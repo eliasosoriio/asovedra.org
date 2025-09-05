@@ -2,7 +2,7 @@ import { Button, Navbar, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbi
 
 const personalizedNavTheme = {
   "root": {
-    "base": "sticky w-full bg-white shadow-[6px_6px_9px_rgba(0,_0,_0,_0.2)] px-3 py-3 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl sm:px-4 dark:border-0 dark:bg-transparent animate-fade-in-down top-0 left-0 right-0",
+    "base": "sticky w-full z-9999 bg-white shadow-[6px_6px_9px_rgba(0,_0,_0,_0.2)] px-3 py-3 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl sm:px-4 dark:border-0 dark:bg-transparent animate-fade-in-down top-0 left-0 right-0",
     "rounded": {
       "on": "rounded",
       "off": ""
