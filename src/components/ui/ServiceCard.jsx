@@ -3,7 +3,7 @@ import React from 'react'
 function ServiceCard({ title, image }) {
   return (
     <article
-      className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64 flex items-end w-full max-w-lg min-w-70 px-5"
+      className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 h-64 flex items-end w-full"
       style={{
         backgroundImage: `
           linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.7) 100%),
