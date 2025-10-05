@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import NewsCard from '../components/ui/NewsCard'
 import { Header } from '../components/layout/Header'
+import SEO from '../components/SEO'
 
 function News() {
   const [currentPage, setCurrentPage] = useState(1)
@@ -125,7 +126,14 @@ function News() {
   }
 
   return (
-    <main className='min-h-screen bg-gray-50'>
+    <>
+      <SEO 
+        title="Noticias - Actualidad Venezolana en España"
+        description="Mantente informado con las últimas noticias de la comunidad venezolana en España. Cobertura de eventos, logros y actualidad migratoria."
+        keywords="noticias venezolanos españa, actualidad venezuela, comunidad venezolana, noticias asovedra, eventos venezolanos"
+        canonical="/noticias"
+      />
+      <main className='min-h-screen bg-gray-50'>
       {/* Header Section with Navigation */}
       <section className="nav-bg py-6 px-3 sticky top-0 z-50">
         <Header />
@@ -237,6 +245,7 @@ function News() {
         </div>
       </section> */}
     </main>
+    </>
   )
 }
 

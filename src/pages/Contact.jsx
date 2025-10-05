@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Header } from '../components/layout/Header'
+import SEO from '../components/SEO'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -64,7 +65,14 @@ function Contact() {
   ]
 
   return (
-    <main className='min-h-screen bg-gray-50'>
+    <>
+      <SEO 
+        title="Contacto - Asovedra"
+        description="Contacta con Asovedra para recibir apoyo y asesoría. Teléfono: +34 604 016 113. Email: info@asovedra.org. Oficina en Pontevedra, España."
+        keywords="contacto asovedra, teléfono asovedra, email asovedra, oficina pontevedra, consulta gratuita, asesoría legal"
+        canonical="/contacto"
+      />
+      <main className='min-h-screen bg-gray-50'>
       {/* Header Section with Navigation */}
       <section className="nav-bg py-6 px-3 sticky top-0 z-50">
         <Header />
@@ -334,6 +342,7 @@ function Contact() {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

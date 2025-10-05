@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { HelmetProvider } from 'react-helmet-async'
 import { Header } from './components/layout/Header'
 import Hero from './components/layout/Hero'
 import Footer from './components/layout/Footer'
@@ -59,12 +60,14 @@ function AnimatedRoutes() {
 function App() {
   
   return (
-    <div className="overflow-x-hidden">
-      <Router>
-        <ScrollToTop />
-        <AnimatedRoutes />
-      </Router>
-    </div>
+    <HelmetProvider>
+      <div className="overflow-x-hidden">
+        <Router>
+          <ScrollToTop />
+          <AnimatedRoutes />
+        </Router>
+      </div>
+    </HelmetProvider>
   )
 }
 

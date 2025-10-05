@@ -2,6 +2,7 @@ import React from 'react'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { Header } from '../components/layout/Header'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 function Services() {
   const services = [
@@ -93,7 +94,14 @@ function Services() {
   ]
 
   return (
-    <main className='min-h-screen bg-gray-50'>
+    <>
+      <SEO 
+        title="Servicios - Apoyo Integral a Venezolanos"
+        description="Descubre todos los servicios de Asovedra: asesoría legal migratoria, bolsa de empleo, trámites, formación, apoyo psicológico y más. ¡Contáctanos!"
+        keywords="servicios asovedra, asesoría legal migratoria, empleo venezuela, trámites migratorios, formación, apoyo psicológico"
+        canonical="/servicios"
+      />
+      <main className='min-h-screen bg-gray-50'>
       {/* Header Section with Navigation */}
       <section className="nav-bg py-6 px-3 sticky top-0 z-50">
         <Header />
@@ -288,6 +296,7 @@ function Services() {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

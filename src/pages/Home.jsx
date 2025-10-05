@@ -4,10 +4,18 @@ import ServiceCard from '../components/ui/ServiceCard'
 import NewsCard from '../components/ui/NewsCard'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { STATS_ARRAY } from '../constants/stats'
+import SEO from '../components/SEO'
 
 function Home() {
   return (
-        <main className='flex flex-col items-center justify-center text-center px-3 py-8 gap-10'>
+    <>
+      <SEO 
+        title="Inicio - Apoyo a Venezolanos en España"
+        description="Asovedra es la asociación líder de apoyo a venezolanos en España. Ofrecemos servicios legales, empleo, trámites migratorios y apoyo integral en Pontevedra, Galicia."
+        keywords="asovedra, venezolanos españa, asociación venezolana, apoyo legal, empleo venezuela, pontevedra, galicia, inmigración, trámites migratorios"
+        canonical="/"
+      />
+      <main className='flex flex-col items-center justify-center text-center px-3 py-8 gap-10 overflow-x-hidden'>
       <section className='actualidad w-full bg-gray-50 py-8 rounded-lg'>
         <div className="max-w-6xl mx-auto w-full px-4">
           <div className="flex items-center justify-between mb-8">
@@ -126,18 +134,18 @@ function Home() {
             <div className="order-1 md:order-2 space-y-6">
               <h3 className="text-2xl font-bold text-primary-dark">Nuestra Historia</h3>
               <p className='text-gray-700 leading-relaxed'>
-                Fundada en 2005, Asovedra nació de la necesidad de crear un espacio de apoyo y orientación para los venezolanos que llegaban a España buscando nuevas oportunidades.
+                Fundada en 2018, Asovedra nació de la necesidad de crear un espacio de apoyo y orientación para los venezolanos que llegaban a España buscando nuevas oportunidades.
               </p>
               <p className='text-gray-700 leading-relaxed'>
                 A lo largo de estos años, hemos crecido hasta convertirnos en un referente en el sector, gracias a nuestro enfoque centrado en las necesidades reales de nuestra comunidad y nuestro equipo de profesionales altamente capacitados.
               </p>
               <div className="flex items-center space-x-4 text-primary-blue">
                 <div className="w-2 h-2 bg-primary-blue rounded-full"></div>
-                <span className="font-medium">Fundada en 2005</span>
+                <span className="font-medium">Fundada en 2018</span>
               </div>
               <div className="flex items-center space-x-4 text-primary-blue">
                 <div className="w-2 h-2 bg-primary-blue rounded-full"></div>
-                <span className="font-medium">Más de 2000 personas atendidas</span>
+                <span className="font-medium">Más de 4000 personas atendidas</span>
               </div>
               <div className="flex items-center space-x-4 text-primary-blue">
                 <div className="w-2 h-2 bg-primary-blue rounded-full"></div>
@@ -225,6 +233,7 @@ function Home() {
         </div>
       </section>
     </main>
+    </>
   )
 }
 
