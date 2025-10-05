@@ -1,6 +1,7 @@
 import React from 'react'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { Header } from '../components/layout/Header'
+import { Link } from 'react-router-dom'
 
 function Services() {
   const services = [
@@ -137,9 +138,9 @@ function Services() {
                     ))}
                   </ul>
                   <div className="mt-6">
-                    <button className="btn-primary">
+                    <Link to="/contacto" className="btn-primary">
                       Solicitar información
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

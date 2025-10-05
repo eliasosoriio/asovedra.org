@@ -1,41 +1,42 @@
 import React from 'react'
 import { Header } from '../components/layout/Header'
+import { Link } from 'react-router-dom'
 
 function About() {
   const teamMembers = [
     {
-      name: "María González",
-      position: "Presidenta",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
-      description: "Abogada especializada en derecho migratorio con más de 15 años de experiencia."
+      name: "Manuel Osorio Lozano",
+      position: "Presidente",
+      image: "https://i.ytimg.com/vi/1lUMjHbRK08/maxresdefault.jpg",
+      description: "Más de 7 años de experiencia con la comunidad venezolana y su integración en España."
     },
     {
-      name: "Carlos Rodríguez",
+      name: "No disponible",
       position: "Vicepresidente",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      description: "Ingeniero y emprendedor, coordina los programas de inserción laboral."
+      image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     },
     {
-      name: "Ana Martínez",
+      name: "No disponible",
       position: "Secretaria",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-      description: "Psicóloga especializada en apoyo a migrantes y familias."
+      image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     },
     {
-      name: "Luis Fernández",
-      position: "Tesorero",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      description: "Contador público con experiencia en gestión de organizaciones sin fines de lucro."
+      name: "No disponible",
+      position: "Asesor Legal",
+      image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     }
   ]
 
   const milestones = [
-    { year: "2005", event: "Fundación de Asovedra", description: "Nace la asociación con el objetivo de apoyar a los primeros venezolanos que llegaban a Pontevedra." },
-    { year: "2010", event: "Primer convenio institucional", description: "Firma del primer convenio con el Ayuntamiento de Pontevedra para programas de integración." },
-    { year: "2015", event: "Expansión a toda Galicia", description: "Asovedra extiende sus servicios a las cuatro provincias gallegas." },
-    { year: "2018", event: "Centro de asesoría legal", description: "Apertura del centro especializado en asesoría legal migratoria." },
-    { year: "2020", event: "Programas digitales", description: "Adaptación a la era digital con servicios online durante la pandemia." },
-    { year: "2025", event: "20 años de servicio", description: "Celebración de dos décadas apoyando a la comunidad venezolana." }
+    { year: "2018", event: "Fundación de Asovedra", description: "Nace la asociación con el objetivo de apoyar a los venezolanos que llegaban a Pontevedra." },
+    { year: "2020", event: "Programa Reinvéntate y Trabaja", description: "Una iniciativa que tiene como objetivo principal conocer la realidad de los venezolanos, retornados y personas de países iberoamericanos, para facilitar su inclusión en el mercado laboral. Se da prioridad a quienes están en riesgo de exclusión social, brindando apoyo para integrarse plenamente en el entorno laboral y alcanzar una estabilidad económica." },
+    { year: "2021", event: "Expansión a toda Galicia y península", description: "Asovedra extiende sus servicios a las cuatro provincias gallegas y a la península para apoyar a la comunidad venezolana en su proceso de integración." },
+    { year: "2022", event: "Eventos", description: "Se llevan a cabo diversos eventos para fomentar la integración y visibilidad de la comunidad. Desde paseos y viajes hasta cenas." },
+    { year: "2023", event: "Galicia Activa", description: "Movimiento que busca promover la participación activa de la comunidad no sólo venezolana sino también de otros colectivos en Galicia." },
+    { year: "2025", event: "GLC Abogados", description: "Acuerdo de colaboración para brindar asesoría legal a la comunidad." }
   ]
 
   return (
@@ -151,7 +152,7 @@ function About() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-primary-dark mb-4">Nuestra Historia</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Un recorrido por los momentos más importantes de nuestros 20 años de servicio
+              Un recorrido por los momentos más importantes de nuestros 7 años de servicio
             </p>
           </div>
 
@@ -222,7 +223,7 @@ function About() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">2,000+</div>
+              <div className="text-4xl font-bold mb-2">4,000+</div>
               <div className="opacity-90">Personas Atendidas</div>
             </div>
             <div className="text-center text-white">
@@ -230,11 +231,11 @@ function About() {
               <div className="opacity-90">Casos Legales Resueltos</div>
             </div>
             <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">300+</div>
+              <div className="text-4xl font-bold mb-2">1000+</div>
               <div className="opacity-90">Empleos Conseguidos</div>
             </div>
             <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">20</div>
+              <div className="text-4xl font-bold mb-2">7</div>
               <div className="opacity-90">Años de Servicio</div>
             </div>
           </div>
@@ -251,12 +252,12 @@ function About() {
             Siempre estamos buscando voluntarios y colaboradores comprometidos con nuestra causa
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
+            <Link to='tel:+34604016113' className="btn-primary">
               Únete como voluntario
-            </button>
-            <button className="btn-secondary">
+            </Link>
+            <Link to='/contacto' className="btn-secondary">
               Contacta con nosotros
-            </button>
+            </Link>
           </div>
         </div>
       </section>

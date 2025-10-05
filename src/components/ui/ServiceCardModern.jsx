@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ServiceCardModern({ title, description, icon, color = "primary-blue" }) {
   const colorClasses = {
@@ -21,7 +22,7 @@ function ServiceCardModern({ title, description, icon, color = "primary-blue" })
           {description}
         </p>
         <div className="mt-auto inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
-          Más información
+          <Link to="/contacto">Consúltanos</Link>
           <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

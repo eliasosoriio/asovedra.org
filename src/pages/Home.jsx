@@ -105,11 +105,11 @@ function Home() {
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">2000+</div>
+                <div className="text-3xl font-bold text-primary-blue mb-2">4000+</div>
                 <div className="text-gray-600 font-medium">Venezolanos Apoyados</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">20+</div>
+                <div className="text-3xl font-bold text-primary-blue mb-2">7+</div>
                 <div className="text-gray-600 font-medium">Años de Experiencia</div>
               </div>
               <div className="text-center">
@@ -208,9 +208,9 @@ function Home() {
               <Link to="/servicios" className='btn-light'>
                 Ver todos los servicios
               </Link>
-              <button className='btn-white-outline'>
+              <Link to="/contacto" className='btn-white-outline'>
                 Solicitar consulta
-              </button>
+              </Link>
             </div>
           </div>
         </div>

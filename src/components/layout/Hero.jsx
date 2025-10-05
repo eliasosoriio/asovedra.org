@@ -32,7 +32,7 @@ function Hero() {
          <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 mt-8 justify-center items-center">
             <div className="text-center text-white">
                <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  2000+
+                  4000+
                </div>
                <div className="text-sm sm:text-base opacity-90">
                   Personas Atendidas
@@ -40,11 +40,17 @@ function Hero() {
             </div>
             <div className="text-center text-white">
                <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  20+
+                  7+
                </div>
                <div className="text-sm sm:text-base opacity-90">
                   Años de Experiencia
                </div>
+            </div>
+            <div className="text-center text-white">
+               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                  1000+
+               </div>
+               <div className="text-sm sm:text-base opacity-90">Empleos Conseguidos</div>
             </div>
             <div className="text-center text-white">
                <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">

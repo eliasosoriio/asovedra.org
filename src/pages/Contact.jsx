@@ -30,8 +30,8 @@ function Contact() {
     {
       icon: "📍",
       title: "Dirección",
-      details: ["Rúa Benito Corbal, 47", "36002 Pontevedra, España"],
-      link: "https://maps.google.com/?q=Rúa+Benito+Corbal+47+Pontevedra"
+      details: ["Rúa Sor Lucía 4, Oficina 50", "36002 Pontevedra, España"],
+      link: "https://maps.google.com/?q=Rúa+Sor+Lucía+4,+Oficina+50,+36002+Pontevedra"
     },
     {
       icon: "📞",
@@ -48,7 +48,7 @@ function Contact() {
     {
       icon: "🕐",
       title: "Horarios de Atención",
-      details: ["Lunes a Viernes: 9:00 - 18:00", "Sábados: 10:00 - 14:00"],
+      details: ["Lunes: 10:00 - 14:00", "Martes: 17:00 - 19:00", "Miércoles: 10:00 - 14:00", "Jueves: 10:00 - 14:00 y 17:00 - 19:00", "Viernes, Sábado y Domingo: Cerrado"],
       link: null
     }
   ]
@@ -234,7 +234,7 @@ function Contact() {
                   <div className="text-center text-gray-500">
                     <div className="text-4xl mb-2">📍</div>
                     <p>Mapa interactivo</p>
-                    <p className="text-sm">Rúa Benito Corbal, 47, Pontevedra</p>
+                    <p className="text-sm">Rúa Sor Lucía 4, Oficina 50, 36002 Pontevedra</p>
                   </div>
                 </div>
               </div>
