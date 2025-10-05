@@ -93,8 +93,8 @@ function Services() {
   return (
     <main className='min-h-screen bg-gray-50'>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-blue to-blue-700 py-16">
-        <div className="max-w-6xl mx-auto px-4 text-center text-white">
+      <section className="nav-bg py-16 -mt-6">
+        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Ofrecemos una amplia gama de servicios especializados para apoyar a la comunidad venezolana en España

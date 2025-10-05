@@ -18,7 +18,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={
           <PageTransition>
-            <div className='mx-auto my-0 py-8 px-3 max-w-lvw w-full min-h-lvh hero-bg bg-center bg-cover bg-no-repeat flex flex-col items-center justify-between'>
+            <div className='home-bg py-6 px-3 w-full min-h-screen bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center relative'>
               <Header />
               <Hero />
             </div>
@@ -27,7 +27,7 @@ function AnimatedRoutes() {
         } />
         <Route path="/noticias" element={
           <PageTransition>
-            <div className='py-4 px-3 bg-white shadow-sm'>
+            <div className='py-6 px-3 nav-bg'>
               <Header />
             </div>
             <News />
@@ -35,7 +35,7 @@ function AnimatedRoutes() {
         } />
         <Route path="/sobre-nosotros" element={
           <PageTransition>
-            <div className='py-4 px-3 bg-white shadow-sm'>
+            <div className='py-6 px-3 nav-bg'>
               <Header />
             </div>
             <About />
@@ -43,7 +43,7 @@ function AnimatedRoutes() {
         } />
         <Route path="/servicios" element={
           <PageTransition>
-            <div className='py-4 px-3 bg-white shadow-sm'>
+            <div className='py-6 px-3 nav-bg'>
               <Header />
             </div>
             <Services />
@@ -51,7 +51,7 @@ function AnimatedRoutes() {
         } />
         <Route path="/contacto" element={
           <PageTransition>
-            <div className='py-4 px-3 bg-white shadow-sm'>
+            <div className='py-6 px-3 nav-bg'>
               <Header />
             </div>
             <Contact />

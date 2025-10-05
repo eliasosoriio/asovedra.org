@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const personalizedNavTheme = {
   "root": {
-    "base": "sticky w-full z-9999 bg-white shadow-[6px_6px_9px_rgba(0,_0,_0,_0.2)] px-3 py-3 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl sm:px-4 dark:border-0 dark:bg-transparent animate-fade-in-down top-0 left-0 right-0",
+    "base": "sticky w-full z-9999 backdrop-blur-md px-4 py-4 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl dark:border-0 animate-fade-in-down top-0 left-0 right-0 transition-all duration-300",
     "rounded": {
       "on": "rounded",
       "off": ""
@@ -32,10 +32,10 @@ const personalizedNavTheme = {
     }
   },
   "link": {
-    "base": "block py-2 pl-3 pr-4 md:p-0",
+    "base": "block py-3 pl-3 pr-4 md:p-0 font-medium transition-colors duration-300 rounded-lg md:rounded-none",
     "active": {
-      "on": "bg-transparent text-primary-dark hover:text-primary-gray md:bg-transparent md:text-primary-dark dark:text-primary-dark",
-      "off": "border-0 text-primary-dark hover:bg-transparent md:border-0 md:hover:bg-transparent hover:text-primary-gray dark:border-gray-700 dark:text-primary-dark dark:hover:bg-transparent dark:hover:text-primary-gray md:dark:hover:bg-transparent md:dark:hover:text-primary-gray"
+      "on": "bg-primary-blue/10 text-primary-blue md:bg-transparent md:text-primary-blue md:border-b-2 md:border-primary-blue md:pb-1",
+      "off": "border-0 text-primary-dark hover:bg-primary-blue/5 md:border-0 md:hover:bg-transparent hover:text-primary-blue md:hover:border-b-2 md:hover:border-primary-blue/50 md:pb-1"
     },
     "disabled": {
       "on": "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
@@ -68,16 +68,40 @@ const handleScroll = (id) => {
 
 export function Header() {
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  // Tema unificado para todas las páginas
+  const dynamicNavTheme = {
+    ...personalizedNavTheme,
+    "root": {
+      ...personalizedNavTheme.root,
+      "base": "sticky w-full z-9999 backdrop-blur-md px-4 py-4 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl dark:border-0 animate-fade-in-down top-0 left-0 right-0 transition-all duration-300 bg-transparent"
+    },
+    "link": {
+      "base": "block py-3 pl-3 pr-4 md:p-0 font-medium transition-colors duration-300 rounded-lg md:rounded-none",
+      "active": {
+        "on": "bg-white/20 text-white md:bg-transparent md:text-white md:border-b-2 md:border-white md:pb-1",
+        "off": "border-0 text-white/90 hover:bg-white/10 md:border-0 md:hover:bg-transparent hover:text-white md:hover:border-b-2 md:hover:border-white/70 md:pb-1"
+      },
+      "disabled": {
+        "on": "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
+        "off": ""
+      }
+    }
+  };
 
   return (
-    <Navbar fluid theme={personalizedNavTheme} className="rounded-2xl">
+    <Navbar fluid theme={dynamicNavTheme} className="rounded-2xl">
         <Link to="/">
           <img src="/favicon.png" alt="Logo ASOVEDRA" className="h-11" />
         </Link>
-        <div className="flex md:order-2">
-            <Button className="bg-primary-dark hover:text-white hover:bg-primary-gray transition-transform cursor-pointer rounded-default md:mr-0 sm:mr-3 h-11 hidden sm:block">
-            <a href="tel:+34604016113">Llámanos</a>
-            </Button>
+        <div className="flex md:order-2 items-center gap-3">
+            <a 
+              href="tel:+34604016113" 
+              className="hidden sm:block text-sm py-2 px-4 shadow-md hover:shadow-lg transition-all duration-300 rounded-lg font-medium bg-white/20 text-white border border-white/30 hover:bg-white hover:text-primary-blue backdrop-blur-sm"
+            >
+              Llámanos
+            </a>
             <NavbarToggle />
         </div>
         <NavbarCollapse>
