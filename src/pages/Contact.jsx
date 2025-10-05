@@ -36,7 +36,7 @@ function Contact() {
     {
       icon: "📞",
       title: "Teléfono",
-      details: ["+34 604 016 113"],
+      details: ["+34 604 016 113", "Llamadas y WhatsApp"],
       link: "tel:+34604016113"
     },
     {
@@ -47,8 +47,8 @@ function Contact() {
     },
     {
       icon: "🕐",
-      title: "Horarios de Atención",
-      details: ["Lunes: 10:00 - 14:00", "Martes: 17:00 - 19:00", "Miércoles: 10:00 - 14:00", "Jueves: 10:00 - 14:00 y 17:00 - 19:00", "Viernes, Sábado y Domingo: Cerrado"],
+      title: "Horarios",
+      details: ["Lunes, Miércoles: 10:00-14:00", "Martes: 17:00-19:00", "Jueves: 10:00-14:00, 17:00-19:00", "Fin de semana: Cerrado"],
       link: null
     }
   ]
@@ -117,7 +117,23 @@ function Contact() {
             {/* Contact Form */}
             <div>
               <h3 className="text-2xl font-bold text-primary-dark mb-6">Envíanos un mensaje</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* Aviso temporal */}
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+                <div className="flex items-start">
+                  <div className="text-amber-600 mr-3 text-xl">⚠️</div>
+                  <div>
+                    <h4 className="text-amber-800 font-medium mb-2">Formulario temporalmente no disponible</h4>
+                    <p className="text-amber-700 text-sm">
+                      Actualmente estamos trabajando en mejorar nuestro sistema de contacto. 
+                      Mientras tanto, por favor <strong>llámanos al +34 604 016 113</strong> o 
+                      escríbenos directamente a <strong>info@asovedra.org</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6 opacity-75 pointer-events-none">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -219,9 +235,10 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="btn-primary w-full"
+                  disabled
+                  className="btn-primary w-full opacity-50 cursor-not-allowed"
                 >
-                  Enviar mensaje
+                  Formulario no disponible
                 </button>
               </form>
             </div>
