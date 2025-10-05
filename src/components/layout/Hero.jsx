@@ -5,7 +5,7 @@ function Hero() {
    return (
       <div className="hero-content flex flex-col items-center gap-12 mb-24 md:mb-16 px-4 pt-16 md:pt-20">
          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-white text-center font-bold text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">ASOVEDRA</h1>
+            <h1 className="text-white text-center font-bold text-6xl md:text-6xl lg:text-7xl mb-6 leading-tight">Asovedra</h1>
             <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
                Tu aliado en España. Brindamos apoyo integral a la comunidad
                venezolana con servicios especializados en migración, empleo y
