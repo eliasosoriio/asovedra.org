@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import NewsCard from '../components/ui/NewsCard'
 
 function News() {
   const [currentPage, setCurrentPage] = useState(1)
   const newsPerPage = 5
+  const newsContainerRef = useRef(null)
   const newsData = [
     {
       title: "Asovedra calcula que 2.000 venezolanos llegaron a Pontevedra desde el año 2017",
@@ -83,15 +84,32 @@ function News() {
   const indexOfFirstNews = indexOfLastNews - newsPerPage
   const currentNews = newsData.slice(indexOfFirstNews, indexOfLastNews)
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  const scrollToNews = () => {
+    if (newsContainerRef.current) {
+      newsContainerRef.current.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start',
+        inline: 'nearest'
+      })
+    }
+  }
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber)
+    setTimeout(scrollToNews, 100) // Pequeño delay para asegurar que el contenido se actualice primero
+  }
+  
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1)
+      setTimeout(scrollToNews, 100)
     }
   }
+  
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
+      setTimeout(scrollToNews, 100)
     }
   }
 
@@ -110,7 +128,7 @@ function News() {
       {/* News Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-8">
+          <div ref={newsContainerRef} className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl font-bold text-primary-dark mb-2">Todas las Noticias</h2>
               <p className="text-gray-600">Últimas actualizaciones y acontecimientos importantes</p>
@@ -118,7 +136,7 @@ function News() {
             <div className="h-1 w-20 bg-primary-blue rounded"></div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 transition-all duration-300 ease-in-out">
             {currentNews.map((news, index) => (
               <NewsCard
                 key={indexOfFirstNews + index}
