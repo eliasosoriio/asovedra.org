@@ -233,10 +233,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      <footer className='mt-16 text-sm text-gray-500 max-w-6xl mx-auto w-full'>
-        &copy; 2024 Asovedra. Todos los derechos reservados.
-      </footer>
     </main>
   )
 }

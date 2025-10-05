@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion'
 import { Header } from './components/layout/Header'
 import Hero from './components/layout/Hero'
+import Footer from './components/layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import PageTransition from './components/PageTransition'
 import Home from "./pages/Home"
@@ -23,26 +24,31 @@ function AnimatedRoutes() {
               <Hero />
             </div>
             <Home />
+            <Footer />
           </PageTransition>
         } />
         <Route path="/noticias" element={
           <PageTransition>
             <News />
+            <Footer />
           </PageTransition>
         } />
         <Route path="/sobre-nosotros" element={
           <PageTransition>
             <About />
+            <Footer />
           </PageTransition>
         } />
         <Route path="/servicios" element={
           <PageTransition>
             <Services />
+            <Footer />
           </PageTransition>
         } />
         <Route path="/contacto" element={
           <PageTransition>
             <Contact />
+            <Footer />
           </PageTransition>
         } />
       </Routes>
