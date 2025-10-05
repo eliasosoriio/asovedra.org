@@ -93,16 +93,7 @@ export function Header() {
             <NavbarLink as={Link} to="/servicios" active={location.pathname === "/servicios"}>
             Servicios
             </NavbarLink>
-            <NavbarLink href="#contact"
-            onClick={(e) => {
-                if (location.pathname !== "/") {
-                  // Si no estamos en home, ir a home primero
-                  window.location.href = "/#contact";
-                } else {
-                  e.preventDefault();
-                  handleScroll("#contact");
-                }
-            }}>
+            <NavbarLink as={Link} to="/contacto" active={location.pathname === "/contacto"}>
             Contacto
             </NavbarLink>
         </NavbarCollapse>

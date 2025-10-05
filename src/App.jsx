@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import News from "./pages/News"
 import About from "./pages/About"
 import Services from "./pages/Services"
+import Contact from "./pages/Contact"
 
 function App() {
   
@@ -44,6 +45,14 @@ function App() {
               <Header />
             </div>
             <Services />
+          </>
+        } />
+        <Route path="/contacto" element={
+          <>
+            <div className='py-4 px-3 bg-white shadow-sm'>
+              <Header />
+            </div>
+            <Contact />
           </>
         } />
       </Routes>

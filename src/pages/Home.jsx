@@ -223,13 +223,13 @@ function Home() {
             Nuestro equipo está disponible para responder todas tus preguntas y brindarte la orientación que necesitas
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className='btn-primary'>
+            <Link to="/contacto" className='btn-primary'>
               Contactar ahora
-            </button>
+            </Link>
             <span className="text-gray-500">o</span>
-            <button className='btn-secondary'>
+            <Link to="/contacto" className='btn-secondary'>
               Solicitar cita
-            </button>
+            </Link>
           </div>
         </div>
       </section>
