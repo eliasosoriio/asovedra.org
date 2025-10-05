@@ -59,10 +59,12 @@ function AnimatedRoutes() {
 function App() {
   
   return (
-    <Router>
-      <ScrollToTop />
-      <AnimatedRoutes />
-    </Router>
+    <div className="overflow-x-hidden">
+      <Router>
+        <ScrollToTop />
+        <AnimatedRoutes />
+      </Router>
+    </div>
   )
 }
 

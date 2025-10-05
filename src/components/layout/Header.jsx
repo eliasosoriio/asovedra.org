@@ -24,8 +24,8 @@ const personalizedNavTheme = {
     "base": "flex items-center"
   },
   "collapse": {
-    "base": "w-full md:block md:w-auto sm:mt-2 md:mt-0 sm:bg-transparent py-3 px-12 rounded-default",
-    "list": "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
+    "base": "w-full md:block md:w-auto md:mt-0 sm:bg-transparent py-3 px-12 rounded-default",
+    "list": "mt-2 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
     "hidden": {
       "on": "hidden",
       "off": ""
