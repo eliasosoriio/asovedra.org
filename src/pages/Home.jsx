@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ServiceCard from '../components/ui/ServiceCard'
 import NewsCard from '../components/ui/NewsCard'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
+import { STATS_ARRAY } from '../constants/stats'
 
 function Home() {
   return (
@@ -104,22 +105,12 @@ function Home() {
           {/* Estadísticas */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">4000+</div>
-                <div className="text-gray-600 font-medium">Venezolanos Apoyados</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">7+</div>
-                <div className="text-gray-600 font-medium">Años de Experiencia</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">500+</div>
-                <div className="text-gray-600 font-medium">Casos Legales</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">100%</div>
-                <div className="text-gray-600 font-medium">Compromiso</div>
-              </div>
+              {STATS_ARRAY.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-primary-blue mb-2">{stat.number}</div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -227,7 +218,7 @@ function Home() {
               Contactar ahora
             </Link>
             <span className="text-gray-500">o</span>
-            <Link to="/contacto" className='btn-secondary'>
+            <Link to="tel:+34604016113" className='btn-secondary'>
               Solicitar cita
             </Link>
           </div>

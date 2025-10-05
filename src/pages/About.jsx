@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from '../components/layout/Header'
+import { ABOUT_STATS_ARRAY } from '../constants/stats'
 import { Link } from 'react-router-dom'
 
 function About() {
@@ -222,22 +223,12 @@ function About() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">4,000+</div>
-              <div className="opacity-90">Personas Atendidas</div>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="opacity-90">Casos Legales Resueltos</div>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">1000+</div>
-              <div className="opacity-90">Empleos Conseguidos</div>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">7</div>
-              <div className="opacity-90">Años de Servicio</div>
-            </div>
+            {ABOUT_STATS_ARRAY.map((stat, index) => (
+              <div key={index} className="text-center text-white">
+                <div className="text-4xl font-bold mb-2">{stat.number}</div>
+                <div className="opacity-90">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

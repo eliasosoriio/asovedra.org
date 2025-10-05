@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HERO_STATS_ARRAY } from '../../constants/stats';
 
 function Hero() {
    return (
@@ -30,34 +31,16 @@ function Hero() {
 
          {/* Estadísticas rápidas */}
          <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 mt-8 justify-center items-center">
-            <div className="text-center text-white">
-               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  4000+
+            {HERO_STATS_ARRAY.map((stat, index) => (
+               <div key={index} className="text-center text-white">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                     {stat.number}
+                  </div>
+                  <div className="text-sm sm:text-base opacity-90">
+                     {stat.label}
+                  </div>
                </div>
-               <div className="text-sm sm:text-base opacity-90">
-                  Personas Atendidas
-               </div>
-            </div>
-            <div className="text-center text-white">
-               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  7+
-               </div>
-               <div className="text-sm sm:text-base opacity-90">
-                  Años de Experiencia
-               </div>
-            </div>
-            <div className="text-center text-white">
-               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  1000+
-               </div>
-               <div className="text-sm sm:text-base opacity-90">Empleos Conseguidos</div>
-            </div>
-            <div className="text-center text-white">
-               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  100%
-               </div>
-               <div className="text-sm sm:text-base opacity-90">Compromiso</div>
-            </div>
+            ))}
          </div>
       </div>
    );

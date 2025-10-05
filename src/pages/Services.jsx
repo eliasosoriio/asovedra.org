@@ -231,9 +231,9 @@ function Services() {
                 <li>• Eventos comunitarios</li>
                 <li>• Apoyo de emergencia</li>
               </ul>
-              <button className="btn-secondary w-full">
+              <Link to="/contacto" className="btn-secondary w-full">
                 Acceder ahora
-              </button>
+              </Link>
             </div>
 
             <div className="bg-primary-blue rounded-2xl p-8 text-center text-white relative">
@@ -247,9 +247,9 @@ function Services() {
                 <li>• Cursos de formación</li>
                 <li>• Seguimiento personalizado</li>
               </ul>
-              <button className="btn-light w-full">
+              <Link to="tel:+34604016113" className="btn-light w-full">
                 Consultar tarifas
-              </button>
+              </Link>
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
@@ -260,9 +260,9 @@ function Services() {
                 <li>• Acceso prioritario</li>
                 <li>• Eventos exclusivos</li>
               </ul>
-              <button className="btn-secondary w-full">
+              <Link to="/contacto" className="btn-secondary w-full">
                 Más información
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -278,12 +278,12 @@ function Services() {
             Nuestro equipo de profesionales está listo para ayudarte. Contáctanos y comencemos a trabajar juntos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
+            <Link to="tel:+34604016113" className="btn-primary">
               Solicitar consulta gratuita
-            </button>
-            <button className="btn-secondary">
+            </Link>
+            <Link to="/contacto" className="btn-secondary">
               Ver horarios de atención
-            </button>
+            </Link>
           </div>
         </div>
       </section>
