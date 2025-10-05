@@ -27,33 +27,21 @@ function AnimatedRoutes() {
         } />
         <Route path="/noticias" element={
           <PageTransition>
-            <div className='py-6 px-3 nav-bg'>
-              <Header />
-            </div>
             <News />
           </PageTransition>
         } />
         <Route path="/sobre-nosotros" element={
           <PageTransition>
-            <div className='py-6 px-3 nav-bg'>
-              <Header />
-            </div>
             <About />
           </PageTransition>
         } />
         <Route path="/servicios" element={
           <PageTransition>
-            <div className='py-6 px-3 nav-bg'>
-              <Header />
-            </div>
             <Services />
           </PageTransition>
         } />
         <Route path="/contacto" element={
           <PageTransition>
-            <div className='py-6 px-3 nav-bg'>
-              <Header />
-            </div>
             <Contact />
           </PageTransition>
         } />

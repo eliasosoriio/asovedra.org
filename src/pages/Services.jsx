@@ -1,5 +1,6 @@
 import React from 'react'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
+import { Header } from '../components/layout/Header'
 
 function Services() {
   const services = [
@@ -92,9 +93,10 @@ function Services() {
 
   return (
     <main className='min-h-screen bg-gray-50'>
-      {/* Hero Section */}
-      <section className="nav-bg py-16 -mt-6">
-        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-6">
+      {/* Header Section with Navigation */}
+      <section className="nav-bg py-6 px-3 sticky top-0 z-50">
+        <Header />
+        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Ofrecemos una amplia gama de servicios especializados para apoyar a la comunidad venezolana en España

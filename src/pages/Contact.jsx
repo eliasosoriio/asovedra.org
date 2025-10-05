@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Header } from '../components/layout/Header'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -64,9 +65,10 @@ function Contact() {
 
   return (
     <main className='min-h-screen bg-gray-50'>
-      {/* Hero Section */}
-      <section className="nav-bg py-16 -mt-6">
-        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-6">
+      {/* Header Section with Navigation */}
+      <section className="nav-bg py-6 px-3 sticky top-0 z-50">
+        <Header />
+        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contacto</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Estamos aquí para ayudarte. Contáctanos y te responderemos lo antes posible
