@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ServiceCard from '../components/ui/ServiceCard'
 import NewsCard from '../components/ui/NewsCard'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
@@ -45,9 +46,9 @@ function Home() {
           </div>
           
           <div className="flex justify-center mt-8">
-            <button className='btn-primary'>
+            <Link to="/noticias" className='btn-primary'>
               Ver todas las noticias
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -155,9 +156,9 @@ function Home() {
           </div>
 
           <div className="flex justify-center">
-            <button className='btn-primary'>
+            <Link to="/sobre-nosotros" className='btn-primary'>
               Conoce más sobre nosotros
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -204,9 +205,9 @@ function Home() {
               Nuestro equipo de profesionales está aquí para brindarte el apoyo que necesitas
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className='btn-light'>
+              <Link to="/servicios" className='btn-light'>
                 Ver todos los servicios
-              </button>
+              </Link>
               <button className='btn-white-outline'>
                 Solicitar consulta
               </button>

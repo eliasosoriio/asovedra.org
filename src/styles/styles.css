@@ -128,6 +128,17 @@
     color: var(--color-primary-blue);
 }
 
+/* Asegurar que los links se vean como botones */
+a.btn-primary,
+a.btn-secondary,
+a.btn-light,
+a.btn-gray,
+a.btn-white-outline {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
 .hero-bg {
     background-image: linear-gradient(100deg, #111, #11111133), url(https://asovedra.org/assets/asovedra_hero.jpg);
 }

@@ -1,4 +1,5 @@
 import { Button, Navbar, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import { Link, useLocation } from "react-router-dom";
 
 const personalizedNavTheme = {
   "root": {
@@ -66,11 +67,13 @@ const handleScroll = (id) => {
 };
 
 export function Header() {
+  const location = useLocation();
+
   return (
     <Navbar fluid theme={personalizedNavTheme} className="rounded-2xl">
-        <a href="https://asovedra.org">
+        <Link to="/">
           <img src="/favicon.png" alt="Logo ASOVEDRA" className="h-11" />
-        </a>
+        </Link>
         <div className="flex md:order-2">
             <Button className="bg-primary-dark hover:text-white hover:bg-primary-gray transition-transform cursor-pointer rounded-default md:mr-0 sm:mr-3 h-11 hidden sm:block">
             <a href="tel:+34604016113">Llámanos</a>
@@ -78,34 +81,28 @@ export function Header() {
             <NavbarToggle />
         </div>
         <NavbarCollapse>
-            <NavbarLink href="#" active>
+            <NavbarLink as={Link} to="/" active={location.pathname === "/"}>
             Inicio
             </NavbarLink>
-            <NavbarLink
-            href="#about"
-            onClick={(e) => {
-                e.preventDefault();
-                handleScroll("#about");
-            }}
-            >
+            <NavbarLink as={Link} to="/noticias" active={location.pathname === "/noticias"}>
+            Noticias
+            </NavbarLink>
+            <NavbarLink as={Link} to="/sobre-nosotros" active={location.pathname === "/sobre-nosotros"}>
             Nosotros
             </NavbarLink>
-            <NavbarLink
-            href="#services"
-            onClick={(e) => {
-                e.preventDefault();
-                handleScroll("#services");
-            }}
-            >
+            <NavbarLink as={Link} to="/servicios" active={location.pathname === "/servicios"}>
             Servicios
             </NavbarLink>
-            <NavbarLink
-            href="#contact"
+            <NavbarLink href="#contact"
             onClick={(e) => {
-                e.preventDefault();
-                handleScroll("#contact");
-            }}
-            >
+                if (location.pathname !== "/") {
+                  // Si no estamos en home, ir a home primero
+                  window.location.href = "/#contact";
+                } else {
+                  e.preventDefault();
+                  handleScroll("#contact");
+                }
+            }}>
             Contacto
             </NavbarLink>
         </NavbarCollapse>
