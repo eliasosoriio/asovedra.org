@@ -91,7 +91,8 @@ export function Header() {
   };
 
   return (
-    <Navbar fluid theme={dynamicNavTheme} className="rounded-2xl">
+    <div className="md:-mt-28 lg:-mt-32 w-full">
+      <Navbar fluid theme={dynamicNavTheme} className="rounded-2xl">
         <Link to="/">
           <img src="/favicon.png" alt="Logo ASOVEDRA" className="h-11" />
         </Link>
@@ -122,5 +123,6 @@ export function Header() {
             </NavbarLink>
         </NavbarCollapse>
     </Navbar>
+    </div>
   );
 }
