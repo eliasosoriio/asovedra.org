@@ -9,9 +9,9 @@ const SEO = ({
   ogType = 'website',
   article = null
 }) => {
-  const siteTitle = 'Asovedra - Asociación de Venezolanos en España'
+  const siteTitle = 'Asovedra - Asociación de Venezolanos en Pontevedra'
   const siteUrl = 'https://asovedra.org'
-  const defaultDescription = 'Asovedra brinda apoyo integral a la comunidad venezolana en España. Servicios legales, empleo, trámites migratorios y más. ¡Contáctanos!'
+  const defaultDescription = 'Asovedra brinda apoyo integral a la comunidad venezolana en Galicia y toda España. Servicios legales, empleo, trámites migratorios y más. ¡Contáctanos!'
   const defaultKeywords = 'asovedra, venezolanos españa, asociación venezolana, ayuda legal migratoria, empleo venezuela, pontevedra, galicia, inmigración'
   const defaultImage = `${siteUrl}/og-image.jpg`
 
@@ -78,7 +78,7 @@ const SEO = ({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Asovedra",
-          "alternateName": "Asociación de Venezolanos en España",
+          "alternateName": "Asociación de Venezolanos en Pontevedra",
           "description": metaDescription,
           "url": siteUrl,
           "logo": `${siteUrl}/favicon.png`,
@@ -97,7 +97,7 @@ const SEO = ({
               "telephone": "+34-604-016-113",
               "contactType": "customer service",
               "email": "info@asovedra.org",
-              "availableLanguage": ["Spanish", "English"]
+              "availableLanguage": ["Spanish"]
             }
           ],
           "areaServed": {
