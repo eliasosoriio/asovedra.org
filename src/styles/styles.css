@@ -216,9 +216,34 @@ button[disabled] {
             transparent 100%
         ), 
         url(https://asovedra.org/assets/asovedra_hero.jpg);
-    background-attachment: fixed;
-    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
+}
+
+/* Para desktop mantener el efecto fixed */
+@media (min-width: 768px) {
+    .home-bg {
+        background-attachment: fixed;
+    }
+}
+
+/* Para móviles usar scroll normal y evitar backdrop-filter */
+@media (max-width: 767px) {
+    .home-bg {
+        background-attachment: scroll;
+        /* Forzar el renderizado del background en móviles */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        /* Asegurar que el background se mantenga visible */
+        will-change: auto;
+        /* Mejorar la compatibilidad con webkit */
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+    }
 }
 
 .home-bg::after {

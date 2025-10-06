@@ -12,7 +12,7 @@ function Hero() {
          </div>
          
          {/* Contenido del Hero */}
-         <div className="hero-content flex flex-col items-center gap-12 mb-24 md:mb-16 px-4 flex-1 justify-center">
+         <div className="hero-content flex flex-col items-center gap-12 mb-24 md:mb-16 px-4 flex-1 justify-center pt-8 md:pt-0">
          <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-white text-center font-bold text-6xl md:text-6xl lg:text-7xl mb-8 md:mb-6 leading-tight">Asovedra</h1>
             <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
