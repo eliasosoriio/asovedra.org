@@ -102,7 +102,7 @@ function Home() {
             
             <div className="relative">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04GklVje8B_FjyfrTZkJNxPMDFj4dlR1SGOcdtPyY_ldTRl1kJC8jy-zsjNG6W6yKjG4&usqp=CAU"
+                src="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2024/09/15/2024091518564641803.jpg"
                 alt="Comunidad Asovedra"
                 className='w-full rounded-2xl shadow-xl h-80 object-cover'
               />

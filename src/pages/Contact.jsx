@@ -43,7 +43,7 @@ function Contact() {
     {
       icon: "✉️",
       title: "Email",
-      details: ["info@asovedra.org", "presidente@asovedra.org"],
+      details: ["info@asovedra.org"],
       link: "mailto:info@asovedra.org"
     },
     {
@@ -84,39 +84,7 @@ function Contact() {
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Información de Contacto</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Encuentra la manera más conveniente de comunicarte con nosotros
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{info.icon}</div>
-                <h3 className="text-xl font-bold text-primary-dark mb-3">{info.title}</h3>
-                <div className="space-y-1">
-                  {info.details.map((detail, detailIndex) => (
-                    <p key={detailIndex} className="text-gray-600 text-sm">
-                      {info.link ? (
-                        <a href={info.link} className="hover:text-primary-blue transition-colors">
-                          {detail}
-                        </a>
-                      ) : (
-                        detail
-                      )}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact Form & Map */}
       <section className="py-16 bg-white">
@@ -251,15 +219,58 @@ function Contact() {
               </form>
             </div>
 
-            {/* Map and Additional Info */}
+            {/* Contact Information */}
             <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-primary-dark mb-6">Nuestra ubicación</h3>
-                <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <div className="text-4xl mb-2">📍</div>
-                    <p>Mapa interactivo</p>
-                    <p className="text-sm">Rúa Sor Lucía 4, Oficina 50, 36002 Pontevedra</p>
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-2xl font-bold text-primary-dark mb-6">Información de Contacto</h3>
+                <div className="space-y-4 text-sm text-gray-600">
+                  <div className="flex items-start">
+                    <div className="text-primary-blue mr-3 text-xl">📍</div>
+                    <div>
+                      <p className="font-medium text-primary-dark">Dirección:</p>
+                      <p>Rúa Sor Lucía 4, Oficina 50</p>
+                      <p>36002 Pontevedra, España</p>
+                      <a href="https://maps.google.com/?q=Rúa+Sor+Lucía+4,+Oficina+50,+36002+Pontevedra" 
+                         className="text-primary-blue hover:underline mt-1 inline-block">
+                        Ver en Google Maps
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-primary-blue mr-3 text-xl">📞</div>
+                    <div>
+                      <p className="font-medium text-primary-dark">Teléfono:</p>
+                      <p>
+                        <a href="tel:+34604016113" className="text-primary-blue hover:underline">
+                          +34 604 016 113
+                        </a>
+                      </p>
+                      <p>Llamadas y WhatsApp</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-primary-blue mr-3 text-xl">✉️</div>
+                    <div>
+                      <p className="font-medium text-primary-dark">Email:</p>
+                      <p>
+                        <a href="mailto:info@asovedra.org" className="text-primary-blue hover:underline">
+                          info@asovedra.org
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-primary-blue mr-3 text-xl">🕐</div>
+                    <div>
+                      <p className="font-medium text-primary-dark">Horarios:</p>
+                      <p>Lunes, Miércoles: 10:00-14:00</p>
+                      <p>Martes: 17:00-19:00</p>
+                      <p>Jueves: 10:00-14:00, 17:00-19:00</p>
+                      <p>Fin de semana: Cerrado</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -335,8 +346,8 @@ function Contact() {
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h4 className="font-bold text-primary-dark mb-2">¿Atienden solo a venezolanos?</h4>
-              <p className="text-gray-600">Aunque nos especializamos en la comunidad venezolana, brindamos apoyo a cualquier persona que necesite nuestros servicios.</p>
+              <h4 className="font-bold text-primary-dark mb-2">¿Atienden solo a iberoamericanos?</h4>
+              <p className="text-gray-600">Nos especializamos en la comunidad iberoamericana, pero brindamos apoyo a cualquier persona que necesite nuestros servicios de migración e integración.</p>
             </div>
           </div>
         </div>

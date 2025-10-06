@@ -8,24 +8,24 @@ function About() {
     {
       name: "Manuel Osorio Lozano",
       position: "Presidente",
-      image: "https://i.ytimg.com/vi/1lUMjHbRK08/maxresdefault.jpg",
+      image: "https://www.diariodepontevedra.es/media/diariodepontevedra/images/2024/02/09/2024020918014660046.jpg",
       description: "Más de 20 años de experiencia con la comunidad venezolana y su integración en España."
     },
     {
-      name: "No disponible",
+      name: "César Augusto Alarcón",
       position: "Vicepresidente",
       image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     },
     {
-      name: "No disponible",
+      name: "Mónica Brenna Álvarez",
       position: "Secretaria",
       image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     },
     {
-      name: "No disponible",
-      position: "Asesor Legal",
+      name: "María Elena Buján",
+      position: "Tesorera",
       image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     }
