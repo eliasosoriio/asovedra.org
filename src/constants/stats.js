@@ -50,8 +50,7 @@ export const STATS_ARRAY = [
 export const HERO_STATS_ARRAY = [
   HERO_STATS.venezuelansSupported,
   HERO_STATS.yearsOfExperience,
-  HERO_STATS.jobsAchieved,
-  HERO_STATS.commitment
+  HERO_STATS.jobsAchieved
 ];
 
 // Variante para About (con diferentes labels y formato)

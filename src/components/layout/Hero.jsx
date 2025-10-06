@@ -14,10 +14,10 @@ function Hero() {
          {/* Contenido del Hero */}
          <div className="hero-content flex flex-col items-center gap-12 mb-24 md:mb-16 px-4 flex-1 justify-center">
          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-white text-center font-bold text-6xl md:text-6xl lg:text-7xl mb-6 leading-tight">Asovedra</h1>
+            <h1 className="text-white text-center font-bold text-6xl md:text-6xl lg:text-7xl mb-8 md:mb-6 leading-tight">Asovedra</h1>
             <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
                Tu aliado en España. Brindamos apoyo integral a la comunidad
-               venezolana con servicios especializados en migración, empleo y
+               iberoamericana con servicios especializados en migración, empleo y
                integración social.
             </p>
          </div>
@@ -25,13 +25,13 @@ function Hero() {
          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
                to="/servicios"
-               className="btn-light text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+               className="btn-light text-sm sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
                Descubre nuestros servicios
             </Link>
             <Link
                to="/contacto"
-               className="btn-white-outline text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+               className="btn-white-outline text-sm sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
                Contactar ahora
             </Link>

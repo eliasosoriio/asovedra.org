@@ -36,6 +36,33 @@
     box-sizing: border-box;
 }
 
+/* Estilos personalizados para scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(222, 222, 222, 0.3);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #001E77, #0033aa);
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0033aa, #001E77);
+}
+
+/* Para Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #001E77 rgba(222, 222, 222, 0.3);
+}
+
 /* Utilidades adicionales */
 .line-clamp-2 {
     display: -webkit-box;
