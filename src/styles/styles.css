@@ -200,7 +200,7 @@ button[disabled] {
 .hero-bg {
     background-image: 
         linear-gradient(135deg, rgba(0, 30, 119, 0.9) 0%, rgba(16, 20, 40, 0.95) 50%, rgba(0, 0, 0, 0.8) 100%), 
-        url(https://asovedra.org/assets/asovedra_hero.jpg);
+        url(https://asovedra.org/assets/img/asovedra_hero.jpg);
     background-attachment: fixed;
 }
 
@@ -215,7 +215,7 @@ button[disabled] {
             rgba(0, 30, 119, 0.3) 95%,
             transparent 100%
         ), 
-        url(https://asovedra.org/assets/asovedra_hero.jpg);
+        url(https://asovedra.org/assets/img/asovedra_hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

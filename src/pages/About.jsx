@@ -8,25 +8,25 @@ function About() {
     {
       name: "Manuel Osorio Lozano",
       position: "Presidente",
-      image: "https://www.diariodepontevedra.es/media/diariodepontevedra/images/2024/02/09/2024020918014660046.jpg",
-      description: "Más de 20 años de experiencia con la comunidad venezolana y su integración en España."
+      image: "https://asovedra.org/assets/img/people/manuel-osorio.jpg",
+      description: "Más de 20 años de experiencia con la comunidad venezolana y su integración en España, ayudando a cientos de familias a establecerse y prosperar en su nuevo hogar."
     },
     {
       name: "César Augusto Alarcón",
       position: "Vicepresidente",
-      image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
+      image: "https://asovedra.org/assets/img/people/cesar-alarcon.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     },
     {
       name: "Mónica Brenna Álvarez",
       position: "Secretaria",
-      image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
+      image: "https://asovedra.org/assets/img/people/monica-brenna.jpg",
+      description: "Compagina su profesión de odontóloga en el SERGAS con su pasión por el voluntariado en ASOVEDRA, donde desde 2018 ayuda a las personas migrantes que lo necesitan."
     },
     {
       name: "María Elena Buján",
       position: "Tesorera",
-      image: "https://glomastore.s3.amazonaws.com/img/sin_imagen.png",
+      image: "https://asovedra.org/assets/img/people/maria-elena.jpg",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
     }
   ]
