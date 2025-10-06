@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { HelmetProvider } from 'react-helmet-async'
-import { Header } from './components/layout/Header'
 import Hero from './components/layout/Hero'
 import Footer from './components/layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -20,8 +19,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={
           <PageTransition>
-            <div className='home-bg py-6 px-3 w-full min-h-screen bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center relative'>
-              <Header />
+            <div className='home-bg w-full min-h-screen bg-center bg-cover bg-no-repeat'>
               <Hero />
             </div>
             <Home />

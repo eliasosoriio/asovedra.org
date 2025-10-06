@@ -75,7 +75,7 @@ export function Header() {
     ...personalizedNavTheme,
     "root": {
       ...personalizedNavTheme.root,
-      "base": "sticky w-full z-9999 backdrop-blur-md px-4 py-4 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl dark:border-0 animate-fade-in-down top-0 left-0 right-0 transition-all duration-300 bg-transparent"
+      "base": "sticky w-full z-9999 backdrop-blur-md px-4 py-4 mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-6xl dark:border-0 top-0 left-0 right-0 transition-all duration-300 bg-transparent"
     },
     "link": {
       "base": "block py-3 pl-3 pr-4 md:p-0 font-medium transition-colors duration-300 rounded-lg md:rounded-none",
@@ -91,8 +91,8 @@ export function Header() {
   };
 
   return (
-    <div className="md:-mt-28 lg:-mt-32 w-full">
-      <Navbar fluid theme={dynamicNavTheme} className="rounded-2xl">
+    <div className="w-full">
+      <Navbar fluid theme={dynamicNavTheme} className="rounded-2xl bg-white/10 backdrop-blur-md">
         <Link to="/">
           <img src="/favicon.png" alt="Logo ASOVEDRA" className="h-11" />
         </Link>

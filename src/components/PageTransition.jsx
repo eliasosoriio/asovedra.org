@@ -5,7 +5,7 @@ const PageTransition = ({ children }) => {
   const variants = {
     initial: {
       opacity: 0,
-      y: 20,
+      y: 0,
     },
     animate: {
       opacity: 1,
