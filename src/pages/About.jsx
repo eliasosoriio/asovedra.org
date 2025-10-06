@@ -9,7 +9,7 @@ function About() {
       name: "Manuel Osorio Lozano",
       position: "Presidente",
       image: "https://i.ytimg.com/vi/1lUMjHbRK08/maxresdefault.jpg",
-      description: "Más de 7 años de experiencia con la comunidad venezolana y su integración en España."
+      description: "Más de 20 años de experiencia con la comunidad venezolana y su integración en España."
     },
     {
       name: "No disponible",

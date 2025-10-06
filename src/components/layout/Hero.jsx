@@ -17,7 +17,7 @@ function Hero() {
             <h1 className="text-white text-center font-bold text-6xl md:text-6xl lg:text-7xl mb-8 md:mb-6 leading-tight">Asovedra</h1>
             <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
                Tu aliado en España. Brindamos apoyo integral a la comunidad
-               iberoamericana con servicios especializados en migración, empleo y
+               iberoamericana con servicios especializados en migración, empleo e
                integración social.
             </p>
          </div>
