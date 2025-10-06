@@ -43,7 +43,7 @@ const personalizedNavTheme = {
     }
   },
   "toggle": {
-    "base": "inline-flex items-center rounded-lg p-2 text-sm text-primary-dark dark:text-white hover:bg-transparent hover:cursor-pointer focus:outline-none focus:ring-0 focus:ring-gray-200 md:hidden dark:text-primary-gray dark:hover:bg-transparent dark:focus:ring-gray-600",
+    "base": "inline-flex items-center rounded-lg p-2 text-sm text-primary dark:text-white hover:bg-transparent hover:cursor-pointer focus:outline-none focus:ring-0 focus:ring-gray-200 md:hidden dark:text-primary dark:hover:bg-transparent dark:focus:ring-gray-600",
     "icon": "h-6 w-6 shrink-0",
     "title": "sr-only"
   }
@@ -87,6 +87,11 @@ export function Header() {
         "on": "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
         "off": ""
       }
+    },
+    "toggle": {
+      "base": "inline-flex items-center rounded-lg p-2 text-sm text-white hover:bg-white/10 hover:cursor-pointer focus:outline-none focus:ring-0 focus:ring-gray-200 md:hidden transition-colors duration-300",
+      "icon": "h-6 w-6 shrink-0",
+      "title": "sr-only"
     }
   };
 
