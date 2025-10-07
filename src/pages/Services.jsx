@@ -34,7 +34,7 @@ function Services() {
     },
     {
       title: "Trámites Migratorios",
-      description: "Asistencia integral en procesos de regularización, renovaciones, nacionalización y otros trámites oficiales.",
+      description: "Asistencia integral en procesos de regularización, renovaciones, nacionalización y otros trámites oficiales, con el apoyo de profesionales de bufete colaboradores que nos asesoran en casos complejos.",
       icon: "📋",
       color: "primary-dark",
       details: [

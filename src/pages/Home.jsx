@@ -186,7 +186,7 @@ function Home() {
             />
             <ServiceCardModern 
               title="Trámites Migratorios" 
-              description="Asistencia integral en procesos de regularización, renovaciones y nacionalización."
+              description="Asistencia integral en procesos de regularización, renovaciones y nacionalización, con el apoyo de profesionales de bufete colaboradores."
               icon="📋"
               color="primary-dark"
             />
