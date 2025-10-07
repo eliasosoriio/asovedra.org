@@ -16,7 +16,7 @@ function About() {
       name: "César Augusto Alarcón",
       position: "Vicepresidente",
       image: "https://asovedra.org/assets/img/people/cesar-alarcon.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
+      description: "Abogado que emigró a España hace siete años; trabajó en empleos temporales mientras regularizaba su situación y recientemente abrió su despacho en Pontevedra."
     },
     {
       name: "Mónica Brenna Álvarez",
@@ -28,7 +28,7 @@ function About() {
       name: "María Elena Buján",
       position: "Tesorera",
       image: "https://asovedra.org/assets/img/people/maria-elena.jpg",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet."
+      description: "Llegó desde Venezuela en 2019, donde ayudaba a padres y madres en situaciones precarias; ahora presta ese apoyo a familias en Pontevedra como parte de Asovedra."
     }
   ]
 

@@ -1,94 +1,20 @@
-import React, { useState, useRef } from 'react'
+﻿import React, { useState, useRef } from 'react'
 import NewsCard from '../components/ui/NewsCard'
 import { Header } from '../components/layout/Header'
+import { NEWS_DATA } from '../constants/news'
 import SEO from '../components/SEO'
 
 function News() {
   const [currentPage, setCurrentPage] = useState(1)
   const newsPerPage = 5
   const newsContainerRef = useRef(null)
-  const newsData = [
-    {
-      title: "Asovedra calcula que 2.000 venezolanos llegaron a Pontevedra desde el año 2017",
-      image: "https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2019/08/03/2019080312114328443.jpg",
-      description: "La Asociación de Venezolanos en Pontevedra presenta un informe detallado sobre la llegada de migrantes venezolanos a la provincia en los últimos años.",
-      date: "3 de agosto, 2019",
-      source: "Diario de Pontevedra",
-      url: "https://www.diariodepontevedra.es/articulo/pontevedra/asovedra-calcula-2000-venezolanos-llegaron-pontevedra-ano-2017/201908031211431894338.html"
-    },
-    {
-      title: "Venimos a trabajar, no a quitar nada a nadie, es hora de acabar con ese famoso mito",
-      image: "https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg",
-      description: "Representantes de la comunidad venezolana desmienten prejuicios y explican su contribución positiva a la sociedad gallega.",
-      date: "22 de julio, 2025",
-      source: "Diario de Pontevedra",
-      url: "https://www.diariodepontevedra.es/articulo/pontevedra/venimos-trabajar-quitar-nada-nadie-hora-acabar-famoso-mito/202507221531057890567.html"
-    },
-    {
-      title: "GLC Abogados y ASOVEDRA en el Congreso de los Diputados",
-      image: "https://glcabogados.es/wp-content/uploads/2025/05/GLCAbogados-y-Asovedra-en-Congreso-diputados-1080x675.jpeg",
-      description: "Importante reunión para abordar temas migratorios y derechos de los venezolanos residentes en España.",
-      date: "Mayo, 2025",
-      source: "GLC Abogados",
-      url: "https://glcabogados.es/glc-abogados-y-asovedra-en-el-congreso-de-los-diputados/"
-    },
-    {
-      title: "El colectivo de venezolanos habla: España necesita médicos, ingenieros...",
-      image: "https://estaticos-cdn.prensaiberica.es/clip/128d1d7f-3ffd-45af-bd37-453f77b15536_16-9-discover-aspect-ratio_default_0.jpg",
-      description: "Profesionales venezolanos destacan la necesidad de España de cubrir puestos especializados y su disposición a contribuir.",
-      date: "Septiembre, 2025",
-      source: "Prensa Ibérica",
-      url: "https://www.farodevigo.es/galicia/2023/09/15/colectivo-venezolanos-habla-espana-necesita-93325634.html"
-    },
-    {
-      title: "Asovedra organiza jornada de orientación laboral para profesionales venezolanos",
-      image: "https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2019/08/03/2019080312114328443.jpg",
-      description: "Más de 150 profesionales participaron en las jornadas de orientación laboral organizadas por Asovedra en colaboración con empresas locales.",
-      date: "15 de septiembre, 2025",
-      source: "Asovedra",
-      url: "https://asovedra.org/jornadas-orientacion-laboral-2025"
-    },
-    {
-      title: "Nuevo convenio entre Asovedra y el Ayuntamiento de Pontevedra",
-      image: "https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg",
-      description: "El acuerdo facilitará la integración de familias venezolanas mediante programas de apoyo social y educativo.",
-      date: "10 de septiembre, 2025",
-      source: "Ayuntamiento de Pontevedra",
-      url: "https://www.pontevedra.gal/convenio-asovedra-integracion-venezolanos"
-    },
-    {
-      title: "Exitosa campaña de regularización documental beneficia a 200 venezolanos",
-      image: "https://glcabogados.es/wp-content/uploads/2025/05/GLCAbogados-y-Asovedra-en-Congreso-diputados-1080x675.jpeg",
-      description: "La campaña de asesoría legal gratuita logró regularizar la situación de más de 200 venezolanos en la región.",
-      date: "5 de agosto, 2025",
-      source: "Asovedra",
-      url: "https://glcabogados.es/campana-regularizacion-documental-venezolanos"
-    },
-    {
-      title: "Asovedra presenta estudio sobre integración laboral de venezolanos en Galicia",
-      image: "https://estaticos-cdn.prensaiberica.es/clip/128d1d7f-3ffd-45af-bd37-453f77b15536_16-9-discover-aspect-ratio_default_0.jpg",
-      description: "El estudio revela que el 78% de los venezolanos en Galicia ha conseguido empleo en sectores acordes a su formación profesional.",
-      date: "20 de julio, 2025",
-      source: "Universidad de Santiago",
-      url: "https://www.usc.gal/es/estudios/estudio-integracion-laboral-venezolanos-galicia"
-    },
-    {
-      title: "Programa de mentoría conecta a profesionales venezolanos con empresarios gallegos",
-      image: "https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2019/08/03/2019080312114328443.jpg",
-      description: "La iniciativa ha facilitado la creación de una red de apoyo profesional que beneficia tanto a migrantes como a empresas locales.",
-      date: "12 de julio, 2025",
-      source: "Cámara de Comercio",
-      url: "https://camarapontevedra.com/programa-mentoria-venezolanos-empresarios"
-    },
-    {
-      title: "Asovedra celebra su vigésimo aniversario con una gala benéfica",
-      image: "https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg",
-      description: "La celebración reunió a más de 300 personas y recaudó fondos para programas de apoyo a familias venezolanas en situación vulnerable.",
-      date: "30 de junio, 2025",
-      source: "Asovedra",
-      url: "https://asovedra.org/vigesimo-aniversario-gala-benefica"
-    }
-  ]
+
+  // Ordenar automáticamente por fecha (desc)
+  const newsData = [...NEWS_DATA].sort((a, b) => {
+    const dA = new Date(a.isoDate || 0).getTime()
+    const dB = new Date(b.isoDate || 0).getTime()
+    return dB - dA
+  })
 
   // Calcular paginación
   const totalPages = Math.ceil(newsData.length / newsPerPage)
@@ -108,7 +34,7 @@ function News() {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
-    setTimeout(scrollToNews, 100) // Pequeño delay para asegurar que el contenido se actualice primero
+    setTimeout(scrollToNews, 100)
   }
   
   const nextPage = () => {
@@ -159,7 +85,7 @@ function News() {
           <div className="space-y-6 transition-all duration-300 ease-in-out">
             {currentNews.map((news, index) => (
               <NewsCard
-                key={indexOfFirstNews + index}
+                key={news.url || indexOfFirstNews + index}
                 title={news.title}
                 image={news.image}
                 description={news.description}
@@ -181,7 +107,7 @@ function News() {
                   : 'btn-secondary hover:bg-primary-blue hover:text-white'
               }`}
             >
-              ← Anterior
+               Anterior
             </button>
             
             <div className="flex space-x-2">
@@ -212,7 +138,7 @@ function News() {
                   : 'btn-secondary hover:bg-primary-blue hover:text-white'
               }`}
             >
-              Siguiente →
+              Siguiente 
             </button>
           </div>
           

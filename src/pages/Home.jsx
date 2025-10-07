@@ -4,14 +4,24 @@ import ServiceCard from '../components/ui/ServiceCard'
 import NewsCard from '../components/ui/NewsCard'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { STATS_ARRAY } from '../constants/stats'
+import { NEWS_DATA } from '../constants/news'
 import SEO from '../components/SEO'
 
 function Home() {
+  // Obtener las 5 noticias más recientes ordenadas por fecha
+  const latestNews = [...NEWS_DATA]
+    .sort((a, b) => {
+      const dA = new Date(a.isoDate || 0).getTime()
+      const dB = new Date(b.isoDate || 0).getTime()
+      return dB - dA
+    })
+    .slice(0, 3)
+
   return (
     <>
       <SEO 
         title="Asovedra"
-        description="Asovedra es la asociación líder de apoyo a venezolanos en España. Ofrecemos servicios legales, empleo, trámites migratorios y apoyo integral en Pontevedra, Galicia."
+        description="Asovedra apoya a venezolanos en Pontevedra, Galicia y toda España con asesoría migratoria, legal y laboral. Te ayudamos en trámites y adaptación en España."
         keywords="asovedra, venezolanos españa, asociación venezolana, apoyo legal, empleo venezuela, pontevedra, galicia, inmigración, trámites migratorios"
         canonical="/"
       />
@@ -24,34 +34,17 @@ function Home() {
           </div>
           
           <div className='space-y-4'>
-            <NewsCard 
-              title="Asovedra calcula que 2.000 venezolanos llegaron a Pontevedra desde el año 2017" 
-              image="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2019/08/03/2019080312114328443.jpg"
-              description="La Asociación de Venezolanos en Pontevedra presenta un informe detallado sobre la llegada de migrantes venezolanos a la provincia en los últimos años."
-              date="3 de agosto, 2019"
-              source="Diario de Pontevedra"
-            />
-            <NewsCard 
-              title="Venimos a trabajar, no a quitar nada a nadie, es hora de acabar con ese famoso mito" 
-              image="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg"
-              description="Representantes de la comunidad venezolana desmienten prejuicios y explican su contribución positiva a la sociedad gallega."
-              date="22 de julio, 2025"
-              source="Diario de Pontevedra"
-            />
-            <NewsCard 
-              title="GLC Abogados y ASOVEDRA en el Congreso de los Diputados" 
-              image="https://glcabogados.es/wp-content/uploads/2025/05/GLCAbogados-y-Asovedra-en-Congreso-diputados-1080x675.jpeg"
-              description="Importante reunión para abordar temas migratorios y derechos de los venezolanos residentes en España."
-              date="Mayo, 2025"
-              source="GLC Abogados"
-            />
-            <NewsCard 
-              title="El colectivo de venezolanos habla: España necesita médicos, ingenieros..." 
-              image="https://estaticos-cdn.prensaiberica.es/clip/128d1d7f-3ffd-45af-bd37-453f77b15536_16-9-discover-aspect-ratio_default_0.jpg"
-              description="Profesionales venezolanos destacan la necesidad de España de cubrir puestos especializados y su disposición a contribuir."
-              date="Septiembre, 2025"
-              source="Prensa Ibérica"
-            />
+            {latestNews.map((news, index) => (
+              <NewsCard 
+                key={news.url || index}
+                title={news.title}
+                image={news.image}
+                description={news.description}
+                date={news.date}
+                source={news.source}
+                url={news.url}
+              />
+            ))}
           </div>
           
           <div className="flex justify-center mt-8">
