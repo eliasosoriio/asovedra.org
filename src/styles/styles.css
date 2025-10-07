@@ -304,16 +304,8 @@ button[disabled] {
     position: relative;
 }
 
+/* Removed bottom decorative gradient to avoid grey shadow at end of nav box */
 .nav-bg::after {
     content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: linear-gradient(to bottom, 
-        rgba(0, 30, 119, 0.1) 0%,
-        transparent 100%
-    );
-    pointer-events: none;
+    display: none;
 }
