@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../components/SEO'
 import { Header } from '../components/layout/Header'
 import { ABOUT_STATS_ARRAY } from '../constants/stats'
 import { Link } from 'react-router-dom'
@@ -41,6 +42,13 @@ function About() {
   ]
 
   return (
+    <>
+      <SEO
+        title="Sobre Nosotros"
+        description="Conoce la historia, misión y equipo de Asovedra. Ofrecemos apoyo e integración a la comunidad iberoamericana en España."
+        keywords="asovedra, sobre nosotros, misión, equipo, asociación, iberoamericanos, integración"
+        canonical="/sobre-nosotros"
+      />
     <main className='min-h-screen bg-gray-50'>
       {/* Header Section with Navigation */}
       <section className="nav-bg py-6 px-3 sticky top-0 z-50">
@@ -253,6 +261,7 @@ function About() {
         </div>
       </section>
     </main>
+    </>
   )
 }
 

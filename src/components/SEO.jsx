@@ -9,13 +9,13 @@ const SEO = ({
   ogType = 'website',
   article = null
 }) => {
-  const siteTitle = 'Asovedra - Asociación de Venezolanos en Pontevedra'
+  const siteTitle = 'Asociación de venezolanos en Pontevedra, Galicia y España: asesoría migratoria, legal, empleo y trámites'
   const siteUrl = 'https://asovedra.org'
   const defaultDescription = 'Asovedra brinda apoyo integral a la comunidad venezolana en Galicia y toda España. Servicios legales, empleo, trámites migratorios y más. ¡Contáctanos!'
   const defaultKeywords = 'asovedra, venezolanos españa, asociación venezolana, ayuda legal migratoria, empleo venezuela, pontevedra, galicia, inmigración'
   const defaultImage = `${siteUrl}/og-image.jpg`
 
-  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
+  const fullTitle = title ? `${title} - ${siteTitle}` : siteTitle
   const metaDescription = description || defaultDescription
   const metaKeywords = keywords || defaultKeywords
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : siteUrl

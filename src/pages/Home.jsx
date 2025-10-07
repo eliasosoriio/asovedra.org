@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <SEO 
-        title="Inicio - Apoyo a Venezolanos en España"
+        title="Asovedra"
         description="Asovedra es la asociación líder de apoyo a venezolanos en España. Ofrecemos servicios legales, empleo, trámites migratorios y apoyo integral en Pontevedra, Galicia."
         keywords="asovedra, venezolanos españa, asociación venezolana, apoyo legal, empleo venezuela, pontevedra, galicia, inmigración, trámites migratorios"
         canonical="/"

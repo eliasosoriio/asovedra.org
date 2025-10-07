@@ -96,7 +96,7 @@ function Services() {
   return (
     <>
       <SEO 
-        title="Servicios - Apoyo Integral a Venezolanos"
+        title="Servicios"
         description="Descubre todos los servicios de Asovedra: asesoría legal migratoria, bolsa de empleo, trámites, formación, apoyo psicológico y más. ¡Contáctanos!"
         keywords="servicios asovedra, asesoría legal migratoria, empleo venezuela, trámites migratorios, formación, apoyo psicológico"
         canonical="/servicios"

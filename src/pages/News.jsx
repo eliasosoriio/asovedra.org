@@ -128,7 +128,7 @@ function News() {
   return (
     <>
       <SEO 
-        title="Noticias - Actualidad Venezolana en España"
+        title="Noticias"
         description="Mantente informado con las últimas noticias de la comunidad venezolana en España. Cobertura de eventos, logros y actualidad migratoria."
         keywords="noticias venezolanos españa, actualidad venezuela, comunidad venezolana, noticias asovedra, eventos venezolanos"
         canonical="/noticias"

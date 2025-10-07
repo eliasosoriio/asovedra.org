@@ -67,7 +67,7 @@ function Contact() {
   return (
     <>
       <SEO 
-        title="Contacto - Asovedra"
+        title="Contacto"
         description="Contacta con Asovedra para recibir apoyo y asesoría. Teléfono: +34 604 016 113. Email: info@asovedra.org. Oficina en Pontevedra, España."
         keywords="contacto asovedra, teléfono asovedra, email asovedra, oficina pontevedra, consulta gratuita, asesoría legal"
         canonical="/contacto"
