@@ -133,12 +133,18 @@ function Footer() {
               © 2025 ASOVEDRA - Asociación de Venezolanos en Pontevedra. Todos los derechos reservados.
             </div>
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
+              <Link to="/aviso-legal" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
+                Aviso Legal
+              </Link>
+              <Link to="/politica-privacidad" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
                 Política de Privacidad
-              </a>
-              <a href="#" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
-                Términos y Condiciones
-              </a>
+              </Link>
+              <Link to="/politica-cookies" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
+                Política de Cookies
+              </Link>
+              <Link to="/accesibilidad" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
+                Accesibilidad
+              </Link>
             </div>
           </div>
         </div>

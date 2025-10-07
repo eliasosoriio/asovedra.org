@@ -10,6 +10,10 @@ import News from "./pages/News"
 import About from "./pages/About"
 import Services from "./pages/Services"
 import Contact from "./pages/Contact"
+import AvisoLegal from "./pages/AvisoLegal"
+import PoliticaPrivacidad from "./pages/PoliticaPrivacidad"
+import PoliticaCookies from "./pages/PoliticaCookies"
+import Accesibilidad from "./pages/Accesibilidad"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -47,6 +51,30 @@ function AnimatedRoutes() {
         <Route path="/contacto" element={
           <PageTransition>
             <Contact />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/aviso-legal" element={
+          <PageTransition>
+            <AvisoLegal />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/politica-privacidad" element={
+          <PageTransition>
+            <PoliticaPrivacidad />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/politica-cookies" element={
+          <PageTransition>
+            <PoliticaCookies />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/accesibilidad" element={
+          <PageTransition>
+            <Accesibilidad />
             <Footer />
           </PageTransition>
         } />
