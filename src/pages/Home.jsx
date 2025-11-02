@@ -6,6 +6,7 @@ import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { STATS_ARRAY } from '../constants/stats'
 import { NEWS_DATA } from '../constants/news'
 import SEO from '../components/SEO'
+import { FaMapMarkerAlt, FaBullseye, FaBriefcase, FaClipboardList, FaBook, FaBalanceScale } from 'react-icons/fa'
 
 function Home() {
   // Obtener las 5 noticias más recientes ordenadas por fecha
@@ -71,7 +72,7 @@ function Home() {
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center text-white text-xl font-bold">
-                    📍
+                    <FaMapMarkerAlt />
                   </div>
                   <h3 className="text-xl font-bold text-primary-dark ml-4">Nuestra Misión</h3>
                 </div>
@@ -83,7 +84,7 @@ function Home() {
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary-gray rounded-full flex items-center justify-center text-white text-xl font-bold">
-                    🎯
+                    <FaBullseye />
                   </div>
                   <h3 className="text-xl font-bold text-primary-dark ml-4">Nuestra Visión</h3>
                 </div>
@@ -168,25 +169,25 @@ function Home() {
             <ServiceCardModern 
               title="Asesoría Legal" 
               description="Orientación jurídica especializada en temas migratorios, documentación y derechos legales."
-              icon="⚖️"
+              icon={<FaBalanceScale />}
               color="primary-blue"
             />
             <ServiceCardModern 
               title="Bolsa de Empleo" 
               description="Conectamos profesionales con oportunidades laborales acordes a su experiencia y formación."
-              icon="💼"
+              icon={<FaBriefcase />}
               color="primary-gray"
             />
             <ServiceCardModern 
               title="Trámites Migratorios" 
               description="Asistencia integral en procesos de regularización, renovaciones y nacionalización, con el apoyo de profesionales de bufete colaboradores."
-              icon="📋"
+              icon={<FaClipboardList />}
               color="primary-dark"
             />
             <ServiceCardModern 
               title="Formación y Cursos" 
               description="Programas educativos para el desarrollo profesional y la integración laboral."
-              icon="📚"
+              icon={<FaBook />}
               color="primary-light"
             />
           </div>
@@ -205,10 +206,29 @@ function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Plan de Igualdad Banner */}
+          <div className="mt-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-center shadow-xl">
+            <div className="text-white">
+              <FaBalanceScale className="text-5xl md:text-6xl mx-auto mb-6" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Plan de Igualdad de Género 2025-2026
+              </h2>
+              <p className="text-lg md:text-xl mb-6 opacity-90 max-w-2xl mx-auto">
+                Conoce nuestro compromiso con la igualdad de oportunidades y la no discriminación
+              </p>
+              <Link 
+                to="/plan-de-igualdad" 
+                className="inline-block bg-white text-purple-600 px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-base md:text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+              >
+                Ver Plan de Igualdad
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className='mt-16 bg-gradient-to-br from-primary-light to-blue-50 p-12 rounded-2xl w-full'>
+      <section className='mt-8 bg-gradient-to-br from-primary-light to-blue-50 p-12 rounded-2xl w-full'>
         <div className="max-w-6xl mx-auto w-full text-center">
           <h2 className='text-3xl text-primary-dark font-bold mb-4'>¿Necesitas más información?</h2>
           <p className='text-primary-dark mb-8 text-lg max-w-2xl mx-auto'>

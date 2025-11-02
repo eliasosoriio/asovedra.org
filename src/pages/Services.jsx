@@ -3,13 +3,14 @@ import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { Header } from '../components/layout/Header'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { FaBalanceScale, FaBriefcase, FaClipboardList, FaBook, FaBrain, FaUsers, FaGraduationCap, FaHandshake, FaTheaterMasks, FaExclamationTriangle } from 'react-icons/fa'
 
 function Services() {
   const services = [
     {
       title: "Asesoría Legal Migratoria",
       description: "Orientación jurídica especializada en temas migratorios, documentación y derechos legales para venezolanos en España.",
-      icon: "⚖️",
+      icon: <FaBalanceScale />,
       color: "primary-blue",
       details: [
         "Consultas sobre estatus migratorio",
@@ -22,7 +23,7 @@ function Services() {
     {
       title: "Bolsa de Empleo",
       description: "Conectamos profesionales con oportunidades laborales acordes a su experiencia y formación en el mercado español.",
-      icon: "💼",
+      icon: <FaBriefcase />,
       color: "primary-gray",
       details: [
         "Base de datos de ofertas laborales",
@@ -35,7 +36,7 @@ function Services() {
     {
       title: "Trámites Migratorios",
       description: "Asistencia integral en procesos de regularización, renovaciones, nacionalización y otros trámites oficiales, con el apoyo de profesionales de bufete colaboradores que nos asesoran en casos complejos.",
-      icon: "📋",
+      icon: <FaClipboardList />,
       color: "primary-dark",
       details: [
         "Renovación de permisos de residencia",
@@ -48,7 +49,7 @@ function Services() {
     {
       title: "Formación y Cursos",
       description: "Programas educativos para el desarrollo profesional, la integración laboral y el crecimiento personal.",
-      icon: "📚",
+      icon: <FaBook />,
       color: "primary-light",
       details: [
         "Cursos de idiomas (español, gallego)",
@@ -64,32 +65,32 @@ function Services() {
     {
       title: "Apoyo Psicológico",
       description: "Atención psicológica especializada en procesos migratorios y adaptación cultural.",
-      icon: "🧠"
+      icon: <FaBrain />
     },
     {
       title: "Orientación Familiar",
       description: "Apoyo integral para familias en procesos de reunificación y adaptación.",
-      icon: "👨‍👩‍👧‍👦"
+      icon: <FaUsers />
     },
     {
       title: "Programas Juveniles",
       description: "Actividades y programas especiales dirigidos a jóvenes venezolanos.",
-      icon: "🎓"
+      icon: <FaGraduationCap />
     },
     {
       title: "Red de Voluntarios",
       description: "Programa de voluntariado para fortalecer la comunidad y brindar apoyo mutuo.",
-      icon: "🤝"
+      icon: <FaHandshake />
     },
     {
       title: "Eventos Culturales",
       description: "Organización de eventos para mantener y compartir la cultura venezolana.",
-      icon: "🎭"
+      icon: <FaTheaterMasks />
     },
     {
       title: "Asistencia de Emergencia",
       description: "Apoyo inmediato en situaciones de crisis o necesidades urgentes.",
-      icon: "🚨"
+      icon: <FaExclamationTriangle />
     }
   ]
 

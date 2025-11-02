@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Header } from '../components/layout/Header'
 import SEO from '../components/SEO'
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaCar, FaBus, FaWalking } from 'react-icons/fa'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -29,25 +30,25 @@ function Contact() {
 
   const contactInfo = [
     {
-      icon: "📍",
+      icon: <FaMapMarkerAlt />,
       title: "Dirección",
       details: ["Rúa Sor Lucía 4, Oficina 50", "36002 Pontevedra, España"],
       link: "https://maps.google.com/?q=Rúa+Sor+Lucía+4,+Oficina+50,+36002+Pontevedra"
     },
     {
-      icon: "📞",
+      icon: <FaPhone />,
       title: "Teléfono",
       details: ["+34 604 016 113", "Llamadas y WhatsApp"],
       link: "tel:+34604016113"
     },
     {
-      icon: "✉️",
+      icon: <FaEnvelope />,
       title: "Email",
       details: ["info@asovedra.org"],
       link: "mailto:info@asovedra.org"
     },
     {
-      icon: "🕐",
+      icon: <FaClock />,
       title: "Horarios",
       details: ["Lunes, Miércoles: 10:00-14:00", "Martes: 17:00-19:00", "Jueves: 10:00-14:00, 17:00-19:00", "Fin de semana: Cerrado"],
       link: null
@@ -225,7 +226,7 @@ function Contact() {
                 <h3 className="text-2xl font-bold text-primary-dark mb-6">Información de Contacto</h3>
                 <div className="space-y-4 text-sm text-gray-600">
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-3 text-xl">📍</div>
+                    <div className="text-primary-blue mr-3 text-xl"><FaMapMarkerAlt /></div>
                     <div>
                       <p className="font-medium text-primary-dark">Dirección:</p>
                       <p>Rúa Sor Lucía 4, Oficina 50</p>
@@ -238,7 +239,7 @@ function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-3 text-xl">📞</div>
+                    <div className="text-primary-blue mr-3 text-xl"><FaPhone /></div>
                     <div>
                       <p className="font-medium text-primary-dark">Teléfono:</p>
                       <p>
@@ -251,7 +252,7 @@ function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-3 text-xl">✉️</div>
+                    <div className="text-primary-blue mr-3 text-xl"><FaEnvelope /></div>
                     <div>
                       <p className="font-medium text-primary-dark">Email:</p>
                       <p>
@@ -263,7 +264,7 @@ function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-3 text-xl">🕐</div>
+                    <div className="text-primary-blue mr-3 text-xl"><FaClock /></div>
                     <div>
                       <p className="font-medium text-primary-dark">Horarios:</p>
                       <p>Lunes, Miércoles: 10:00-14:00</p>
@@ -292,21 +293,21 @@ function Contact() {
                 <h4 className="text-lg font-bold text-primary-dark mb-4">Cómo llegar</h4>
                 <div className="space-y-3 text-sm text-gray-600">
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-2">🚗</div>
+                    <div className="text-primary-blue mr-2"><FaCar /></div>
                     <div>
                       <p className="font-medium">En coche:</p>
                       <p>Aparcamiento disponible en las proximidades</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-2">🚌</div>
+                    <div className="text-primary-blue mr-2"><FaBus /></div>
                     <div>
                       <p className="font-medium">En transporte público:</p>
                       <p>Líneas de autobús urbano con parada cercana</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="text-primary-blue mr-2">🚶</div>
+                    <div className="text-primary-blue mr-2"><FaWalking /></div>
                     <div>
                       <p className="font-medium">A pie:</p>
                       <p>Centro histórico de Pontevedra, zona peatonal</p>

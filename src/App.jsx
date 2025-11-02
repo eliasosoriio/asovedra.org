@@ -14,6 +14,7 @@ import AvisoLegal from "./pages/AvisoLegal"
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad"
 import PoliticaCookies from "./pages/PoliticaCookies"
 import Accesibilidad from "./pages/Accesibilidad"
+import PlanIgualdad from "./pages/PlanIgualdad"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -75,6 +76,12 @@ function AnimatedRoutes() {
         <Route path="/accesibilidad" element={
           <PageTransition>
             <Accesibilidad />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/plan-de-igualdad" element={
+          <PageTransition>
+            <PlanIgualdad />
             <Footer />
           </PageTransition>
         } />

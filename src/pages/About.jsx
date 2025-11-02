@@ -3,6 +3,7 @@ import SEO from '../components/SEO'
 import { Header } from '../components/layout/Header'
 import { ABOUT_STATS_ARRAY } from '../constants/stats'
 import { Link } from 'react-router-dom'
+import { FaBullseye, FaStar, FaHandshake, FaBalanceScale, FaGraduationCap, FaGlobe, FaDumbbell, FaHeart } from 'react-icons/fa'
 
 function About() {
   const teamMembers = [
@@ -29,6 +30,24 @@ function About() {
       position: "Tesorera",
       image: "https://asovedra.org/assets/img/people/maria-elena.jpg",
       description: "Llegó desde Venezuela en 2019, donde ayudaba a padres y madres en situaciones precarias; ahora presta ese apoyo a familias en Pontevedra como parte de Asovedra."
+    },
+    {
+      name: "Bernardo Gamallo Neira",
+      position: "Primer Vocal",
+      image: "https://asovedra.org/assets/img/people/bernardo-gamallo.jpg",
+      description: "Presidente fundador de la Asociación de Venezolanos en Pontevedra (2018–2021). Promotor del bienestar y la integración iberoamericana, fundador de Gaden Yoga, donde impulsa la meditación, el crecimiento personal y la armonía comunitaria."
+    },
+    {
+      name: "Juan Francisco Díaz Belisario",
+      position: "Segundo Vocal",
+      image: "https://asovedra.org/assets/img/people/juan-francisco.jpg",
+      description: "Comunicador Social con 30 años de experiencia en medios de comunicación y la docencia universitaria en Venezuela. Emigró a España en 2024, donde ha canalizado su compromiso social a través de voluntariado."
+    },
+    {
+      name: "Americo Antenucci",
+      position: "Tercer Vocal",
+      image: "https://asovedra.org/assets/img/people/americo-antenucci.jpg",
+      description: "De origen italiano y fue presidente del Club Ítalo Venezolano, destacando por su compromiso con la integración cultural y comunitaria. Aporta su experiencia colaborando activamente en el área de voluntariado y apoyo comunitario."
     }
   ]
 
@@ -71,7 +90,7 @@ function About() {
 
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gradient-to-br from-primary-blue to-blue-700 rounded-2xl p-8 text-white">
-              <div className="text-4xl mb-4">🎯</div>
+              <div className="text-4xl mb-4"><FaBullseye /></div>
               <h3 className="text-2xl font-bold mb-4">Misión</h3>
               <p className="text-lg leading-relaxed opacity-90">
                 Brindar apoyo integral y servicios especializados a la comunidad venezolana en España, 
@@ -81,7 +100,7 @@ function About() {
             </div>
 
             <div className="bg-gradient-to-br from-primary-dark to-gray-800 rounded-2xl p-8 text-primary-dark">
-              <div className="text-4xl mb-4">🌟</div>
+              <div className="text-4xl mb-4"><FaStar /></div>
               <h3 className="text-2xl font-bold mb-4">Visión</h3>
               <p className="text-lg leading-relaxed opacity-90">
                 Ser la organización de referencia para la comunidad venezolana en España, 
@@ -105,7 +124,7 @@ function About() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">🤝</div>
+              <div className="text-4xl mb-4"><FaHandshake className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Solidaridad</h3>
               <p className="text-gray-600">
                 Trabajamos unidos para apoyar a cada miembro de nuestra comunidad en sus necesidades y desafíos.
@@ -113,7 +132,7 @@ function About() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">⚖️</div>
+              <div className="text-4xl mb-4"><FaBalanceScale className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Transparencia</h3>
               <p className="text-gray-600">
                 Actuamos con honestidad y claridad en todos nuestros procesos y decisiones.
@@ -121,7 +140,7 @@ function About() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">🎓</div>
+              <div className="text-4xl mb-4"><FaGraduationCap className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Excelencia</h3>
               <p className="text-gray-600">
                 Nos esforzamos por brindar servicios de la más alta calidad y profesionalismo.
@@ -129,7 +148,7 @@ function About() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">🌍</div>
+              <div className="text-4xl mb-4"><FaGlobe className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Integración</h3>
               <p className="text-gray-600">
                 Promovemos la integración positiva respetando tanto nuestras raíces como la cultura local.
@@ -137,7 +156,7 @@ function About() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">💪</div>
+              <div className="text-4xl mb-4"><FaDumbbell className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Empoderamiento</h3>
               <p className="text-gray-600">
                 Capacitamos a las personas para que sean protagonistas de su propio desarrollo.
@@ -145,12 +164,33 @@ function About() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">❤️</div>
+              <div className="text-4xl mb-4"><FaHeart className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Compromiso</h3>
               <p className="text-gray-600">
                 Mantenemos una dedicación constante hacia el bienestar de nuestra comunidad.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Plan de Igualdad Banner */}
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="text-white">
+            <FaBalanceScale className="text-6xl mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Plan de Igualdad de Género 2025-2026
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Conoce nuestro compromiso con la igualdad de oportunidades y la no discriminación
+            </p>
+            <Link 
+              to="/plan-de-igualdad" 
+              className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Ver Plan de Igualdad
+            </Link>
           </div>
         </div>
       </section>

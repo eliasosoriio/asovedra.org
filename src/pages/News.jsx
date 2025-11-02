@@ -101,13 +101,16 @@ function News() {
             <button 
               onClick={prevPage}
               disabled={currentPage === 1}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              className={`p-3 rounded-lg font-medium transition-all ${
                 currentPage === 1 
                   ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
-                  : 'btn-secondary hover:bg-primary-blue hover:text-white'
+                  : 'btn-secondary hover:bg-primary-blue hover:text-white hover:scale-110'
               }`}
+              aria-label="Página anterior"
             >
-               Anterior
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
             
             <div className="flex space-x-2">
@@ -132,13 +135,16 @@ function News() {
             <button 
               onClick={nextPage}
               disabled={currentPage === totalPages}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              className={`p-3 rounded-lg font-medium transition-all ${
                 currentPage === totalPages 
                   ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
-                  : 'btn-secondary hover:bg-primary-blue hover:text-white'
+                  : 'btn-secondary hover:bg-primary-blue hover:text-white hover:scale-110'
               }`}
+              aria-label="Página siguiente"
             >
-              Siguiente 
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
           
