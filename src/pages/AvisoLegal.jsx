@@ -55,7 +55,7 @@ function AvisoLegal() {
               <div>
                 <h2 className="text-2xl font-bold text-primary-dark mb-4">OBJETO</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  El sitio web facilita a los usuarios del mismo el acceso a información y servicios prestados por Asovedra a aquellas personas u organizaciones interesadas en los mismos, especialmente en relación con el apoyo y la integración de la comunidad venezolana en España.
+                  El sitio web facilita a los usuarios del mismo el acceso a información y servicios prestados por Asovedra a aquellas personas u organizaciones interesadas en los mismos, especialmente en relación con el apoyo y la integración de la comunidad iberoamericana en España.
                 </p>
               </div>
 

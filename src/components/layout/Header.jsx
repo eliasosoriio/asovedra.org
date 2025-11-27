@@ -123,6 +123,9 @@ export function Header() {
             <NavbarLink as={Link} to="/servicios" active={location.pathname === "/servicios"}>
             Servicios
             </NavbarLink>
+            <NavbarLink as={Link} to="/estatutos" active={location.pathname === "/estatutos"}>
+            Estatutos
+            </NavbarLink>
             <NavbarLink as={Link} to="/contacto" active={location.pathname === "/contacto"}>
             Contacto
             </NavbarLink>

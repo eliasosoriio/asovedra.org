@@ -326,24 +326,24 @@ function Contact() {
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-primary-dark mb-4">Preguntas Frecuentes</h3>
             <p className="text-gray-600">
-              Encuentra respuestas rápidas a las consultas más comunes
+              Encuentra respuestas rápidas a las preguntas más comunes
             </p>
           </div>
 
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h4 className="font-bold text-primary-dark mb-2">¿Cuánto tiempo tardan en responder?</h4>
-              <p className="text-gray-600">Normalmente respondemos en un plazo de 24-48 horas laborables. Para consultas urgentes, recomendamos llamar directamente.</p>
+              <p className="text-gray-600">Normalmente respondemos en un plazo de 24-48 horas laborables. Para situaciones urgentes, recomendamos llamar directamente.</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
               <h4 className="font-bold text-primary-dark mb-2">¿Los servicios tienen costo?</h4>
-              <p className="text-gray-600">Ofrecemos servicios gratuitos y premium. La orientación inicial y la información básica son siempre gratuitas.</p>
+              <p className="text-gray-600">Ofrecemos servicios básicos y premium. La orientación inicial y la información básica están incluidas en nuestros servicios básicos.</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
               <h4 className="font-bold text-primary-dark mb-2">¿Necesito cita previa?</h4>
-              <p className="text-gray-600">Para una atención más personalizada recomendamos solicitar cita previa, aunque también atendemos consultas sin cita según disponibilidad.</p>
+              <p className="text-gray-600">Para una atención más personalizada recomendamos solicitar cita previa, aunque también atendemos sin cita según disponibilidad.</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">

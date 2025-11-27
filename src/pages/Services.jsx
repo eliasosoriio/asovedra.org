@@ -9,11 +9,11 @@ function Services() {
   const services = [
     {
       title: "Asesoría Legal Migratoria",
-      description: "Orientación jurídica especializada en temas migratorios, documentación y derechos legales para venezolanos en España.",
+      description: "Orientación jurídica especializada en temas migratorios, documentación y derechos legales para iberoamericanos en España.",
       icon: <FaBalanceScale />,
       color: "primary-blue",
       details: [
-        "Consultas sobre estatus migratorio",
+        "Orientación sobre estatus migratorio",
         "Tramitación de documentos",
         "Asesoramiento en procesos de regularización",
         "Orientación sobre derechos y deberes",
@@ -22,7 +22,7 @@ function Services() {
     },
     {
       title: "Bolsa de Empleo",
-      description: "Conectamos profesionales con oportunidades laborales acordes a su experiencia y formación en el mercado español.",
+      description: "Conectamos profesionales con oportunidades laborales acordes a su experiencia y formación en el mercado gallego principalmente.",
       icon: <FaBriefcase />,
       color: "primary-gray",
       details: [
@@ -74,7 +74,7 @@ function Services() {
     },
     {
       title: "Programas Juveniles",
-      description: "Actividades y programas especiales dirigidos a jóvenes venezolanos.",
+      description: "Actividades y programas especiales dirigidos a jóvenes iberoamericanos.",
       icon: <FaGraduationCap />
     },
     {
@@ -84,7 +84,7 @@ function Services() {
     },
     {
       title: "Eventos Culturales",
-      description: "Organización de eventos para mantener y compartir la cultura venezolana.",
+      description: "Organización de eventos para mantener y compartir la cultura iberoamericana.",
       icon: <FaTheaterMasks />
     },
     {
@@ -109,7 +109,7 @@ function Services() {
         <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Ofrecemos una amplia gama de servicios especializados para apoyar a la comunidad venezolana en España
+            Ofrecemos una amplia gama de programas de acompañamiento para apoyar a la comunidad iberoamericana en España
           </p>
         </div>
       </section>
@@ -225,15 +225,15 @@ function Services() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Modalidades de Servicio</h2>
+            <h2 className="text-3xl font-bold text-primary-dark mb-4">Programas y Modalidades de Apoyo</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Ofrecemos diferentes modalidades para adaptarnos a tus necesidades y posibilidades
+              Contamos con diversas modalidades de apoyo solidario, asesoría y acompañamiento, pensadas para promover la integración y el bienestar común.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-bold text-primary-dark mb-4">Servicios Gratuitos</h3>
+              <h3 className="text-xl font-bold text-primary-dark mb-4">Atención Básica Comunitaria</h3>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li>• Orientación inicial</li>
                 <li>• Información básica</li>
@@ -249,7 +249,7 @@ function Services() {
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-primary-dark px-4 py-1 rounded-full text-sm font-bold">
                 Más popular
               </div>
-              <h3 className="text-xl font-bold mb-4">Servicios Premium</h3>
+              <h3 className="text-xl font-bold mb-4">Acompañamiento Avanzado</h3>
               <ul className="space-y-2 opacity-90 mb-6">
                 <li>• Asesoría legal especializada</li>
                 <li>• Gestión de trámites</li>
@@ -257,17 +257,17 @@ function Services() {
                 <li>• Seguimiento personalizado</li>
               </ul>
               <Link to="tel:+34604016113" className="btn-light w-full">
-                Consultar tarifas
+                Más información
               </Link>
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-bold text-primary-dark mb-4">Membresía Anual</h3>
+              <h3 className="text-xl font-bold text-primary-dark mb-4">Membresía Solidaria</h3>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li>• Todos los servicios incluidos</li>
-                <li>• Descuentos especiales</li>
                 <li>• Acceso prioritario</li>
-                <li>• Eventos exclusivos</li>
+                <li>• Participación en actividades especiales</li>
+                <li>• Descuentos en eventos</li>
               </ul>
               <Link to="/contacto" className="btn-secondary w-full">
                 Más información
@@ -288,7 +288,7 @@ function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="tel:+34604016113" className="btn-primary">
-              Solicitar consulta gratuita
+              Solicitar consulta
             </Link>
             <Link to="/contacto" className="btn-secondary">
               Ver horarios de atención

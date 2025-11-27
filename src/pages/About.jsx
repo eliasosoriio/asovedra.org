@@ -75,7 +75,7 @@ function About() {
         <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Conoce nuestra historia, misión y el equipo que trabaja día a día por la comunidad venezolana en España
+            Conoce nuestra historia, misión y el equipo que trabaja día a día por la comunidad iberoamericana en España
           </p>
         </div>
       </section>
@@ -93,9 +93,7 @@ function About() {
               <div className="text-4xl mb-4"><FaBullseye /></div>
               <h3 className="text-2xl font-bold mb-4">Misión</h3>
               <p className="text-lg leading-relaxed opacity-90">
-                Brindar apoyo integral y servicios especializados a la comunidad venezolana en España, 
-                facilitando su integración social, laboral y cultural, mientras preservamos nuestras 
-                raíces y valores, promoviendo la solidaridad y el desarrollo mutuo.
+                Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia, a través del acompañamiento, la orientación y la cooperación solidaria, preservando nuestras raíces y valores, y fomentando la igualdad, la participación y el desarrollo mutuo.
               </p>
             </div>
 
@@ -103,9 +101,7 @@ function About() {
               <div className="text-4xl mb-4"><FaStar /></div>
               <h3 className="text-2xl font-bold mb-4">Visión</h3>
               <p className="text-lg leading-relaxed opacity-90">
-                Ser la organización de referencia para la comunidad venezolana en España, 
-                reconocida por la excelencia de nuestros servicios, nuestro compromiso con 
-                la integración exitosa y nuestro aporte al desarrollo social y económico del país.
+                Consolidarnos como una organización de referencia en Galicia por nuestro compromiso con la integración, la solidaridad y el desarrollo humano de la comunidad venezolana e iberoamericana, fortaleciendo los lazos culturales y sociales que nos unen y contribuyendo a una sociedad más inclusiva y participativa.
               </p>
             </div>
           </div>
@@ -127,7 +123,7 @@ function About() {
               <div className="text-4xl mb-4"><FaHandshake className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Solidaridad</h3>
               <p className="text-gray-600">
-                Trabajamos unidos para apoyar a cada miembro de nuestra comunidad en sus necesidades y desafíos.
+                Promovemos la ayuda mutua y el trabajo conjunto, fortaleciendo la unión y el apoyo entre quienes forman parte de nuestra comunidad.
               </p>
             </div>
 
@@ -135,7 +131,7 @@ function About() {
               <div className="text-4xl mb-4"><FaBalanceScale className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Transparencia</h3>
               <p className="text-gray-600">
-                Actuamos con honestidad y claridad en todos nuestros procesos y decisiones.
+                Gestionamos con honestidad y rendición de cuentas: publicamos de forma clara y accesible nuestras decisiones, actividades y uso de los recursos, abiertos al control de socios y comunidad.
               </p>
             </div>
 
@@ -143,7 +139,7 @@ function About() {
               <div className="text-4xl mb-4"><FaGraduationCap className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Excelencia</h3>
               <p className="text-gray-600">
-                Nos esforzamos por brindar servicios de la más alta calidad y profesionalismo.
+                Promovemos la excelencia en nuestra labor social, actuando con compromiso, respeto y calidad humana en cada acompañamiento.
               </p>
             </div>
 
@@ -151,7 +147,7 @@ function About() {
               <div className="text-4xl mb-4"><FaGlobe className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Integración</h3>
               <p className="text-gray-600">
-                Promovemos la integración positiva respetando tanto nuestras raíces como la cultura local.
+                Fomentamos la integración social y cultural desde el respeto mutuo, valorando nuestras raíces iberoamericanas y la riqueza de la cultura gallega.
               </p>
             </div>
 
@@ -159,7 +155,7 @@ function About() {
               <div className="text-4xl mb-4"><FaDumbbell className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Empoderamiento</h3>
               <p className="text-gray-600">
-                Capacitamos a las personas para que sean protagonistas de su propio desarrollo.
+                Acompañamos a las personas para fortalecer sus capacidades y que puedan ser protagonistas de su propio proceso de integración y crecimiento.
               </p>
             </div>
 
@@ -167,7 +163,7 @@ function About() {
               <div className="text-4xl mb-4"><FaHeart className="mx-auto text-primary-blue" /></div>
               <h3 className="text-xl font-bold text-primary-dark mb-3">Compromiso</h3>
               <p className="text-gray-600">
-                Mantenemos una dedicación constante hacia el bienestar de nuestra comunidad.
+                Asumimos con responsabilidad y entrega nuestro compromiso con la comunidad, trabajando cada día por su bienestar, integración y desarrollo.
               </p>
             </div>
           </div>

@@ -61,7 +61,7 @@ function PoliticaPrivacidad() {
               <div>
                 <h2 className="text-2xl font-bold text-primary-dark mb-4">Finalidad de tener datos</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  Utilizamos tus datos para llevar a cabo los servicios de apoyo y orientación que ofrecemos a la comunidad venezolana, para enviarte notificaciones con información sobre nuestros servicios, eventos y actividades. También, para enviarte información y emails sobre nuestros programas, así como ofertas de formación y oportunidades laborales.
+                  Utilizamos tus datos para llevar a cabo los servicios de apoyo y orientación que ofrecemos a la comunidad iberoamericana, para enviarte notificaciones con información sobre nuestros servicios, eventos y actividades. También, para enviarte información y emails sobre nuestros programas, así como ofertas de formación y oportunidades laborales.
                 </p>
               </div>
 

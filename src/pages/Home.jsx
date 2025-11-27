@@ -22,8 +22,8 @@ function Home() {
     <>
       <SEO 
         title="Asovedra"
-        description="Asovedra apoya a venezolanos en Pontevedra, Galicia y toda España con asesoría migratoria, legal y laboral. Te ayudamos en trámites y adaptación en España."
-        keywords="asovedra, venezolanos españa, asociación venezolana, apoyo legal, empleo venezuela, pontevedra, galicia, inmigración, trámites migratorios"
+        description="Asovedra apoya a iberoamericanos en Pontevedra, Galicia y toda España con asesoría migratoria, legal y laboral. Te ayudamos en trámites y adaptación en España."
+        keywords="asovedra, iberoamericanos españa, asociación iberoamericana, apoyo legal, empleo, pontevedra, galicia, inmigración, trámites migratorios"
         canonical="/"
       />
       <main className='flex flex-col items-center justify-center text-center px-3 py-8 gap-10 overflow-x-hidden'>
@@ -62,7 +62,7 @@ function Home() {
             <h2 className='text-3xl text-primary-dark font-bold mb-4'>Sobre Nosotros</h2>
             <div className="h-1 w-20 bg-primary-blue rounded mx-auto mb-6"></div>
             <p className='text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed'>
-              Somos una organización comprometida con el bienestar y la integración exitosa de la comunidad venezolana en España
+              Somos una organización comprometida con el bienestar y la integración exitosa de la comunidad iberoamericana en España
             </p>
           </div>
 
@@ -77,7 +77,7 @@ function Home() {
                   <h3 className="text-xl font-bold text-primary-dark ml-4">Nuestra Misión</h3>
                 </div>
                 <p className='text-gray-700 leading-relaxed'>
-                  Brindar apoyo integral y servicios especializados a la comunidad venezolana, facilitando su integración social, laboral y cultural en España, mientras preservamos nuestras raíces y valores.
+                  Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia, a través del acompañamiento, la orientación y la cooperación solidaria, preservando nuestras raíces y valores, y fomentando la igualdad, la participación y el desarrollo mutuo.
                 </p>
               </div>
               
@@ -89,7 +89,7 @@ function Home() {
                   <h3 className="text-xl font-bold text-primary-dark ml-4">Nuestra Visión</h3>
                 </div>
                 <p className='text-gray-700 leading-relaxed'>
-                  Ser la organización de referencia para la comunidad venezolana en España, reconocida por la excelencia de nuestros servicios y nuestro compromiso con la integración exitosa.
+                  Ser la organización de referencia para la comunidad iberoamericana en España, reconocida por la excelencia de nuestros servicios y nuestro compromiso con la integración exitosa.
                 </p>
               </div>
             </div>
@@ -161,7 +161,7 @@ function Home() {
           <div className="text-center mb-12">
             <h2 className='text-3xl text-primary-dark font-bold mb-4'>Nuestros Servicios</h2>
             <p className='text-gray-600 max-w-2xl mx-auto'>
-              Ofrecemos una amplia gama de servicios especializados para apoyar a la comunidad venezolana en España
+              Ofrecemos una amplia gama de programas de acompañamiento para apoyar a la comunidad iberoamericana en Galicia y parte de España
             </p>
           </div>
           

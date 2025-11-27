@@ -16,7 +16,7 @@ function Footer() {
               </span>
             </div>
             <p className="text-primary-dark text-sm leading-relaxed">
-              Asociación de Venezolanos en Pontevedra. Tu aliado en España, brindamos apoyo integral a la comunidad venezolana con servicios especializados.
+              Asociación de Venezolanos en Pontevedra. Entidad sin ánimo de lucro dedicada a la integración y desarrollo de la comunidad venezolana e iberoamericana en Galicia.
             </p>
             <div className="flex space-x-4" aria-label="Redes sociales">
               <a href="https://facebook.com/asovedra" target="_blank" rel="noopener" className="text-primary-dark hover:text-yellow-400 transition-colors duration-300" aria-label="Facebook">
@@ -73,6 +73,11 @@ function Footer() {
               <li>
                 <Link to="/noticias" className="text-primary-dark hover:text-yellow-400 transition-colors duration-300 text-sm">
                   Noticias
+                </Link>
+              </li>
+              <li>
+                <Link to="/estatutos" className="text-primary-dark hover:text-yellow-400 transition-colors duration-300 text-sm">
+                  Estatutos
                 </Link>
               </li>
               <li>
@@ -133,6 +138,9 @@ function Footer() {
               © 2025 ASOVEDRA - Asociación de Venezolanos en Pontevedra. Todos los derechos reservados.
             </div>
             <div className="flex items-center space-x-6">
+              <Link to="/estatutos" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
+                Estatutos
+              </Link>
               <Link to="/aviso-legal" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
                 Aviso Legal
               </Link>

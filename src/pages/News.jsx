@@ -55,8 +55,8 @@ function News() {
     <>
       <SEO 
         title="Noticias"
-        description="Mantente informado con las últimas noticias de la comunidad venezolana en España. Cobertura de eventos, logros y actualidad migratoria."
-        keywords="noticias venezolanos españa, actualidad venezuela, comunidad venezolana, noticias asovedra, eventos venezolanos"
+        description="Mantente informado con las últimas noticias de la comunidad iberoamericana en España. Cobertura de eventos, logros y actualidad migratoria."
+        keywords="noticias iberoamericanos españa, actualidad, comunidad iberoamericana, noticias asovedra, eventos"
         canonical="/noticias"
       />
       <main className='min-h-screen bg-gray-50'>
@@ -66,7 +66,7 @@ function News() {
         <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Noticias y Actualidad</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Mantente informado sobre las últimas noticias de la comunidad venezolana en España
+            Mantente informado sobre las últimas noticias de la comunidad iberoamericana en España
           </p>
         </div>
       </section>

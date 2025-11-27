@@ -2,7 +2,7 @@
 export const ASOVEDRA_STATS = {
   venezuelansSupported: {
     number: "4000+",
-    label: "Venezolanos Apoyados"
+    label: "Iberoamericanos Apoyados"
   },
   yearsOfExperience: {
     number: "7+",
