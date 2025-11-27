@@ -16,6 +16,7 @@ import PoliticaCookies from "./pages/PoliticaCookies"
 import Accesibilidad from "./pages/Accesibilidad"
 import PlanIgualdad from "./pages/PlanIgualdad"
 import Estatutos from "./pages/Estatutos"
+import DeclaracionValores from "./pages/DeclaracionValores"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -89,6 +90,12 @@ function AnimatedRoutes() {
         <Route path="/estatutos" element={
           <PageTransition>
             <Estatutos />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/declaracion-valores" element={
+          <PageTransition>
+            <DeclaracionValores />
             <Footer />
           </PageTransition>
         } />

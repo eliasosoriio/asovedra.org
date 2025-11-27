@@ -193,7 +193,7 @@ function Estatutos() {
                 Descarga el documento completo en formato PDF para conocer todos los detalles de nuestra organización
               </p>
               <a 
-                href="/docs/estatutos_asovedra.pdf" 
+                href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
@@ -202,7 +202,7 @@ function Estatutos() {
                 Descargar Estatutos (PDF)
               </a>
               <p className="text-sm mt-6 opacity-75">
-                Última actualización: 2024
+                Última actualización: 2025
               </p>
             </div>
           </div>

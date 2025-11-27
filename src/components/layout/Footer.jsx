@@ -81,6 +81,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/declaracion-valores" className="text-primary-dark hover:text-yellow-400 transition-colors duration-300 text-sm">
+                  Declaración de Valores
+                </Link>
+              </li>
+              <li>
                 <Link to="/contacto" className="text-primary-dark hover:text-yellow-400 transition-colors duration-300 text-sm">
                   Contacto
                 </Link>
@@ -133,14 +138,11 @@ function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
         <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-primary-dark text-sm text-center md:text-left">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="text-primary-dark text-sm text-center">
               © 2025 ASOVEDRA - Asociación de Venezolanos en Pontevedra. Todos los derechos reservados.
             </div>
-            <div className="flex items-center space-x-6">
-              <Link to="/estatutos" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
-                Estatutos
-              </Link>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               <Link to="/aviso-legal" className="text-primary-dark hover:text-yellow-400 text-sm transition-colors duration-300">
                 Aviso Legal
               </Link>
