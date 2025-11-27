@@ -204,62 +204,6 @@ button[disabled] {
     background-attachment: fixed;
 }
 
-/* Fondo especial para página de inicio que combina imagen y gradiente */
-.home-bg {
-    background-image: 
-        linear-gradient(135deg, 
-            rgba(0, 30, 119, 0.95) 0%, 
-            rgba(16, 20, 40, 0.9) 40%, 
-            rgba(0, 30, 119, 0.85) 70%, 
-            rgba(0, 30, 119, 0.6) 85%,
-            rgba(0, 30, 119, 0.3) 95%,
-            transparent 100%
-        ), 
-        url(https://asovedra.org/assets/img/asovedra_hero.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-/* Para desktop mantener el efecto fixed */
-@media (min-width: 768px) {
-    .home-bg {
-        background-attachment: fixed;
-    }
-}
-
-/* Para móviles usar scroll normal y evitar backdrop-filter */
-@media (max-width: 767px) {
-    .home-bg {
-        background-attachment: scroll;
-        /* Forzar el renderizado del background en móviles */
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        /* Asegurar que el background se mantenga visible */
-        will-change: auto;
-        /* Mejorar la compatibilidad con webkit */
-        -webkit-background-size: cover;
-        background-size: cover;
-        -webkit-background-clip: border-box;
-        background-clip: border-box;
-    }
-}
-
-.home-bg::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: linear-gradient(to bottom, 
-        rgba(0, 30, 119, 0.1) 0%,
-        transparent 100%
-    );
-    pointer-events: none;
-}
-
 /* Efectos adicionales para el hero */
 .hero-content {
     position: relative;

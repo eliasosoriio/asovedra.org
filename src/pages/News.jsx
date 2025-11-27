@@ -1,6 +1,5 @@
 ﻿import React, { useState, useRef } from 'react'
 import NewsCard from '../components/ui/NewsCard'
-import { Header } from '../components/layout/Header'
 import { NEWS_DATA } from '../constants/news'
 import SEO from '../components/SEO'
 
@@ -59,11 +58,10 @@ function News() {
         keywords="noticias iberoamericanos españa, actualidad, comunidad iberoamericana, noticias asovedra, eventos"
         canonical="/noticias"
       />
-      <main className='min-h-screen bg-gray-50'>
-      {/* Header Section with Navigation */}
-      <section className="nav-bg py-6 px-3 sticky top-0 z-50">
-        <Header />
-        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
+      <main className='min-h-screen bg-gray-50 pt-20'>
+      {/* Header Section */}
+      <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
+        <div className="max-w-6xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Noticias y Actualidad</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Mantente informado sobre las últimas noticias de la comunidad iberoamericana en España

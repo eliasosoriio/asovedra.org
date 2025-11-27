@@ -1,5 +1,4 @@
 import React from 'react'
-import { Header } from '../components/layout/Header'
 import SEO from '../components/SEO'
 import { FaHeart, FaHandshake, FaUsers, FaBalanceScale, FaStar, FaLeaf, FaDownload, FaFileAlt } from 'react-icons/fa'
 
@@ -72,11 +71,10 @@ function DeclaracionValores() {
         keywords="valores asovedra, principios, ética, solidaridad, inclusión, transparencia"
         canonical="/declaracion-valores"
       />
-      <main className='min-h-screen bg-gray-50'>
+      <main className='min-h-screen bg-gray-50 pt-20'>
         {/* Header Section */}
-        <section className="nav-bg py-6 px-3 sticky top-0 z-50">
-          <Header />
-          <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
+        <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
+          <div className="max-w-6xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Declaración de Valores</h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Los principios que guían nuestro trabajo y nuestra comunidad

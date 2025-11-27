@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Header } from '../components/layout/Header'
 import SEO from '../components/SEO'
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaCar, FaBus, FaWalking } from 'react-icons/fa'
 
@@ -73,11 +72,10 @@ function Contact() {
         keywords="contacto asovedra, teléfono asovedra, email asovedra, oficina pontevedra, consulta gratuita, asesoría legal"
         canonical="/contacto"
       />
-      <main className='min-h-screen bg-gray-50'>
-      {/* Header Section with Navigation */}
-      <section className="nav-bg py-6 px-3 sticky top-0 z-50">
-        <Header />
-        <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
+      <main className='min-h-screen bg-gray-50 pt-20'>
+      {/* Header Section */}
+      <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
+        <div className="max-w-6xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contacto</h1>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Estamos aquí para ayudarte. Contáctanos y te responderemos lo antes posible

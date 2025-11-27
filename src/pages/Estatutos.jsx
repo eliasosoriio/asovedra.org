@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Header } from '../components/layout/Header'
 import SEO from '../components/SEO'
 import { FaFileAlt, FaDownload, FaBalanceScale, FaUsers, FaHandshake, FaGavel } from 'react-icons/fa'
 
@@ -15,7 +14,7 @@ function Estatutos() {
       />
       <main className='min-h-screen bg-gray-50'>
         {/* Header Section */}
-        <section className="nav-bg py-6 px-3 sticky top-0 z-50">
+        <section className="nav-bg py-6 px-3 sticky top-0 z-50 pt-20">
           <Header />
           <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Estatutos de ASOVEDRA</h1>

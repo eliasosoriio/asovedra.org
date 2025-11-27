@@ -1,5 +1,4 @@
 import React from 'react'
-import { Header } from '../components/layout/Header'
 import SEO from '../components/SEO'
 import { FaBalanceScale, FaUsers, FaBullseye, FaHandshake, FaChartLine, FaGavel, FaHeart, FaDownload } from 'react-icons/fa'
 import jsPDF from 'jspdf'
@@ -399,7 +398,7 @@ function PlanIgualdad() {
       />
       <main className='min-h-screen bg-gray-50'>
         {/* Header Section */}
-        <section className="nav-bg py-6 px-3 sticky top-0 z-50">
+        <section className="nav-bg py-6 px-3 sticky top-0 z-50 pt-20">
           <Header />
           <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Plan de Igualdad de Género</h1>
