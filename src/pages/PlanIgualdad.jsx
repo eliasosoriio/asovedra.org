@@ -396,24 +396,43 @@ function PlanIgualdad() {
         keywords="plan igualdad, género, asovedra, igualdad oportunidades, no discriminación"
         canonical="/plan-de-igualdad"
       />
-      <main className='min-h-screen bg-gray-50'>
+      <main className='min-h-screen bg-white pt-20'>
         {/* Header Section */}
-        <section className="nav-bg py-6 px-3 sticky top-0 z-50 pt-20">
-          <Header />
-          <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Plan de Igualdad de Género</h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
+          {/* Puntos decorativos */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+          </div>
+
+          {/* Badge */}
+          <div className="max-w-6xl mx-auto mb-8 text-center relative z-10">
+            <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white border border-white/20">
+              Compromiso con la igualdad
+            </span>
+          </div>
+
+          {/* Línea decorativa Venezuela */}
+          <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-8"></div>
+
+          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Plan de Igualdad de Género</h1>
+            <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
               2025-2026
             </p>
           </div>
         </section>
 
         {/* Introducción */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-6">Nuestro Compromiso con la Igualdad</h2>
-              <div className="h-1 w-20 bg-primary-blue rounded mx-auto mb-8"></div>
+              <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+                Nuestro compromiso
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-6">Nuestro Compromiso con la Igualdad</h2>
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -424,7 +443,7 @@ function PlanIgualdad() {
                 oportunidades de desarrollo personal y profesional.
               </p>
 
-              <div className="bg-gradient-to-r from-primary-blue to-blue-700 rounded-xl p-8 text-white text-center my-12">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white text-center my-12">
                 <FaGavel className="text-5xl mx-auto mb-4" />
                 <p className="text-xl font-medium">
                   "La igualdad de género no es solo un derecho humano fundamental, 
@@ -436,11 +455,15 @@ function PlanIgualdad() {
         </section>
 
         {/* Objetivos */}
-        <section className="py-16">
+        <section className="py-20 lg:py-24 bg-slate-50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-4">Objetivos Estratégicos</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
+                Nuestras metas
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Objetivos Estratégicos</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                 Los pilares fundamentales de nuestro Plan de Igualdad
               </p>
             </div>
@@ -448,10 +471,10 @@ function PlanIgualdad() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {objetivos.map((objetivo, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <div className="text-4xl text-primary-blue mb-4 flex justify-center">
+                  <div className="text-4xl text-blue-600 mb-4 flex justify-center">
                     {objetivo.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-primary-dark mb-3 text-center">
+                  <h3 className="text-lg font-bold text-[#1B2336] mb-3 text-center">
                     {objetivo.titulo}
                   </h3>
                   <p className="text-gray-600 text-sm text-center">
@@ -464,33 +487,37 @@ function PlanIgualdad() {
         </section>
 
         {/* Ejes de Actuación */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-4">Ejes de Actuación</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+                Áreas de trabajo
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Ejes de Actuación</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                 Áreas estratégicas donde implementamos medidas concretas para la igualdad
               </p>
             </div>
 
             <div className="space-y-8">
               {ejes.map((eje, index) => (
-                <div key={index} className="bg-gradient-to-r from-gray-50 to-white rounded-xl shadow-lg p-8 border-l-4 border-primary-blue">
+                <div key={index} className="bg-gradient-to-r from-gray-50 to-white rounded-xl shadow-lg p-8 border-l-4 border-blue-600">
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                      <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                         {eje.numero}
                       </div>
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-bold text-primary-dark mb-3">{eje.titulo}</h3>
+                      <h3 className="text-2xl font-bold text-[#1B2336] mb-3">{eje.titulo}</h3>
                       <p className="text-gray-700 mb-4 font-medium">{eje.descripcion}</p>
                       <div className="space-y-2">
-                        <p className="text-sm font-semibold text-primary-blue mb-2">Medidas implementadas:</p>
+                        <p className="text-sm font-semibold text-blue-600 mb-2">Medidas implementadas:</p>
                         <ul className="grid md:grid-cols-2 gap-2">
                           {eje.medidas.map((medida, idx) => (
                             <li key={idx} className="flex items-start text-gray-600 text-sm">
-                              <span className="text-primary-blue mr-2">•</span>
+                              <span className="text-blue-600 mr-2">•</span>
                               <span>{medida}</span>
                             </li>
                           ))}
@@ -505,7 +532,7 @@ function PlanIgualdad() {
         </section>
 
         {/* Compromisos */}
-        <section className="py-16 bg-gradient-to-br from-primary-blue to-blue-700">
+        <section className="py-20 lg:py-24 bg-gradient-to-br from-[#1B2336] via-slate-800 to-slate-900">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Nuestros Compromisos</h2>
@@ -519,7 +546,7 @@ function PlanIgualdad() {
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <FaHandshake className="text-3xl text-primary-blue" />
+                      <FaHandshake className="text-3xl text-blue-600" />
                     </div>
                     <p className="text-lg leading-relaxed text-gray-700">{compromiso}</p>
                   </div>
@@ -533,15 +560,15 @@ function PlanIgualdad() {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-4">Seguimiento y Evaluación</h2>
-              <div className="h-1 w-20 bg-primary-blue rounded mx-auto"></div>
+              <h2 className="text-3xl font-bold text-[#1B2336] mb-4">Seguimiento y Evaluación</h2>
+              <div className="h-1 w-20 bg-blue-600 rounded mx-auto"></div>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold text-primary-dark mb-3 flex items-center gap-2">
-                    <FaChartLine className="text-primary-blue" />
+                  <h3 className="text-xl font-bold text-[#1B2336] mb-3 flex items-center gap-2">
+                    <FaChartLine className="text-blue-600" />
                     Monitoreo Continuo
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -551,33 +578,33 @@ function PlanIgualdad() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-primary-dark mb-3 flex items-center gap-2">
-                    <FaBullseye className="text-primary-blue" />
+                  <h3 className="text-xl font-bold text-[#1B2336] mb-3 flex items-center gap-2">
+                    <FaBullseye className="text-blue-600" />
                     Indicadores de Progreso
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
-                      <span className="text-primary-blue mr-2">•</span>
+                      <span className="text-blue-600 mr-2">•</span>
                       <span>Porcentaje de participación por género en programas y servicios</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-blue mr-2">•</span>
+                      <span className="text-blue-600 mr-2">•</span>
                       <span>Número de formaciones en igualdad realizadas</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-blue mr-2">•</span>
+                      <span className="text-blue-600 mr-2">•</span>
                       <span>Grado de satisfacción con las medidas implementadas</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-blue mr-2">•</span>
+                      <span className="text-blue-600 mr-2">•</span>
                       <span>Análisis de brechas y evolución de las mismas</span>
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-primary-dark mb-3 flex items-center gap-2">
-                    <FaUsers className="text-primary-blue" />
+                  <h3 className="text-xl font-bold text-[#1B2336] mb-3 flex items-center gap-2">
+                    <FaUsers className="text-blue-600" />
                     Revisión Participativa
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -594,7 +621,7 @@ function PlanIgualdad() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-primary-light rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-primary-dark mb-4">
+              <h3 className="text-2xl font-bold text-[#1B2336] mb-4">
                 Vigencia del Plan
               </h3>
               <p className="text-gray-700 text-lg mb-6">
@@ -632,3 +659,4 @@ function PlanIgualdad() {
 }
 
 export default PlanIgualdad
+

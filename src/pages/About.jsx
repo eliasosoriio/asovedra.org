@@ -67,23 +67,43 @@ function About() {
         keywords="asovedra, sobre nosotros, misión, equipo, asociación, iberoamericanos, integración"
         canonical="/sobre-nosotros"
       />
-    <main className='min-h-screen bg-gray-50 pt-20'>
+    <main className='min-h-screen bg-white pt-20'>
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Sobre Nosotros</h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+      <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
+        {/* Puntos decorativos */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+        </div>
+
+        {/* Badge */}
+        <div className="max-w-6xl mx-auto mb-8 text-center relative z-10">
+          <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white border border-white/20">
+            Conoce nuestra historia
+          </span>
+        </div>
+
+        {/* Línea decorativa Venezuela */}
+        <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-8"></div>
+
+        <div className="max-w-6xl mx-auto text-center text-white relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Sobre Nosotros</h1>
+          <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
             Conoce nuestra historia, misión y el equipo que trabaja día a día por la comunidad iberoamericana en España
           </p>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-white">
+      <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Nuestra Misión y Visión</h2>
-            <div className="h-1 w-20 bg-primary-blue rounded mx-auto"></div>
+            <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+              Nuestro propósito
+            </span>
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestra Misión y Visión</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -107,59 +127,63 @@ function About() {
       </section>
 
       {/* Values */}
-      <section className="py-16">
+      <section className="py-20 lg:py-24 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Nuestros Valores</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
+              Lo que nos define
+            </span>
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestros Valores</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
               Los principios que guían nuestro trabajo y definen nuestra identidad como organización
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaHandshake className="mx-auto text-primary-blue" /></div>
-              <h3 className="text-xl font-bold text-primary-dark mb-3">Solidaridad</h3>
+              <div className="text-4xl mb-4"><FaHandshake className="mx-auto text-blue-600" /></div>
+              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Solidaridad</h3>
               <p className="text-gray-600">
                 Promovemos la ayuda mutua y el trabajo conjunto, fortaleciendo la unión y el apoyo entre quienes forman parte de nuestra comunidad.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaBalanceScale className="mx-auto text-primary-blue" /></div>
-              <h3 className="text-xl font-bold text-primary-dark mb-3">Transparencia</h3>
+              <div className="text-4xl mb-4"><FaBalanceScale className="mx-auto text-blue-600" /></div>
+              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Transparencia</h3>
               <p className="text-gray-600">
                 Gestionamos con honestidad y rendición de cuentas: publicamos de forma clara y accesible nuestras decisiones, actividades y uso de los recursos, abiertos al control de socios y comunidad.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaGraduationCap className="mx-auto text-primary-blue" /></div>
-              <h3 className="text-xl font-bold text-primary-dark mb-3">Excelencia</h3>
+              <div className="text-4xl mb-4"><FaGraduationCap className="mx-auto text-blue-600" /></div>
+              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Excelencia</h3>
               <p className="text-gray-600">
                 Promovemos la excelencia en nuestra labor social, actuando con compromiso, respeto y calidad humana en cada acompañamiento.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaGlobe className="mx-auto text-primary-blue" /></div>
-              <h3 className="text-xl font-bold text-primary-dark mb-3">Integración</h3>
+              <div className="text-4xl mb-4"><FaGlobe className="mx-auto text-blue-600" /></div>
+              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Integración</h3>
               <p className="text-gray-600">
                 Fomentamos la integración social y cultural desde el respeto mutuo, valorando nuestras raíces iberoamericanas y la riqueza de la cultura gallega.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaDumbbell className="mx-auto text-primary-blue" /></div>
-              <h3 className="text-xl font-bold text-primary-dark mb-3">Empoderamiento</h3>
+              <div className="text-4xl mb-4"><FaDumbbell className="mx-auto text-blue-600" /></div>
+              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Empoderamiento</h3>
               <p className="text-gray-600">
                 Acompañamos a las personas para fortalecer sus capacidades y que puedan ser protagonistas de su propio proceso de integración y crecimiento.
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaHeart className="mx-auto text-primary-blue" /></div>
-              <h3 className="text-xl font-bold text-primary-dark mb-3">Compromiso</h3>
+              <div className="text-4xl mb-4"><FaHeart className="mx-auto text-blue-600" /></div>
+              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Compromiso</h3>
               <p className="text-gray-600">
                 Asumimos con responsabilidad y entrega nuestro compromiso con la comunidad, trabajando cada día por su bienestar, integración y desarrollo.
               </p>
@@ -169,7 +193,7 @@ function About() {
       </section>
 
       {/* Plan de Igualdad Banner */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-20 lg:py-24 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="text-white">
             <FaBalanceScale className="text-6xl mx-auto mb-6" />
@@ -190,30 +214,34 @@ function About() {
       </section>
 
       {/* History Timeline */}
-      <section className="py-16 bg-white">
+      <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Nuestra Historia</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+              Nuestro camino
+            </span>
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestra Historia</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
               Un recorrido por los momentos más importantes de nuestros 7 años de servicio
             </p>
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary-blue h-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-600 h-full"></div>
             
             {milestones.map((milestone, index) => (
               <div key={index} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-blue">
-                    <div className="text-2xl font-bold text-primary-blue mb-2">{milestone.year}</div>
-                    <h3 className="text-xl font-bold text-primary-dark mb-3">{milestone.event}</h3>
-                    <p className="text-gray-600">{milestone.description}</p>
+                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600">
+                    <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
+                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">{milestone.event}</h3>
+                    <p className="text-slate-600">{milestone.description}</p>
                   </div>
                 </div>
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                     <div className="w-6 h-6 bg-white rounded-full"></div>
                   </div>
                 </div>
@@ -226,11 +254,15 @@ function About() {
       </section>
 
       {/* Team */}
-      <section className="py-16">
+      <section className="py-20 lg:py-24 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Nuestro Equipo</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
+              Quiénes somos
+            </span>
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestro Equipo</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
               Conoce a las personas que lideran y hacen posible el trabajo de Asovedra
             </p>
           </div>
@@ -244,9 +276,9 @@ function About() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary-dark mb-2">{member.name}</h3>
-                  <p className="text-primary-blue font-medium mb-3">{member.position}</p>
-                  <p className="text-gray-600 text-sm">{member.description}</p>
+                  <h3 className="text-xl font-bold text-[#1B2336] mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-medium mb-3">{member.position}</p>
+                  <p className="text-slate-600 text-sm">{member.description}</p>
                 </div>
               </div>
             ))}
@@ -255,7 +287,7 @@ function About() {
       </section>
 
       {/* Statistics */}
-      <section className="py-16 bg-gradient-to-r from-primary-blue to-blue-700">
+      <section className="py-20 lg:py-24 !bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Nuestro Impacto</h2>
@@ -276,21 +308,30 @@ function About() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold text-primary-dark mb-4">
-            ¿Quieres formar parte de nuestro equipo?
-          </h3>
-          <p className="text-gray-600 mb-8">
-            Siempre estamos buscando voluntarios y colaboradores comprometidos con nuestra causa
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to='tel:+34604016113' className="btn-primary">
+      <section className='w-full bg-gradient-to-br from-[#1B2336] via-slate-800 to-slate-900 py-20 lg:py-24 relative overflow-hidden'>
+        {/* Puntos decorativos */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="mb-8">
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h2 className='text-3xl lg:text-5xl font-bold mb-4 leading-tight' style={{color: '#ffffff !important'}}>¿Quieres formar parte de nuestro equipo?</h2>
+            <p className='text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed' style={{color: '#cbd5e1 !important'}}>
+              Siempre estamos buscando voluntarios y colaboradores comprometidos con nuestra causa
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link to='/contacto' className='inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1B2336] text-white rounded-lg font-semibold hover:bg-slate-800 transition-all duration-200 shadow-lg hover:shadow-xl'>
               Únete como voluntario
             </Link>
-            <Link to='/contacto' className="btn-secondary">
-              Contacta con nosotros
-            </Link>
+            <a href="tel:+34604016113" className='inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-[#1B2336] text-[#1B2336] rounded-lg font-semibold hover:bg-[#1B2336] hover:text-white transition-all duration-200'>
+              Llamar: 604 016 113
+            </a>
           </div>
         </div>
       </section>
@@ -300,3 +341,4 @@ function About() {
 }
 
 export default About
+

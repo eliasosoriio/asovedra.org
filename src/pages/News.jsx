@@ -1,4 +1,4 @@
-﻿import React, { useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { NEWS_DATA } from '../constants/news'
 import SEO from '../components/SEO'
 import { FaArrowRight } from 'react-icons/fa'
@@ -73,7 +73,7 @@ function News() {
               Actualidad
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 !text-white">Noticias y Actualidad</h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-blue-600 to-red-600 mx-auto mb-6"></div>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className="text-xl !text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Mantente informado sobre las últimas noticias de la comunidad iberoamericana en España
             </p>
@@ -194,3 +194,4 @@ function News() {
 }
 
 export default News
+

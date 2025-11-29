@@ -71,24 +71,44 @@ function DeclaracionValores() {
         keywords="valores asovedra, principios, ética, solidaridad, inclusión, transparencia"
         canonical="/declaracion-valores"
       />
-      <main className='min-h-screen bg-gray-50 pt-20'>
+      <main className='min-h-screen bg-white pt-20'>
         {/* Header Section */}
-        <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
-          <div className="max-w-6xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Declaración de Valores</h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
+          {/* Puntos decorativos */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+          </div>
+
+          {/* Badge */}
+          <div className="max-w-6xl mx-auto mb-8 text-center relative z-10">
+            <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white border border-white/20">
+              Nuestros principios
+            </span>
+          </div>
+
+          {/* Línea decorativa Venezuela */}
+          <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-8"></div>
+
+          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Declaración de Valores</h1>
+            <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
               Los principios que guían nuestro trabajo y nuestra comunidad
             </p>
           </div>
         </section>
 
         {/* Introducción */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
-              <FaHeart className="text-6xl text-primary-blue mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-primary-dark mb-6">Nuestro Compromiso</h2>
-              <div className="h-1 w-20 bg-primary-blue rounded mx-auto mb-8"></div>
+              <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+                Nuestro compromiso
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <FaHeart className="text-6xl text-red-500 mx-auto mb-6" />
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-6">Nuestro Compromiso</h2>
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -98,7 +118,7 @@ function DeclaracionValores() {
                 acciones, decisiones y relaciones con la comunidad a la que servimos.
               </p>
 
-              <div className="bg-gradient-to-r from-primary-blue to-blue-700 rounded-xl p-8 text-white text-center my-12">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white text-center my-12">
                 <FaUsers className="text-5xl mx-auto mb-4" />
                 <p className="text-xl font-medium">
                   "Construimos una comunidad basada en el respeto, la solidaridad y el compromiso 
@@ -110,11 +130,15 @@ function DeclaracionValores() {
         </section>
 
         {/* Valores Fundamentales */}
-        <section className="py-16">
+        <section className="py-20 lg:py-24 bg-slate-50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-4">Valores Fundamentales</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
+                Lo que nos define
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Valores Fundamentales</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                 Los valores que definen nuestra identidad y guían nuestro día a día
               </p>
             </div>
@@ -122,10 +146,10 @@ function DeclaracionValores() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {valores.map((valor, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <div className="text-4xl text-primary-blue mb-4 flex justify-center">
+                  <div className="text-4xl text-blue-600 mb-4 flex justify-center">
                     {valor.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-primary-dark mb-3 text-center">
+                  <h3 className="text-xl font-bold text-[#1B2336] mb-3 text-center">
                     {valor.titulo}
                   </h3>
                   <p className="text-gray-600 text-center">
@@ -138,19 +162,23 @@ function DeclaracionValores() {
         </section>
 
         {/* Principios de Actuación */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-4">Principios de Actuación</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+                Cómo actuamos
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Principios de Actuación</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                 Los criterios que orientan nuestras decisiones y acciones diarias
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {principios.map((principio, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg p-6 border-l-4 border-primary-blue">
-                  <h3 className="text-xl font-bold text-primary-dark mb-3">{principio.titulo}</h3>
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600">
+                  <h3 className="text-xl font-bold text-[#1B2336] mb-3">{principio.titulo}</h3>
                   <p className="text-gray-700 leading-relaxed">{principio.descripcion}</p>
                 </div>
               ))}
@@ -159,7 +187,7 @@ function DeclaracionValores() {
         </section>
 
         {/* Compromisos */}
-        <section className="py-16 bg-gradient-to-br from-primary-blue to-blue-700">
+        <section className="py-20 lg:py-24 bg-gradient-to-br from-[#1B2336] via-slate-800 to-slate-900">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Nuestros Compromisos</h2>
@@ -171,9 +199,9 @@ function DeclaracionValores() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-start gap-4">
-                  <FaHandshake className="text-3xl text-primary-blue flex-shrink-0 mt-1" />
+                  <FaHandshake className="text-3xl text-blue-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-primary-dark mb-2">Con la Comunidad</h4>
+                    <h4 className="font-bold text-[#1B2336] mb-2">Con la Comunidad</h4>
                     <p className="text-gray-700 text-sm">
                       Escuchar activamente las necesidades, trabajar de manera transparente 
                       y rendir cuentas de nuestras acciones.
@@ -184,9 +212,9 @@ function DeclaracionValores() {
 
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-start gap-4">
-                  <FaBalanceScale className="text-3xl text-primary-blue flex-shrink-0 mt-1" />
+                  <FaBalanceScale className="text-3xl text-blue-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-primary-dark mb-2">Con la Ética</h4>
+                    <h4 className="font-bold text-[#1B2336] mb-2">Con la Ética</h4>
                     <p className="text-gray-700 text-sm">
                       Actuar siempre con integridad, honestidad y respeto a los derechos 
                       humanos fundamentales.
@@ -197,9 +225,9 @@ function DeclaracionValores() {
 
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-start gap-4">
-                  <FaUsers className="text-3xl text-primary-blue flex-shrink-0 mt-1" />
+                  <FaUsers className="text-3xl text-blue-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-primary-dark mb-2">Con la Inclusión</h4>
+                    <h4 className="font-bold text-[#1B2336] mb-2">Con la Inclusión</h4>
                     <p className="text-gray-700 text-sm">
                       Promover la participación de todas las personas, especialmente 
                       de aquellas en situación de mayor vulnerabilidad.
@@ -210,9 +238,9 @@ function DeclaracionValores() {
 
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-start gap-4">
-                  <FaStar className="text-3xl text-primary-blue flex-shrink-0 mt-1" />
+                  <FaStar className="text-3xl text-blue-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-primary-dark mb-2">Con la Excelencia</h4>
+                    <h4 className="font-bold text-[#1B2336] mb-2">Con la Excelencia</h4>
                     <p className="text-gray-700 text-sm">
                       Buscar continuamente la mejora de nuestros programas y la 
                       profesionalización de nuestro equipo.
@@ -225,9 +253,9 @@ function DeclaracionValores() {
         </section>
 
         {/* Descarga del documento */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-slate-50">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-gradient-to-br from-primary-blue to-blue-700 rounded-xl p-8 md:p-12 text-white text-center shadow-xl">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-white text-center shadow-xl">
               <FaFileAlt className="text-6xl mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-4">
                 Consulta la Declaración Completa
@@ -239,7 +267,7 @@ function DeclaracionValores() {
                 href="https://asovedra.org/assets/docs/declaracion_valores_asovedra.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+                className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
               >
                 <FaDownload className="text-2xl" />
                 Descargar Declaración de Valores (PDF)
@@ -252,10 +280,10 @@ function DeclaracionValores() {
         </section>
 
         {/* Información adicional */}
-        <section className="py-16">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-gray-100 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-primary-dark mb-4 text-center">
+              <h3 className="text-2xl font-bold text-[#1B2336] mb-4 text-center">
                 Vive Nuestros Valores
               </h3>
               <p className="text-gray-700 text-center mb-6">
@@ -279,3 +307,5 @@ function DeclaracionValores() {
 }
 
 export default DeclaracionValores
+
+

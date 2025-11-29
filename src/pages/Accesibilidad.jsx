@@ -10,11 +10,22 @@ function Accesibilidad() {
         keywords="accesibilidad web asovedra, wcag 2.1, inclusión digital, accesibilidad discapacidad"
         canonical="/accesibilidad"
       />
-      <main className='min-h-screen bg-gray-50 pt-20'>
+      <main className='min-h-screen bg-white pt-20'>
         {/* Header Section */}
-        <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
-          <div className="max-w-6xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Declaración de Accesibilidad</h1>
+        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
+          {/* Puntos decorativos */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+          </div>
+
+          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
+            <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Accesibilidad
+            </div>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Declaración de Accesibilidad</h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Nuestro compromiso con la accesibilidad web para todos los usuarios
             </p>
@@ -22,12 +33,12 @@ function Accesibilidad() {
         </section>
 
         {/* Content Section */}
-        <section className="py-16">
+        <section className="py-20 lg:py-24 bg-slate-50">
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
               <div className="prose prose-lg max-w-none">
                 
-                <h2 className="text-2xl font-bold text-primary-dark mb-6">Declaración de Accesibilidad</h2>
+                <h2 className="text-2xl font-bold text-[#1B2336] mb-6">Declaración de Accesibilidad</h2>
                 
                 <p className="mb-6">
                   En ASOVEDRA, estamos comprometidos a hacer accesible nuestro sitio de acuerdo al Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público.
@@ -37,7 +48,7 @@ function Accesibilidad() {
                   La presente declaración de accesibilidad se aplica al sitio web <strong>https://asovedra.org</strong>
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Situación de Cumplimiento</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Situación de Cumplimiento</h3>
                 <p className="mb-6">
                   En ASOVEDRA estamos comprometidos con la accesibilidad de nuestro sitio web para que todos los usuarios, incluyendo personas con discapacidades, tengan las mismas condiciones de acceso a nuestro sitio web. Hemos trabajado arduamente para garantizar que nuestro sitio cumpla con los estándares de accesibilidad establecidos en las <strong>Directrices de Accesibilidad para el Contenido Web (WCAG) 2.1 Nivel AA</strong>.
                 </p>
@@ -46,7 +57,7 @@ function Accesibilidad() {
                   Nuestro sitio web incluye características de accesibilidad como texto alternativo para imágenes, navegación por teclado, etiquetas de formulario claras y opciones de contraste de color para garantizar que los usuarios con discapacidades visuales puedan acceder fácilmente a nuestro contenido. Además, nuestro sitio web es compatible con tecnologías de asistencia como lectores de pantalla y software de reconocimiento de voz.
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Características de Accesibilidad Implementadas</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Características de Accesibilidad Implementadas</h3>
                 <ul className="mb-6 space-y-2">
                   <li>• <strong>Navegación por teclado:</strong> Todas las funciones están disponibles mediante teclado</li>
                   <li>• <strong>Texto alternativo:</strong> Las imágenes incluyen descripciones alt apropiadas</li>
@@ -57,7 +68,7 @@ function Accesibilidad() {
                   <li>• <strong>Responsive design:</strong> Adaptable a diferentes dispositivos y tamaños de pantalla</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Preparación de la Presente Declaración de Accesibilidad</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Preparación de la Presente Declaración de Accesibilidad</h3>
                 <p className="mb-6">
                   La presente declaración fue preparada el <strong>7 de octubre de 2025</strong>.
                 </p>
@@ -70,12 +81,12 @@ function Accesibilidad() {
                   Continuaremos monitoreando y mejorando continuamente la accesibilidad de nuestro sitio web para asegurarnos de que sea fácilmente accesible para todos los usuarios. Si tiene alguna sugerencia o problema para mejorar nuestra accesibilidad, no dude en ponerse en contacto con nosotros.
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Propiedad Intelectual e Industrial</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Propiedad Intelectual e Industrial</h3>
                 <p className="mb-8">
                   Los derechos de propiedad intelectual del contenido de las páginas web, su diseño gráfico y códigos son titularidad de ASOVEDRA (Asociación de Venezolanos en Pontevedra) y, por tanto, queda prohibida su reproducción, distribución, comunicación pública, transformación o cualquier otra actividad que se pueda realizar con los contenidos de sus páginas web ni aun citando las fuentes, salvo consentimiento por escrito de ASOVEDRA. Todos los nombres comerciales, marcas o signos distintos de cualquier clase contenidos en las páginas web de la Asociación son propiedad de sus dueños y están protegidos por ley.
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Observaciones y Datos de Contacto</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Observaciones y Datos de Contacto</h3>
                 <p className="mb-4">
                   Puede realizar comunicaciones sobre requisitos de accesibilidad (artículo 10.2.a del RD 1112/2018), como, por ejemplo:
                 </p>
@@ -87,7 +98,7 @@ function Accesibilidad() {
                 </ul>
                 
                 <p className="mb-6">
-                  Escribiendo un email a <a href="mailto:info@asovedra.org" className="text-primary-blue hover:underline">info@asovedra.org</a> o a través del número de teléfono <a href="tel:+34604016113" className="text-primary-blue hover:underline">(+34) 604 016 113</a>.
+                  Escribiendo un email a <a href="mailto:info@asovedra.org" className="text-blue-600 hover:underline">info@asovedra.org</a> o a través del número de teléfono <a href="tel:+34604016113" className="text-blue-600 hover:underline">(+34) 604 016 113</a>.
                 </p>
 
                 <h4 className="text-lg font-semibold text-gray-800 mb-3">Puede presentar:</h4>
@@ -105,7 +116,7 @@ function Accesibilidad() {
                   En la Solicitud de información accesible, se debe concretar, con toda claridad, los hechos, razones y petición que permitan constatar que se trata de una solicitud razonable y legítima.
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Procedimiento de Aplicación</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Procedimiento de Aplicación</h3>
                 <p className="mb-6">
                   Si una vez realizada una solicitud de información accesible o queja, esta hubiera sido desestimada, no se estuviera de acuerdo con la decisión adoptada, o la respuesta no cumpliera los requisitos contemplados en el artículo 12.5, la persona interesada podrá iniciar una reclamación. Igualmente se podrá iniciar una reclamación en el caso de que haya transcurrido el plazo de veinte días hábiles sin haber obtenido respuesta.
                 </p>
@@ -114,7 +125,7 @@ function Accesibilidad() {
                   La reclamación puede ser presentada través de la Instancia Genérica de la Sede electrónica del Ministerio de Asuntos Económicos y Transformación Digital, así como en el resto de opciones recogidas en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. Las reclamaciones serán recibidas y tratadas por la Subdirección General de Inspección de Servicios del Ministerio.
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Contenido Opcional - Ayuda para la Navegación</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Contenido Opcional - Ayuda para la Navegación</h3>
                 <p className="mb-6">
                   Este portal está diseñado para poder cambiar el tamaño del texto y el color, así como el fondo de la página mediante las opciones de configuración estándar de los navegadores.
                 </p>
@@ -135,15 +146,15 @@ function Accesibilidad() {
                 </ul>
 
                 <p className="mb-6">
-                  Si lo que quiere es anular la hoja de estilos o modificar el color del texto, puede consultar la página <a href="https://www.w3.org/WAI/meta/customize/" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline">"How to Change Text Size or Colors"</a> de la WAI (Web Accessibility Initiative).
+                  Si lo que quiere es anular la hoja de estilos o modificar el color del texto, puede consultar la página <a href="https://www.w3.org/WAI/meta/customize/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">"How to Change Text Size or Colors"</a> de la WAI (Web Accessibility Initiative).
                 </p>
 
-                <h3 className="text-xl font-semibold text-primary-dark mb-4">Mejora Continua</h3>
+                <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Mejora Continua</h3>
                 <p className="mb-6">
                   En ASOVEDRA nos comprometemos a seguir mejorando la accesibilidad de nuestro sitio web. Realizamos revisiones periódicas y actualizaciones para mantener y mejorar los estándares de accesibilidad, garantizando que todas las personas puedan acceder a nuestros servicios y contenidos de manera equitativa.
                 </p>
 
-                <div className="mt-8 p-4 bg-blue-50 rounded-lg border-l-4 border-primary-blue">
+                <div className="mt-8 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
                   <p className="text-sm text-gray-700">
                     <strong>Última actualización de esta declaración:</strong> 7 de octubre de 2025<br/>
                     <strong>Próxima revisión programada:</strong> 7 de octubre de 2026
@@ -159,3 +170,4 @@ function Accesibilidad() {
 }
 
 export default Accesibilidad
+

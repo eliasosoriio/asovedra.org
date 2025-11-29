@@ -52,7 +52,7 @@ function Home() {
               Actualidad
             </span>
             <h2 className='text-4xl lg:text-5xl font-bold text-slate-900 mb-4'>Últimas Noticias</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-blue-600 to-red-600 mx-auto mb-6"></div>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
               Mantente informado sobre nuestras actividades y novedades
             </p>
@@ -109,13 +109,13 @@ function Home() {
       <section className='w-full py-20 lg:py-24 bg-white'>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
               Lo que hacemos
             </span>
             <h2 className='text-4xl lg:text-5xl font-bold text-slate-900 mb-4'>
               Nuestros Servicios
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-blue-600 to-red-600 mx-auto mb-6"></div>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
               Programas especializados de acompañamiento para la comunidad iberoamericana
             </p>
@@ -146,7 +146,7 @@ function Home() {
 
           <div className="relative overflow-hidden rounded-2xl">
             {/* Fondo con gradiente de Venezuela */}
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-blue-600 to-red-600 opacity-10"></div>
+            <div className="absolute inset-0 !bg-gradient-to-r !from-yellow-400 !via-blue-600 to-red-600 opacity-10"></div>
             
             <div className="relative bg-white border-2 border-slate-200 rounded-2xl p-8 md:p-12 text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">¿Necesitas ayuda especializada?</h3>
@@ -181,8 +181,8 @@ function Home() {
             <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
               Quiénes somos
             </span>
-            <h2 className='text-4xl lg:text-5xl font-bold text-slate-900 mb-4'>Sobre Nosotros</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 via-blue-600 to-red-600 mx-auto mb-6"></div>
+            <h2 className='text-4xl lg:text-5xl font-bold text-slate-900 mb-4'>¿Por qué elegirnos?</h2>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
               Comprometidos con el bienestar de la comunidad iberoamericana
             </p>
@@ -230,34 +230,34 @@ function Home() {
               </div>
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Nuestra Historia</h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 via-blue-600 to-red-600 mb-6"></div>
+                <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mb-6"></div>
                 <p className='text-slate-700 leading-relaxed text-lg mb-6'>
                   Fundada en 2018, Asovedra nació de la necesidad de crear un espacio de apoyo para los venezolanos que llegaban a España buscando nuevas oportunidades.
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
-                    <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
+                    <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-md">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <span className="text-slate-700 text-base">Fundada en 2018</span>
+                    <span className="text-slate-700 text-base font-medium">Fundada en 2018</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-md">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <span className="text-slate-700 text-base">Más de 4000 personas atendidas</span>
+                    <span className="text-slate-700 text-base font-medium">Más de 4000 personas atendidas</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-6 h-6 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
+                    <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mt-0.5 mr-3 flex-shrink-0 shadow-md">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                     </div>
-                    <span className="text-slate-700 text-base">Presencia en toda Galicia</span>
+                    <span className="text-slate-700 text-base font-medium">Presencia en toda Galicia</span>
                   </li>
                 </ul>
                 <Link to="/sobre-nosotros" className='inline-flex items-center gap-2 text-[#1B2336] font-semibold hover:text-blue-600 transition-colors group self-start'>
@@ -312,7 +312,7 @@ function Home() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="mb-8">
-            <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 via-blue-500 to-red-600 mx-auto mb-6"></div>
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
             <h2 className='text-3xl lg:text-5xl font-bold mb-4 leading-tight' style={{color: '#ffffff !important'}}>¿Necesitas más información?</h2>
             <p className='text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed' style={{color: '#cbd5e1 !important'}}>
               Nuestro equipo está disponible para responder tus preguntas y brindarte la orientación que necesitas
@@ -336,3 +336,4 @@ function Home() {
 }
 
 export default Home
+

@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer 
+      className="text-white overflow-hidden" 
+      style={{
+        background: '#0f172a',
+        boxShadow: 'none',
+        border: 'none',
+        position: 'relative'
+      }}
+    >
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style={{background: '#0f172a'}}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* About Section */}
@@ -141,8 +149,8 @@ function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="border-t border-slate-800" style={{background: '#0f172a', borderTop: '1px solid #1e293b'}}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6" style={{background: '#0f172a'}}>
           <div className="flex flex-col items-center space-y-4">
             <div className="text-slate-400 text-sm text-center">
               © 2025 ASOVEDRA - Asociación de Venezolanos en Pontevedra. Todos los derechos reservados.

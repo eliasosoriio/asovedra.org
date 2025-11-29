@@ -2,7 +2,7 @@ import React from 'react'
 import ServiceCardModern from '../components/ui/ServiceCardModern'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
-import { FaBalanceScale, FaBriefcase, FaClipboardList, FaBook, FaBrain, FaUsers, FaGraduationCap, FaHandshake, FaTheaterMasks, FaExclamationTriangle } from 'react-icons/fa'
+import { FaBalanceScale, FaBriefcase, FaClipboardList, FaBook, FaBrain, FaUsers, FaGraduationCap, FaHandshake, FaTheaterMasks, FaExclamationTriangle, FaArrowRight } from 'react-icons/fa'
 
 function Services() {
   const services = [
@@ -101,22 +101,37 @@ function Services() {
         keywords="servicios asovedra, asesoría legal migratoria, empleo venezuela, trámites migratorios, formación, apoyo psicológico"
         canonical="/servicios"
       />
-      <main className='min-h-screen bg-gray-50 pt-20'>
+      <main className='min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20'>
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+      <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 px-4 relative overflow-hidden">
+        {/* Puntos decorativos */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm !text-white rounded-full text-sm font-semibold mb-6">
+            Lo que hacemos
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 !text-white">Nuestros Servicios</h1>
+          <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
+          <p className="text-xl !text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Ofrecemos una amplia gama de programas de acompañamiento para apoyar a la comunidad iberoamericana en España
           </p>
         </div>
       </section>
 
       {/* Main Services */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Servicios Principales</h2>
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
+              Servicios Core
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Servicios Principales</h2>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Nuestros servicios core diseñados para cubrir las necesidades más importantes de nuestra comunidad
             </p>
@@ -157,10 +172,14 @@ function Services() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Servicios Adicionales</h2>
+      <section className="py-20 lg:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
+              Más servicios
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Servicios Adicionales</h2>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Programas complementarios que enriquecen nuestra oferta de apoyo integral
             </p>
@@ -168,13 +187,13 @@ function Services() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-primary-dark mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <button className="text-primary-blue font-medium hover:underline">
+              <div key={index} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow border border-slate-200">
+                <div className="text-4xl text-[#1B2336] mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
+                <p className="text-slate-600 mb-4">{service.description}</p>
+                <Link to="/contacto" className="text-[#1B2336] font-semibold hover:text-blue-600 transition-colors">
                   Más información →
-                </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -182,10 +201,14 @@ function Services() {
       </section>
 
       {/* How it Works */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">¿Cómo funciona?</h2>
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
+              Proceso
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">¿Cómo funciona?</h2>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Un proceso sencillo para acceder a nuestros servicios
             </p>
@@ -220,10 +243,14 @@ function Services() {
       </section>
 
       {/* Pricing/Fees */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary-dark mb-4">Programas y Modalidades de Apoyo</h2>
+      <section className="py-20 lg:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
+              Modalidades
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Programas y Modalidades de Apoyo</h2>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Contamos con diversas modalidades de apoyo solidario, asesoría y acompañamiento, pensadas para promover la integración y el bienestar común.
             </p>
@@ -276,21 +303,31 @@ function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-primary-light to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold text-primary-dark mb-4">
-            ¿Necesitas alguno de nuestros servicios?
-          </h3>
-          <p className="text-gray-700 mb-8 text-lg">
-            Nuestro equipo de profesionales está listo para ayudarte. Contáctanos y comencemos a trabajar juntos.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="tel:+34604016113" className="btn-primary">
-              Solicitar consulta
+      <section className='w-full bg-gradient-to-br from-[#1B2336] via-slate-800 to-slate-900 py-20 lg:py-24 relative overflow-hidden'>
+        {/* Puntos decorativos */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="mb-8">
+            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+            <h2 className='text-3xl lg:text-5xl font-bold mb-4 leading-tight' style={{color: '#ffffff !important'}}>¿Necesitas más información?</h2>
+            <p className='text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed' style={{color: '#cbd5e1 !important'}}>
+              Nuestro equipo está disponible para responder tus preguntas y brindarte la orientación que necesitas
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link to="/contacto" className='inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1B2336] text-white rounded-lg font-semibold hover:bg-slate-800 transition-all duration-200 shadow-lg hover:shadow-xl'>
+              Contactar ahora
+              <FaArrowRight className="text-sm" />
             </Link>
-            <Link to="/contacto" className="btn-secondary">
-              Ver horarios de atención
-            </Link>
+            <a href="tel:+34604016113" className='inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-[#1B2336] text-[#1B2336] rounded-lg font-semibold hover:bg-[#1B2336] hover:text-white transition-all duration-200'>
+              Llamar: 604 016 113
+            </a>
           </div>
         </div>
       </section>
@@ -300,3 +337,4 @@ function Services() {
 }
 
 export default Services
+

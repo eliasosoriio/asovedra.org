@@ -15,7 +15,7 @@ function ServiceCardModern({ title, description, icon }) {
           {description}
         </p>
       </div>
-      <Link to="/contacto" className="inline-flex items-center justify-center text-blue-600 text-sm font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1 transform duration-300 mt-auto">
+      <Link to="/contacto" className="inline-flex items-center justify-center text-sm font-semibold hover:text-blue-700 transition-colorstransform duration-300 mt-auto">
         Consúltanos
         <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

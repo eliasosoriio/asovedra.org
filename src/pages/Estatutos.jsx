@@ -12,25 +12,44 @@ function Estatutos() {
         keywords="estatutos asovedra, normativa, asociación iberoamericana, reglamento, documentos legales"
         canonical="/estatutos"
       />
-      <main className='min-h-screen bg-gray-50'>
+      <main className='min-h-screen bg-white pt-20'>
         {/* Header Section */}
-        <section className="nav-bg py-6 px-3 sticky top-0 z-50 pt-20">
-          <Header />
-          <div className="max-w-6xl mx-auto px-4 text-center text-white pt-12 pb-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Estatutos de ASOVEDRA</h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
+          {/* Puntos decorativos */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+          </div>
+
+          {/* Badge */}
+          <div className="max-w-6xl mx-auto mb-8 text-center relative z-10">
+            <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white border border-white/20">
+              Marco normativo
+            </span>
+          </div>
+
+          {/* Línea decorativa Venezuela */}
+          <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-8"></div>
+
+          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Estatutos de ASOVEDRA</h1>
+            <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
               Marco normativo y organizativo de nuestra asociación
             </p>
           </div>
         </section>
 
         {/* Introducción */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
-              <FaBalanceScale className="text-6xl text-primary-blue mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-primary-dark mb-6">Transparencia y Normativa</h2>
-              <div className="h-1 w-20 bg-primary-blue rounded mx-auto mb-8"></div>
+              <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
+                Transparencia y normativa
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <FaBalanceScale className="text-6xl text-blue-600 mx-auto mb-6" />
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-6">Transparencia y Normativa</h2>
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -40,7 +59,7 @@ function Estatutos() {
                 así como los procedimientos para la toma de decisiones y el funcionamiento de la asociación.
               </p>
 
-              <div className="bg-gradient-to-r from-primary-blue to-blue-700 rounded-xl p-8 text-white text-center my-12">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white text-center my-12">
                 <FaGavel className="text-5xl mx-auto mb-4" />
                 <p className="text-xl font-medium">
                   "Comprometidos con la transparencia y el buen gobierno asociativo"
@@ -51,11 +70,15 @@ function Estatutos() {
         </section>
 
         {/* Contenido de los Estatutos */}
-        <section className="py-16">
+        <section className="py-20 lg:py-24 bg-slate-50">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary-dark mb-4">Contenido de los Estatutos</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
+                Estructura organizativa
+              </span>
+              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Contenido de los Estatutos</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                 Principales aspectos regulados en nuestros estatutos
               </p>
             </div>
@@ -64,25 +87,25 @@ function Estatutos() {
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <FaUsers className="text-4xl text-primary-blue" />
+                    <FaUsers className="text-4xl text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-primary-dark mb-3">Asociados</h3>
+                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Asociados</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Requisitos y procedimiento de admisión</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Derechos y obligaciones</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Tipos de socios</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Causas de baja</span>
                       </li>
                     </ul>
@@ -93,25 +116,25 @@ function Estatutos() {
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <FaBalanceScale className="text-4xl text-primary-blue" />
+                    <FaBalanceScale className="text-4xl text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-primary-dark mb-3">Órganos de Gobierno</h3>
+                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Órganos de Gobierno</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Asamblea General</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Junta Directiva</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Composición y funciones</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Procedimientos de elección</span>
                       </li>
                     </ul>
@@ -122,25 +145,25 @@ function Estatutos() {
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <FaHandshake className="text-4xl text-primary-blue" />
+                    <FaHandshake className="text-4xl text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-primary-dark mb-3">Régimen Económico</h3>
+                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Régimen Económico</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Patrimonio y recursos</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Cuotas de socios</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Gestión económica</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Presupuestos y rendición de cuentas</span>
                       </li>
                     </ul>
@@ -151,25 +174,25 @@ function Estatutos() {
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <FaGavel className="text-4xl text-primary-blue" />
+                    <FaGavel className="text-4xl text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-primary-dark mb-3">Modificación y Disolución</h3>
+                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Modificación y Disolución</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Procedimiento de reforma</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Causas de disolución</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Liquidación del patrimonio</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-primary-blue mr-2">•</span>
+                        <span className="text-blue-600 mr-2">•</span>
                         <span>Destino de bienes</span>
                       </li>
                     </ul>
@@ -181,9 +204,9 @@ function Estatutos() {
         </section>
 
         {/* Descarga del documento */}
-        <section className="py-16 bg-white">
+        <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-gradient-to-br from-primary-blue to-blue-700 rounded-xl p-8 md:p-12 text-white text-center shadow-xl">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-white text-center shadow-xl">
               <FaFileAlt className="text-6xl mx-auto mb-6" />
               <h3 className="text-3xl font-bold mb-4">
                 Consulta Nuestros Estatutos
@@ -195,7 +218,7 @@ function Estatutos() {
                 href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+                className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
               >
                 <FaDownload className="text-2xl" />
                 Descargar Estatutos (PDF)
@@ -208,10 +231,10 @@ function Estatutos() {
         </section>
 
         {/* Información adicional */}
-        <section className="py-16">
+        <section className="py-20 lg:py-24 bg-slate-50">
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-gray-100 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-primary-dark mb-4 text-center">
+              <h3 className="text-2xl font-bold text-[#1B2336] mb-4 text-center">
                 ¿Tienes dudas sobre los estatutos?
               </h3>
               <p className="text-gray-700 text-center mb-6">
@@ -241,3 +264,7 @@ function Estatutos() {
 }
 
 export default Estatutos
+
+
+
+

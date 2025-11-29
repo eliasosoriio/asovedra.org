@@ -43,7 +43,7 @@ function Hero() {
 
                   {/* Main heading */}
                   <div className="w-full">
-                     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-4">
+                     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight mb-4">
                         Asovedra
                      </h1>
                      <div className="w-24 h-1 bg-primary-blue mb-6 mx-auto lg:mx-0"></div>

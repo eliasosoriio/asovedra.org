@@ -72,12 +72,23 @@ function Contact() {
         keywords="contacto asovedra, teléfono asovedra, email asovedra, oficina pontevedra, consulta gratuita, asesoría legal"
         canonical="/contacto"
       />
-      <main className='min-h-screen bg-gray-50 pt-20'>
+      <main className='min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20'>
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-primary-blue to-blue-700 py-16 px-4">
-        <div className="max-w-6xl mx-auto text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contacto</h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+      <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 px-4 relative overflow-hidden">
+        {/* Puntos decorativos */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
+          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm !text-white rounded-full text-sm font-semibold mb-6">
+            Contáctanos
+          </span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 !text-white">Contacto</h1>
+          <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
+          <p className="text-xl !text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Estamos aquí para ayudarte. Contáctanos y te responderemos lo antes posible
           </p>
         </div>
@@ -86,7 +97,7 @@ function Contact() {
 
 
       {/* Contact Form & Map */}
-      <section className="py-16 bg-white">
+      <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -319,10 +330,14 @@ function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
+      <section className="py-20 lg:py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-primary-dark mb-4">Preguntas Frecuentes</h3>
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-[#1B2336] text-white rounded-full text-sm font-semibold mb-4">
+              Ayuda
+            </span>
+            <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Preguntas Frecuentes</h3>
+            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
             <p className="text-gray-600">
               Encuentra respuestas rápidas a las preguntas más comunes
             </p>
@@ -357,3 +372,4 @@ function Contact() {
 }
 
 export default Contact
+
