@@ -1,5 +1,32 @@
 export const NEWS_DATA = [
   {
+    title: 'La incertidumbre inunda a los venezolanos que buscan volver a casa',
+    image: 'https://www.diariodepontevedra.es/asset/thumbnail,768,432,center,center/media/diariodepontevedra/images/2025/11/27/2025112719551835738.jpg',
+    description: 'La comunidad venezolana de Pontevedra afronta la falta de información y el desamparo ante la revocación de las licencias a seis aerolíneas internacionales por parte del gobierno de Maduro. Una situación que impide que muchos puedan volver a sus hogares o viajar para ver a sus familiares',
+    date: '28 de noviembre de 2025',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/incertidumbre-inunda-venezolanos-que-buscan-volver-casa/202511280500001420280.html',
+    isoDate: '2025-11-28'
+  },
+  {
+    title: 'Una concentración en A Peregrina reclama mejoras de las oficinas en personal y medios',
+    image: 'https://estaticos-cdn.prensaiberica.es/clip/13e68db2-6d96-45a3-8117-3bd72999df0b_16-9-discover-aspect-ratio_default_0.jpg',
+    description: '«Estamos en un escenario crítico», resume Manuel Osorio, presidente de Asovedra, que convocó con Galicia Activa una concentración para visibilizar la «creciente saturación del sistema de Extranjería en Galicia», un sistema tensionado que afecta a unas 600 personas en Pontevedra y a unas 3.000 en la provincia.',
+    date: '23 de noviembre de 2025',
+    source: 'Faro de Vigo',
+    url: 'https://www.farodevigo.es/pontevedra/2025/11/23/retrasos-extranjeria-llevan-situacion-critica-124013836.html',
+    isoDate: '2025-11-23'
+  },
+  {
+    title: 'Piden en Pontevedra más medios para unas oficinas de extranjería «desbordadas»',
+    image: 'https://cflvdg.avoz.es/sc/NXKv4jmZBr1unjQLqkt_N_MDR1c=/768x/2025/11/22/00121763828761676484289/Foto/PN23C2F1_172331.jpg',
+    description: 'Venezolanos de la ciudad hablan de un escenario «crítico» que deja a personas fuera del sistema y rompe proyectos de vida. ASOVEDRA y Galicia Activa reclaman más personal y medios ante la saturación de las oficinas de extranjería.',
+    date: '23 de noviembre de 2025',
+    source: 'La Voz de Galicia',
+    url: 'https://www.lavozdegalicia.es/noticia/pontevedra/2025/11/23/piden-medios-oficinas-extranjeria-desbordadas/0003_202511P23C2994.htm',
+    isoDate: '2025-11-23'
+  },
+  {
     title: '"Venimos a trabajar, no a quitar nada a nadie", es hora de acabar con ese famoso mito',
     image: 'https://www.diariodepontevedra.es/asset/thumbnail,992,558,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg',
     description: 'La nueva junta directiva de ASOVEDRA reivindica la aportación laboral de la comunidad iberoamericana y pide una regularización ágil ante vacantes sin cubrir en sectores clave de Galicia.',
