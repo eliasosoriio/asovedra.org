@@ -207,10 +207,10 @@ export function Header() {
 
         <div
           className={`overflow-hidden transition-all duration-300 lg:hidden ${
-            mobileMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
+            mobileMenuOpen ? 'max-h-[calc(100svh-5.5rem)] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="border-t border-white/8 px-4 pb-4 pt-3 sm:px-5">
+          <div className="max-h-[calc(100svh-5.5rem)] overflow-y-auto overscroll-contain border-t border-white/8 px-4 pb-4 pt-3 sm:px-5">
             <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-4">
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-slate-400">Navegación</p>
               <p className="mt-2 text-sm leading-6 text-slate-300">Acceso directo a servicios, noticias y documentos institucionales.</p>
