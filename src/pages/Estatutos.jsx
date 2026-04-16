@@ -1,261 +1,137 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaBalanceScale, FaDownload, FaFileAlt, FaGavel, FaHandshake, FaUsers } from 'react-icons/fa'
 import SEO from '../components/SEO'
-import { FaFileAlt, FaDownload, FaBalanceScale, FaUsers, FaHandshake, FaGavel } from 'react-icons/fa'
+import ContentSurface from '../components/layout/ContentSurface'
+import InternalPageHero from '../components/layout/InternalPageHero'
 
 function Estatutos() {
+  const bloques = [
+    {
+      title: 'Asociados',
+      icon: <FaUsers />,
+      items: ['Requisitos y procedimiento de admision', 'Derechos y obligaciones', 'Tipos de socios', 'Causas de baja']
+    },
+    {
+      title: 'Organos de gobierno',
+      icon: <FaBalanceScale />,
+      items: ['Asamblea General', 'Junta Directiva', 'Composicion y funciones', 'Procedimientos de eleccion']
+    },
+    {
+      title: 'Regimen economico',
+      icon: <FaHandshake />,
+      items: ['Patrimonio y recursos', 'Cuotas de socios', 'Gestion economica', 'Presupuestos y rendicion de cuentas']
+    },
+    {
+      title: 'Modificacion y disolucion',
+      icon: <FaGavel />,
+      items: ['Procedimiento de reforma', 'Causas de disolucion', 'Liquidacion del patrimonio', 'Destino de bienes']
+    }
+  ]
+
   return (
     <>
-      <SEO 
+      <SEO
         title="Estatutos"
-        description="Estatutos de ASOVEDRA - Asociación Iberoamericana en el Principado de Asturias. Consulta nuestros estatutos y normativa interna."
-        keywords="estatutos asovedra, normativa, asociación iberoamericana, reglamento, documentos legales"
+        description="Estatutos de ASOVEDRA. Consulta nuestro marco normativo, organizativo y de buen gobierno asociativo."
+        keywords="estatutos asovedra, normativa, asociacion iberoamericana, reglamento, documentos legales"
         canonical="/estatutos"
       />
-      <main className='min-h-screen bg-white pt-20'>
-        {/* Header Section */}
-        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
-          {/* Puntos decorativos */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-          </div>
 
-          {/* Badge */}
-          <div className="max-w-6xl mx-auto mb-8 text-center relative z-10">
-            <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white border border-white/20">
-              Marco normativo
-            </span>
-          </div>
+      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
+        <InternalPageHero
+          eyebrow="Marco normativo"
+          title="Estatutos de Asovedra"
+          description="Documento que regula la organizacion, el funcionamiento interno y el buen gobierno de la asociacion."
+        />
 
-          {/* Línea decorativa Venezuela */}
-          <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-8"></div>
-
-          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Estatutos de ASOVEDRA</h1>
-            <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Marco normativo y organizativo de nuestra asociación
-            </p>
-          </div>
-        </section>
-
-        {/* Introducción */}
-        <section className="py-20 lg:py-24 bg-white">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
-                Transparencia y normativa
-              </span>
-              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-              <FaBalanceScale className="text-6xl text-blue-600 mx-auto mb-6" />
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-6">Transparencia y Normativa</h2>
-            </div>
-
-            <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                Los estatutos de <strong>ASOVEDRA</strong> establecen las bases de nuestra organización, 
-                definen nuestros objetivos, estructura, derechos y obligaciones de los asociados, 
-                así como los procedimientos para la toma de decisiones y el funcionamiento de la asociación.
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-4xl">
+            <ContentSurface className="p-8 text-center lg:p-10">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-[1.4rem] bg-white/[0.08] text-3xl text-blue-300">
+                <FaBalanceScale />
+              </div>
+              <h2 className="mt-6 text-3xl font-bold text-white">Transparencia y normativa</h2>
+              <p className="mt-5 text-lg leading-8 text-slate-300">
+                Los estatutos de Asovedra establecen nuestras bases organizativas, los derechos y obligaciones de las personas asociadas y los procedimientos que ordenan la toma de decisiones.
               </p>
-
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white text-center my-12">
-                <FaGavel className="text-5xl mx-auto mb-4" />
-                <p className="text-xl font-medium">
-                  "Comprometidos con la transparencia y el buen gobierno asociativo"
+              <div className="mt-8 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(135deg,rgba(59,130,246,0.24),rgba(15,23,42,0.3))] px-6 py-8 text-white">
+                <FaGavel className="mx-auto text-4xl text-blue-200" />
+                <p className="mt-4 text-lg font-medium">
+                  Comprometidos con la transparencia y el buen gobierno asociativo.
                 </p>
               </div>
+            </ContentSurface>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <h2 className="text-3xl font-bold text-white lg:text-4xl">Contenido de los estatutos</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">
+                Principales apartados que estructuran el funcionamiento de la asociacion.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              {bloques.map((bloque) => (
+                <ContentSurface key={bloque.title} className="p-6 sm:p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.08] text-xl text-blue-300">
+                      {bloque.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white">{bloque.title}</h3>
+                      <div className="mt-4 grid gap-3">
+                        {bloque.items.map((item) => (
+                          <div key={item} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm leading-6 text-slate-300">
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </ContentSurface>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Contenido de los Estatutos */}
-        <section className="py-20 lg:py-24 bg-slate-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
-                Estructura organizativa
-              </span>
-              <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Contenido de los Estatutos</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-                Principales aspectos regulados en nuestros estatutos
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[1fr_0.9fr]">
+            <ContentSurface className="p-8 text-center lg:p-10">
+              <FaFileAlt className="mx-auto text-5xl text-blue-300" />
+              <h2 className="mt-6 text-3xl font-bold text-white">Consulta nuestros estatutos</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">
+                Descarga el documento completo en PDF para conocer el detalle del marco organizativo y normativo de la asociacion.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <FaUsers className="text-4xl text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Asociados</h3>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Requisitos y procedimiento de admisión</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Derechos y obligaciones</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Tipos de socios</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Causas de baja</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <FaBalanceScale className="text-4xl text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Órganos de Gobierno</h3>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Asamblea General</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Junta Directiva</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Composición y funciones</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Procedimientos de elección</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <FaHandshake className="text-4xl text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Régimen Económico</h3>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Patrimonio y recursos</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Cuotas de socios</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Gestión económica</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Presupuestos y rendición de cuentas</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <FaGavel className="text-4xl text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">Modificación y Disolución</h3>
-                    <ul className="space-y-2 text-gray-700 text-sm">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Procedimiento de reforma</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Causas de disolución</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Liquidación del patrimonio</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span>Destino de bienes</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Descarga del documento */}
-        <section className="py-20 lg:py-24 bg-white">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-8 md:p-12 text-white text-center shadow-xl">
-              <FaFileAlt className="text-6xl mx-auto mb-6" />
-              <h3 className="text-3xl font-bold mb-4">
-                Consulta Nuestros Estatutos
-              </h3>
-              <p className="text-lg mb-8 opacity-90">
-                Descarga el documento completo en formato PDF para conocer todos los detalles de nuestra organización
-              </p>
-              <a 
-                href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf" 
+              <a
+                href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+                className="mt-6 inline-flex items-center gap-3 rounded-xl bg-white px-7 py-4 text-sm font-semibold text-slate-950 hover:bg-slate-100"
               >
-                <FaDownload className="text-2xl" />
-                Descargar Estatutos (PDF)
+                <FaDownload className="text-lg" />
+                Descargar estatutos
               </a>
-              <p className="text-sm mt-6 opacity-75">
-                Última actualización: 2025
-              </p>
-            </div>
-          </div>
-        </section>
+              <p className="mt-5 text-sm text-slate-400">Ultima actualizacion: 2025</p>
+            </ContentSurface>
 
-        {/* Información adicional */}
-        <section className="py-20 lg:py-24 bg-slate-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-gray-100 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-[#1B2336] mb-4 text-center">
-                ¿Tienes dudas sobre los estatutos?
-              </h3>
-              <p className="text-gray-700 text-center mb-6">
-                Si necesitas aclaraciones sobre cualquier aspecto de nuestros estatutos o sobre el funcionamiento 
-                de la asociación, no dudes en contactarnos.
+            <ContentSurface className="p-8 text-center lg:p-10">
+              <h2 className="text-2xl font-bold text-white lg:text-3xl">Tienes dudas sobre los estatutos</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300">
+                Si necesitas aclaraciones sobre cualquier aspecto del documento o sobre el funcionamiento de la asociacion, podemos orientarte.
               </p>
-              <div className="flex justify-center">
-                <Link 
-                  to="/contacto" 
-                  className="btn-primary inline-flex items-center justify-center gap-2"
-                >
-                  Contactar con la Junta Directiva
-                </Link>
-              </div>
-            </div>
-
-            <div className="mt-8 text-center text-sm text-gray-600">
-              <p>
-                Los estatutos están inscritos en el Registro de Asociaciones del Principado de Asturias
+              <Link
+                to="/contacto"
+                className="mt-6 inline-flex items-center justify-center rounded-xl border border-white/14 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-white hover:bg-white/[0.08]"
+              >
+                Contactar con la Junta Directiva
+              </Link>
+              <p className="mt-6 text-sm text-slate-400">
+                Los estatutos estan inscritos en el Registro de Asociaciones correspondiente.
               </p>
-            </div>
+            </ContentSurface>
           </div>
         </section>
       </main>
@@ -264,7 +140,3 @@ function Estatutos() {
 }
 
 export default Estatutos
-
-
-
-

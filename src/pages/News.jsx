@@ -1,21 +1,20 @@
-import React, { useState, useRef } from 'react'
-import { NEWS_DATA } from '../constants/news'
-import SEO from '../components/SEO'
+import React, { useRef, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
+import SEO from '../components/SEO'
+import InternalPageHero from '../components/layout/InternalPageHero'
+import { NEWS_DATA } from '../constants/news'
 
 function News() {
   const [currentPage, setCurrentPage] = useState(1)
   const newsPerPage = 6
   const newsContainerRef = useRef(null)
 
-  // Ordenar automáticamente por fecha (desc)
   const newsData = [...NEWS_DATA].sort((a, b) => {
     const dA = new Date(a.isoDate || 0).getTime()
     const dB = new Date(b.isoDate || 0).getTime()
     return dB - dA
   })
 
-  // Calcular paginación
   const totalPages = Math.ceil(newsData.length / newsPerPage)
   const indexOfLastNews = currentPage * newsPerPage
   const indexOfFirstNews = indexOfLastNews - newsPerPage
@@ -23,11 +22,7 @@ function News() {
 
   const scrollToNews = () => {
     if (newsContainerRef.current) {
-      newsContainerRef.current.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start',
-        inline: 'nearest'
-      })
+      newsContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
@@ -35,14 +30,14 @@ function News() {
     setCurrentPage(pageNumber)
     setTimeout(scrollToNews, 100)
   }
-  
+
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1)
       setTimeout(scrollToNews, 100)
     }
   }
-  
+
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
@@ -52,111 +47,90 @@ function News() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Noticias"
         description="Mantente informado con las últimas noticias de la comunidad iberoamericana en España. Cobertura de eventos, logros y actualidad migratoria."
         keywords="noticias iberoamericanos españa, actualidad, comunidad iberoamericana, noticias asovedra, eventos"
         canonical="/noticias"
       />
-      <main className='min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20'>
-        {/* Header Section */}
-        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 px-4 relative overflow-hidden">
-          {/* Puntos decorativos */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto text-center relative z-10">
-            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm !text-white rounded-full text-sm font-semibold mb-6">
-              Actualidad
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 !text-white">Noticias y Actualidad</h1>
-            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-600 !to-red-600 mx-auto mb-6"></div>
-            <p className="text-xl !text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Mantente informado sobre las últimas noticias de la comunidad iberoamericana en España
-            </p>
-          </div>
-        </section>
 
-        {/* News Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div ref={newsContainerRef} className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Todas las Noticias</h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Últimas actualizaciones y acontecimientos importantes
-              </p>
-            </div>
+      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
+        <InternalPageHero
+          eyebrow="Actualidad"
+          title="Noticias y actualidad"
+          description="Seguimiento de iniciativas, colaboraciones y temas de interes para la comunidad iberoamericana."
+        />
 
-            <div className="grid gap-8 mb-12">
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-7xl" ref={newsContainerRef}>
+            <div className="grid gap-6">
               {currentNews.map((news, index) => (
-                <article 
+                <article
                   key={news.url || indexOfFirstNews + index}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 lg:grid lg:grid-cols-2"
+                  className="group overflow-hidden rounded-[1.8rem] border border-white/8 bg-white/[0.04] shadow-[0_24px_50px_-30px_rgba(15,23,42,0.9)] backdrop-blur-sm lg:grid lg:grid-cols-[0.95fr_1.05fr]"
                 >
-                  <div className="relative h-80 lg:h-96 overflow-hidden">
-                    <img 
-                      src={news.image} 
+                  <div className="relative h-72 overflow-hidden lg:h-full lg:min-h-[20rem]">
+                    <img
+                      src={news.image}
                       alt={news.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1B2336] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent"></div>
+                    <div className="absolute left-5 top-5 rounded-full border border-white/14 bg-slate-950/72 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
                       {news.source}
                     </div>
                   </div>
-                  <div className="p-8 flex flex-col justify-center">
-                    <div className="text-sm text-slate-500 mb-3">{news.date}</div>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+
+                  <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+                    <p className="text-sm font-medium text-slate-400">{news.date}</p>
+                    <h2 className="mt-3 text-2xl font-bold text-white transition-colors duration-200 group-hover:text-blue-300 lg:text-3xl">
                       {news.title}
-                    </h3>
-                    <p className="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
+                    </h2>
+                    <p className="mt-4 line-clamp-3 text-base leading-7 text-slate-300">
                       {news.description}
                     </p>
-                    <a 
-                      href={news.url} 
-                      target="_blank" 
+                    <a
+                      href={news.url}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[#1B2336] font-semibold hover:text-blue-600 transition-colors group/link"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
                     >
-                      Leer más
-                      <FaArrowRight className="text-sm group-hover/link:translate-x-1 transition-transform" />
+                      Leer noticia completa
+                      <FaArrowRight className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
                     </a>
                   </div>
                 </article>
               ))}
             </div>
 
-            {/* Pagination */}
-            <div className="flex flex-col items-center gap-6 mt-16">
-              <div className="flex justify-center items-center space-x-3">
-                <button 
+            <div className="mt-14 flex flex-col items-center gap-6">
+              <div className="flex items-center justify-center gap-3">
+                <button
                   onClick={prevPage}
                   disabled={currentPage === 1}
-                  className={`p-3 rounded-lg font-medium transition-all ${
-                    currentPage === 1 
-                      ? 'bg-slate-200 text-slate-400 cursor-not-allowed' 
-                      : 'bg-white border-2 border-[#1B2336] text-[#1B2336] hover:bg-[#1B2336] hover:text-white shadow-md'
+                  className={`flex h-11 w-11 items-center justify-center rounded-xl border text-sm font-semibold transition-all duration-200 ${
+                    currentPage === 1
+                      ? 'cursor-not-allowed border-white/6 bg-white/[0.03] text-slate-500'
+                      : 'border-white/10 bg-white/[0.05] text-white hover:bg-white/[0.08]'
                   }`}
-                  aria-label="Página anterior"
+                  aria-label="Pagina anterior"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
-                
-                <div className="flex space-x-2">
+
+                <div className="flex gap-2">
                   {[...Array(totalPages)].map((_, index) => {
                     const pageNumber = index + 1
                     return (
                       <button
                         key={pageNumber}
                         onClick={() => paginate(pageNumber)}
-                        className={`w-12 h-12 rounded-lg font-semibold transition-all ${
+                        className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-semibold transition-all duration-200 ${
                           currentPage === pageNumber
-                            ? 'bg-[#1B2336] text-white shadow-lg scale-110'
-                            : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-[#1B2336] hover:text-[#1B2336]'
+                            ? 'bg-gradient-to-r from-blue-700 to-blue-600 text-white shadow-[0_14px_28px_-18px_rgba(37,99,235,0.95)]'
+                            : 'border border-white/10 bg-white/[0.05] text-slate-300 hover:bg-white/[0.08] hover:text-white'
                         }`}
                       >
                         {pageNumber}
@@ -164,27 +138,26 @@ function News() {
                     )
                   })}
                 </div>
-                
-                <button 
+
+                <button
                   onClick={nextPage}
                   disabled={currentPage === totalPages}
-                  className={`p-3 rounded-lg font-medium transition-all ${
-                    currentPage === totalPages 
-                      ? 'bg-slate-200 text-slate-400 cursor-not-allowed' 
-                      : 'bg-white border-2 border-[#1B2336] text-[#1B2336] hover:bg-[#1B2336] hover:text-white shadow-md'
+                  className={`flex h-11 w-11 items-center justify-center rounded-xl border text-sm font-semibold transition-all duration-200 ${
+                    currentPage === totalPages
+                      ? 'cursor-not-allowed border-white/6 bg-white/[0.03] text-slate-500'
+                      : 'border-white/10 bg-white/[0.05] text-white hover:bg-white/[0.08]'
                   }`}
-                  aria-label="Página siguiente"
+                  aria-label="Pagina siguiente"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </div>
-              
-              {/* Page info */}
-              <div className="text-center text-slate-600 text-sm">
+
+              <p className="text-sm text-slate-400">
                 Mostrando {indexOfFirstNews + 1}-{Math.min(indexOfLastNews, newsData.length)} de {newsData.length} noticias
-              </div>
+              </p>
             </div>
           </div>
         </section>
@@ -194,4 +167,3 @@ function News() {
 }
 
 export default News
-

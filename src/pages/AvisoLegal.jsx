@@ -1,5 +1,6 @@
 import React from 'react'
 import SEO from '../components/SEO'
+import LegalDocumentLayout from '../components/layout/LegalDocumentLayout'
 
 function AvisoLegal() {
   return (
@@ -10,46 +11,25 @@ function AvisoLegal() {
         keywords="aviso legal, términos condiciones, asovedra, protección datos, privacidad"
         canonical="/aviso-legal"
       />
-      <main className='min-h-screen bg-white pt-20'>
-        {/* Header Section */}
-        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
-          {/* Puntos decorativos */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-          </div>
-
-          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-            <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Legal
-            </div>
-            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Aviso Legal</h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Términos y condiciones de uso del sitio web
-            </p>
-          </div>
-        </section>
-
-        {/* Legal Notice Content */}
-        <section className="py-20 lg:py-24 bg-slate-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
-              
+      <LegalDocumentLayout
+        eyebrow="Legal"
+        title="Aviso Legal"
+        description="Terminos y condiciones de uso del sitio web"
+      >
+            <div className="space-y-8">
               <div>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="leading-relaxed text-slate-300">
                   El presente Aviso Legal regula las condiciones generales de acceso y utilización del sitio web accesible en la dirección URL https://asovedra.org (en adelante, el sitio web), que Asovedra pone a disposición de los usuarios de Internet.
                 </p>
-                <p className="text-slate-600 leading-relaxed mt-4">
+                <p className="mt-4 leading-relaxed text-slate-300">
                   La utilización del sitio web implica la aceptación plena y sin reservas de todas y cada una de las disposiciones incluidas en este Aviso Legal. En consecuencia, el usuario del sitio web debe leer atentamente el presente Aviso Legal en cada una de las ocasiones en que se proponga utilizar la web, ya que el texto podría sufrir modificaciones a criterio del titular de la web, o a causa de un cambio legislativo, jurisprudencial o en la práctica empresarial.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">TITULARIDAD DEL SITIO WEB</h2>
-                <div className="bg-slate-100 p-6 rounded-lg">
-                  <ul className="space-y-2 text-slate-600">
+                <h2 className="mb-4 text-2xl font-bold text-white">TITULARIDAD DEL SITIO WEB</h2>
+                <div className="rounded-2xl border border-white/8 bg-white/[0.04] p-6">
+                  <ul className="space-y-2 text-slate-300">
                     <li><strong>Razón Social:</strong> ASOVEDRA</li>
                     <li><strong>Nombre del titular:</strong> Asociación de Venezolanos en Pontevedra</li>
                     <li><strong>Domicilio social:</strong> Rúa Sor Lucía 4, Oficina 50</li>
@@ -151,25 +131,22 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">LEGISLACIÓN APLICABLE Y JURISDICCIÓN COMPETENTE</h2>
-                <p className="text-slate-600 leading-relaxed">
+                <h2 className="mb-4 text-2xl font-bold text-white">LEGISLACIÓN APLICABLE Y JURISDICCIÓN COMPETENTE</h2>
+                <p className="leading-relaxed text-slate-300">
                   El presente Aviso Legal se interpretará y regirá de conformidad con la legislación española. Asovedra y los usuarios, con renuncia expresa a cualquier otro fuero que pudiera corresponderles, se someten al de los juzgados y tribunales del domicilio de Asovedra para cualquier controversia que pudiera derivarse del acceso o uso de la web.
                 </p>
               </div>
 
               <div className="border-t pt-6">
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-slate-400">
                   Última actualización: Octubre 2025
                 </p>
               </div>
-
             </div>
-          </div>
-        </section>
-      </main>
+
+      </LegalDocumentLayout>
     </>
   )
 }
 
 export default AvisoLegal
-

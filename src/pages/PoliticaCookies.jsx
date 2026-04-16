@@ -1,49 +1,27 @@
 import React from 'react'
 import SEO from '../components/SEO'
+import LegalDocumentLayout from '../components/layout/LegalDocumentLayout'
 
 function PoliticaCookies() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Política de Cookies"
         description="Información sobre el uso de cookies en ASOVEDRA. Conoce cómo utilizamos las cookies para mejorar tu experiencia de navegación."
         keywords="cookies asovedra, política cookies, privacidad web, navegación segura"
         canonical="/politica-cookies"
       />
-      <main className='min-h-screen bg-white pt-20'>
-        {/* Header Section */}
-        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
-          {/* Puntos decorativos */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-          </div>
-
-          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-            <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Legal
-            </div>
-            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Política de Cookies</h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Información sobre el uso de cookies en nuestro sitio web
-            </p>
-          </div>
-        </section>
-
-        {/* Legal Content */}
-        <section className="py-20 lg:py-24 bg-slate-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-              <div className="prose prose-lg max-w-none">
-                
+      <LegalDocumentLayout
+        eyebrow="Legal"
+        title="Politica de Cookies"
+        description="Informacion sobre el uso de cookies en nuestro sitio web"
+      >
                 <h2 className="text-2xl font-bold text-[#1B2336] mb-6">Política de Cookies de ASOVEDRA.org</h2>
-                
+
                 <p className="mb-6">
                   Esta política define las condiciones establecidas para el dominio:
                 </p>
-                
+
                 <ul className="mb-6">
                   <li><strong>https://asovedra.org</strong></li>
                 </ul>
@@ -52,7 +30,7 @@ function PoliticaCookies() {
                 <p className="mb-6">
                   Las cookies constituyen una herramienta empleada por los servidores Web para almacenar y recuperar información acerca de sus visitantes. No es más que un fichero de texto que algunos servidores piden a nuestro navegador que escriba en nuestro disco duro, con información acerca de lo que hemos estado haciendo por sus páginas.
                 </p>
-                
+
                 <p className="mb-6">
                   Poseen una fecha de caducidad, que puede oscilar desde el tiempo que dure la sesión hasta una fecha futura especificada, a partir de la cual dejan de ser operativas. ASOVEDRA.org utiliza cookies para facilitar la navegación por su Portal y para obtener una mayor eficacia y personalización de los servicios ofrecidos a los Usuarios.
                 </p>
@@ -66,7 +44,7 @@ function PoliticaCookies() {
                 <p className="mb-6">
                   El usuario puede libremente decidir acerca de la implantación o no en su disco duro de las cookies empleadas en ASOVEDRA.org. En este sentido, el usuario puede configurar su navegador para aceptar o rechazar por defecto todas las cookies o para recibir un aviso en pantalla de la recepción de cada cookie y decidir en ese momento su implantación o no en su disco duro.
                 </p>
-                
+
                 <p className="mb-6">
                   Le sugerimos consultar la sección de ayuda de su navegador para saber cómo cambiar la configuración que actualmente emplea. Aun cuando el Usuario configurase su navegador para rechazar todas las cookies o rechazase expresamente las cookies de ASOVEDRA.org podrá navegar por el Portal con el único inconveniente de no poder disfrutar de las funcionalidades del Portal que requieran la instalación de alguna de ellas.
                 </p>
@@ -96,7 +74,7 @@ function PoliticaCookies() {
                 </ul>
 
                 <h3 className="text-xl font-semibold text-[#1B2336] mb-4">Tipos de cookies utilizadas</h3>
-                
+
                 <h4 className="text-lg font-semibold text-gray-800 mb-3">Cookies técnicas</h4>
                 <p className="mb-6">
                   Son aquéllas que permiten al USUARIO la navegación a través de la página web y la utilización de las diferentes opciones o servicios que en ella existen como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la navegación, almacenar contenidos para la difusión de vídeos o sonido o compartir contenidos a través de redes sociales.
@@ -106,7 +84,7 @@ function PoliticaCookies() {
                 <p className="mb-4">
                   Son cookies de terceros (Google Inc.) de análisis que permiten el seguimiento y análisis del comportamiento de los USUARIOS de los sitios web a los que están vinculadas. La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de perfiles de navegación de los USUARIOS de dichos sitios, aplicaciones y plataformas, con el fin de introducir mejoras en función del análisis de los datos de uso que hacen los USUARIOS del servicio.
                 </p>
-                
+
                 <p className="mb-6">
                   Google Analytics, almacena las cookies en servidores ubicados en Estados Unidos y se compromete a no compartirla con terceros, excepto en los casos en los que sea necesario para el funcionamiento del sistema o cuando la ley obligue a tal efecto. Según Google no guarda la dirección IP del USUARIO.
                 </p>
@@ -153,7 +131,7 @@ function PoliticaCookies() {
                 <p className="mb-6">
                   Ni esta web, ni sus representantes legales se hacen responsables ni del contenido ni de la veracidad de las políticas de privacidad que puedan tener los terceros mencionados en esta política de cookies.
                 </p>
-                
+
                 <p className="mb-6">
                   Los navegadores web son las herramientas encargadas de almacenar las cookies y desde esos navegadores debes efectuar tu derecho a eliminación o desactivación de las mismas. Ni esta web ni sus representantes legales pueden garantizar la correcta o incorrecta manipulación de las cookies por parte de los mencionados navegadores.
                 </p>
@@ -173,14 +151,9 @@ function PoliticaCookies() {
                     <strong>Última actualización:</strong> Octubre 2025
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+      </LegalDocumentLayout>
     </>
   )
 }
 
 export default PoliticaCookies
-

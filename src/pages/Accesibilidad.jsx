@@ -1,49 +1,27 @@
 import React from 'react'
 import SEO from '../components/SEO'
+import LegalDocumentLayout from '../components/layout/LegalDocumentLayout'
 
 function Accesibilidad() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Declaración de Accesibilidad"
         description="Declaración de accesibilidad de ASOVEDRA. Nuestro compromiso con la accesibilidad web y la inclusión digital para todos los usuarios."
         keywords="accesibilidad web asovedra, wcag 2.1, inclusión digital, accesibilidad discapacidad"
         canonical="/accesibilidad"
       />
-      <main className='min-h-screen bg-white pt-20'>
-        {/* Header Section */}
-        <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
-          {/* Puntos decorativos */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-            <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-            <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-          </div>
-
-          <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-            <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Accesibilidad
-            </div>
-            <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Declaración de Accesibilidad</h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Nuestro compromiso con la accesibilidad web para todos los usuarios
-            </p>
-          </div>
-        </section>
-
-        {/* Content Section */}
-        <section className="py-20 lg:py-24 bg-slate-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-              <div className="prose prose-lg max-w-none">
-                
+      <LegalDocumentLayout
+        eyebrow="Accesibilidad"
+        title="Declaracion de Accesibilidad"
+        description="Nuestro compromiso con la accesibilidad web para todos los usuarios"
+      >
                 <h2 className="text-2xl font-bold text-[#1B2336] mb-6">Declaración de Accesibilidad</h2>
-                
+
                 <p className="mb-6">
                   En ASOVEDRA, estamos comprometidos a hacer accesible nuestro sitio de acuerdo al Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público.
                 </p>
-                
+
                 <p className="mb-8">
                   La presente declaración de accesibilidad se aplica al sitio web <strong>https://asovedra.org</strong>
                 </p>
@@ -52,7 +30,7 @@ function Accesibilidad() {
                 <p className="mb-6">
                   En ASOVEDRA estamos comprometidos con la accesibilidad de nuestro sitio web para que todos los usuarios, incluyendo personas con discapacidades, tengan las mismas condiciones de acceso a nuestro sitio web. Hemos trabajado arduamente para garantizar que nuestro sitio cumpla con los estándares de accesibilidad establecidos en las <strong>Directrices de Accesibilidad para el Contenido Web (WCAG) 2.1 Nivel AA</strong>.
                 </p>
-                
+
                 <p className="mb-6">
                   Nuestro sitio web incluye características de accesibilidad como texto alternativo para imágenes, navegación por teclado, etiquetas de formulario claras y opciones de contraste de color para garantizar que los usuarios con discapacidades visuales puedan acceder fácilmente a nuestro contenido. Además, nuestro sitio web es compatible con tecnologías de asistencia como lectores de pantalla y software de reconocimiento de voz.
                 </p>
@@ -72,11 +50,11 @@ function Accesibilidad() {
                 <p className="mb-6">
                   La presente declaración fue preparada el <strong>7 de octubre de 2025</strong>.
                 </p>
-                
+
                 <p className="mb-6">
                   El método empleado para preparar la declaración ha sido una autoevaluación llevada a cabo por los desarrolladores del sitio web.
                 </p>
-                
+
                 <p className="mb-8">
                   Continuaremos monitoreando y mejorando continuamente la accesibilidad de nuestro sitio web para asegurarnos de que sea fácilmente accesible para todos los usuarios. Si tiene alguna sugerencia o problema para mejorar nuestra accesibilidad, no dude en ponerse en contacto con nosotros.
                 </p>
@@ -90,13 +68,13 @@ function Accesibilidad() {
                 <p className="mb-4">
                   Puede realizar comunicaciones sobre requisitos de accesibilidad (artículo 10.2.a del RD 1112/2018), como, por ejemplo:
                 </p>
-                
+
                 <ul className="mb-6 space-y-2">
                   <li>• Informar sobre cualquier posible incumplimiento por parte de este sitio web</li>
                   <li>• Transmitir otras dificultades de acceso al contenido</li>
                   <li>• Formular cualquier otra consulta o sugerencia de mejora relativa a la accesibilidad del sitio web</li>
                 </ul>
-                
+
                 <p className="mb-6">
                   Escribiendo un email a <a href="mailto:info@asovedra.org" className="text-blue-600 hover:underline">info@asovedra.org</a> o a través del número de teléfono <a href="tel:+34604016113" className="text-blue-600 hover:underline">(+34) 604 016 113</a>.
                 </p>
@@ -111,7 +89,7 @@ function Accesibilidad() {
                     </ul>
                   </li>
                 </ul>
-                
+
                 <p className="mb-8">
                   En la Solicitud de información accesible, se debe concretar, con toda claridad, los hechos, razones y petición que permitan constatar que se trata de una solicitud razonable y legítima.
                 </p>
@@ -120,7 +98,7 @@ function Accesibilidad() {
                 <p className="mb-6">
                   Si una vez realizada una solicitud de información accesible o queja, esta hubiera sido desestimada, no se estuviera de acuerdo con la decisión adoptada, o la respuesta no cumpliera los requisitos contemplados en el artículo 12.5, la persona interesada podrá iniciar una reclamación. Igualmente se podrá iniciar una reclamación en el caso de que haya transcurrido el plazo de veinte días hábiles sin haber obtenido respuesta.
                 </p>
-                
+
                 <p className="mb-8">
                   La reclamación puede ser presentada través de la Instancia Genérica de la Sede electrónica del Ministerio de Asuntos Económicos y Transformación Digital, así como en el resto de opciones recogidas en la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. Las reclamaciones serán recibidas y tratadas por la Subdirección General de Inspección de Servicios del Ministerio.
                 </p>
@@ -160,14 +138,9 @@ function Accesibilidad() {
                     <strong>Próxima revisión programada:</strong> 7 de octubre de 2026
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+      </LegalDocumentLayout>
     </>
   )
 }
 
 export default Accesibilidad
-

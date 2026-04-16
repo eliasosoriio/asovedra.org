@@ -1,62 +1,59 @@
 import React from 'react'
-import SEO from '../components/SEO'
-import { ABOUT_STATS_ARRAY } from '../constants/stats'
 import { Link } from 'react-router-dom'
-import { FaBullseye, FaStar, FaHandshake, FaBalanceScale, FaGraduationCap, FaGlobe, FaDumbbell, FaHeart } from 'react-icons/fa'
+import {
+  FaBalanceScale,
+  FaBullseye,
+  FaGraduationCap,
+  FaHandshake,
+  FaHeart,
+  FaStar,
+  FaUsers
+} from 'react-icons/fa'
+import SEO from '../components/SEO'
+import ContentSurface from '../components/layout/ContentSurface'
+import InternalPageHero from '../components/layout/InternalPageHero'
+import { ABOUT_STATS_ARRAY } from '../constants/stats'
 
 function About() {
   const teamMembers = [
     {
-      name: "Manuel Osorio Lozano",
-      position: "Presidente",
-      image: "https://asovedra.org/assets/img/people/manuel-osorio.jpg",
-      description: "Más de 20 años de experiencia con la comunidad venezolana y su integración en España, ayudando a cientos de familias a establecerse y prosperar en su nuevo hogar."
+      name: 'Manuel Osorio Lozano',
+      position: 'Presidente',
+      image: 'https://asovedra.org/assets/img/people/manuel-osorio.jpg',
+      description: 'Más de 20 años de experiencia con la comunidad venezolana y su integración en España.'
     },
     {
-      name: "César Augusto Alarcón",
-      position: "Vicepresidente",
-      image: "https://asovedra.org/assets/img/people/cesar-alarcon.jpg",
-      description: "Abogado que emigró a España hace siete años; trabajó en empleos temporales mientras regularizaba su situación y recientemente abrió su despacho en Pontevedra."
+      name: 'César Augusto Alarcón',
+      position: 'Vicepresidente',
+      image: 'https://asovedra.org/assets/img/people/cesar-alarcon.jpg',
+      description: 'Abogado y referente en acompañamiento jurídico y procesos de regularización.'
     },
     {
-      name: "Mónica Brenna Álvarez",
-      position: "Secretaria",
-      image: "https://asovedra.org/assets/img/people/monica-brenna.jpg",
-      description: "Compagina su profesión de odontóloga en el SERGAS con su pasión por el voluntariado en ASOVEDRA, donde desde 2018 ayuda a las personas migrantes que lo necesitan."
+      name: 'Mónica Brenna Álvarez',
+      position: 'Secretaria',
+      image: 'https://asovedra.org/assets/img/people/monica-brenna.jpg',
+      description: 'Compagina su profesión sanitaria con un fuerte compromiso de voluntariado en Asovedra.'
     },
     {
-      name: "María Elena Buján",
-      position: "Tesorera",
-      image: "https://asovedra.org/assets/img/people/maria-elena.jpg",
-      description: "Llegó desde Venezuela en 2019, donde ayudaba a padres y madres en situaciones precarias; ahora presta ese apoyo a familias en Pontevedra como parte de Asovedra."
-    },
-    {
-      name: "Bernardo Gamallo Neira",
-      position: "Primer Vocal",
-      image: "https://asovedra.org/assets/img/people/bernardo-gamallo.jpg",
-      description: "Presidente fundador de la Asociación de Venezolanos en Pontevedra (2018–2021). Promotor del bienestar y la integración iberoamericana, fundador de Gaden Yoga, donde impulsa la meditación, el crecimiento personal y la armonía comunitaria."
-    },
-    {
-      name: "Juan Francisco Díaz Belisario",
-      position: "Segundo Vocal",
-      image: "https://asovedra.org/assets/img/people/juan-francisco.jpg",
-      description: "Comunicador Social con 30 años de experiencia en medios de comunicación y la docencia universitaria en Venezuela. Emigró a España en 2024, donde ha canalizado su compromiso social a través de voluntariado."
-    },
-    {
-      name: "Americo Antenucci",
-      position: "Tercer Vocal",
-      image: "https://asovedra.org/assets/img/people/americo-antenucci.jpg",
-      description: "De origen italiano y fue presidente del Club Ítalo Venezolano, destacando por su compromiso con la integración cultural y comunitaria. Aporta su experiencia colaborando activamente en el área de voluntariado y apoyo comunitario."
+      name: 'María Elena Buján',
+      position: 'Tesorera',
+      image: 'https://asovedra.org/assets/img/people/maria-elena.jpg',
+      description: 'Apoya a familias migrantes desde una mirada cercana, comunitaria y práctica.'
     }
   ]
 
   const milestones = [
-    { year: "2018", event: "Fundación de Asovedra", description: "Nace la asociación con el objetivo de apoyar a los venezolanos que llegaban a Pontevedra." },
-    { year: "2020", event: "Programa Reinvéntate y Trabaja", description: "Una iniciativa que tiene como objetivo principal conocer la realidad de los venezolanos, retornados y personas de países iberoamericanos, para facilitar su inclusión en el mercado laboral. Se da prioridad a quienes están en riesgo de exclusión social, brindando apoyo para integrarse plenamente en el entorno laboral y alcanzar una estabilidad económica." },
-    { year: "2021", event: "Expansión a toda Galicia y península", description: "Asovedra extiende sus servicios a las cuatro provincias gallegas y a la península para apoyar a la comunidad venezolana en su proceso de integración." },
-    { year: "2022", event: "Eventos", description: "Se llevan a cabo diversos eventos para fomentar la integración y visibilidad de la comunidad. Desde paseos y viajes hasta cenas." },
-    { year: "2023", event: "Galicia Activa", description: "Movimiento que busca promover la participación activa de la comunidad no sólo venezolana sino también de otros colectivos en Galicia." },
-    { year: "2025", event: "GLC Abogados", description: "Acuerdo de colaboración para brindar asesoría legal a la comunidad." }
+    { year: '2018', event: 'Fundación de Asovedra', description: 'Nace la asociación para apoyar a venezolanos e iberoamericanos en Pontevedra.' },
+    { year: '2020', event: 'Programa Reinvéntate y Trabaja', description: 'Impulso a la inserción laboral y acompañamiento a personas en riesgo de exclusión.' },
+    { year: '2021', event: 'Expansión territorial', description: 'Asovedra amplía su alcance a toda Galicia y a otras zonas de la península.' },
+    { year: '2023', event: 'Galicia Activa', description: 'Se refuerza la participación social y comunitaria con nuevos programas y alianzas.' }
+  ]
+
+  const values = [
+    { title: 'Solidaridad', text: 'Promovemos la ayuda mutua y el trabajo compartido dentro de la comunidad.', icon: <FaHandshake /> },
+    { title: 'Transparencia', text: 'Actuamos con honestidad, responsabilidad y claridad institucional.', icon: <FaBalanceScale /> },
+    { title: 'Excelencia', text: 'Buscamos calidad humana y profesional en cada acompañamiento.', icon: <FaGraduationCap /> },
+    { title: 'Compromiso', text: 'Asumimos el bienestar y la integración de la comunidad como prioridad.', icon: <FaHeart /> }
   ]
 
   return (
@@ -67,278 +64,147 @@ function About() {
         keywords="asovedra, sobre nosotros, misión, equipo, asociación, iberoamericanos, integración"
         canonical="/sobre-nosotros"
       />
-    <main className='min-h-screen bg-white pt-20'>
-      {/* Header Section */}
-      <section className="!bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900 py-20 lg:py-24 px-4 relative overflow-hidden">
-        {/* Puntos decorativos */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-        </div>
 
-        {/* Badge */}
-        <div className="max-w-6xl mx-auto mb-8 text-center relative z-10">
-          <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white border border-white/20">
-            Conoce nuestra historia
-          </span>
-        </div>
+      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
+        <InternalPageHero
+          eyebrow="Sobre Asovedra"
+          title="Una asociación construida desde el acompañamiento"
+          description="Historia, valores y equipo al servicio de la comunidad iberoamericana en Galicia."
+        />
 
-        {/* Línea decorativa Venezuela */}
-        <div className="w-24 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-8"></div>
-
-        <div className="max-w-6xl mx-auto text-center text-white relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Sobre Nosotros</h1>
-          <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Conoce nuestra historia, misión y el equipo que trabaja día a día por la comunidad iberoamericana en España
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
-              Nuestro propósito
-            </span>
-            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestra Misión y Visión</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-primary-blue to-blue-700 rounded-2xl p-8 text-white">
-              <div className="text-4xl mb-4"><FaBullseye /></div>
-              <h3 className="text-2xl font-bold mb-4">Misión</h3>
-              <p className="text-lg leading-relaxed opacity-90">
-                Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia, a través del acompañamiento, la orientación y la cooperación solidaria, preservando nuestras raíces y valores, y fomentando la igualdad, la participación y el desarrollo mutuo.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-primary-dark to-gray-800 rounded-2xl p-8 text-primary-dark">
-              <div className="text-4xl mb-4"><FaStar /></div>
-              <h3 className="text-2xl font-bold mb-4">Visión</h3>
-              <p className="text-lg leading-relaxed opacity-90">
-                Consolidarnos como una organización de referencia en Galicia por nuestro compromiso con la integración, la solidaridad y el desarrollo humano de la comunidad venezolana e iberoamericana, fortaleciendo los lazos culturales y sociales que nos unen y contribuyendo a una sociedad más inclusiva y participativa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20 lg:py-24 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
-              Lo que nos define
-            </span>
-            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestros Valores</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              Los principios que guían nuestro trabajo y definen nuestra identidad como organización
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaHandshake className="mx-auto text-blue-600" /></div>
-              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Solidaridad</h3>
-              <p className="text-gray-600">
-                Promovemos la ayuda mutua y el trabajo conjunto, fortaleciendo la unión y el apoyo entre quienes forman parte de nuestra comunidad.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaBalanceScale className="mx-auto text-blue-600" /></div>
-              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Transparencia</h3>
-              <p className="text-gray-600">
-                Gestionamos con honestidad y rendición de cuentas: publicamos de forma clara y accesible nuestras decisiones, actividades y uso de los recursos, abiertos al control de socios y comunidad.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaGraduationCap className="mx-auto text-blue-600" /></div>
-              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Excelencia</h3>
-              <p className="text-gray-600">
-                Promovemos la excelencia en nuestra labor social, actuando con compromiso, respeto y calidad humana en cada acompañamiento.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaGlobe className="mx-auto text-blue-600" /></div>
-              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Integración</h3>
-              <p className="text-gray-600">
-                Fomentamos la integración social y cultural desde el respeto mutuo, valorando nuestras raíces iberoamericanas y la riqueza de la cultura gallega.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaDumbbell className="mx-auto text-blue-600" /></div>
-              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Empoderamiento</h3>
-              <p className="text-gray-600">
-                Acompañamos a las personas para fortalecer sus capacidades y que puedan ser protagonistas de su propio proceso de integración y crecimiento.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4"><FaHeart className="mx-auto text-blue-600" /></div>
-              <h3 className="text-xl font-bold text-[#1B2336] mb-3">Compromiso</h3>
-              <p className="text-gray-600">
-                Asumimos con responsabilidad y entrega nuestro compromiso con la comunidad, trabajando cada día por su bienestar, integración y desarrollo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Plan de Igualdad Banner */}
-      <section className="py-20 lg:py-24 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-white">
-            <FaBalanceScale className="text-6xl mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Plan de Igualdad de Género 2025-2026
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Conoce nuestro compromiso con la igualdad de oportunidades y la no discriminación
-            </p>
-            <Link 
-              to="/plan-de-igualdad" 
-              className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Ver Plan de Igualdad
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* History Timeline */}
-      <section className="py-20 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-slate-100 px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4">
-              Nuestro camino
-            </span>
-            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestra Historia</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              Un recorrido por los momentos más importantes de nuestros 7 años de servicio
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-600 h-full"></div>
-            
-            {milestones.map((milestone, index) => (
-              <div key={index} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600">
-                    <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                    <h3 className="text-xl font-bold text-[#1B2336] mb-3">{milestone.event}</h3>
-                    <p className="text-slate-600">{milestone.description}</p>
-                  </div>
-                </div>
-                
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <div className="w-6 h-6 bg-white rounded-full"></div>
-                  </div>
-                </div>
-                
-                <div className="w-1/2"></div>
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+            <ContentSurface className="p-6 sm:p-8 lg:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.08] text-2xl text-blue-300">
+                <FaBullseye />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <h2 className="mt-5 text-2xl font-bold text-white lg:text-3xl">Nuestra misión</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300">
+                Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia desde el acompañamiento, la orientación y la cooperación solidaria.
+              </p>
+            </ContentSurface>
 
-      {/* Team */}
-      <section className="py-20 lg:py-24 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 mb-4 shadow-sm">
-              Quiénes somos
-            </span>
-            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1B2336] mb-4">Nuestro Equipo</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              Conoce a las personas que lideran y hacen posible el trabajo de Asovedra
-            </p>
+            <ContentSurface className="p-6 sm:p-8 lg:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.08] text-2xl text-blue-300">
+                <FaStar />
+              </div>
+              <h2 className="mt-5 text-2xl font-bold text-white lg:text-3xl">Nuestra visión</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300">
+                Consolidarnos como una organización de referencia por su compromiso con la integración, la solidaridad y el desarrollo humano de la comunidad iberoamericana.
+              </p>
+            </ContentSurface>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-full h-48 object-cover"
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <h2 className="text-3xl font-bold text-white lg:text-4xl">Valores que sostienen nuestra labor</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">
+                Principios que orientan nuestras decisiones, relaciones y forma de trabajar con la comunidad.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              {values.map((value) => (
+                <ContentSurface key={value.title} className="p-6 text-center">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.08] text-xl text-blue-300">
+                    {value.icon}
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-white">{value.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{value.text}</p>
+                </ContentSurface>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/8 bg-white/[0.04] shadow-[0_26px_56px_-32px_rgba(15,23,42,0.95)] backdrop-blur-sm">
+            <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
+              <div className="relative min-h-[18rem] lg:min-h-full">
+                <img
+                  src="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg"
+                  alt="Historia de Asovedra"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#1B2336] mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-3">{member.position}</p>
-                  <p className="text-slate-600 text-sm">{member.description}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent"></div>
+              </div>
+              <div className="p-8 lg:p-10">
+                <h2 className="text-3xl font-bold text-white lg:text-4xl">Nuestra historia</h2>
+                <p className="mt-5 text-base leading-7 text-slate-300 lg:text-lg">
+                  Asovedra surge en 2018 para crear un espacio de apoyo, orientación e integración para personas que llegan a España buscando nuevas oportunidades y una red comunitaria estable.
+                </p>
+                <div className="mt-6 grid gap-3">
+                  {milestones.map((milestone) => (
+                    <div key={milestone.year} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4">
+                      <div className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">{milestone.year}</div>
+                      <h3 className="mt-2 text-lg font-semibold text-white">{milestone.event}</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">{milestone.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <h2 className="text-3xl font-bold text-white lg:text-4xl">Nuestro equipo</h2>
+              <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">
+                Personas que impulsan la actividad de la asociación desde la experiencia, el compromiso y el trabajo voluntario.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              {teamMembers.map((member) => (
+                <ContentSurface key={member.name} className="overflow-hidden p-0">
+                  <img src={member.image} alt={member.name} className="h-56 w-full object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                    <p className="mt-1 text-sm font-semibold text-blue-300">{member.position}</p>
+                    <p className="mt-4 text-sm leading-7 text-slate-300">{member.description}</p>
+                  </div>
+                </ContentSurface>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-7xl grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {ABOUT_STATS_ARRAY.map((stat) => (
+              <ContentSurface key={stat.label} className="p-6 text-center">
+                <div className="text-3xl font-bold text-white lg:text-4xl">{stat.number}</div>
+                <div className="mt-2 text-sm text-slate-300">{stat.label}</div>
+              </ContentSurface>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Statistics */}
-      <section className="py-20 lg:py-24 !bg-gradient-to-br !from-[#1B2336] !via-slate-800 !to-slate-900">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Nuestro Impacto</h2>
-            <p className="text-white opacity-90 max-w-2xl mx-auto">
-              Cifras que reflejan nuestro compromiso y los resultados de nuestro trabajo
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {ABOUT_STATS_ARRAY.map((stat, index) => (
-              <div key={index} className="text-center text-white">
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="opacity-90">{stat.label}</div>
+        <section className="px-4 pb-20 lg:pb-24">
+          <div className="mx-auto max-w-5xl">
+            <ContentSurface className="p-8 text-center lg:p-10">
+              <div className="mx-auto flex max-w-3xl flex-col items-center">
+                <h2 className="text-3xl font-bold text-white lg:text-5xl">¿Quieres colaborar con Asovedra?</h2>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+                  Siempre estamos abiertos a nuevas colaboraciones, voluntariado y personas comprometidas con nuestra comunidad.
+                </p>
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <Link to="/contacto" className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 hover:bg-slate-100">
+                    Unete como voluntario
+                  </Link>
+                  <a href="tel:+34604016113" className="inline-flex items-center justify-center rounded-xl border border-white/14 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-white hover:bg-white/[0.08]">
+                    Llamar: 604 016 113
+                  </a>
+                </div>
               </div>
-            ))}
+            </ContentSurface>
           </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className='w-full bg-gradient-to-br from-[#1B2336] via-slate-800 to-slate-900 py-20 lg:py-24 relative overflow-hidden'>
-        {/* Puntos decorativos */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/30 rounded-full"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-500/30 rounded-full"></div>
-          <div className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-red-500/30 rounded-full"></div>
-        </div>
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="mb-8">
-            <div className="w-16 h-1 !bg-gradient-to-r !from-yellow-400 !via-blue-500 !to-red-600 mx-auto mb-6"></div>
-            <h2 className='text-3xl lg:text-5xl font-bold mb-4 leading-tight' style={{color: '#ffffff !important'}}>¿Quieres formar parte de nuestro equipo?</h2>
-            <p className='text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed' style={{color: '#cbd5e1 !important'}}>
-              Siempre estamos buscando voluntarios y colaboradores comprometidos con nuestra causa
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link to='/contacto' className='inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1B2336] text-white rounded-lg font-semibold hover:bg-slate-800 transition-all duration-200 shadow-lg hover:shadow-xl'>
-              Únete como voluntario
-            </Link>
-            <a href="tel:+34604016113" className='inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-[#1B2336] text-[#1B2336] rounded-lg font-semibold hover:bg-[#1B2336] hover:text-white transition-all duration-200'>
-              Llamar: 604 016 113
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
     </>
   )
 }
 
 export default About
-
