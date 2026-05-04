@@ -1,8 +1,57 @@
 import { useEffect, useState } from 'react'
-import { FaTrash, FaPlus } from 'react-icons/fa'
+import { FaTrash, FaPlus, FaKey } from 'react-icons/fa'
 import { supabase } from '../../lib/supabase'
 
 const DAYS = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+
+const inputCls = 'w-full rounded-lg border border-white/10 bg-white/[0.05] px-3 py-2 text-sm text-white outline-none focus:border-blue-400'
+
+function PasswordChangeCard() {
+  const [pwd, setPwd] = useState('')
+  const [pwd2, setPwd2] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [msg, setMsg] = useState(null)
+  const [err, setErr] = useState(null)
+
+  const submit = async (e) => {
+    e.preventDefault()
+    setErr(null); setMsg(null)
+    if (pwd.length < 8) { setErr('La contraseña debe tener al menos 8 caracteres.'); return }
+    if (pwd !== pwd2) { setErr('Las contraseñas no coinciden.'); return }
+    setBusy(true)
+    const { error } = await supabase.auth.updateUser({ password: pwd })
+    setBusy(false)
+    if (error) { setErr(error.message); return }
+    setPwd(''); setPwd2('')
+    setMsg('Contraseña actualizada correctamente.')
+  }
+
+  return (
+    <section className="rounded-xl border border-white/10 bg-white/[0.04] p-5">
+      <h3 className="mb-1 flex items-center gap-2 text-lg font-semibold text-white">
+        <FaKey className="text-blue-300" /> Cambiar contraseña
+      </h3>
+      <p className="mb-4 text-xs text-slate-400">Mínimo 8 caracteres. Si entraste con tu DNI, cámbialo ahora por algo más seguro.</p>
+      <form onSubmit={submit} className="grid gap-3 md:grid-cols-2">
+        <div>
+          <label className="mb-1 block text-xs text-slate-300">Nueva contraseña</label>
+          <input type="password" autoComplete="new-password" className={inputCls} value={pwd} onChange={e => setPwd(e.target.value)} required minLength={8} />
+        </div>
+        <div>
+          <label className="mb-1 block text-xs text-slate-300">Repetir contraseña</label>
+          <input type="password" autoComplete="new-password" className={inputCls} value={pwd2} onChange={e => setPwd2(e.target.value)} required minLength={8} />
+        </div>
+        <div className="md:col-span-2 flex flex-wrap items-center gap-3">
+          <button type="submit" disabled={busy} className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-100 disabled:opacity-60">
+            {busy ? 'Guardando…' : 'Actualizar contraseña'}
+          </button>
+          {msg && <span className="text-sm text-emerald-300">{msg}</span>}
+          {err && <span className="text-sm text-red-300">{err}</span>}
+        </div>
+      </form>
+    </section>
+  )
+}
 
 export default function ScheduleEditor({ userId }) {
   const [slots, setSlots] = useState([])
@@ -82,6 +131,8 @@ export default function ScheduleEditor({ userId }) {
           </label>
         </div>
       </section>
+
+      <PasswordChangeCard />
 
       <section className="rounded-xl border border-white/10 bg-white/[0.04] p-5">
         <div className="mb-4 flex items-center justify-between">
