@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { FaChevronDown, FaPhone } from 'react-icons/fa'
+import { FaChevronDown, FaCalendarPlus } from 'react-icons/fa'
 
 const menuStructure = [
   {
@@ -176,13 +176,13 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <a
-              href="tel:+34604016113"
+            <Link
+              to="/agendar"
               className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100 md:flex"
             >
-              <FaPhone className="text-xs" />
-              <span>604 016 113</span>
-            </a>
+              <FaCalendarPlus className="text-xs" />
+              <span>Pedir cita</span>
+            </Link>
 
             <button
               type="button"
@@ -282,13 +282,13 @@ export function Header() {
               ))}
             </nav>
 
-            <a
-              href="tel:+34604016113"
+            <Link
+              to="/agendar"
               className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition-all duration-200 hover:bg-slate-100"
             >
-              <FaPhone className="text-xs" />
-              <span>604 016 113</span>
-            </a>
+              <FaCalendarPlus className="text-xs" />
+              <span>Pedir cita</span>
+            </Link>
           </div>
         </div>
       </div>

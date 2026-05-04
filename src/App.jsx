@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { HelmetProvider } from 'react-helmet-async'
+import { AuthProvider } from './context/AuthContext'
 import { Header } from './components/layout/Header'
 import Hero from './components/layout/Hero'
 import Footer from './components/layout/Footer'
@@ -18,10 +19,15 @@ import Accesibilidad from "./pages/Accesibilidad"
 import PlanIgualdad from "./pages/PlanIgualdad"
 import Estatutos from "./pages/Estatutos"
 import DeclaracionValores from "./pages/DeclaracionValores"
+import Booking from "./pages/Booking"
+import BookingConfirmation from "./pages/BookingConfirmation"
+import BookingCancel from "./pages/BookingCancel"
+import PortalLogin from "./pages/PortalLogin"
+import Portal from "./pages/Portal"
 
 function AnimatedRoutes() {
   const location = useLocation()
-  
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
@@ -100,22 +106,54 @@ function AnimatedRoutes() {
             <Footer />
           </PageTransition>
         } />
+        <Route path="/agendar" element={
+          <PageTransition>
+            <Booking />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/agendar/confirmacion/:appointmentId" element={
+          <PageTransition>
+            <BookingConfirmation />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/agendar/cancelar/:token" element={
+          <PageTransition>
+            <BookingCancel />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/portal/login" element={
+          <PageTransition>
+            <PortalLogin />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/portal" element={
+          <PageTransition>
+            <Portal />
+            <Footer />
+          </PageTransition>
+        } />
       </Routes>
     </AnimatePresence>
   )
 }
 
 function App() {
-  
+
   return (
     <HelmetProvider>
-      <div className="overflow-x-hidden">
-        <Router>
-          <Header />
-          <ScrollToTop />
-          <AnimatedRoutes />
-        </Router>
-      </div>
+      <AuthProvider>
+        <div className="overflow-x-hidden">
+          <Router>
+            <Header />
+            <ScrollToTop />
+            <AnimatedRoutes />
+          </Router>
+        </div>
+      </AuthProvider>
     </HelmetProvider>
   )
 }

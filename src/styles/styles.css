@@ -253,3 +253,39 @@ button[disabled] {
     content: '';
     display: none;
 }
+/* react-day-picker dark theme overrides for booking */
+.booking-daypicker .rdp { --rdp-accent-color: #3b82f6; --rdp-background-color: rgba(59,130,246,.18); color: #e2e8f0; }
+.booking-daypicker .rdp-day, .booking-daypicker .rdp-day_button { color: #e2e8f0; }
+.booking-daypicker .rdp-day_button { border-radius: 9999px; }
+
+/* Today: yellow ring + bold so destaca contra fondo oscuro */
+.booking-daypicker .rdp-day_today:not(.rdp-day_selected) .rdp-day_button,
+.booking-daypicker .rdp-today:not(.rdp-selected) .rdp-day_button {
+  color: #facc15 !important;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1.5px rgba(250, 204, 21, 0.7);
+  border-radius: 9999px;
+}
+
+/* Selected day: solid blue pill */
+.booking-daypicker .rdp-day_selected,
+.booking-daypicker .rdp-day_selected .rdp-day_button,
+.booking-daypicker .rdp-selected .rdp-day_button,
+.booking-daypicker .rdp-day_selected:hover .rdp-day_button {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 9999px;
+}
+
+.booking-daypicker .rdp-day:hover:not(.rdp-day_disabled):not(.rdp-day_selected) .rdp-day_button {
+  background-color: rgba(59,130,246,.2);
+  border-radius: 9999px;
+}
+.booking-daypicker .rdp-day_disabled { opacity: .3; }
+.booking-daypicker .rdp-weekday, .booking-daypicker .rdp-head_cell { color: #94a3b8; font-weight: 600; }
+.booking-daypicker .rdp-caption_label, .booking-daypicker .rdp-month_caption { color: #fff; font-weight: 600; }
+.booking-daypicker .rdp-nav_button,
+.booking-daypicker .rdp-button_previous,
+.booking-daypicker .rdp-button_next { color: #fff; }
+.booking-daypicker .rdp-day_hasAppts .rdp-day_button { box-shadow: inset 0 -2px 0 #3b82f6; }

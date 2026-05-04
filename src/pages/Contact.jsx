@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   FaBus,
   FaCar,
@@ -13,38 +14,6 @@ import ContentSurface from '../components/layout/ContentSurface'
 import InternalPageHero from '../components/layout/InternalPageHero'
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-    service: ''
-  })
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Datos del formulario:', formData)
-    alert('Gracias por tu mensaje. Te contactaremos pronto.')
-  }
-
-  const services = [
-    'Orientación Legal y Derivación',
-    'Bolsa de Empleo',
-    'Trámites Migratorios',
-    'Formación y Cursos',
-    'Apoyo Psicológico',
-    'Orientación Familiar',
-    'Otro'
-  ]
 
   const faqItems = [
     {
@@ -113,107 +82,42 @@ function Contact() {
         <section className="px-4 pb-20 lg:pb-24">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
             <ContentSurface className="p-6 sm:p-8 lg:p-10">
-              <h2 className="text-2xl font-bold text-white lg:text-3xl">Envíanos un mensaje</h2>
+              <h2 className="text-2xl font-bold text-white lg:text-3xl">Reserva una cita con nosotros</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-300 lg:text-base">
+                La forma más cómoda de hablar con un miembro del equipo es agendar una cita en línea.
+                Elige al profesional que prefieras (o déjanos asignarte uno disponible), selecciona el día y la hora
+                que mejor te vengan e introduce tus datos.
+              </p>
+              <p className="mt-3 text-sm leading-7 text-slate-300 lg:text-base">
+                Recibirás un correo de confirmación con un enlace para añadir la cita a tu calendario y un justificante en PDF.
+              </p>
 
-              <div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 p-4 text-amber-50">
-                <h3 className="text-base font-semibold">Formulario temporalmente no disponible</h3>
-                <p className="mt-2 text-sm leading-6 text-amber-100/90">
-                  Estamos mejorando el sistema de contacto. Mientras tanto, llámanos al +34 604 016 113 o escríbenos a info@asovedra.org.
-                </p>
-              </div>
+              <ul className="mt-6 grid gap-3 text-sm text-slate-200">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">1</span>
+                  <span>Elige profesional o marca <strong>"Sin preferencia"</strong> para asignación automática.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">2</span>
+                  <span>Selecciona día y hora dentro de la disponibilidad real.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">3</span>
+                  <span>Introduce tus datos y opcionalmente el motivo de la consulta.</span>
+                </li>
+              </ul>
 
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5 opacity-70 pointer-events-none">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-200">Nombre completo *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none placeholder:text-slate-400"
-                      placeholder="Tu nombre completo"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-200">Correo electrónico *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none placeholder:text-slate-400"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-                </div>
+              <Link
+                to="/agendar"
+                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto"
+              >
+                Reservar cita ahora
+              </Link>
 
-                <div className="grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label htmlFor="phone" className="mb-2 block text-sm font-medium text-slate-200">Teléfono</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none placeholder:text-slate-400"
-                      placeholder="+34 XXX XXX XXX"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="mb-2 block text-sm font-medium text-slate-200">Servicio de interés</label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none"
-                    >
-                      <option value="">Selecciona un servicio</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="mb-2 block text-sm font-medium text-slate-200">Asunto *</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none placeholder:text-slate-400"
-                    placeholder="¿En qué podemos ayudarte?"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-200">Mensaje *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-white outline-none placeholder:text-slate-400"
-                    placeholder="Describe tu consulta o necesidad..."
-                  ></textarea>
-                </div>
-
-                <button type="submit" disabled className="w-full rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 opacity-60">
-                  Formulario no disponible
-                </button>
-              </form>
+              <p className="mt-6 text-xs leading-6 text-slate-400">
+                ¿Prefieres otro canal? Llámanos al <a href="tel:+34604016113" className="underline hover:text-white">+34 604 016 113</a> o
+                escríbenos a <a href="mailto:info@asovedra.org" className="underline hover:text-white">info@asovedra.org</a>.
+              </p>
             </ContentSurface>
 
             <div className="space-y-6">

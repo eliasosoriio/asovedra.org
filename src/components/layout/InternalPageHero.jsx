@@ -2,7 +2,7 @@ import React from 'react'
 
 function InternalPageHero({ eyebrow, title, description }) {
   return (
-    <section className="relative overflow-hidden px-4 py-20 lg:py-24">
+    <section className="relative overflow-hidden px-4 pt-32 pb-20 lg:pt-40 lg:pb-24">
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(250,204,21,0.08),transparent_24%)]"></div>
       <div className="relative mx-auto max-w-6xl text-center text-white">
         {eyebrow && (

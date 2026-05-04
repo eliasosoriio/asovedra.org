@@ -42,90 +42,90 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">OBJETO</h2>
-                <p className="text-slate-600 leading-relaxed">
+                <h2 className="text-2xl font-bold text-white mb-4">OBJETO</h2>
+                <p className="text-slate-300 leading-relaxed">
                   El sitio web facilita a los usuarios del mismo el acceso a información y servicios prestados por Asovedra a aquellas personas u organizaciones interesadas en los mismos, especialmente en relación con el apoyo y la integración de la comunidad iberoamericana en España.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">ACCESO Y UTILIZACIÓN DE LA WEB</h2>
-                <h3 className="text-lg font-semibold text-[#1B2336] mb-2">Carácter gratuito del acceso y utilización de la web:</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h2 className="text-2xl font-bold text-white mb-4">ACCESO Y UTILIZACIÓN DE LA WEB</h2>
+                <h3 className="text-lg font-semibold text-white mb-2">Carácter gratuito del acceso y utilización de la web:</h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   El acceso a la web tiene carácter gratuito para los usuarios de la misma.
                 </p>
-                <h3 className="text-lg font-semibold text-[#1B2336] mb-2">Registro de usuarios:</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <h3 className="text-lg font-semibold text-white mb-2">Registro de usuarios:</h3>
+                <p className="text-slate-300 leading-relaxed">
                   Con carácter general el acceso y utilización de la web no exige la previa suscripción o registro de los usuarios de la misma.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">CONTENIDOS DE LA WEB</h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h2 className="text-2xl font-bold text-white mb-4">CONTENIDOS DE LA WEB</h2>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   El idioma utilizado por el titular en la web será el castellano. Asovedra no se responsabiliza de la no comprensión o entendimiento del idioma de la web por el usuario, ni de sus consecuencias.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Asovedra podrá modificar los contenidos sin previo aviso, así como suprimir y cambiar éstos dentro de la web, como la forma en que se accede a éstos, sin justificación alguna y libremente, no responsabilizándose de las consecuencias que los mismos puedan ocasionar a los usuarios.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Se prohíbe el uso de los contenidos de la web para promocionar, contratar o divulgar publicidad o información propia o de terceras personas sin la autorización de Asovedra, ni remitir publicidad o información valiéndose para ello de los servicios o información que se ponen a disposición de los usuarios, independientemente de si la utilización es gratuita o no.
                 </p>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   Los enlaces o hiperenlaces que incorporen terceros en sus páginas web, dirigidos a esta web, serán para la apertura de la página web completa, no pudiendo manifestar, directa o indirectamente, indicaciones falsas, inexactas o confusas, ni incurrir en acciones desleales o ilícitas en contra de Asovedra.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">LIMITACIÓN DE RESPONSABILIDAD</h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h2 className="text-2xl font-bold text-white mb-4">LIMITACIÓN DE RESPONSABILIDAD</h2>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Tanto el acceso a la web como el uso inconsentido que pueda efectuarse de la información contenida en la misma es de la exclusiva responsabilidad de quien lo realiza.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Asovedra no responderá de ninguna consecuencia, daño o perjuicio que pudieran derivarse de dicho acceso o uso. Asovedra no se hace responsable de los errores de seguridad, que se puedan producir ni de los daños que puedan causarse al sistema informático del usuario (hardware y software), o a los ficheros o documentos almacenados en el mismo, como consecuencia de:
                 </p>
-                <ul className="list-disc list-inside text-slate-600 space-y-2 mb-4 ml-4">
+                <ul className="list-disc list-inside text-slate-300 space-y-2 mb-4 ml-4">
                   <li>la presencia de un virus en el ordenador del usuario que sea utilizado para la conexión a los servicios y contenidos de la web,</li>
                   <li>un mal funcionamiento del navegador,</li>
                   <li>y/o del uso de versiones no actualizadas del mismo.</li>
                 </ul>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Asovedra no se hace responsable de la fiabilidad y rapidez de los hiperenlaces que se incorporen en la web para la apertura de otras. Asovedra no garantiza la utilidad de estos enlaces, ni se responsabiliza de los contenidos o servicios a los que pueda acceder el usuario por medio de estos enlaces, ni del buen funcionamiento de estas webs.
                 </p>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   Asovedra no será responsable de los virus o demás programas informáticos que deterioren o puedan deteriorar los sistemas o equipos informáticos de los usuarios al acceder a su web u otras webs a las que se haya accedido mediante enlaces de esta web.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">EMPLEO DE LA TECNOLOGÍA "COOKIE"</h2>
-                <p className="text-slate-600 leading-relaxed">
+                <h2 className="text-2xl font-bold text-white mb-4">EMPLEO DE LA TECNOLOGÍA "COOKIE"</h2>
+                <p className="text-slate-300 leading-relaxed">
                   La web puede emplear cookies para mejorar la experiencia del usuario. Puede consultar nuestra Política de Cookies, que respeta en todo momento la confidencialidad e intimidad del mismo.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">PROPIEDAD INTELECTUAL E INDUSTRIAL</h2>
-                <p className="text-slate-600 leading-relaxed">
+                <h2 className="text-2xl font-bold text-white mb-4">PROPIEDAD INTELECTUAL E INDUSTRIAL</h2>
+                <p className="text-slate-300 leading-relaxed">
                   Son propiedad de Asovedra, todos los derechos de propiedad industrial e intelectual de la web, así como de los contenidos que alberga. Cualquier uso de la web o sus contenidos deberá tener un carácter exclusivamente particular. Cualquier otro uso que suponga la copia, reproducción, distribución, transformación, comunicación pública o cualquier otra acción similar, de todo o parte de los contenidos de la web, por lo que ningún usuario podrá llevar a cabo estas acciones sin la autorización previa y por escrito de Asovedra.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-[#1B2336] mb-4">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <h2 className="text-2xl font-bold text-white mb-4">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Asovedra garantiza la protección y confidencialidad de los datos personales, de cualquier tipo que nos proporcionen nuestros usuarios de acuerdo con lo dispuesto en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales y al RGPD.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Todos los datos facilitados por nuestros usuarios a Asovedra o a su personal, serán incluidos en un fichero automatizado de datos de carácter personal creado y mantenido bajo la responsabilidad de Asovedra, imprescindibles para prestar los servicios solicitados por los usuarios.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   Los datos facilitados serán tratados según el Reglamento General de Protección de Datos (RGPD), en este sentido Asovedra ha adoptado los niveles de protección que legalmente se exigen, y ha instalado todas las medidas técnicas a su alcance para evitar la pérdida, mal uso, alteración, acceso no autorizado por terceros. No obstante, el usuario debe ser consciente de que las medidas de seguridad en Internet no son inexpugnables.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4">
                   En caso en que considere oportuno que se cedan sus datos de carácter personal a otras entidades, el usuario será informado de los datos cedidos, de la finalidad del fichero y del nombre y dirección del cesionario, para que de su consentimiento inequívoco al respecto.
                 </p>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   En cumplimiento de lo establecido en el RGPD, el usuario podrá ejercer todos sus derechos. Para ello debe de contactar con nosotros en info@asovedra.org
                 </p>
               </div>
