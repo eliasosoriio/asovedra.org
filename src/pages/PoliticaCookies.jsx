@@ -13,8 +13,8 @@ function PoliticaCookies() {
       />
       <LegalDocumentLayout
         eyebrow="Legal"
-        title="Politica de Cookies"
-        description="Informacion sobre el uso de cookies en nuestro sitio web"
+        title="Política de Cookies"
+        description="Información sobre el uso de cookies en nuestro sitio web"
       >
                 <h2 className="text-2xl font-bold text-[#1B2336] mb-6">Política de Cookies de ASOVEDRA.org</h2>
 

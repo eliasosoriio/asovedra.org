@@ -14,7 +14,7 @@ function AvisoLegal() {
       <LegalDocumentLayout
         eyebrow="Legal"
         title="Aviso Legal"
-        description="Terminos y condiciones de uso del sitio web"
+        description="Términos y condiciones de uso del sitio web"
       >
             <div className="space-y-8">
               <div>

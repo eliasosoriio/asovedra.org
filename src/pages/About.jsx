@@ -192,7 +192,7 @@ function About() {
                 </p>
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   <Link to="/contacto" className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 hover:bg-slate-100">
-                    Unete como voluntario
+                    Únete como voluntario
                   </Link>
                   <a href="tel:+34604016113" className="inline-flex items-center justify-center rounded-xl border border-white/14 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-white hover:bg-white/[0.08]">
                     Llamar: 604 016 113

@@ -10,22 +10,22 @@ function Estatutos() {
     {
       title: 'Asociados',
       icon: <FaUsers />,
-      items: ['Requisitos y procedimiento de admision', 'Derechos y obligaciones', 'Tipos de socios', 'Causas de baja']
+      items: ['Requisitos y procedimiento de admisión', 'Derechos y obligaciones', 'Tipos de socios', 'Causas de baja']
     },
     {
-      title: 'Organos de gobierno',
+      title: 'Órganos de gobierno',
       icon: <FaBalanceScale />,
-      items: ['Asamblea General', 'Junta Directiva', 'Composicion y funciones', 'Procedimientos de eleccion']
+      items: ['Asamblea General', 'Junta Directiva', 'Composición y funciones', 'Procedimientos de elección']
     },
     {
-      title: 'Regimen economico',
+      title: 'Régimen económico',
       icon: <FaHandshake />,
-      items: ['Patrimonio y recursos', 'Cuotas de socios', 'Gestion economica', 'Presupuestos y rendicion de cuentas']
+      items: ['Patrimonio y recursos', 'Cuotas de socios', 'Gestión económica', 'Presupuestos y rendición de cuentas']
     },
     {
-      title: 'Modificacion y disolucion',
+      title: 'Modificación y disolución',
       icon: <FaGavel />,
-      items: ['Procedimiento de reforma', 'Causas de disolucion', 'Liquidacion del patrimonio', 'Destino de bienes']
+      items: ['Procedimiento de reforma', 'Causas de disolución', 'Liquidación del patrimonio', 'Destino de bienes']
     }
   ]
 
@@ -42,7 +42,7 @@ function Estatutos() {
         <InternalPageHero
           eyebrow="Marco normativo"
           title="Estatutos de Asovedra"
-          description="Documento que regula la organizacion, el funcionamiento interno y el buen gobierno de la asociacion."
+          description="Documento que regula la organización, el funcionamiento interno y el buen gobierno de la asociación."
         />
 
         <section className="px-4 pb-20 lg:pb-24">
@@ -70,7 +70,7 @@ function Estatutos() {
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="text-3xl font-bold text-white lg:text-4xl">Contenido de los estatutos</h2>
               <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">
-                Principales apartados que estructuran el funcionamiento de la asociacion.
+                Principales apartados que estructuran el funcionamiento de la asociación.
               </p>
             </div>
             <div className="grid gap-5 md:grid-cols-2">
@@ -103,7 +103,7 @@ function Estatutos() {
               <FaFileAlt className="mx-auto text-5xl text-blue-300" />
               <h2 className="mt-6 text-3xl font-bold text-white">Consulta nuestros estatutos</h2>
               <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">
-                Descarga el documento completo en PDF para conocer el detalle del marco organizativo y normativo de la asociacion.
+                Descarga el documento completo en PDF para conocer el detalle del marco organizativo y normativo de la asociación.
               </p>
               <a
                 href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf"
@@ -114,13 +114,13 @@ function Estatutos() {
                 <FaDownload className="text-lg" />
                 Descargar estatutos
               </a>
-              <p className="mt-5 text-sm text-slate-400">Ultima actualizacion: 2025</p>
+              <p className="mt-5 text-sm text-slate-400">Última actualización: 2025</p>
             </ContentSurface>
 
             <ContentSurface className="p-8 text-center lg:p-10">
               <h2 className="text-2xl font-bold text-white lg:text-3xl">Tienes dudas sobre los estatutos</h2>
               <p className="mt-4 text-base leading-7 text-slate-300">
-                Si necesitas aclaraciones sobre cualquier aspecto del documento o sobre el funcionamiento de la asociacion, podemos orientarte.
+                Si necesitas aclaraciones sobre cualquier aspecto del documento o sobre el funcionamiento de la asociación, podemos orientarte.
               </p>
               <Link
                 to="/contacto"
@@ -129,7 +129,7 @@ function Estatutos() {
                 Contactar con la Junta Directiva
               </Link>
               <p className="mt-6 text-sm text-slate-400">
-                Los estatutos estan inscritos en el Registro de Asociaciones correspondiente.
+                Los estatutos están inscritos en el Registro de Asociaciones correspondiente.
               </p>
             </ContentSurface>
           </div>

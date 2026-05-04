@@ -106,7 +106,7 @@ function Contact() {
       <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
         <InternalPageHero
           eyebrow="Contacto"
-          title="Estamos aqui para ayudarte"
+          title="Estamos aquí para ayudarte"
           description="Respondemos consultas, orientamos procesos y facilitamos el acceso a los servicios de Asovedra."
         />
 
@@ -239,7 +239,7 @@ function Contact() {
               </div>
 
               <ContentSurface className="p-6 sm:p-8">
-                <h3 className="text-xl font-bold text-white">Como llegar</h3>
+                <h3 className="text-xl font-bold text-white">Cómo llegar</h3>
                 <div className="mt-5 space-y-4 text-sm leading-6 text-slate-300">
                   <div className="flex items-start gap-3">
                     <FaCar className="mt-1 text-blue-300" />

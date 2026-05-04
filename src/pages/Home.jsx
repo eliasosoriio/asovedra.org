@@ -19,40 +19,40 @@ import {
 const serviceHighlights = [
   {
     title: 'Orientacion legal',
-    description: 'Te orientamos en extranjeria, derechos y tramites, y te derivamos a profesionales especializados cuando se requiere asesoramiento juridico formal.',
+    description: 'Te orientamos en extranjería, derechos y trámites, y te derivamos a profesionales especializados cuando se requiere asesoramiento jurídico formal.',
     icon: <FaBalanceScale />
   },
   {
     title: 'Bolsa de empleo',
-    description: 'Conectamos perfiles profesionales con oportunidades laborales y redes utiles.',
+    description: 'Conectamos perfiles profesionales con oportunidades laborales y redes útiles.',
     icon: <FaBriefcase />
   },
   {
-    title: 'Tramites migratorios',
-    description: 'Acompanamiento en regularizacion, renovaciones y documentacion administrativa.',
+    title: 'Trámites migratorios',
+    description: 'Acompañamiento en regularización, renovaciones y documentación administrativa.',
     icon: <FaClipboardList />
   },
   {
-    title: 'Formacion y cursos',
-    description: 'Programas para fortalecer competencias, autonomia y acceso al mercado laboral.',
+    title: 'Formación y cursos',
+    description: 'Programas para fortalecer competencias, autonomía y acceso al mercado laboral.',
     icon: <FaBook />
   }
 ]
 
 const trustPoints = [
   {
-    title: 'Nuestra mision',
-    text: 'Promover la integracion social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia desde el acompanamiento y la cooperacion solidaria.',
+    title: 'Nuestra misión',
+    text: 'Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia desde el acompañamiento y la cooperación solidaria.',
     icon: <FaMapMarkerAlt />
   },
   {
-    title: 'Nuestra vision',
-    text: 'Ser una organizacion de referencia para la comunidad iberoamericana en Espana, reconocida por la calidad del apoyo y su impacto real.',
+    title: 'Nuestra visión',
+    text: 'Ser una organización de referencia para la comunidad iberoamericana en España, reconocida por la calidad del apoyo y su impacto real.',
     icon: <FaBullseye />
   },
   {
     title: 'Comunidad y red',
-    text: 'Trabajamos desde la escucha, el vinculo comunitario y la orientacion practica para responder a necesidades concretas.',
+    text: 'Trabajamos desde la escucha, el vínculo comunitario y la orientación práctica para responder a necesidades concretas.',
     icon: <FaUsers />
   }
 ]
@@ -100,10 +100,10 @@ function Home() {
               <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-slate-200">
                 Actualidad
               </span>
-              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Ultimas noticias y actividad</h2>
+              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Últimas noticias y actividad</h2>
               <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
               <p className="mt-5 text-lg leading-8 text-slate-300">
-                Seguimiento de nuestras acciones, colaboraciones y novedades de interes para la comunidad.
+                Seguimiento de nuestras acciones, colaboraciones y novedades de interés para la comunidad.
               </p>
             </div>
 
@@ -166,10 +166,10 @@ function Home() {
               <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-slate-200">
                 Lo que hacemos
               </span>
-              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Servicios de acompanamiento</h2>
+              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Servicios de acompañamiento</h2>
               <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
               <p className="mt-5 text-lg leading-8 text-slate-300">
-                Recursos y programas pensados para responder a situaciones reales con apoyo cercano y practico.
+                Recursos y programas pensados para responder a situaciónes reales con apoyo cercano y práctico.
               </p>
             </div>
 
@@ -188,7 +188,7 @@ function Home() {
                     to="/contacto"
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
                   >
-                    Consultanos
+                    Consúltanos
                     <FaArrowRight className="text-xs" />
                   </Link>
                 </article>
@@ -196,9 +196,9 @@ function Home() {
             </div>
 
             <div className="mt-10 rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 text-center shadow-[0_28px_60px_-32px_rgba(15,23,42,0.95)] backdrop-blur-sm lg:p-10">
-              <h3 className="text-2xl font-bold text-white lg:text-3xl">Necesitas ayuda especializada</h3>
+              <h3 className="text-2xl font-bold text-white lg:text-3xl">¿Necesitas ayuda especializada?</h3>
               <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300 lg:text-lg">
-                Nuestro equipo esta preparado para orientarte y ayudarte a encontrar el siguiente paso mas adecuado.
+                Nuestro equipo está preparado para orientarte y ayudarte a encontrar el siguiente paso más adecuado.
               </p>
               <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
@@ -224,12 +224,12 @@ function Home() {
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto mb-14 max-w-3xl text-center">
               <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-slate-200">
-                Quienes somos
+                Quiénes somos
               </span>
               <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Compromiso con la comunidad</h2>
               <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
               <p className="mt-5 text-lg leading-8 text-slate-300">
-                Una asociacion construida desde la cercania, la orientacion y la cooperacion con impacto real.
+                Una asociación construida desde la cercanía, la orientación y la cooperación con impacto real.
               </p>
             </div>
 
@@ -263,7 +263,7 @@ function Home() {
                   <h3 className="text-3xl font-bold text-white lg:text-4xl">Nuestra historia</h3>
                   <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
                   <p className="mt-6 text-base leading-7 text-slate-300 lg:text-lg">
-                    Fundada en 2018, Asovedra nace para crear un espacio de orientacion y apoyo a personas que llegan a Espana buscando estabilidad, oportunidades y red comunitaria.
+                    Fundada en 2018, Asovedra nace para crear un espacio de orientación y apoyo a personas que llegan a España buscando estabilidad, oportunidades y red comunitaria.
                   </p>
 
                   <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -285,7 +285,7 @@ function Home() {
                     to="/sobre-nosotros"
                     className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
                   >
-                    Conocer mas sobre Asovedra
+                    Conocer más sobre Asovedra
                     <FaArrowRight className="text-xs" />
                   </Link>
                 </div>
@@ -300,7 +300,7 @@ function Home() {
             <div className="mx-auto flex h-18 w-18 items-center justify-center rounded-[1.6rem] border border-white/12 bg-white/12 text-4xl text-white shadow-[0_22px_48px_-30px_rgba(15,23,42,0.9)] backdrop-blur-sm">
               <FaBalanceScale />
             </div>
-            <h2 className="mt-6 text-3xl font-bold text-white lg:text-5xl">Plan de Igualdad de Genero 2025-2026</h2>
+            <h2 className="mt-6 text-3xl font-bold text-white lg:text-5xl">Plan de Igualdad de Género 2025-2026</h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/90">
               Nuestro compromiso con la igualdad de oportunidades y la equidad forma parte del modo en que trabajamos y acompañamos.
             </p>
@@ -323,9 +323,9 @@ function Home() {
                   <FaHandshake className="text-blue-300" />
                   Contacto
                 </div>
-                <h2 className="mt-5 text-3xl font-bold text-white lg:text-5xl">Necesitas mas informacion</h2>
+                <h2 className="mt-5 text-3xl font-bold text-white lg:text-5xl">¿Necesitas más información?</h2>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-                  Resolvemos dudas, orientamos procesos y ayudamos a encontrar el recurso o servicio que mejor se adapta a cada situacion.
+                  Resolvemos dudas, orientamos procesos y ayudamos a encontrar el recurso o servicio que mejor se adapta a cada situación.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -347,7 +347,7 @@ function Home() {
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-300">
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
                     <FaHeart className="text-blue-300" />
-                    Atencion cercana
+                    Atención cercana
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
                     <FaUsers className="text-blue-300" />

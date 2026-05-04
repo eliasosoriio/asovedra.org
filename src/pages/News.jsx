@@ -58,7 +58,7 @@ function News() {
         <InternalPageHero
           eyebrow="Actualidad"
           title="Noticias y actualidad"
-          description="Seguimiento de iniciativas, colaboraciones y temas de interes para la comunidad iberoamericana."
+          description="Seguimiento de iniciativas, colaboraciones y temas de interés para la comunidad iberoamericana."
         />
 
         <section className="px-4 pb-20 lg:pb-24">
@@ -113,7 +113,7 @@ function News() {
                       ? 'cursor-not-allowed border-white/6 bg-white/[0.03] text-slate-500'
                       : 'border-white/10 bg-white/[0.05] text-white hover:bg-white/[0.08]'
                   }`}
-                  aria-label="Pagina anterior"
+                  aria-label="Página anterior"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -147,7 +147,7 @@ function News() {
                       ? 'cursor-not-allowed border-white/6 bg-white/[0.03] text-slate-500'
                       : 'border-white/10 bg-white/[0.05] text-white hover:bg-white/[0.08]'
                   }`}
-                  aria-label="Pagina siguiente"
+                  aria-label="Página siguiente"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

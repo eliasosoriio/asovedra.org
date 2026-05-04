@@ -13,7 +13,7 @@ function Accesibilidad() {
       />
       <LegalDocumentLayout
         eyebrow="Accesibilidad"
-        title="Declaracion de Accesibilidad"
+        title="Declaración de Accesibilidad"
         description="Nuestro compromiso con la accesibilidad web para todos los usuarios"
       >
                 <h2 className="text-2xl font-bold text-[#1B2336] mb-6">Declaración de Accesibilidad</h2>

@@ -10,22 +10,22 @@ function PlanIgualdad() {
     {
       icon: <FaBalanceScale />,
       titulo: 'Igualdad de oportunidades',
-      descripcion: 'Garantizar igualdad de acceso a todos los servicios sin discriminacion por genero.'
+      descripcion: 'Garantizar igualdad de acceso a todos los servicios sin discriminación por género.'
     },
     {
       icon: <FaUsers />,
-      titulo: 'Participacion equilibrada',
-      descripcion: 'Promover la representacion equitativa en todos los niveles de la organizacion.'
+      titulo: 'Participación equilibrada',
+      descripcion: 'Promover la representación equitativa en todos los niveles de la organización.'
     },
     {
       icon: <FaChartLine />,
       titulo: 'Desarrollo profesional',
-      descripcion: 'Facilitar el crecimiento profesional sin barreras de genero.'
+      descripcion: 'Facilitar el crecimiento profesional sin barreras de género.'
     },
     {
       icon: <FaHeart />,
-      titulo: 'Conciliacion',
-      descripcion: 'Fomentar la conciliacion de la vida personal, familiar y laboral.'
+      titulo: 'Conciliación',
+      descripcion: 'Fomentar la conciliación de la vida personal, familiar y laboral.'
     }
   ]
 
@@ -33,77 +33,77 @@ function PlanIgualdad() {
     {
       numero: '1',
       titulo: 'Acceso al empleo',
-      descripcion: 'Promover la igualdad en los procesos de seleccion y contratacion',
+      descripcion: 'Promover la igualdad en los procesos de selección y contratación',
       medidas: [
         'Uso de lenguaje inclusivo en ofertas de trabajo',
-        'Procesos de seleccion objetivos y transparentes',
-        'Eliminacion de sesgos de genero en la evaluacion',
-        'Promocion de la diversidad en la bolsa de empleo'
+        'Procesos de selección objetivos y transparentes',
+        'Eliminación de sesgos de género en la evaluación',
+        'Promoción de la diversidad en la bolsa de empleo'
       ]
     },
     {
       numero: '2',
-      titulo: 'Clasificacion profesional',
-      descripcion: 'Garantizar la equidad en la valoracion de puestos de trabajo',
+      titulo: 'Clasificación profesional',
+      descripcion: 'Garantizar la equidad en la valoración de puestos de trabajo',
       medidas: [
-        'Revision de las descripciones de puestos',
-        'Analisis de brechas salariales',
-        'Eliminacion de estereotipos de genero',
-        'Promocion basada en meritos objetivos'
+        'Revisión de las descripciones de puestos',
+        'Análisis de brechas salariales',
+        'Eliminación de estereotipos de género',
+        'Promoción basada en méritos objetivos'
       ]
     },
     {
       numero: '3',
-      titulo: 'Formacion y desarrollo',
-      descripcion: 'Facilitar el acceso equitativo a la formacion',
+      titulo: 'Formación y desarrollo',
+      descripcion: 'Facilitar el acceso equitativo a la formación',
       medidas: [
-        'Programas de formacion accesibles para todos',
-        'Cursos de sensibilizacion en igualdad',
-        'Capacitacion en liderazgo sin sesgos',
-        'Mentorias y desarrollo profesional'
+        'Programas de formación accesibles para todos',
+        'Cursos de sensibilización en igualdad',
+        'Capacitación en liderazgo sin sesgos',
+        'Mentorías y desarrollo profesional'
       ]
     },
     {
       numero: '4',
-      titulo: 'Retribucion',
+      titulo: 'Retribución',
       descripcion: 'Asegurar la equidad salarial entre hombres y mujeres',
       medidas: [
-        'Auditoria salarial periodica',
-        'Transparencia en las politicas retributivas',
-        'Correccion de desigualdades detectadas',
-        'Sistema de evaluacion objetivo'
+        'Auditoría salarial periódica',
+        'Transparencia en las políticas retributivas',
+        'Corrección de desigualdades detectadas',
+        'Sistema de evaluación objetivo'
       ]
     },
     {
       numero: '5',
-      titulo: 'Conciliacion',
+      titulo: 'Conciliación',
       descripcion: 'Facilitar el equilibrio entre vida personal y profesional',
       medidas: [
         'Flexibilidad horaria cuando sea posible',
         'Apoyo en periodos de maternidad y paternidad',
-        'Politicas de teletrabajo inclusivas',
+        'Políticas de teletrabajo inclusivas',
         'Respeto a los permisos y licencias'
       ]
     },
     {
       numero: '6',
-      titulo: 'Prevencion del acoso',
+      titulo: 'Prevención del acoso',
       descripcion: 'Crear entornos seguros y respetuosos',
       medidas: [
-        'Protocolo de actuacion ante el acoso',
+        'Protocolo de actuación ante el acoso',
         'Canales de denuncia confidenciales',
-        'Formacion en prevencion del acoso',
-        'Actuacion inmediata ante casos reportados'
+        'Formación en prevención del acoso',
+        'Actuación inmediata ante casos reportados'
       ]
     }
   ]
 
   const compromisos = [
-    'Integrar la perspectiva de genero en todas las politicas y programas',
-    'Promover la participacion equilibrada de mujeres y hombres',
+    'Integrar la perspectiva de género en todas las políticas y programas',
+    'Promover la participación equilibrada de mujeres y hombres',
     'Garantizar la igualdad salarial por trabajos de igual valor',
-    'Facilitar la conciliacion de la vida personal, familiar y laboral',
-    'Prevenir y actuar contra cualquier forma de discriminacion o acoso',
+    'Facilitar la conciliación de la vida personal, familiar y laboral',
+    'Prevenir y actuar contra cualquier forma de discriminación o acoso',
     'Formar y sensibilizar a todo el equipo en materia de igualdad'
   ]
 
@@ -148,7 +148,7 @@ function PlanIgualdad() {
     doc.setFontSize(28)
     doc.setFont('helvetica', 'bold')
     doc.text('PLAN DE IGUALDAD', pageWidth / 2, 55, { align: 'center' })
-    doc.text('DE GENERO', pageWidth / 2, 70, { align: 'center' })
+    doc.text('DE GÉNERO', pageWidth / 2, 70, { align: 'center' })
     doc.setFontSize(16)
     doc.text('2025-2026', pageWidth / 2, 85, { align: 'center' })
     doc.setTextColor(0, 0, 0)
@@ -168,7 +168,7 @@ function PlanIgualdad() {
     doc.text('Nuestro Compromiso con la Igualdad', margin, yPos)
     yPos += 8
     doc.setTextColor(0, 0, 0)
-    addWrappedText('En ASOVEDRA estamos firmemente comprometidos con la promocion de la igualdad de genero y la no discriminacion. Este Plan de Igualdad establece las bases de nuestro trabajo para garantizar que todas las personas, independientemente de su genero, tengan las mismas oportunidades de desarrollo personal y profesional.', 10, contentWidth)
+    addWrappedText('En ASOVEDRA estamos firmemente comprometidos con la promoción de la igualdad de género y la no discriminación. Este Plan de Igualdad establece las bases de nuestro trabajo para garantizar que todas las personas, independientemente de su género, tengan las mismas oportunidades de desarrollo personal y profesional.', 10, contentWidth)
     yPos += 3
 
     doc.addPage()
@@ -178,7 +178,7 @@ function PlanIgualdad() {
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(16)
     doc.setFont('helvetica', 'bold')
-    doc.text('OBJETIVOS ESTRATEGICOS', pageWidth / 2, yPos + 10, { align: 'center' })
+    doc.text('OBJETIVOS ESTRATÉGICOS', pageWidth / 2, yPos + 10, { align: 'center' })
     yPos += 20
 
     doc.setTextColor(0, 0, 0)
@@ -207,7 +207,7 @@ function PlanIgualdad() {
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(16)
     doc.setFont('helvetica', 'bold')
-    doc.text('EJES DE ACTUACION', pageWidth / 2, yPos + 10, { align: 'center' })
+    doc.text('EJES DE ACTUACIÓN', pageWidth / 2, yPos + 10, { align: 'center' })
     yPos += 20
 
     doc.setTextColor(0, 0, 0)
@@ -282,7 +282,7 @@ function PlanIgualdad() {
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(16)
     doc.setFont('helvetica', 'bold')
-    doc.text('SEGUIMIENTO Y EVALUACION', pageWidth / 2, yPos + 10, { align: 'center' })
+    doc.text('SEGUIMIENTO Y EVALUACIÓN', pageWidth / 2, yPos + 10, { align: 'center' })
     yPos += 20
     doc.setTextColor(0, 0, 0)
     doc.setFontSize(10)
@@ -291,7 +291,7 @@ function PlanIgualdad() {
     yPos += 6
     doc.setFontSize(9)
     doc.setFont('helvetica', 'normal')
-    addWrappedText('Realizamos un seguimiento periodico de la implementacion de las medidas establecidas en este plan, con evaluaciones trimestrales de los indicadores de igualdad.', 9, contentWidth)
+    addWrappedText('Realizamos un seguimiento periódico de la implementación de las medidas establecidas en este plan, con evaluaciones trimestrales de los indicadores de igualdad.', 9, contentWidth)
     yPos += 3
     doc.setFontSize(10)
     doc.setFont('helvetica', 'bold')
@@ -300,10 +300,10 @@ function PlanIgualdad() {
     doc.setFontSize(8)
     doc.setFont('helvetica', 'normal')
     ;[
-      'Porcentaje de participacion por genero en programas y servicios',
-      'Numero de formaciones en igualdad realizadas',
-      'Grado de satisfaccion con las medidas implementadas',
-      'Analisis de brechas y evolucion de las mismas'
+      'Porcentaje de participación por género en programas y servicios',
+      'Número de formaciones en igualdad realizadas',
+      'Grado de satisfacción con las medidas implementadas',
+      'Análisis de brechas y evolución de las mismas'
     ].forEach((ind) => {
       checkNewPage(4)
       doc.text(`• ${ind}`, margin + 5, yPos)
@@ -325,15 +325,15 @@ function PlanIgualdad() {
     doc.text('y será revisado y actualizado al finalizar este periodo.', pageWidth / 2, yPos + 36, { align: 'center' })
     doc.setFontSize(9)
     doc.setTextColor(100, 100, 100)
-    doc.text('Aprobado: Octubre 2025 | Proxima revision: Octubre 2027', pageWidth / 2, yPos + 50, { align: 'center' })
+    doc.text('Aprobado: Octubre 2025 | Próxima revisión: Octubre 2027', pageWidth / 2, yPos + 50, { align: 'center' })
     doc.save('Plan_Igualdad_ASOVEDRA_2025-2026.pdf')
   }
 
   return (
     <>
       <SEO
-        title="Plan de Igualdad de Genero"
-        description="Plan de Igualdad de Genero 2025-2026 de ASOVEDRA. Nuestro compromiso con la igualdad de oportunidades y la no discriminacion."
+        title="Plan de Igualdad de Género"
+        description="Plan de Igualdad de Género 2025-2026 de ASOVEDRA. Nuestro compromiso con la igualdad de oportunidades y la no discriminación."
         keywords="plan igualdad, genero, asovedra, igualdad oportunidades, no discriminacion"
         canonical="/plan-de-igualdad"
       />
@@ -341,8 +341,8 @@ function PlanIgualdad() {
       <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
         <InternalPageHero
           eyebrow="Compromiso con la igualdad"
-          title="Plan de Igualdad de Genero"
-          description="Marco de actuacion 2025-2026 para impulsar igualdad de oportunidades, prevencion de discriminaciones y mejora continua."
+          title="Plan de Igualdad de Género"
+          description="Marco de actuación 2025-2026 para impulsar igualdad de oportunidades, prevención de discriminaciones y mejora continua."
         />
 
         <section className="px-4 pb-20 lg:pb-24">
@@ -351,7 +351,7 @@ function PlanIgualdad() {
               <FaGavel className="mx-auto text-5xl text-blue-300" />
               <h2 className="mt-6 text-3xl font-bold text-white">Nuestro compromiso con la igualdad</h2>
               <p className="mt-5 text-lg leading-8 text-slate-300">
-                Este plan establece una hoja de ruta clara para garantizar igualdad de oportunidades, participacion equilibrada y entornos de trabajo respetuosos.
+                Este plan establece una hoja de ruta clara para garantizar igualdad de oportunidades, participación equilibrada y entornos de trabajo respetuosos.
               </p>
             </ContentSurface>
           </div>
@@ -360,7 +360,7 @@ function PlanIgualdad() {
         <section className="px-4 pb-20 lg:pb-24">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="text-3xl font-bold text-white lg:text-4xl">Objetivos estrategicos</h2>
+              <h2 className="text-3xl font-bold text-white lg:text-4xl">Objetivos estratégicos</h2>
               <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">Los pilares fundamentales del Plan de Igualdad.</p>
             </div>
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -418,7 +418,7 @@ function PlanIgualdad() {
 
             <div className="space-y-6">
               <ContentSurface className="p-8">
-                <h2 className="text-2xl font-bold text-white">Seguimiento y evaluacion</h2>
+                <h2 className="text-2xl font-bold text-white">Seguimiento y evaluación</h2>
                 <div className="mt-6 space-y-6">
                   <div>
                     <h3 className="flex items-center gap-2 text-lg font-semibold text-white">
@@ -426,7 +426,7 @@ function PlanIgualdad() {
                       Monitoreo continuo
                     </h3>
                     <p className="mt-2 text-sm leading-7 text-slate-300">
-                      Se realiza seguimiento periodico de las medidas con evaluaciones trimestrales de indicadores de igualdad.
+                      Se realiza seguimiento periódico de las medidas con evaluaciones trimestrales de indicadores de igualdad.
                     </p>
                   </div>
                   <div>
@@ -436,10 +436,10 @@ function PlanIgualdad() {
                     </h3>
                     <div className="mt-3 grid gap-3">
                       {[
-                        'Porcentaje de participacion por genero en programas y servicios',
-                        'Numero de formaciones en igualdad realizadas',
-                        'Grado de satisfaccion con las medidas implementadas',
-                        'Analisis de brechas y evolucion de las mismas'
+                        'Porcentaje de participación por género en programas y servicios',
+                        'Número de formaciones en igualdad realizadas',
+                        'Grado de satisfacción con las medidas implementadas',
+                        'Análisis de brechas y evolución de las mismas'
                       ].map((indicador) => (
                         <div key={indicador} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm leading-6 text-slate-300">
                           {indicador}
@@ -450,10 +450,10 @@ function PlanIgualdad() {
                   <div>
                     <h3 className="flex items-center gap-2 text-lg font-semibold text-white">
                       <FaUsers className="text-blue-300" />
-                      Revision participativa
+                      Revisión participativa
                     </h3>
                     <p className="mt-2 text-sm leading-7 text-slate-300">
-                      El plan se revisa anualmente con la participacion del equipo y de las personas usuarias de los servicios.
+                      El plan se revisa anualmente con la participación del equipo y de las personas usuarias de los servicios.
                     </p>
                   </div>
                 </div>
@@ -471,7 +471,7 @@ function PlanIgualdad() {
                   <FaDownload className="text-lg" />
                   Descargar plan completo
                 </button>
-                <p className="mt-5 text-sm text-slate-400">Aprobado: Octubre 2025 | Proxima revision: Octubre 2027</p>
+                <p className="mt-5 text-sm text-slate-400">Aprobado: Octubre 2025 | Próxima revisión: Octubre 2027</p>
               </ContentSurface>
             </div>
           </div>

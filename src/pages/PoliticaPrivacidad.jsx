@@ -13,12 +13,12 @@ function PoliticaPrivacidad() {
       />
       <LegalDocumentLayout
         eyebrow="Legal"
-        title="Politica de Privacidad"
-        description="Informacion sobre proteccion y tratamiento de datos personales"
+        title="Política de Privacidad"
+        description="Información sobre protección y tratamiento de datos personales"
       >
             <div className="space-y-8">
               <div>
-                <h2 className="mb-4 text-2xl font-bold text-white">Politica de Privacidad (LOPD y RGPD)</h2>
+                <h2 className="mb-4 text-2xl font-bold text-white">Política de Privacidad (LOPD y RGPD)</h2>
                 <p className="mb-4 leading-relaxed text-slate-300">
                   En esta Política de Privacidad te explicamos cómo recopilamos, utilizamos, compartimos y protegemos tu información de carácter personal a raíz de la contratación y uso que haces de nuestros productos, servicios y/o de nuestro Sitio Web.
                 </p>
