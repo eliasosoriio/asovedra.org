@@ -110,7 +110,7 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Servicios</h3>
             <ul className="space-y-2">
-              <li className="text-slate-300 text-sm">Asesoría Legal</li>
+              <li className="text-slate-300 text-sm">Orientación Legal</li>
               <li className="text-slate-300 text-sm">Inserción Laboral</li>
               <li className="text-slate-300 text-sm">Apoyo Psicológico</li>
               <li className="text-slate-300 text-sm">Integración Social</li>

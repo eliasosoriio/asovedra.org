@@ -37,7 +37,7 @@ function Contact() {
   }
 
   const services = [
-    'Asesoría Legal Migratoria',
+    'Orientación Legal y Derivación',
     'Bolsa de Empleo',
     'Trámites Migratorios',
     'Formación y Cursos',

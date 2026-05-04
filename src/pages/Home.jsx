@@ -18,8 +18,8 @@ import {
 
 const serviceHighlights = [
   {
-    title: 'Asesoria legal',
-    description: 'Orientacion juridica especializada en extranjeria, derechos y tramites esenciales.',
+    title: 'Orientacion legal',
+    description: 'Te orientamos en extranjeria, derechos y tramites, y te derivamos a profesionales especializados cuando se requiere asesoramiento juridico formal.',
     icon: <FaBalanceScale />
   },
   {

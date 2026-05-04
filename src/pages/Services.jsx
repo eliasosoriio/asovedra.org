@@ -20,15 +20,15 @@ import InternalPageHero from '../components/layout/InternalPageHero'
 function Services() {
   const services = [
     {
-      title: 'Asesoría Legal Migratoria',
-      description: 'Orientación jurídica especializada en temas migratorios, documentación y derechos legales para iberoamericanos en España.',
+      title: 'Orientación Legal y Derivación',
+      description: 'Ofrecemos orientación general en temas migratorios, documentación y derechos, y derivamos a despachos y entidades especializadas cuando se requiere asesoramiento jurídico formal.',
       icon: <FaBalanceScale />,
       details: [
-        'Orientación sobre estatus migratorio',
-        'Tramitación de documentos',
-        'Asesoramiento en procesos de regularización',
+        'Orientación general sobre estatus migratorio',
+        'Acompañamiento en la preparación de documentación',
+        'Información sobre procesos de regularización',
         'Orientación sobre derechos y deberes',
-        'Representación legal en casos complejos'
+        'Derivación a profesionales y entidades especializadas'
       ]
     },
     {
