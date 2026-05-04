@@ -1,5 +1,104 @@
 export const NEWS_DATA = [
   {
+    title: 'Servicios sociales colapsados: las ONG rescatan la regularización de inmigrantes ante el atasco en los concellos',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/04/27/2026042721010793060.jpg',
+    description: 'ASOVEDRA gestiona una media de 65 expedientes al día desde su base operativa en la Casa Azul. La gran mayoría son vecinos del entorno, pero también llegan de fuera.',
+    date: '27 de abril de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/intenso-volumen/202604272100441445317.html',
+    isoDate: '2026-04-27'
+  },
+  {
+    title: 'Ante una oportunidad de oro',
+    image: 'https://img.lavdg.com/sc/5C-gMGrVxsjRnR9Xe9RlVShb67I=/1280x/2026/04/21/00121776775081262471555/Foto/PA22C1F1_143530.jpg',
+    description: 'Análisis sobre el proceso histórico de regularización migratoria en Pontevedra y el papel clave de ASOVEDRA en el acompañamiento de los expedientes.',
+    date: '22 de abril de 2026',
+    source: 'La Voz de Galicia',
+    url: 'https://www.lavozdegalicia.es/noticia/pontevedra/pontevedra/2026/04/22/ante-oportunidad-oro/0003_202604P22C1992.htm',
+    isoDate: '2026-04-22'
+  },
+  {
+    title: 'La regularización de inmigrantes revoluciona Pontevedra con más de 40 atendidos en una mañana',
+    image: 'https://estaticos-cdn.prensaiberica.es/clip/f01ef6cd-89f2-4cdf-858d-8a624f4af258_16-9-discover-aspect-ratio_default_1456517.jpg',
+    description: 'ASOVEDRA empezó a mover expedientes el 16 de abril y desde el pasado lunes atiende sin parar en oficina a extranjeros que buscan regularizar su situación.',
+    date: '21 de abril de 2026',
+    source: 'Faro de Vigo',
+    url: 'https://www.farodevigo.es/pontevedra/2026/04/21/regularizacion-inmigrantes-revoluciona-pontevedra-40-129360049.html',
+    isoDate: '2026-04-21'
+  },
+  {
+    title: 'Estos son los cuellos de botella que frenan la regularización de inmigrantes en Pontevedra',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/04/21/2026042121000169397.jpg',
+    description: 'ASOVEDRA, una de las dos únicas entidades de Galicia autorizadas a emitir el certificado de vulnerabilidad, explica los pasos y resuelve las principales dudas.',
+    date: '21 de abril de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/papeles-plazos-certificado-ultima-hora-principales-dudas-inmigrantes-pontevedreses/202604212100251444347.html',
+    isoDate: '2026-04-21'
+  },
+  {
+    title: 'César Alarcón, abogado: «Regularizar a quienes ya están aquí es una deuda con la sociedad»',
+    image: 'https://estaticos-cdn.prensaiberica.es/clip/1f4f062b-989b-477e-a065-4afafe1dec7c_16-9-aspect-ratio_default_0.jpg',
+    description: 'Su despacho tramita ya cerca de 400 expedientes en Pontevedra en el histórico proceso de regularización migratoria iniciado hace unos días.',
+    date: '21 de abril de 2026',
+    source: 'Faro de Vigo',
+    url: 'https://www.farodevigo.es/pontevedra/2026/04/21/cesar-alarcon-abogado-regularizar-migrantes-ya-estan-aqui-es-una-deuda-con-la-sociedad-129324442.html',
+    isoDate: '2026-04-21'
+  },
+  {
+    title: 'Hermanamiento entre dos asociaciones en Pontevedra para donar sangre de forma masiva',
+    image: 'https://img.lavdg.com/sc/2g_AZ1LgqJHWi2Y8XtMuyc5nMf8=/1280x/2026/03/28/00121774709821979560418/Foto/PM29C5F2_155535.jpg',
+    description: 'ASAMPO y ASOVEDRA se hermanan en una jornada de donación masiva de sangre en Pontevedra, reforzando la colaboración entre asociaciones para causas solidarias.',
+    date: '29 de marzo de 2026',
+    source: 'La Voz de Galicia',
+    url: 'https://www.lavozdegalicia.es/noticia/pontevedra/2026/03/29/hermanamiento-dos-asociaciones-pontevedra-donar-sangre-forma-masiva/0003_202603P29C5992.htm',
+    isoDate: '2026-03-29'
+  },
+  {
+    title: '"Éxito absoluto" en la jornada de donación masiva organizada por Asampo y Asovedra',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/03/28/2026032817450646669.jpg',
+    description: 'Llegaron a formarse varias colas a lo largo del sábado en la unidad móvil ubicada en la Praza de Ourense para las extracciones de sangre organizadas por ASAMPO y ASOVEDRA.',
+    date: '28 de marzo de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/exito-absoluto-jornada-donacion-masiva-organizada-asampo-asovedra/202603281747031440345.html',
+    isoDate: '2026-03-28'
+  },
+  {
+    title: 'Música y baile para acompañar la jornada de donación de sangre en Pontevedra',
+    image: 'https://www.lavozdegalicia.es/default/2026/03/28/00121774709821979560418/Foto/PM29C5F2_155535.jpg',
+    description: 'Las asociaciones ASAMPO y ASOVEDRA impulsaron una iniciativa conjunta —que no descartan repetir— acompañada de música y baile durante la jornada de donación de sangre.',
+    date: '28 de marzo de 2026',
+    source: 'La Voz de Galicia',
+    url: 'https://www.lavozdegalicia.es/album/pontevedra/pontevedra/2026/03/28/musica-baile-acompanar-manana-donacion-sangre-pontevedra/01101774709852210422921.htm',
+    isoDate: '2026-03-28'
+  },
+  {
+    title: 'Asovedra, una garantía de ayuda e inclusión para migrantes y retornados',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/03/26/2026032617524721034.jpg',
+    description: 'La labor de la Asociación de Venezolanos de Pontevedra engloba actualmente a miles de personas iberoamericanas, con acompañamiento en inclusión, empleo y trámites.',
+    date: '26 de marzo de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/asovedra-garantia-ayuda-inclusion-migrantes-retornados/202603261803021440037.html',
+    isoDate: '2026-03-26'
+  },
+  {
+    title: 'Asovedra insta a la comunidad internacional a "no mirar hacia otro lado ni normalizar abusos"',
+    image: 'https://www.diariodepontevedra.es/asset/thumbnail,1920,1080,center,center/media/diariodepontevedra/images/2026/01/05/2026010519370749837.jpg',
+    description: 'ASOVEDRA hace un llamamiento a la comunidad internacional para que no normalice los abusos en Venezuela y mantenga el foco sobre la situación política y humanitaria del país.',
+    date: '5 de enero de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/asovedra-insta-comunidad-internacional-mirar-lado-ni-normalizar-abusos/202601051940091426349.html',
+    isoDate: '2026-01-05'
+  },
+  {
+    title: 'El Gobierno aborda la agilización de los trámites de asilo en Pontevedra',
+    image: 'https://estaticos-cdn.prensaiberica.es/clip/2457bbfa-eed3-4d1c-9af4-cc47d19b53a9_16-9-discover-aspect-ratio_default_0.webp',
+    description: 'El Ejecutivo se reúne en Pontevedra para abordar la agilización de los trámites de asilo, una demanda recurrente de asociaciones como ASOVEDRA frente a la saturación de las oficinas de extranjería.',
+    date: '15 de diciembre de 2025',
+    source: 'Faro de Vigo',
+    url: 'https://www.farodevigo.es/gran-vigo/2025/12/15/gobierno-aborda-agilizacion-tramites-asilo-124802003.html',
+    isoDate: '2025-12-15'
+  },
+  {
     title: 'La incertidumbre inunda a los venezolanos que buscan volver a casa',
     image: 'https://www.diariodepontevedra.es/asset/thumbnail,768,432,center,center/media/diariodepontevedra/images/2025/11/27/2025112719551835738.jpg',
     description: 'La comunidad venezolana de Pontevedra afronta la falta de información y el desamparo ante la revocación de las licencias a seis aerolíneas internacionales por parte del gobierno de Maduro. Una situación que impide que muchos puedan volver a sus hogares o viajar para ver a sus familiares',
