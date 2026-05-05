@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async'
-
 const SEO = ({ 
   title, 
   description, 
@@ -22,7 +20,7 @@ const SEO = ({
   const imageUrl = ogImage || defaultImage
 
   return (
-    <Helmet>
+    <>
       {/* Title */}
       <title>{fullTitle}</title>
       
@@ -131,7 +129,7 @@ const SEO = ({
           }
         })}
       </script>
-    </Helmet>
+    </>
   )
 }
 
