@@ -9,10 +9,14 @@ import {
   FaBook,
   FaBriefcase,
   FaBullseye,
+  FaCalendarAlt,
   FaClipboardList,
+  FaExclamationTriangle,
   FaHandshake,
   FaHeart,
   FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaShip,
   FaUsers
 } from 'react-icons/fa'
 
@@ -76,6 +80,29 @@ function Home() {
       />
 
       <main className="flex flex-col items-center justify-center overflow-x-hidden bg-slate-950 text-white">
+        <section className="relative w-full border-t border-red-500/20 bg-[linear-gradient(135deg,#7f1d1d_0%,#1e293b_55%,#172554_100%)] py-8">
+          <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 text-center sm:flex-row sm:justify-between sm:text-left sm:px-6 lg:px-8">
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-2xl text-red-200">
+                <FaExclamationTriangle />
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-200">Emergencia · Terremoto en Venezuela</p>
+                <p className="mt-1 text-base font-semibold text-white sm:text-lg">
+                  Asovedra Presente: red gratuita de apoyo psicológico para personas afectadas
+                </p>
+              </div>
+            </div>
+            <Link
+              to="/emergencia-terremoto-venezuela"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+            >
+              Ver cómo ayudar
+              <FaArrowRight className="text-sm" />
+            </Link>
+          </div>
+        </section>
+
         <section className="relative w-full border-t border-white/6 bg-[linear-gradient(180deg,#020617_0%,#0b1225_100%)] py-16 lg:py-20">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(250,204,21,0.08),transparent_25%)]"></div>
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -155,6 +182,91 @@ function Home() {
                 Ver todas las noticias
                 <FaArrowRight className="text-sm" />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative w-full bg-[linear-gradient(180deg,#0b1225_0%,#111827_100%)] py-20 lg:py-24">
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_28%)]"></div>
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto mb-14 max-w-3xl text-center">
+              <span className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-2 text-sm font-semibold text-yellow-200">
+                <FaCalendarAlt />
+                Próximo evento
+              </span>
+              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Xornada de Convivencia en Ons</h2>
+              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
+              <p className="mt-5 text-lg leading-8 text-slate-300">
+                Asovedra - Galicia Activa organiza "Iberoamérica + Convive en Ons", una jornada de convivencia
+                comunitaria en la isla de Ons.
+              </p>
+            </div>
+
+            <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-white/8 bg-white/[0.04] shadow-[0_26px_56px_-32px_rgba(15,23,42,0.95)] backdrop-blur-sm">
+              <div className="grid gap-0 lg:grid-cols-[0.85fr_1.15fr]">
+                <div className="relative min-h-[20rem] lg:min-h-full">
+                  <img
+                    src="/photo/excursion_ons.jpeg"
+                    alt="Cartel de la Xornada de Convivencia Iberoamérica + Convive en Ons 2026"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+
+                <div className="p-8 lg:p-10">
+                  <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-200">
+                    <FaShip />
+                    Domingo 9 de agosto de 2026
+                  </div>
+                  <h3 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
+                    Navega, desconecta y disfruta de un paraíso natural a un paso de ti
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-slate-300">
+                    Trayecto en barco cómodo y seguro, playas de ensueño, rutas de naturaleza y recuerdos inolvidables.
+                    Actividad subvencionada por la Diputación de Pontevedra dentro del Programa +Convivencia.
+                  </p>
+
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
+                      <p className="text-2xl font-bold text-white">14 €</p>
+                      <p className="mt-1 text-sm text-slate-300">Socios</p>
+                    </div>
+                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
+                      <p className="text-2xl font-bold text-white">16 €</p>
+                      <p className="mt-1 text-sm text-slate-300">Usuarios</p>
+                    </div>
+                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
+                      <p className="text-2xl font-bold text-white">5 €</p>
+                      <p className="mt-1 text-sm text-slate-300">Menores de 12 años</p>
+                    </div>
+                  </div>
+
+                  <a
+                    href="tel:+34604016113"
+                    className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+                  >
+                    <FaPhoneAlt className="text-xs" />
+                    Llamar para apuntarte: 604 016 113
+                  </a>
+                  <p className="mt-3 text-sm text-slate-400">Plazas limitadas. Reserva tu sitio por teléfono.</p>
+                </div>
+              </div>
+
+              <div className="grid gap-0 border-t border-white/8 sm:grid-cols-[0.85fr_1.15fr]">
+                <div className="relative min-h-[14rem]">
+                  <img
+                    src="/photo/excursion_ons_2.png"
+                    alt="Más de 150 voces unidas por Venezuela en una edición anterior del paseo a la isla de Ons"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-6 sm:p-8">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-200">Así vivimos la edición anterior</p>
+                  <p className="mt-3 text-base leading-7 text-slate-300">
+                    Más de 150 personas ya compartieron esta jornada en Ons, unidas por el mismo sentimiento de amor,
+                    unión y esperanza. Este año queremos ser todavía más.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

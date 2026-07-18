@@ -104,11 +104,6 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/agendar" className="text-slate-300 hover:text-white transition-colors duration-300 text-sm">
-                  Reservar cita
-                </Link>
-              </li>
-              <li>
                 <Link to="/portal/login" className="text-slate-300 hover:text-white transition-colors duration-300 text-sm">
                   Portal de Empleados
                 </Link>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {
   FaBus,
   FaCar,
@@ -82,42 +81,41 @@ function Contact() {
         <section className="px-4 pb-20 lg:pb-24">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
             <ContentSurface className="p-6 sm:p-8 lg:p-10">
-              <h2 className="text-2xl font-bold text-white lg:text-3xl">Reserva una cita con nosotros</h2>
+              <h2 className="text-2xl font-bold text-white lg:text-3xl">Habla con nosotros</h2>
               <p className="mt-4 text-sm leading-7 text-slate-300 lg:text-base">
-                La forma más cómoda de hablar con un miembro del equipo es agendar una cita en línea.
-                Elige al profesional que prefieras (o déjanos asignarte uno disponible), selecciona el día y la hora
-                que mejor te vengan e introduce tus datos.
-              </p>
-              <p className="mt-3 text-sm leading-7 text-slate-300 lg:text-base">
-                Recibirás un correo de confirmación con un enlace para añadir la cita a tu calendario y un justificante en PDF.
+                La forma más rápida de contactar con un miembro del equipo es llamando o escribiendo directamente.
+                Te orientaremos y, si corresponde, coordinaremos una cita presencial con el profesional adecuado.
               </p>
 
               <ul className="mt-6 grid gap-3 text-sm text-slate-200">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">1</span>
-                  <span>Elige profesional o marca <strong>"Sin preferencia"</strong> para asignación automática.</span>
+                  <span>Llámanos o escríbenos contándonos brevemente tu situación.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">2</span>
-                  <span>Selecciona día y hora dentro de la disponibilidad real.</span>
+                  <span>Te orientamos y valoramos qué tipo de apoyo necesitas.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">3</span>
-                  <span>Introduce tus datos y opcionalmente el motivo de la consulta.</span>
+                  <span>Coordinamos, si es necesario, una cita con el profesional más adecuado.</span>
                 </li>
               </ul>
 
-              <Link
-                to="/agendar"
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto"
-              >
-                Reservar cita ahora
-              </Link>
-
-              <p className="mt-6 text-xs leading-6 text-slate-400">
-                ¿Prefieres otro canal? Llámanos al <a href="tel:+34604016113" className="underline hover:text-white">+34 604 016 113</a> o
-                escríbenos a <a href="mailto:info@asovedra.org" className="underline hover:text-white">info@asovedra.org</a>.
-              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="tel:+34604016113"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto"
+                >
+                  Llamar: +34 604 016 113
+                </a>
+                <a
+                  href="mailto:info@asovedra.org"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/14 bg-white/[0.05] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/[0.08] sm:w-auto"
+                >
+                  Escribir a info@asovedra.org
+                </a>
+              </div>
             </ContentSurface>
 
             <div className="space-y-6">

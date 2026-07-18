@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { FaChevronDown, FaCalendarPlus } from 'react-icons/fa'
+import { FaChevronDown, FaExclamationTriangle } from 'react-icons/fa'
 
 const menuStructure = [
   {
@@ -177,11 +177,11 @@ export function Header() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
-              to="/agendar"
-              className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100 md:flex"
+              to="/emergencia-terremoto-venezuela"
+              className="hidden items-center gap-2 rounded-full border border-red-400/40 bg-red-500/15 px-4 py-2.5 text-sm font-semibold text-red-200 transition-all duration-200 hover:-translate-y-0.5 hover:bg-red-500/25 hover:text-white md:flex"
             >
-              <FaCalendarPlus className="text-xs" />
-              <span>Pedir cita</span>
+              <FaExclamationTriangle className="text-xs" />
+              <span>Emergencia Venezuela</span>
             </Link>
 
             <button
@@ -283,11 +283,11 @@ export function Header() {
             </nav>
 
             <Link
-              to="/agendar"
-              className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition-all duration-200 hover:bg-slate-100"
+              to="/emergencia-terremoto-venezuela"
+              className="mt-4 flex items-center justify-center gap-2 rounded-2xl border border-red-400/40 bg-red-500/15 px-4 py-3 text-sm font-semibold text-red-200 transition-all duration-200 hover:bg-red-500/25 hover:text-white"
             >
-              <FaCalendarPlus className="text-xs" />
-              <span>Pedir cita</span>
+              <FaExclamationTriangle className="text-xs" />
+              <span>Emergencia Venezuela</span>
             </Link>
           </div>
         </div>

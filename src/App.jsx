@@ -18,11 +18,9 @@ import Accesibilidad from "./pages/Accesibilidad"
 import PlanIgualdad from "./pages/PlanIgualdad"
 import Estatutos from "./pages/Estatutos"
 import DeclaracionValores from "./pages/DeclaracionValores"
-import Booking from "./pages/Booking"
-import BookingConfirmation from "./pages/BookingConfirmation"
-import BookingCancel from "./pages/BookingCancel"
 import PortalLogin from "./pages/PortalLogin"
 import Portal from "./pages/Portal"
+import EmergenciaVenezuela from "./pages/EmergenciaVenezuela"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -42,6 +40,12 @@ function AnimatedRoutes() {
         <Route path="/noticias" element={
           <PageTransition>
             <News />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/emergencia-terremoto-venezuela" element={
+          <PageTransition>
+            <EmergenciaVenezuela />
             <Footer />
           </PageTransition>
         } />
@@ -102,24 +106,6 @@ function AnimatedRoutes() {
         <Route path="/declaracion-valores" element={
           <PageTransition>
             <DeclaracionValores />
-            <Footer />
-          </PageTransition>
-        } />
-        <Route path="/agendar" element={
-          <PageTransition>
-            <Booking />
-            <Footer />
-          </PageTransition>
-        } />
-        <Route path="/agendar/confirmacion/:appointmentId" element={
-          <PageTransition>
-            <BookingConfirmation />
-            <Footer />
-          </PageTransition>
-        } />
-        <Route path="/agendar/cancelar/:token" element={
-          <PageTransition>
-            <BookingCancel />
             <Footer />
           </PageTransition>
         } />

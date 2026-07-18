@@ -1,5 +1,95 @@
 export const NEWS_DATA = [
   {
+    title: 'Luis López promete la ayuda del Gobierno Provincial para apoyar a los afectados por los sismos ante las organizaciones venezolanas de la provincia',
+    image: 'https://diariodevigo.com/wp-content/uploads/2026/07/20260708-venezuela-rafaestevez-02-2026-07-09-20260708-venezuela-rafaestevez-02-scaled.jpg',
+    description: 'Luis López promete la ayuda de la Diputación Provincial para apoyar a los afectados por los sismos ante las organizaciones venezolanas de la provincia.',
+    date: '9 de julio de 2026',
+    source: 'Diario de Vigo',
+    url: 'https://diariodevigo.com/luis-lopez-promete-la-ayuda-del-gobierno-provincial-para-apoyar-a-los-afectados-por-los-sismos-ante-las-organizaciones-venezolanas-de-la-provincia/',
+    isoDate: '2026-07-09'
+  },
+  {
+    title: 'Diputación apoya a los afectados por los terremotos de Venezuela',
+    image: 'https://telemarinas.com/wp-content/uploads/2026/07/venezuela-deputacion.jpg',
+    description: 'La Diputación de Pontevedra se compromete a apoyar a los afectados por los terremotos en Venezuela, anunciando mecanismos para canalizar la ayuda a través de las asociaciones venezolanas de la provincia.',
+    date: '8 de julio de 2026',
+    source: 'Telemarinas',
+    url: 'https://telemarinas.com/diputacion-apoya-a-los-afectados-por-los-terremotos-de-venezuela/',
+    isoDate: '2026-07-08'
+  },
+  {
+    title: 'Antonio Osorio, venezolano de Pontevedra: "Los cadáveres están por las calles, no hay forma de cremar ni de poder enterrar"',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/29/2026062921141589480.jpg',
+    description: 'El presidente de Asovedra apunta que "lo que se necesita ahora mismo con urgencia es dinero para poder comprar material de rescate".',
+    date: '29 de junio de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/cadaveres-estan-calles-forma-cremar-ni-poder-enterrar/202606292114451456522.html',
+    isoDate: '2026-06-29'
+  },
+  {
+    title: 'Minuto de silencio en memoria de las víctimas del terremoto en Venezuela',
+    image: 'https://www.pontevedraviva.com/uploads/s1/54/01/29/7/minuto-de-silencio-en-solidaridad-con-el-pueblo-venezolano_26_1200x675.jpeg',
+    description: 'Existe un fuerte vínculo de Pontevedra con la comunidad venezolana, la cual forma el colectivo extranjero más numeroso en la ciudad. El Concello reafirmó el compromiso local para ayudar.',
+    date: '29 de junio de 2026',
+    source: 'Pontevedra Viva',
+    url: 'https://www.pontevedraviva.com/es/general/minuto-silencio-victimas-terremoto-venezuela-pontevedra-marin_518680_102.html',
+    isoDate: '2026-06-29'
+  },
+  {
+    title: 'Asovedra abre una recaudación de fondos tras los terremotos en Venezuela: "Cada donación cuenta"',
+    image: 'https://www.pontevedraviva.com/uploads/s1/44/78/23/7/66ae756e62-con-venez-004.jpeg',
+    description: 'Desde la Asociación de Venezolanos en Pontevedra "queremos canalizar la solidaridad de nuestra comunidad de la forma más rápida, útil y transparente", afirman.',
+    date: '27 de junio de 2026',
+    source: 'Pontevedra Viva',
+    url: 'https://www.pontevedraviva.com/es/general/asovedra-abre-recaudacion-fondos-terremotos-venzuela-cada-donacion-cuenta_518645_102.html',
+    isoDate: '2026-06-27'
+  },
+  {
+    title: 'Pontevedra ofrece colaboración a Venezuela tras la tragedia',
+    image: 'https://diariogallego.es/media/2026/06/pontevedra-ofrece-axuda-a-venezuela-tras-os-devastadores-terremotos.webp',
+    description: 'El gobierno municipal de Pontevedra ofreció su apoyo a Venezuela tras los devastadores terremotos. La concejala Anabel Gulías anunció la coordinación con Asovedra para enviar ayuda humanitaria al país.',
+    date: '26 de junio de 2026',
+    source: 'Diario Gallego',
+    url: 'https://diariogallego.es/es/pontevedra/general/pontevedra-ofrece-colaboracion-a-venezuela-tras-la-tragedia',
+    isoDate: '2026-06-26'
+  },
+  {
+    title: 'Abren una cuenta bancaria para recoger la solidaridad de los pontevedreses con Venezuela',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/26/2026062616175249579.jpg',
+    description: 'Asovedra anuncia que se podrán hacer donaciones para colaborar con los damnificados por los terremotos. La asociación celebrará una misa por las víctimas.',
+    date: '26 de junio de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/asovedra-recoge-solidaridad-pontevedreses-pueblo-venezolano/202606261737081456065.html',
+    isoDate: '2026-06-26'
+  },
+  {
+    title: 'Máxima preocupación por el estado de la familia de Marín desaparecida en Venezuela',
+    image: 'https://estaticos-cdn.prensaiberica.es/clip/5e186768-f332-4412-8cc1-a9cc411fc8da_16-9-discover-aspect-ratio_default_1480700.jpg',
+    description: '«Necesitamos ayuda porque siguen bajo los escombros», proclama el hijo mayor de la familia de Marín desaparecida tras el terremoto en Venezuela.',
+    date: '26 de junio de 2026',
+    source: 'Faro de Vigo',
+    url: 'https://www.farodevigo.es/pontevedra/2026/06/26/temor-marin-desaparicion-familia-terremoto-131846621.html',
+    isoDate: '2026-06-26'
+  },
+  {
+    title: 'Pontevedra ofrece su colaboración tras la tragedia de Venezuela',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/26/2026062613321097880.jpg',
+    description: 'Gulías se pone "a disposición" del colectivo Asovedra ante la posibilidad de que el Concello pueda enviar ayuda al país. Los venezolanos son la principal población extranjera en Pontevedra.',
+    date: '26 de junio de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/pontevedra-ofrece-colaboracion-tragedia-venezuela/202606261336331456023.html',
+    isoDate: '2026-06-26'
+  },
+  {
+    title: 'Manuel Osorio, presidente de Asovedra: "Estamos en contacto con gente que no encuentra a sus familiares en Venezuela"',
+    image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/26/2026062609432592839.jpg',
+    description: 'El teléfono del presidente de Asovedra no ha dejado de sonar desde la medianoche del miércoles. Muchos de los asociados todavía buscan a sus allegados en Venezuela.',
+    date: '26 de junio de 2026',
+    source: 'Diario de Pontevedra',
+    url: 'https://www.diariodepontevedra.es/articulo/pontevedra/manuel-osorio-presidente-asovedra-estamos-contacto-gente-que-encuentra-familiares/202606260946211455971.html',
+    isoDate: '2026-06-26'
+  },
+  {
     title: 'Servicios sociales colapsados: las ONG rescatan la regularización de inmigrantes ante el atasco en los concellos',
     image: 'https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/04/27/2026042721010793060.jpg',
     description: 'ASOVEDRA gestiona una media de 65 expedientes al día desde su base operativa en la Casa Azul. La gran mayoría son vecinos del entorno, pero también llegan de fuera.',
