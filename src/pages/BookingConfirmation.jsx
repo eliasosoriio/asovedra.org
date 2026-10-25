@@ -11,8 +11,8 @@ export default function BookingConfirmation() {
   const { appointmentId } = useParams()
   const location = useLocation()
   const stateData = location.state
-  const [appt, setAppt] = useState(stateData?.appointment ?? null)
-  const [staff, setStaff] = useState(stateData?.staff ?? null)
+  const [appt] = useState(stateData?.appointment ?? null)
+  const [staff] = useState(stateData?.staff ?? null)
   const [error, setError] = useState(null)
 
   useEffect(() => {
