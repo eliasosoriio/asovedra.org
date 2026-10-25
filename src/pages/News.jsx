@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { FaArrowRight } from 'react-icons/fa'
+import { LuArrowRight, LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 import SEO from '../components/SEO'
 import InternalPageHero from '../components/layout/InternalPageHero'
 import { NEWS_DATA } from '../constants/news'
@@ -45,6 +45,11 @@ function News() {
     }
   }
 
+  const arrowClass = (disabled) =>
+    `grid h-11 w-11 place-items-center rounded-full border transition-colors ${
+      disabled ? 'cursor-not-allowed border-line text-[#b9b2a3]' : 'border-line bg-white text-ink hover:border-navy hover:text-navy'
+    }`
+
   return (
     <>
       <SEO
@@ -54,111 +59,88 @@ function News() {
         canonical="/noticias"
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] text-white">
+      <main className="min-h-screen">
         <InternalPageHero
           eyebrow="Actualidad"
           title="Noticias y actualidad"
           description="Seguimiento de iniciativas, colaboraciones y temas de interés para la comunidad iberoamericana."
         />
 
-        <section className="px-4 pb-20 lg:pb-24">
-          <div className="mx-auto max-w-7xl" ref={newsContainerRef}>
-            <div className="grid gap-6">
+        <section className="px-5 pb-24 lg:px-10">
+          <div id="listado-noticias" className="mx-auto max-w-[1200px]" ref={newsContainerRef}>
+            <div className="grid gap-5">
               {currentNews.map((news, index) => (
                 <article
                   key={news.url || indexOfFirstNews + index}
-                  className="group overflow-hidden rounded-[1.8rem] border border-white/8 bg-white/[0.04] shadow-[0_24px_50px_-30px_rgba(15,23,42,0.9)] backdrop-blur-sm lg:grid lg:grid-cols-[0.95fr_1.05fr]"
+                  className="group overflow-hidden rounded-[28px] border border-line bg-white lg:grid lg:grid-cols-[0.9fr_1.1fr]"
                 >
-                  <div className="relative h-72 overflow-hidden lg:h-full lg:min-h-[20rem]">
+                  <div className="relative h-64 overflow-hidden bg-line lg:h-full lg:min-h-[18rem]">
                     <img
                       src={news.image}
                       alt={news.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent"></div>
-                    <div className="absolute left-5 top-5 rounded-full border border-white/14 bg-slate-950/72 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                    <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold text-red shadow-sm">
                       {news.source}
-                    </div>
+                    </span>
                   </div>
 
                   <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-                    <p className="text-sm font-medium text-slate-400">{news.date}</p>
-                    <h2 className="mt-3 text-2xl font-bold text-white transition-colors duration-200 group-hover:text-blue-300 lg:text-3xl">
+                    <p className="text-sm font-semibold text-muted">{news.date}</p>
+                    <h2 className="mt-2 text-2xl font-extrabold leading-snug tracking-[-0.015em] text-ink transition-colors group-hover:text-navy lg:text-[26px]">
                       {news.title}
                     </h2>
-                    <p className="mt-4 line-clamp-3 text-base leading-7 text-slate-300">
+                    <p className="mt-3 line-clamp-3 text-base leading-7 text-muted">
                       {news.description}
                     </p>
                     <a
                       href={news.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-navy hover:underline"
                     >
                       Leer noticia completa
-                      <FaArrowRight className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
+                      <LuArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" />
                     </a>
                   </div>
                 </article>
               ))}
             </div>
 
-            <div className="mt-14 flex flex-col items-center gap-6">
-              <div className="flex items-center justify-center gap-3">
-                <button
-                  onClick={prevPage}
-                  disabled={currentPage === 1}
-                  className={`flex h-11 w-11 items-center justify-center rounded-xl border text-sm font-semibold transition-all duration-200 ${
-                    currentPage === 1
-                      ? 'cursor-not-allowed border-white/6 bg-white/[0.03] text-slate-500'
-                      : 'border-white/10 bg-white/[0.05] text-white hover:bg-white/[0.08]'
-                  }`}
-                  aria-label="Página anterior"
-                >
-                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
+            <nav aria-label="Paginación de noticias" className="mt-12 flex flex-col items-center gap-5">
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                <button type="button" onClick={prevPage} disabled={currentPage === 1} className={arrowClass(currentPage === 1)} aria-label="Página anterior">
+                  <LuChevronLeft aria-hidden="true" className="h-5 w-5" />
                 </button>
 
-                <div className="flex gap-2">
-                  {[...Array(totalPages)].map((_, index) => {
-                    const pageNumber = index + 1
-                    return (
-                      <button
-                        key={pageNumber}
-                        onClick={() => paginate(pageNumber)}
-                        className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-semibold transition-all duration-200 ${
-                          currentPage === pageNumber
-                            ? 'bg-gradient-to-r from-blue-700 to-blue-600 text-white shadow-[0_14px_28px_-18px_rgba(37,99,235,0.95)]'
-                            : 'border border-white/10 bg-white/[0.05] text-slate-300 hover:bg-white/[0.08] hover:text-white'
-                        }`}
-                      >
-                        {pageNumber}
-                      </button>
-                    )
-                  })}
-                </div>
+                {[...Array(totalPages)].map((_, index) => {
+                  const pageNumber = index + 1
+                  const active = currentPage === pageNumber
+                  return (
+                    <button
+                      key={pageNumber}
+                      type="button"
+                      onClick={() => paginate(pageNumber)}
+                      aria-current={active ? 'page' : undefined}
+                      className={`grid h-11 w-11 place-items-center rounded-full text-sm font-bold transition-colors ${
+                        active ? 'bg-navy text-white' : 'border border-line bg-white text-ink hover:border-navy hover:text-navy'
+                      }`}
+                    >
+                      {pageNumber}
+                    </button>
+                  )
+                })}
 
-                <button
-                  onClick={nextPage}
-                  disabled={currentPage === totalPages}
-                  className={`flex h-11 w-11 items-center justify-center rounded-xl border text-sm font-semibold transition-all duration-200 ${
-                    currentPage === totalPages
-                      ? 'cursor-not-allowed border-white/6 bg-white/[0.03] text-slate-500'
-                      : 'border-white/10 bg-white/[0.05] text-white hover:bg-white/[0.08]'
-                  }`}
-                  aria-label="Página siguiente"
-                >
-                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                <button type="button" onClick={nextPage} disabled={currentPage === totalPages} className={arrowClass(currentPage === totalPages)} aria-label="Página siguiente">
+                  <LuChevronRight aria-hidden="true" className="h-5 w-5" />
                 </button>
               </div>
 
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-muted">
                 Mostrando {indexOfFirstNews + 1}-{Math.min(indexOfLastNews, newsData.length)} de {newsData.length} noticias
               </p>
-            </div>
+            </nav>
           </div>
         </section>
       </main>

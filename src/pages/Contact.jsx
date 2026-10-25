@@ -1,19 +1,13 @@
 import React from 'react'
-import {
-  FaBus,
-  FaCar,
-  FaClock,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaPhone,
-  FaWalking
-} from 'react-icons/fa'
+import { LuBus, LuCar, LuClock, LuFootprints, LuMail, LuMapPin, LuPhone } from 'react-icons/lu'
 import SEO from '../components/SEO'
-import ContentSurface from '../components/layout/ContentSurface'
 import InternalPageHero from '../components/layout/InternalPageHero'
+import Button from '../components/ui/Button'
+import Card from '../components/ui/Card'
+import SectionHeader from '../components/ui/SectionHeader'
+import { CONTACT } from '../constants/site'
 
 function Contact() {
-
   const faqItems = [
     {
       question: '¿Cuánto tiempo tardan en responder?',
@@ -35,31 +29,43 @@ function Contact() {
 
   const contactCards = [
     {
-      icon: <FaMapMarkerAlt />,
+      icon: LuMapPin,
       title: 'Dirección',
-      details: ['Rúa Sor Lucía 4, Oficina 50', '36002 Pontevedra, España'],
+      details: [CONTACT.address, `${CONTACT.city}, España`],
       action: 'Ver en Google Maps',
       link: 'https://maps.google.com/?q=Rúa+Sor+Lucía+4,+Oficina+50,+36002+Pontevedra'
     },
     {
-      icon: <FaPhone />,
+      icon: LuPhone,
       title: 'Teléfono',
-      details: ['+34 604 016 113', 'Llamadas y WhatsApp'],
+      details: [`+34 ${CONTACT.phoneDisplay}`, 'Llamadas y WhatsApp'],
       action: 'Llamar ahora',
-      link: 'tel:+34604016113'
+      link: `tel:${CONTACT.phone}`
     },
     {
-      icon: <FaEnvelope />,
+      icon: LuMail,
       title: 'Email',
-      details: ['info@asovedra.org'],
+      details: [CONTACT.email],
       action: 'Escribir correo',
-      link: 'mailto:info@asovedra.org'
+      link: `mailto:${CONTACT.email}`
     },
     {
-      icon: <FaClock />,
+      icon: LuClock,
       title: 'Horarios',
-      details: ['Lunes, Miércoles: 10:00-14:00', 'Martes: 17:00-19:00', 'Jueves: 10:00-14:00, 17:00-19:00', 'Fin de semana: Cerrado']
+      details: [...CONTACT.hours, 'Fin de semana: cerrado']
     }
+  ]
+
+  const arrival = [
+    { icon: LuCar, title: 'En coche', text: 'Aparcamiento disponible en las proximidades.' },
+    { icon: LuBus, title: 'En transporte público', text: 'Líneas de autobús urbano con parada cercana.' },
+    { icon: LuFootprints, title: 'A pie', text: 'Centro histórico de Pontevedra, zona peatonal.' }
+  ]
+
+  const steps = [
+    'Llámanos o escríbenos contándonos brevemente tu situación.',
+    'Te orientamos y valoramos qué tipo de apoyo necesitas.',
+    'Coordinamos, si es necesario, una cita con el profesional más adecuado.'
   ]
 
   return (
@@ -71,124 +77,100 @@ function Contact() {
         canonical="/contacto"
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] text-white">
+      <main className="min-h-screen">
         <InternalPageHero
           eyebrow="Contacto"
           title="Estamos aquí para ayudarte"
           description="Respondemos consultas, orientamos procesos y facilitamos el acceso a los servicios de Asovedra."
         />
 
-        <section className="px-4 pb-20 lg:pb-24">
-          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-            <ContentSurface className="p-6 sm:p-8 lg:p-10">
-              <h2 className="text-2xl font-bold text-white lg:text-3xl">Habla con nosotros</h2>
-              <p className="mt-4 text-sm leading-7 text-slate-300 lg:text-base">
-                La forma más rápida de contactar con un miembro del equipo es llamando o escribiendo directamente.
-                Te orientaremos y, si corresponde, coordinaremos una cita presencial con el profesional adecuado.
-              </p>
-
-              <ul className="mt-6 grid gap-3 text-sm text-slate-200">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">1</span>
-                  <span>Llámanos o escríbenos contándonos brevemente tu situación.</span>
+        <section className="mx-auto grid max-w-[1200px] gap-5 px-5 pb-20 lg:grid-cols-[1fr_1.15fr] lg:px-10">
+          <Card tone="navy" className="p-8 sm:p-10">
+            <h2 className="text-2xl font-extrabold tracking-[-0.02em] sm:text-3xl">Habla con nosotros</h2>
+            <p className="mt-3 text-[17px] leading-relaxed text-[#c9d3f0]">
+              La forma más rápida de contactar con un miembro del equipo es llamando o escribiendo directamente.
+              Te orientaremos y, si corresponde, coordinaremos una cita presencial con el profesional adecuado.
+            </p>
+            <ol className="mt-7 space-y-4">
+              {steps.map((step, index) => (
+                <li key={step} className="flex gap-3 text-[15px] text-[#dfe6fa]">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-sm font-extrabold text-ink">
+                    {index + 1}
+                  </span>
+                  <span>{step}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">2</span>
-                  <span>Te orientamos y valoramos qué tipo de apoyo necesitas.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-xs font-bold text-blue-200">3</span>
-                  <span>Coordinamos, si es necesario, una cita con el profesional más adecuado.</span>
-                </li>
-              </ul>
+              ))}
+            </ol>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href={`tel:${CONTACT.phone}`} variant="yellow">Llamar: {CONTACT.phoneDisplay}</Button>
+              <Button href={`mailto:${CONTACT.email}`} variant="white">Escribir a {CONTACT.email}</Button>
+            </div>
+          </Card>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="tel:+34604016113"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto"
-                >
-                  Llamar: +34 604 016 113
-                </a>
-                <a
-                  href="mailto:info@asovedra.org"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/14 bg-white/[0.05] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/[0.08] sm:w-auto"
-                >
-                  Escribir a info@asovedra.org
-                </a>
-              </div>
-            </ContentSurface>
-
-            <div className="space-y-6">
-              <div className="grid gap-4 sm:grid-cols-2">
-                {contactCards.map((item) => (
-                  <ContentSurface key={item.title} className="p-5">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/[0.08] text-lg text-blue-300">
-                      {item.icon}
-                    </div>
-                    <h3 className="mt-4 text-lg font-bold text-white">{item.title}</h3>
-                    <div className="mt-3 space-y-1 text-sm leading-6 text-slate-300">
-                      {item.details.map((detail) => (
-                        <p key={detail}>{detail}</p>
-                      ))}
+          <div className="grid gap-5">
+            <div className="grid gap-5 sm:grid-cols-2">
+              {contactCards.map((item) => {
+                const Icon = item.icon
+                return (
+                  <Card key={item.title} className="p-6">
+                    <span className="grid h-11 w-11 place-items-center rounded-2xl bg-pill-blue text-navy">
+                      <Icon aria-hidden="true" className="h-5 w-5" />
+                    </span>
+                    <h3 className="mt-4 text-lg font-bold text-ink">{item.title}</h3>
+                    <div className="mt-1 space-y-0.5 text-[15px] text-muted">
+                      {item.details.map((detail) => <p key={detail}>{detail}</p>)}
                     </div>
                     {item.link && (
-                      <a href={item.link} className="mt-4 inline-flex text-sm font-semibold text-blue-300 hover:text-blue-200">
+                      <a
+                        href={item.link}
+                        className="mt-3 inline-block text-sm font-bold text-navy hover:underline"
+                        {...(item.link.startsWith('https:') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      >
                         {item.action}
                       </a>
                     )}
-                  </ContentSurface>
-                ))}
-              </div>
-
-              <ContentSurface className="p-6 sm:p-8">
-                <h3 className="text-xl font-bold text-white">Cómo llegar</h3>
-                <div className="mt-5 space-y-4 text-sm leading-6 text-slate-300">
-                  <div className="flex items-start gap-3">
-                    <FaCar className="mt-1 text-blue-300" />
-                    <div>
-                      <p className="font-semibold text-white">En coche</p>
-                      <p>Aparcamiento disponible en las proximidades.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <FaBus className="mt-1 text-blue-300" />
-                    <div>
-                      <p className="font-semibold text-white">En transporte público</p>
-                      <p>Líneas de autobús urbano con parada cercana.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <FaWalking className="mt-1 text-blue-300" />
-                    <div>
-                      <p className="font-semibold text-white">A pie</p>
-                      <p>Centro histórico de Pontevedra, zona peatonal.</p>
-                    </div>
-                  </div>
-                </div>
-              </ContentSurface>
+                  </Card>
+                )
+              })}
             </div>
+
+            <Card className="p-6 sm:p-7">
+              <h3 className="text-lg font-bold text-ink">Cómo llegar</h3>
+              <ul className="mt-4 grid gap-4 sm:grid-cols-3">
+                {arrival.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <li key={item.title} className="flex gap-3">
+                      <Icon aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-red" />
+                      <div>
+                        <p className="font-semibold text-ink">{item.title}</p>
+                        <p className="text-sm text-muted">{item.text}</p>
+                      </div>
+                    </li>
+                  )
+                })}
+              </ul>
+            </Card>
           </div>
         </section>
 
-        <section className="px-4 pb-20 lg:pb-24">
-          <div className="mx-auto max-w-5xl">
-            <ContentSurface className="p-6 sm:p-8 lg:p-10">
-              <div className="mx-auto max-w-3xl text-center">
-                <h2 className="text-2xl font-bold text-white lg:text-3xl">Preguntas frecuentes</h2>
-                <p className="mt-4 text-base leading-7 text-slate-300">
-                  Respuestas rápidas a algunas dudas habituales antes de contactarnos.
-                </p>
-              </div>
-
-              <div className="mt-8 grid gap-4">
-                {faqItems.map((item) => (
-                  <div key={item.question} className="rounded-2xl border border-white/8 bg-white/[0.03] p-5">
-                    <h3 className="text-base font-semibold text-white">{item.question}</h3>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">{item.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </ContentSurface>
+        <section className="bg-sand py-20">
+          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+            <SectionHeader
+              align="center"
+              pill="Dudas"
+              pillTone="white"
+              title="Preguntas frecuentes"
+              subtitle="Respuestas rápidas a algunas dudas habituales antes de contactarnos."
+            />
+            <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-2">
+              {faqItems.map((item) => (
+                <Card key={item.question} className="p-7">
+                  <h3 className="text-lg font-bold text-ink">{item.question}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{item.answer}</p>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
       </main>

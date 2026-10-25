@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from '../components/SEO'
-import { FaBalanceScale, FaBullseye, FaChartLine, FaDownload, FaGavel, FaHandshake, FaHeart, FaUsers } from 'react-icons/fa'
+import { LuChartLine, LuDownload, LuGavel, LuHandshake, LuHeart, LuScale, LuTarget, LuUsers } from 'react-icons/lu'
 import jsPDF from 'jspdf'
 import ContentSurface from '../components/layout/ContentSurface'
 import InternalPageHero from '../components/layout/InternalPageHero'
@@ -8,22 +8,22 @@ import InternalPageHero from '../components/layout/InternalPageHero'
 function PlanIgualdad() {
   const objetivos = [
     {
-      icon: <FaBalanceScale />,
+      icon: <LuScale />,
       titulo: 'Igualdad de oportunidades',
       descripcion: 'Garantizar igualdad de acceso a todos los servicios sin discriminación por género.'
     },
     {
-      icon: <FaUsers />,
+      icon: <LuUsers />,
       titulo: 'Participación equilibrada',
       descripcion: 'Promover la representación equitativa en todos los niveles de la organización.'
     },
     {
-      icon: <FaChartLine />,
+      icon: <LuChartLine />,
       titulo: 'Desarrollo profesional',
       descripcion: 'Facilitar el crecimiento profesional sin barreras de género.'
     },
     {
-      icon: <FaHeart />,
+      icon: <LuHeart />,
       titulo: 'Conciliación',
       descripcion: 'Fomentar la conciliación de la vida personal, familiar y laboral.'
     }
@@ -338,59 +338,59 @@ function PlanIgualdad() {
         canonical="/plan-de-igualdad"
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] text-white">
+      <main className="min-h-screen">
         <InternalPageHero
           eyebrow="Compromiso con la igualdad"
           title="Plan de Igualdad de Género"
           description="Marco de actuación 2025-2026 para impulsar igualdad de oportunidades, prevención de discriminaciones y mejora continua."
         />
 
-        <section className="px-4 pb-20 lg:pb-24">
+        <section className="px-5 pb-20 lg:px-10 lg:pb-24">
           <div className="mx-auto max-w-4xl">
             <ContentSurface className="p-8 text-center lg:p-10">
-              <FaGavel className="mx-auto text-5xl text-blue-300" />
-              <h2 className="mt-6 text-3xl font-bold text-white">Nuestro compromiso con la igualdad</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-300">
+              <LuGavel className="mx-auto text-5xl text-navy" />
+              <h2 className="mt-6 text-3xl font-extrabold text-ink">Nuestro compromiso con la igualdad</h2>
+              <p className="mt-5 text-lg leading-8 text-muted">
                 Este plan establece una hoja de ruta clara para garantizar igualdad de oportunidades, participación equilibrada y entornos de trabajo respetuosos.
               </p>
             </ContentSurface>
           </div>
         </section>
 
-        <section className="px-4 pb-20 lg:pb-24">
-          <div className="mx-auto max-w-7xl">
+        <section className="px-5 pb-20 lg:px-10 lg:pb-24">
+          <div className="mx-auto max-w-[1200px]">
             <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="text-3xl font-bold text-white lg:text-4xl">Objetivos estratégicos</h2>
-              <p className="mt-4 text-base leading-7 text-slate-300 lg:text-lg">Los pilares fundamentales del Plan de Igualdad.</p>
+              <h2 className="text-3xl font-extrabold text-ink lg:text-4xl">Objetivos estratégicos</h2>
+              <p className="mt-4 text-base leading-7 text-muted lg:text-lg">Los pilares fundamentales del Plan de Igualdad.</p>
             </div>
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {objetivos.map((objetivo) => (
                 <ContentSurface key={objetivo.titulo} className="p-6 text-center">
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.08] text-xl text-blue-300">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-pill-blue text-xl text-navy">
                     {objetivo.icon}
                   </div>
-                  <h3 className="mt-5 text-xl font-bold text-white">{objetivo.titulo}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">{objetivo.descripcion}</p>
+                  <h3 className="mt-5 text-xl font-extrabold text-ink">{objetivo.titulo}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">{objetivo.descripcion}</p>
                 </ContentSurface>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="px-4 pb-20 lg:pb-24">
-          <div className="mx-auto max-w-7xl space-y-5">
+        <section className="px-5 pb-20 lg:px-10 lg:pb-24">
+          <div className="mx-auto max-w-[1200px] space-y-5">
             {ejes.map((eje) => (
               <ContentSurface key={eje.numero} className="p-6 sm:p-8">
                 <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-700 text-lg font-bold text-white">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-yellow text-lg font-extrabold text-ink">
                     {eje.numero}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white">{eje.titulo}</h3>
-                    <p className="mt-2 text-base font-medium text-slate-300">{eje.descripcion}</p>
+                    <h3 className="text-2xl font-extrabold text-ink">{eje.titulo}</h3>
+                    <p className="mt-2 text-base font-medium text-muted">{eje.descripcion}</p>
                     <div className="mt-5 grid gap-3 md:grid-cols-2">
                       {eje.medidas.map((medida) => (
-                        <div key={medida} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm leading-6 text-slate-300">
+                        <div key={medida} className="rounded-2xl bg-cream px-4 py-3 text-sm leading-6 text-muted">
                           {medida}
                         </div>
                       ))}
@@ -402,15 +402,15 @@ function PlanIgualdad() {
           </div>
         </section>
 
-        <section className="px-4 pb-20 lg:pb-24">
-          <div className="mx-auto max-w-7xl grid gap-6 lg:grid-cols-[1fr_0.95fr]">
+        <section className="px-5 pb-20 lg:px-10 lg:pb-24">
+          <div className="mx-auto max-w-[1200px] grid gap-6 lg:grid-cols-[1fr_0.95fr]">
             <ContentSurface className="p-8 lg:p-10">
-              <h2 className="text-3xl font-bold text-white">Nuestros compromisos</h2>
+              <h2 className="text-3xl font-extrabold text-ink">Nuestros compromisos</h2>
               <div className="mt-6 grid gap-4">
                 {compromisos.map((compromiso) => (
-                  <div key={compromiso} className="flex items-start gap-4 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4">
-                    <FaHandshake className="mt-1 text-xl text-blue-300" />
-                    <p className="text-base leading-7 text-slate-300">{compromiso}</p>
+                  <div key={compromiso} className="flex items-start gap-4 rounded-2xl bg-cream px-4 py-4">
+                    <LuHandshake className="mt-1 text-xl text-navy" />
+                    <p className="text-base leading-7 text-muted">{compromiso}</p>
                   </div>
                 ))}
               </div>
@@ -418,20 +418,20 @@ function PlanIgualdad() {
 
             <div className="space-y-6">
               <ContentSurface className="p-8">
-                <h2 className="text-2xl font-bold text-white">Seguimiento y evaluación</h2>
+                <h2 className="text-2xl font-extrabold text-ink">Seguimiento y evaluación</h2>
                 <div className="mt-6 space-y-6">
                   <div>
-                    <h3 className="flex items-center gap-2 text-lg font-semibold text-white">
-                      <FaChartLine className="text-blue-300" />
+                    <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
+                      <LuChartLine className="text-navy" />
                       Monitoreo continuo
                     </h3>
-                    <p className="mt-2 text-sm leading-7 text-slate-300">
+                    <p className="mt-2 text-sm leading-7 text-muted">
                       Se realiza seguimiento periódico de las medidas con evaluaciones trimestrales de indicadores de igualdad.
                     </p>
                   </div>
                   <div>
-                    <h3 className="flex items-center gap-2 text-lg font-semibold text-white">
-                      <FaBullseye className="text-blue-300" />
+                    <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
+                      <LuTarget className="text-navy" />
                       Indicadores de progreso
                     </h3>
                     <div className="mt-3 grid gap-3">
@@ -441,18 +441,18 @@ function PlanIgualdad() {
                         'Grado de satisfacción con las medidas implementadas',
                         'Análisis de brechas y evolución de las mismas'
                       ].map((indicador) => (
-                        <div key={indicador} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm leading-6 text-slate-300">
+                        <div key={indicador} className="rounded-2xl bg-cream px-4 py-3 text-sm leading-6 text-muted">
                           {indicador}
                         </div>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h3 className="flex items-center gap-2 text-lg font-semibold text-white">
-                      <FaUsers className="text-blue-300" />
+                    <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
+                      <LuUsers className="text-navy" />
                       Revisión participativa
                     </h3>
-                    <p className="mt-2 text-sm leading-7 text-slate-300">
+                    <p className="mt-2 text-sm leading-7 text-muted">
                       El plan se revisa anualmente con la participación del equipo y de las personas usuarias de los servicios.
                     </p>
                   </div>
@@ -460,18 +460,18 @@ function PlanIgualdad() {
               </ContentSurface>
 
               <ContentSurface className="p-8 text-center">
-                <h2 className="text-2xl font-bold text-white">Vigencia del plan</h2>
-                <p className="mt-4 text-base leading-7 text-slate-300">
+                <h2 className="text-2xl font-extrabold text-ink">Vigencia del plan</h2>
+                <p className="mt-4 text-base leading-7 text-muted">
                   Este plan tiene una vigencia de 2 años, entre 2025 y 2026, y será revisado al finalizar el periodo.
                 </p>
                 <button
                   onClick={generarPDF}
-                  className="mt-6 inline-flex items-center gap-3 rounded-xl bg-white px-7 py-4 text-sm font-semibold text-slate-950 hover:bg-slate-100"
+                  className="mt-6 inline-flex items-center gap-3 rounded-full bg-navy px-7 py-4 text-sm font-bold text-white hover:bg-navy-deep"
                 >
-                  <FaDownload className="text-lg" />
+                  <LuDownload className="text-lg" />
                   Descargar plan completo
                 </button>
-                <p className="mt-5 text-sm text-slate-400">Aprobado: Octubre 2025 | Próxima revisión: Octubre 2027</p>
+                <p className="mt-5 text-sm text-muted">Aprobado: Octubre 2025 | Próxima revisión: Octubre 2027</p>
               </ContentSurface>
             </div>
           </div>
