@@ -160,6 +160,14 @@ export function Header() {
                 {item.label}
               </NavLink>
             ))}
+            <NavLink
+              to="/colabora"
+              className={({ isActive }) =>
+                `rounded-2xl px-4 py-3 text-base font-semibold ${isActive ? 'bg-white text-navy' : 'text-ink hover:bg-white'}`
+              }
+            >
+              Colabora con ASOVEDRA
+            </NavLink>
             <p className="mt-4 px-4 text-xs font-bold uppercase tracking-[0.14em] text-muted">La Asociación</p>
             {asociacionItems.map((item) => (
               <NavLink

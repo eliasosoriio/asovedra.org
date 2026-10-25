@@ -17,6 +17,7 @@ function ResidenciaBanner() {
           {RESIDENCIA.headline}
         </h2>
         <p className="mt-4 text-[17px] leading-relaxed text-[#c9d3f0]">{RESIDENCIA.intro}</p>
+        <p className="mt-3 text-[17px] font-semibold leading-relaxed text-white">{RESIDENCIA.advance}</p>
         <Link
           to="/residencia-2027"
           className="mt-5 inline-flex items-center gap-2 font-bold text-[#FBD96A] underline-offset-4 hover:underline"

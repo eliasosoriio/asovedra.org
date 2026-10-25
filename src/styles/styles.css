@@ -148,3 +148,11 @@ body {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+
+/* Anillo de foco visible sobre fondos oscuros o rojos */
+.bg-navy :focus-visible,
+.bg-ink :focus-visible,
+.bg-red :focus-visible,
+footer :focus-visible {
+    outline-color: var(--color-yellow);
+}
