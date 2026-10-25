@@ -43,7 +43,6 @@ function Home() {
   return (
     <>
       <SEO
-        title="Asovedra"
         description="Asovedra apoya a iberoamericanos en Pontevedra, Galicia y toda España con asesoría migratoria, legal y laboral. Te ayudamos en trámites y adaptación en España."
         keywords="asovedra, iberoamericanos españa, asociación iberoamericana, apoyo legal, empleo, pontevedra, galicia, inmigración, trámites migratorios"
         canonical="/"

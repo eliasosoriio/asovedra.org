@@ -9,7 +9,7 @@ Sitio web corporativo de ASOVEDRA, la Asociacion de Venezolanos en Pontevedra, d
 [![Animaciones](https://img.shields.io/badge/animaciones-Framer_Motion_12.23.22-ff4f87?style=for-the-badge)](package.json)
 [![Estilos](https://img.shields.io/badge/estilos-Tailwind_CSS_4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=ffffff)](tailwind.config.js)
 
-**Stack principal:** React 19, Vite, React Router, Tailwind CSS, Framer Motion y React Helmet Async.
+**Stack principal:** React 19, Vite, React Router, Tailwind CSS 4, Framer Motion y Supabase (portal interno).
 
 **Objetivo del proyecto:** mantener la web publica de ASOVEDRA con una presencia institucional clara, accesible y orientada a la comunidad iberoamericana en Galicia y en el resto de Espana.
 
@@ -70,6 +70,7 @@ npm run preview
 - `npm run build`: genera la build de produccion.
 - `npm run preview`: sirve localmente la build generada.
 - `npm run lint`: ejecuta ESLint sobre el codigo del proyecto.
+- `npm test`: ejecuta las pruebas unitarias (`node --test`) de `src/constants`.
 
 ## Estructura del proyecto
 
@@ -106,7 +107,9 @@ asovedra.org/
 
 - React Router gestiona la navegacion del sitio y las rutas internas.
 - Framer Motion se utiliza para transiciones entre paginas.
-- React Helmet Async centraliza metadatos SEO y datos estructurados.
+- El componente `SEO` usa los metadatos nativos de React 19 (`<title>`, `<meta>`) para cada página.
+- El sistema visual «Cercana» vive en `src/styles/styles.css` (`@theme`: colores `navy`, `yellow`, `red`, `ink`, `cream`, `sand`…) y en los componentes de `src/components/ui`. Diseño de referencia: `docs/superpowers/specs/2026-10-25-rebranding-cercana-design.md`.
+- Los enlaces de pago de Stripe se configuran en `src/constants/colabora.js`; un enlace vacío oculta su botón.
 - Tailwind CSS soporta la capa visual utilitaria del frontend.
 - Los contenidos de noticias y estadisticas se mantienen actualmente en constantes locales dentro de `src/constants`.
 
@@ -117,6 +120,7 @@ El proyecto genera una salida estatica con Vite, por lo que puede desplegarse en
 Antes de publicar cambios conviene validar como minimo:
 
 - `npm run lint`
+- `npm test`
 - `npm run build`
 
 ## Mantenimiento
