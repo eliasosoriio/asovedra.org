@@ -1,5 +1,7 @@
 import React from 'react'
 import SEO from '../components/SEO'
+import Button from '../components/ui/Button'
+import { COLABORA_LINKS, safeLink } from '../constants/colabora'
 import {
   FaExclamationTriangle,
   FaHandsHelping,
@@ -10,6 +12,8 @@ import {
   FaArrowRight,
   FaShieldAlt
 } from 'react-icons/fa'
+
+const VENEZUELA_DONATION_HREF = safeLink(COLABORA_LINKS.venezuela)
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfhna_sr_ML0vuWtxPOhnq9G3ttD1sCcOT70pzr1Qz6iFBcbQ/viewform?usp=send_form'
 
@@ -422,6 +426,14 @@ function EmergenciaVenezuela() {
                 />
               </a>
             </div>
+            {VENEZUELA_DONATION_HREF && (
+              <div className="mt-8 flex flex-col items-center gap-3 text-center">
+                <Button href={VENEZUELA_DONATION_HREF} variant="yellow" size="lg">
+                  Donar a la campaña de Venezuela
+                </Button>
+                <p className="text-sm">Esta donación se destina íntegramente a la campaña de emergencia en Venezuela.</p>
+              </div>
+            )}
             <p className="mt-4 text-center text-sm text-white/70">
               Toca la imagen para verla ampliada. Ante cualquier duda sobre cómo colaborar, puedes escribirnos a{' '}
               <a href="mailto:info@asovedra.org" className="underline hover:text-white">
