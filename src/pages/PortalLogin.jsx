@@ -29,7 +29,7 @@ export default function PortalLogin() {
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(to bottom, #020617, #0f172a, #020617)' }}>
       <SEO pageTitle="Portal de empleados" description="Acceso para miembros de ASOVEDRA." />
-      <InternalPageHero eyebrow="Portal interno" title="Acceso para empleados" description="Inicia sesión para gestionar tus citas." />
+      <InternalPageHero variant="dark" eyebrow="Portal interno" title="Acceso para empleados" description="Inicia sesión para gestionar tus citas." />
       <section className="px-4 pb-24">
         <form onSubmit={onSubmit} className="mx-auto max-w-md rounded-[1.8rem] border border-white/8 bg-white/[0.04] p-8 backdrop-blur-sm">
           <label className="mb-2 block text-sm text-slate-300">Email</label>

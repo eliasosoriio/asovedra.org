@@ -38,7 +38,7 @@ function PortalInner() {
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(to bottom, #020617, #0f172a, #020617)' }}>
       <SEO pageTitle="Portal de empleados" />
-      <InternalPageHero eyebrow={`Hola, ${name}`} title="Portal de empleados" description="Gestiona tus citas y tu horario." />
+      <InternalPageHero variant="dark" eyebrow={`Hola, ${name}`} title="Portal de empleados" description="Gestiona tus citas y tu horario." />
       <section className="px-4 pb-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">

@@ -65,7 +65,7 @@ function About() {
         canonical="/sobre-nosotros"
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
+      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] text-white">
         <InternalPageHero
           eyebrow="Sobre Asovedra"
           title="Una asociación construida desde el acompañamiento"

@@ -94,7 +94,7 @@ function Services() {
         canonical="/servicios"
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] pt-24 text-white">
+      <main className="min-h-screen bg-[linear-gradient(180deg,#020617_0%,#0f172a_38%,#111827_100%)] text-white">
         <InternalPageHero
           eyebrow="Servicios"
           title="Acompañamiento en cada etapa del proceso"

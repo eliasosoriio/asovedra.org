@@ -105,7 +105,7 @@ function EmergenciaVenezuela() {
         canonical="/emergencia-terremoto-venezuela"
       />
 
-      <main className="min-h-screen bg-[linear-gradient(180deg,#1c0a0a_0%,#111827_35%,#0f172a_100%)] pt-24 text-white">
+      <main className="min-h-screen bg-[linear-gradient(180deg,#1c0a0a_0%,#111827_35%,#0f172a_100%)] text-white">
         <section className="relative overflow-hidden px-4 pt-16 pb-16 lg:pt-24 lg:pb-20">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(248,113,113,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.12),transparent_26%)]"></div>
           <div className="relative mx-auto max-w-5xl text-center">

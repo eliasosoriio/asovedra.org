@@ -1,8 +1,9 @@
 import React from 'react'
+import SectionHeader from '../ui/SectionHeader'
 
-function InternalPageHero({ eyebrow, title, description }) {
+function DarkHero({ eyebrow, title, description }) {
   return (
-    <section className="relative overflow-hidden px-4 pt-32 pb-20 lg:pt-40 lg:pb-24">
+    <section className="relative overflow-hidden px-4 pt-16 pb-20 lg:pt-20 lg:pb-24">
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(250,204,21,0.08),transparent_24%)]"></div>
       <div className="relative mx-auto max-w-6xl text-center text-white">
         {eyebrow && (
@@ -17,6 +18,24 @@ function InternalPageHero({ eyebrow, title, description }) {
             {description}
           </p>
         )}
+      </div>
+    </section>
+  )
+}
+
+function InternalPageHero({ eyebrow, title, description, variant = 'light', pillTone = 'yellow' }) {
+  if (variant === 'dark') {
+    return <DarkHero eyebrow={eyebrow} title={title} description={description} />
+  }
+
+  return (
+    <section className="relative overflow-hidden">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-10 top-6 hidden h-48 w-72 md:block">
+        <span className="absolute right-16 top-4 h-11 w-48 -rotate-45 rounded-full bg-yellow"></span>
+        <span className="absolute right-0 top-16 h-11 w-40 rotate-45 rounded-full bg-red"></span>
+      </div>
+      <div className="relative mx-auto max-w-[1200px] px-5 pb-12 pt-12 lg:px-10 lg:pb-16 lg:pt-16">
+        <SectionHeader as="h1" pill={eyebrow} pillTone={pillTone} title={title} subtitle={description} />
       </div>
     </section>
   )

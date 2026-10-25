@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion'
 import { AuthProvider } from './context/AuthContext'
 import { Header } from './components/layout/Header'
-import Hero from './components/layout/Hero'
+import EmergencyStrip from './components/layout/EmergencyStrip'
 import Footer from './components/layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import PageTransition from './components/PageTransition'
@@ -21,6 +21,8 @@ import DeclaracionValores from "./pages/DeclaracionValores"
 import PortalLogin from "./pages/PortalLogin"
 import Portal from "./pages/Portal"
 import EmergenciaVenezuela from "./pages/EmergenciaVenezuela"
+import Colabora from "./pages/Colabora"
+import Residencia2027 from "./pages/Residencia2027"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -30,9 +32,6 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={
           <PageTransition>
-            <div className='home-bg w-full min-h-screen bg-center bg-cover bg-no-repeat'>
-              <Hero />
-            </div>
             <Home />
             <Footer />
           </PageTransition>
@@ -46,6 +45,18 @@ function AnimatedRoutes() {
         <Route path="/emergencia-terremoto-venezuela" element={
           <PageTransition>
             <EmergenciaVenezuela />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/colabora" element={
+          <PageTransition>
+            <Colabora />
+            <Footer />
+          </PageTransition>
+        } />
+        <Route path="/residencia-2027" element={
+          <PageTransition>
+            <Residencia2027 />
             <Footer />
           </PageTransition>
         } />
@@ -130,8 +141,9 @@ function App() {
 
   return (
     <AuthProvider>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-clip">
         <Router>
+          <EmergencyStrip />
           <Header />
           <ScrollToTop />
           <AnimatedRoutes />
