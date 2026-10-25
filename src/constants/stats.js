@@ -5,7 +5,7 @@ const YEARS = `${yearsSince(FOUNDING_YEAR)}`
 // Estadísticas de Asovedra
 export const ASOVEDRA_STATS = {
   venezuelansSupported: {
-    number: "4000+",
+    number: "4.000+",
     label: "Iberoamericanos Apoyados"
   },
   yearsOfExperience: {
@@ -25,7 +25,7 @@ export const ASOVEDRA_STATS = {
 // Variante para Hero (con diferentes labels)
 export const HERO_STATS = {
   venezuelansSupported: {
-    number: "4000+",
+    number: "4.000+",
     label: "Personas Atendidas"
   },
   yearsOfExperience: {
@@ -33,7 +33,7 @@ export const HERO_STATS = {
     label: "Años de Experiencia"
   },
   jobsAchieved: {
-    number: "1000+",
+    number: "1.000+",
     label: "Empleos Conseguidos"
   },
   commitment: {
@@ -60,7 +60,7 @@ export const HERO_STATS_ARRAY = [
 // Variante para About (con diferentes labels y formato)
 export const ABOUT_STATS = {
   personasAtendidas: {
-    number: "4,000+",
+    number: "4.000+",
     label: "Personas Atendidas"
   },
   casosLegales: {
@@ -68,7 +68,7 @@ export const ABOUT_STATS = {
     label: "Casos Legales Resueltos"
   },
   empleos: {
-    number: "1000+",
+    number: "1.000+",
     label: "Empleos Conseguidos"
   },
   anosServicio: {

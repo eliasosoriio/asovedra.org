@@ -1,73 +1,43 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { STATS_ARRAY } from '../constants/stats'
-import { NEWS_DATA } from '../constants/news'
+import { LuArrowRight, LuBriefcase, LuFileText, LuGraduationCap, LuScale } from 'react-icons/lu'
 import SEO from '../components/SEO'
-import {
-  FaArrowRight,
-  FaBalanceScale,
-  FaBook,
-  FaBriefcase,
-  FaBullseye,
-  FaCalendarAlt,
-  FaClipboardList,
-  FaExclamationTriangle,
-  FaHandshake,
-  FaHeart,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaShip,
-  FaUsers
-} from 'react-icons/fa'
+import HomeHero from '../components/home/HomeHero'
+import ResidenciaBanner from '../components/home/ResidenciaBanner'
+import ColaboraOptions from '../components/colabora/ColaboraOptions'
+import SectionHeader from '../components/ui/SectionHeader'
+import { NEWS_DATA } from '../constants/news'
 
-const serviceHighlights = [
+const services = [
   {
-    title: 'Orientacion legal',
-    description: 'Te orientamos en extranjería, derechos y trámites, y te derivamos a profesionales especializados cuando se requiere asesoramiento jurídico formal.',
-    icon: <FaBalanceScale />
+    title: 'Orientación legal',
+    description: 'Extranjería, derechos y deberes, con derivación a profesionales cuando hace falta.',
+    icon: LuScale,
+    tile: 'bg-pill-blue text-navy'
   },
   {
-    title: 'Bolsa de empleo',
-    description: 'Conectamos perfiles profesionales con oportunidades laborales y redes útiles.',
-    icon: <FaBriefcase />
+    title: 'Trámites',
+    description: 'Regularización, renovaciones, nacionalidad y reagrupación familiar.',
+    icon: LuFileText,
+    tile: 'bg-pill-yellow text-[#7a5a00]'
   },
   {
-    title: 'Trámites migratorios',
-    description: 'Acompañamiento en regularización, renovaciones y documentación administrativa.',
-    icon: <FaClipboardList />
+    title: 'Empleo',
+    description: 'Bolsa de empleo, orientación profesional y preparación de entrevistas.',
+    icon: LuBriefcase,
+    tile: 'bg-pill-red text-[#a10a22]'
   },
   {
-    title: 'Formación y cursos',
-    description: 'Programas para fortalecer competencias, autonomía y acceso al mercado laboral.',
-    icon: <FaBook />
-  }
-]
-
-const trustPoints = [
-  {
-    title: 'Nuestra misión',
-    text: 'Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia desde el acompañamiento y la cooperación solidaria.',
-    icon: <FaMapMarkerAlt />
-  },
-  {
-    title: 'Nuestra visión',
-    text: 'Ser una organización de referencia para la comunidad iberoamericana en España, reconocida por la calidad del apoyo y su impacto real.',
-    icon: <FaBullseye />
-  },
-  {
-    title: 'Comunidad y red',
-    text: 'Trabajamos desde la escucha, el vínculo comunitario y la orientación práctica para responder a necesidades concretas.',
-    icon: <FaUsers />
+    title: 'Formación',
+    description: 'Idiomas, capacitación digital y talleres de emprendimiento.',
+    icon: LuGraduationCap,
+    tile: 'bg-[#EAF6EE] text-[#17663a]'
   }
 ]
 
 function Home() {
   const latestNews = [...NEWS_DATA]
-    .sort((a, b) => {
-      const dA = new Date(a.isoDate || 0).getTime()
-      const dB = new Date(b.isoDate || 0).getTime()
-      return dB - dA
-    })
+    .sort((a, b) => new Date(b.isoDate || 0).getTime() - new Date(a.isoDate || 0).getTime())
     .slice(0, 3)
 
   return (
@@ -79,395 +49,76 @@ function Home() {
         canonical="/"
       />
 
-      <main className="flex flex-col items-center justify-center overflow-x-hidden bg-slate-950 text-white">
-        <section className="relative w-full border-t border-red-500/20 bg-[linear-gradient(135deg,#7f1d1d_0%,#1e293b_55%,#172554_100%)] py-8">
-          <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 text-center sm:flex-row sm:justify-between sm:text-left sm:px-6 lg:px-8">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-2xl text-red-200">
-                <FaExclamationTriangle />
-              </div>
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-200">Emergencia · Terremoto en Venezuela</p>
-                <p className="mt-1 text-base font-semibold text-white sm:text-lg">
-                  Asovedra Presente: red gratuita de apoyo psicológico para personas afectadas
-                </p>
-              </div>
-            </div>
-            <Link
-              to="/emergencia-terremoto-venezuela"
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
-            >
-              Ver cómo ayudar
-              <FaArrowRight className="text-sm" />
-            </Link>
-          </div>
+      <main>
+        <HomeHero />
+
+        <section className="mx-auto max-w-[1200px] px-5 pb-24 lg:px-10">
+          <ResidenciaBanner />
         </section>
 
-        <section className="relative w-full border-t border-white/6 bg-[linear-gradient(180deg,#020617_0%,#0b1225_100%)] py-16 lg:py-20">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(250,204,21,0.08),transparent_25%)]"></div>
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
-              {STATS_ARRAY.map((stat, index) => (
-                <div
-                  key={index}
-                  className="rounded-[1.6rem] border border-white/8 bg-white/[0.04] px-5 py-6 text-center shadow-[0_18px_40px_-28px_rgba(15,23,42,0.9)] backdrop-blur-sm"
-                >
-                  <div className="text-3xl font-bold text-white lg:text-4xl">{stat.number}</div>
-                  <div className="mt-2 text-sm font-medium text-slate-300 lg:text-base">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative w-full bg-[linear-gradient(180deg,#0b1225_0%,#111827_100%)] py-20 lg:py-24">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_left,rgba(37,99,235,0.12),transparent_28%)]"></div>
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto mb-14 max-w-3xl text-center">
-              <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-slate-200">
-                Actualidad
-              </span>
-              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Últimas noticias y actividad</h2>
-              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
-              <p className="mt-5 text-lg leading-8 text-slate-300">
-                Seguimiento de nuestras acciones, colaboraciones y novedades de interés para la comunidad.
-              </p>
-            </div>
-
-            <div className="grid gap-6">
-              {latestNews.map((news, index) => (
-                <article
-                  key={news.url || index}
-                  className="group overflow-hidden rounded-[1.8rem] border border-white/8 bg-white/[0.04] shadow-[0_24px_50px_-30px_rgba(15,23,42,0.9)] backdrop-blur-sm lg:grid lg:grid-cols-[0.95fr_1.05fr]"
-                >
-                  <div className="relative h-72 overflow-hidden lg:h-full lg:min-h-[20rem]">
-                    <img
-                      src={news.image}
-                      alt={news.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent"></div>
-                    <div className="absolute left-5 top-5 rounded-full border border-white/14 bg-slate-950/72 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-                      {news.source}
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-                    <p className="text-sm font-medium text-slate-400">{news.date}</p>
-                    <h3 className="mt-3 text-2xl font-bold text-white transition-colors duration-200 group-hover:text-blue-300 lg:text-3xl">
-                      {news.title}
-                    </h3>
-                    <p className="mt-4 line-clamp-3 text-base leading-7 text-slate-300">
-                      {news.description}
-                    </p>
-                    <a
-                      href={news.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
-                    >
-                      Leer noticia completa
-                      <FaArrowRight className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-10 flex justify-center">
-              <Link
-                to="/noticias"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/12 bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
-              >
-                Ver todas las noticias
-                <FaArrowRight className="text-sm" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative w-full bg-[linear-gradient(180deg,#0b1225_0%,#111827_100%)] py-20 lg:py-24">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_28%)]"></div>
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto mb-14 max-w-3xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-2 text-sm font-semibold text-yellow-200">
-                <FaCalendarAlt />
-                Próximo evento
-              </span>
-              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Xornada de Convivencia en Ons</h2>
-              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
-              <p className="mt-5 text-lg leading-8 text-slate-300">
-                Asovedra - Galicia Activa organiza "Iberoamérica + Convive en Ons", una jornada de convivencia
-                comunitaria en la isla de Ons.
-              </p>
-            </div>
-
-            <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-white/8 bg-white/[0.04] shadow-[0_26px_56px_-32px_rgba(15,23,42,0.95)] backdrop-blur-sm">
-              <div className="grid gap-0 lg:grid-cols-[0.85fr_1.15fr]">
-                <div className="relative min-h-[20rem] lg:min-h-full">
-                  <img
-                    src="/photo/excursion_ons.jpeg"
-                    alt="Cartel de la Xornada de Convivencia Iberoamérica + Convive en Ons 2026"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </div>
-
-                <div className="p-8 lg:p-10">
-                  <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-200">
-                    <FaShip />
-                    Domingo 9 de agosto de 2026
-                  </div>
-                  <h3 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-                    Navega, desconecta y disfruta de un paraíso natural a un paso de ti
-                  </h3>
-                  <p className="mt-4 text-base leading-7 text-slate-300">
-                    Trayecto en barco cómodo y seguro, playas de ensueño, rutas de naturaleza y recuerdos inolvidables.
-                    Actividad subvencionada por la Diputación de Pontevedra dentro del Programa +Convivencia.
-                  </p>
-
-                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
-                      <p className="text-2xl font-bold text-white">14 €</p>
-                      <p className="mt-1 text-sm text-slate-300">Socios</p>
-                    </div>
-                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
-                      <p className="text-2xl font-bold text-white">16 €</p>
-                      <p className="mt-1 text-sm text-slate-300">Usuarios</p>
-                    </div>
-                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
-                      <p className="text-2xl font-bold text-white">5 €</p>
-                      <p className="mt-1 text-sm text-slate-300">Menores de 12 años</p>
-                    </div>
-                  </div>
-
-                  <a
-                    href="tel:+34604016113"
-                    className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
-                  >
-                    <FaPhoneAlt className="text-xs" />
-                    Llamar para apuntarte: 604 016 113
-                  </a>
-                  <p className="mt-3 text-sm text-slate-400">Plazas limitadas. Reserva tu sitio por teléfono.</p>
-                </div>
-              </div>
-
-              <div className="grid gap-0 border-t border-white/8 sm:grid-cols-[0.85fr_1.15fr]">
-                <div className="relative min-h-[14rem]">
-                  <img
-                    src="/photo/excursion_ons_2.png"
-                    alt="Más de 150 voces unidas por Venezuela en una edición anterior del paseo a la isla de Ons"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-center p-6 sm:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-200">Así vivimos la edición anterior</p>
-                  <p className="mt-3 text-base leading-7 text-slate-300">
-                    Más de 150 personas ya compartieron esta jornada en Ons, unidas por el mismo sentimiento de amor,
-                    unión y esperanza. Este año queremos ser todavía más.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative w-full bg-[linear-gradient(180deg,#111827_0%,#0f172a_100%)] py-20 lg:py-24">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.08),transparent_22%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.1),transparent_24%)]"></div>
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto mb-14 max-w-3xl text-center">
-              <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-slate-200">
-                Lo que hacemos
-              </span>
-              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Servicios de acompañamiento</h2>
-              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
-              <p className="mt-5 text-lg leading-8 text-slate-300">
-                Recursos y programas pensados para responder a situaciónes reales con apoyo cercano y práctico.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-              {serviceHighlights.map((service) => (
-                <article
+        <section className="mx-auto max-w-[1200px] px-5 pb-24 lg:px-10">
+          <SectionHeader pill="Lo que hacemos" title="Te ayudamos con lo que más importa" />
+          <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => {
+              const Icon = service.icon
+              return (
+                <Link
                   key={service.title}
-                  className="group flex h-full flex-col rounded-[1.75rem] border border-white/8 bg-white/[0.05] p-6 shadow-[0_22px_44px_-30px_rgba(15,23,42,0.95)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/[0.07]"
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-2xl text-white transition-colors duration-300 group-hover:bg-blue-600/22 group-hover:text-blue-200">
-                    {service.icon}
-                  </div>
-                  <h3 className="mt-5 text-xl font-bold text-white">{service.title}</h3>
-                  <p className="mt-3 flex-grow text-sm leading-7 text-slate-300">{service.description}</p>
-                  <Link
-                    to="/contacto"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
-                  >
-                    Consúltanos
-                    <FaArrowRight className="text-xs" />
-                  </Link>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-10 rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 text-center shadow-[0_28px_60px_-32px_rgba(15,23,42,0.95)] backdrop-blur-sm lg:p-10">
-              <h3 className="text-2xl font-bold text-white lg:text-3xl">¿Necesitas ayuda especializada?</h3>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300 lg:text-lg">
-                Nuestro equipo está preparado para orientarte y ayudarte a encontrar el siguiente paso más adecuado.
-              </p>
-              <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-                <Link
                   to="/servicios"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+                  className="group rounded-[24px] border border-line bg-white p-7 transition-shadow hover:shadow-[0_18px_40px_-28px_rgba(13,21,48,0.5)]"
                 >
-                  Ver todos los servicios
-                  <FaArrowRight className="text-sm" />
+                  <span className={`grid h-[52px] w-[52px] place-items-center rounded-2xl ${service.tile}`}>
+                    <Icon aria-hidden="true" className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-5 text-xl font-bold text-ink">{service.title}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{service.description}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-navy">
+                    Saber más
+                    <LuArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+                  </span>
                 </Link>
-                <Link
-                  to="/contacto"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/14 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/[0.08]"
-                >
-                  Contactar
-                </Link>
-              </div>
+              )
+            })}
+          </div>
+        </section>
+
+        <section className="bg-sand py-24">
+          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+            <SectionHeader
+              align="center"
+              pill="Colabora"
+              pillTone="white"
+              title="Juntos llegamos más lejos"
+              subtitle="Tu aportación ayuda a sostener la orientación, la formación y el acompañamiento social que ofrecemos como asociación sin ánimo de lucro, incluida la atención a personas sin recursos."
+            />
+            <div className="mt-12">
+              <ColaboraOptions />
             </div>
           </div>
         </section>
 
-        <section className="relative w-full bg-[linear-gradient(180deg,#0f172a_0%,#111827_100%)] py-20 lg:py-24">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_32%)]"></div>
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto mb-14 max-w-3xl text-center">
-              <span className="inline-flex rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm font-semibold text-slate-200">
-                Quiénes somos
-              </span>
-              <h2 className="mt-5 text-4xl font-bold text-white lg:text-5xl">Compromiso con la comunidad</h2>
-              <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
-              <p className="mt-5 text-lg leading-8 text-slate-300">
-                Una asociación construida desde la cercanía, la orientación y la cooperación con impacto real.
-              </p>
-            </div>
-
-            <div className="grid gap-5 lg:grid-cols-3">
-              {trustPoints.map((point) => (
-                <article
-                  key={point.title}
-                  className="rounded-[1.75rem] border border-white/8 bg-white/[0.05] p-6 shadow-[0_22px_44px_-30px_rgba(15,23,42,0.95)] backdrop-blur-sm"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-xl text-blue-200">
-                    {point.icon}
-                  </div>
-                  <h3 className="mt-5 text-2xl font-bold text-white">{point.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-slate-300">{point.text}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 overflow-hidden rounded-[2rem] border border-white/8 bg-white/[0.04] shadow-[0_26px_56px_-32px_rgba(15,23,42,0.95)] backdrop-blur-sm">
-              <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
-                <div className="relative min-h-[18rem] lg:min-h-full">
-                  <img
-                    src="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg"
-                    alt="Historia de Asovedra"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent"></div>
-                </div>
-
-                <div className="p-8 lg:p-10">
-                  <h3 className="text-3xl font-bold text-white lg:text-4xl">Nuestra historia</h3>
-                  <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-yellow-400 via-blue-500 to-red-500"></div>
-                  <p className="mt-6 text-base leading-7 text-slate-300 lg:text-lg">
-                    Fundada en 2018, Asovedra nace para crear un espacio de orientación y apoyo a personas que llegan a España buscando estabilidad, oportunidades y red comunitaria.
-                  </p>
-
-                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
-                      <p className="text-2xl font-bold text-white">2018</p>
-                      <p className="mt-1 text-sm text-slate-300">Inicio de actividad</p>
-                    </div>
-                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
-                      <p className="text-2xl font-bold text-white">4000+</p>
-                      <p className="mt-1 text-sm text-slate-300">Personas atendidas</p>
-                    </div>
-                    <div className="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-4 text-center">
-                      <p className="text-2xl font-bold text-white">Galicia</p>
-                      <p className="mt-1 text-sm text-slate-300">Red territorial</p>
-                    </div>
-                  </div>
-
-                  <Link
-                    to="/sobre-nosotros"
-                    className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-200 hover:text-blue-300"
-                  >
-                    Conocer más sobre Asovedra
-                    <FaArrowRight className="text-xs" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative w-full bg-[linear-gradient(135deg,#172554_0%,#1e293b_45%,#7f1d1d_100%)] py-20 lg:py-24">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_22%)]"></div>
-          <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-            <div className="mx-auto flex h-18 w-18 items-center justify-center rounded-[1.6rem] border border-white/12 bg-white/12 text-4xl text-white shadow-[0_22px_48px_-30px_rgba(15,23,42,0.9)] backdrop-blur-sm">
-              <FaBalanceScale />
-            </div>
-            <h2 className="mt-6 text-3xl font-bold text-white lg:text-5xl">Plan de Igualdad de Género 2025-2026</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/90">
-              Nuestro compromiso con la igualdad de oportunidades y la equidad forma parte del modo en que trabajamos y acompañamos.
-            </p>
-            <Link
-              to="/plan-de-igualdad"
-              className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
-            >
-              Ver plan de igualdad
-              <FaArrowRight className="text-sm" />
+        <section className="mx-auto max-w-[1200px] px-5 py-24 lg:px-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <SectionHeader pill="Noticias" title="Lo último de ASOVEDRA" />
+            <Link to="/noticias" className="inline-flex items-center gap-1.5 font-bold text-navy hover:underline">
+              Ver todas <LuArrowRight aria-hidden="true" />
             </Link>
           </div>
-        </section>
-
-        <section className="relative w-full bg-[linear-gradient(180deg,#111827_0%,#020617_100%)] py-20 lg:py-24">
-          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_bottom,rgba(59,130,246,0.1),transparent_30%)]"></div>
-          <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-[2rem] border border-white/8 bg-white/[0.04] px-8 py-10 text-center shadow-[0_28px_64px_-36px_rgba(15,23,42,0.95)] backdrop-blur-sm lg:px-12 lg:py-12">
-              <div className="mx-auto flex max-w-3xl flex-col items-center">
-                <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
-                  <FaHandshake className="text-blue-300" />
-                  Contacto
-                </div>
-                <h2 className="mt-5 text-3xl font-bold text-white lg:text-5xl">¿Necesitas más información?</h2>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-                  Resolvemos dudas, orientamos procesos y ayudamos a encontrar el recurso o servicio que mejor se adapta a cada situación.
-                </p>
-
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <Link
-                    to="/contacto"
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
-                  >
-                    Contactar ahora
-                    <FaArrowRight className="text-sm" />
-                  </Link>
-                  <a
-                    href="tel:+34604016113"
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/14 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/[0.08]"
-                  >
-                    Llamar: 604 016 113
-                  </a>
-                </div>
-
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-300">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
-                    <FaHeart className="text-blue-300" />
-                    Atención cercana
-                  </span>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
-                    <FaUsers className="text-blue-300" />
-                    Apoyo comunitario
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div className="mt-11 grid gap-6 md:grid-cols-3">
+            {latestNews.map((news) => (
+              <article key={news.url}>
+                <a href={news.url} target="_blank" rel="noopener noreferrer" className="group block">
+                  <img
+                    src={news.image}
+                    alt=""
+                    loading="lazy"
+                    className="aspect-[16/10] w-full rounded-[22px] bg-line object-cover"
+                  />
+                  <p className="mt-4 text-[13px] font-semibold text-red">{news.source} · {news.date}</p>
+                  <h3 className="mt-1.5 text-[19px] font-bold leading-snug text-ink group-hover:text-navy">{news.title}</h3>
+                </a>
+              </article>
+            ))}
           </div>
         </section>
       </main>
