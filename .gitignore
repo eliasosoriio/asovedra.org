@@ -26,3 +26,6 @@ dist-ssr
 .playwright-mcp/*
 /*.png
 supabase/*
+
+# Visual brainstorming sessions
+.superpowers/

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASOVEDRA · Propuestas de imagen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wdth,wght@100..125,400;100..125,500;100..125,600;100..125,800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#e9ebef;-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+
+  /* ───── Selector de propuestas ───── */
+  .switch{position:sticky;top:0;z-index:50;background:#0b0f19;color:#cbd5e1;font:500 13px/1 'Public Sans',sans-serif;display:flex;align-items:center;gap:6px;padding:10px 16px;flex-wrap:wrap}
+  .switch strong{color:#fff;margin-right:10px;font-weight:600}
+  .switch button{font:inherit;border:1px solid #2b3445;background:transparent;color:#cbd5e1;padding:8px 14px;border-radius:6px;cursor:pointer}
+  .switch button[aria-pressed="true"]{background:#fff;color:#0b0f19;border-color:#fff}
+  .switch .pick{margin-left:auto;background:#F8C31C;color:#111;border-color:#F8C31C;font-weight:700}
+  .switch .pick.done{background:#22c55e;border-color:#22c55e;color:#fff}
+  .page{display:none;background:#fff}
+  .page.on{display:block}
+
+  /* Paleta de marca (del logo) */
+  :root{--navy:#001E77;--navy-900:#00124a;--yellow:#F8C31C;--red:#E10E2F;--gold:#B8955A}
+
+  /* ═════════════ A · INSTITUCIONAL ═════════════ */
+  .A{font-family:'Public Sans',sans-serif;color:#1c2433;font-size:17px;line-height:1.6}
+  .A h1,.A h2,.A h3.serif{font-family:'Newsreader',serif;font-weight:500;letter-spacing:-.01em;color:var(--navy)}
+  .A .util{background:var(--navy-900);color:#c7d0e6;font-size:13px}
+  .A .util .wrap{display:flex;gap:28px;height:38px;align-items:center}
+  .A .util .r{margin-left:auto;display:flex;gap:20px}
+  .A header{border-bottom:1px solid #e3e6ee;background:#fff}
+  .A header .wrap{display:flex;align-items:center;height:84px;gap:40px}
+  .A .brand{display:flex;align-items:center;gap:12px}
+  .A .brand img{height:44px}
+  .A .brand b{display:block;font-size:20px;letter-spacing:.12em;color:var(--navy);font-weight:700;line-height:1.1}
+  .A .brand small{display:block;font-size:12px;color:#5b6578;letter-spacing:.01em}
+  .A nav{display:flex;gap:26px;font-size:15px;font-weight:500;color:#2b3446}
+  .A nav a.hl{color:var(--navy);font-weight:700;box-shadow:inset 0 -2px 0 var(--yellow)}
+  .A .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:4px;border:1px solid transparent}
+  .A .btn-y{background:var(--yellow);color:#14181f}
+  .A .btn-n{background:var(--navy);color:#fff}
+  .A .btn-o{border-color:#b9c2d6;color:var(--navy)}
+  .A header .btn{margin-left:auto}
+  .A .alert{background:#fff5f6;border-bottom:1px solid #f6d3d9;color:#8a1024;font-size:14px}
+  .A .alert .wrap{display:flex;align-items:center;gap:12px;height:46px}
+  .A .alert i{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block}
+  .A .alert a{margin-left:auto;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .A .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-top:72px;padding-bottom:80px}
+  .A .kicker{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6a5426}
+  .A .kicker:before{content:"";display:inline-block;width:28px;height:2px;background:var(--yellow);vertical-align:middle;margin-right:12px}
+  .A h1{font-size:58px;line-height:1.06;margin:18px 0 22px}
+  .A .lead{font-size:19px;color:#465066;max-width:520px;margin:0 0 32px}
+  .A .hero .ctas{display:flex;gap:12px}
+  .A .frame{position:relative}
+  .A .frame img{width:100%;aspect-ratio:4/3.3;object-fit:cover;border-radius:2px;position:relative;z-index:1}
+  .A .frame .pic{position:relative}
+  .A .frame .pic:before{content:"";position:absolute;right:-18px;bottom:-18px;width:62%;height:62%;background:var(--yellow);z-index:0}
+  .A .frame figcaption{font-size:13px;color:#6b7385;margin-top:32px}
+  .A .figs{background:var(--navy);color:#fff}
+  .A .figs .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .A .figs div div{padding:36px 28px;border-left:1px solid #ffffff22}
+  .A .figs div div:first-child{border-left:0;padding-left:0}
+  .A .figs b{font-family:'Newsreader',serif;font-weight:500;font-size:46px;display:block;line-height:1}
+  .A .figs span{font-size:14px;color:#b9c4e4;display:block;margin-top:10px}
+  .A section.pad{padding:96px 0}
+  .A .sec-h{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:44px}
+  .A h2{font-size:40px;line-height:1.15;margin:12px 0 0;max-width:640px}
+  .A .more{font-weight:600;color:var(--navy);font-size:15px;border-bottom:1px solid #b9c2d6;padding-bottom:3px;white-space:nowrap}
+  .A .camp{border:1px solid #dfe3ec;display:grid;grid-template-columns:8px 1.6fr 1fr;align-items:stretch}
+  .A .camp:before{content:"";background:linear-gradient(var(--navy) 0 60%,var(--yellow) 60% 80%,var(--red) 80%)}
+  .A .camp .t{padding:40px 44px}
+  .A .camp .t h2{font-size:34px;margin-top:10px}
+  .A .camp p{color:#465066;margin:14px 0 0;max-width:680px}
+  .A .camp .a{padding:40px 44px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:#f5f7fb;border-left:1px solid #dfe3ec}
+  .A .camp .a small{font-size:13px;color:#5b6578}
+  .A .svc{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #dfe3ec}
+  .A .svc article{display:flex;flex-direction:column;padding:32px 28px 8px 0;margin-right:28px;border-right:1px solid #dfe3ec}
+  .A .svc article:last-child{border-right:0;margin-right:0}
+  .A .svc .n{font-family:'Newsreader',serif;color:#8a94a8;font-size:18px}
+  .A .svc h3{font-family:'Newsreader',serif;font-weight:500;font-size:25px;color:var(--navy);margin:12px 0 10px}
+  .A .svc p{font-size:15px;color:#4e586c;margin:0 0 18px;flex:1}
+  .A .svc a{font-size:14px;font-weight:600;color:var(--navy)}
+  .A .give{background:#f5f7fb;border-top:1px solid #e3e6ee;border-bottom:1px solid #e3e6ee}
+  .A .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .A .tier{background:#fff;border:1px solid #dfe3ec;padding:34px 30px;display:flex;flex-direction:column}
+  .A .tier.feat{border-color:var(--navy);box-shadow:0 0 0 1px var(--navy)}
+  .A .tier .tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6a5426}
+  .A .tier h3{font-family:'Newsreader',serif;font-weight:500;font-size:26px;color:var(--navy);margin:10px 0 6px}
+  .A .tier .p{font-family:'Newsreader',serif;font-size:40px;color:#111a2c;margin:8px 0 4px}
+  .A .tier .p small{font-family:'Public Sans';font-size:15px;color:#5b6578}
+  .A .tier p{font-size:15px;color:#4e586c;margin:8px 0 26px;flex:1}
+  .A .tier .btn{justify-content:center}
+  .A .give .foot{display:flex;justify-content:space-between;margin-top:28px;font-size:14px;color:#5b6578}
+  .A .give .foot a{color:var(--navy);font-weight:600}
+  .A .news{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+  .A .news .big img{aspect-ratio:16/9;object-fit:cover;width:100%}
+  .A .news .src{font-size:13px;color:#6b7385;margin:18px 0 6px}
+  .A .news h3{font-family:'Newsreader',serif;font-weight:500;color:#111a2c;font-size:28px;line-height:1.2;margin:0}
+  .A .news .list article{padding:22px 0;border-top:1px solid #dfe3ec}
+  .A .news .list article:first-child{border-top:0;padding-top:0}
+  .A .news .list h3{font-size:21px}
+  .A .partners{border-top:1px solid #e3e6ee;padding:40px 0}
+  .A .partners .wrap{display:flex;align-items:center;gap:36px;flex-wrap:wrap;font-size:15px;color:#6b7385}
+  .A .partners b{color:#2b3446;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+  .A footer{background:var(--navy-900);color:#c7d0e6;font-size:15px}
+  .A footer .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-top:64px;padding-bottom:48px}
+  .A footer h4{color:#fff;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px}
+  .A footer p{margin:0 0 8px}
+  .A footer .legal{border-top:1px solid #ffffff1f;font-size:13px;color:#8e9bc0}
+  .A footer .legal .wrap{display:flex;justify-content:space-between;padding-top:20px;padding-bottom:20px;grid-template-columns:none}
+
+  /* ═════════════ B · CERCANA ═════════════ */
+  .B{font-family:'Plus Jakarta Sans',sans-serif;color:#1d2433;font-size:17px;line-height:1.6;background:#FFFCF6}
+  .B .alert{background:var(--red);color:#fff;font-size:14px;font-weight:500}
+  .B .alert .wrap{display:flex;justify-content:center;gap:10px;height:42px;align-items:center}
+  .B .alert a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .B header .wrap{display:flex;align-items:center;height:92px;gap:36px}
+  .B .brand{display:flex;align-items:center;gap:12px}
+  .B .brand img{height:46px}
+  .B .brand b{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:-.01em}
+  .B nav{display:flex;gap:6px;font-size:15px;font-weight:600;color:#2d3548}
+  .B nav a{padding:10px 14px;border-radius:999px}
+  .B nav a.hl{background:#EEF2FB;color:var(--navy)}
+  .B .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:999px}
+  .B .btn-y{background:var(--yellow);color:#1a1600}
+  .B .btn-n{background:var(--navy);color:#fff}
+  .B .btn-w{background:#fff;color:var(--navy)}
+  .B header .btn{margin-left:auto}
+  .B .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-top:40px;padding-bottom:88px}
+  .B .pill{display:inline-flex;gap:8px;align-items:center;background:#FFF1C7;color:#5c4500;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px}
+  .B h1{font-size:60px;line-height:1.04;font-weight:800;letter-spacing:-.03em;color:#0d1530;margin:20px 0 20px}
+  .B h1 em{font-style:normal;color:var(--navy);background:linear-gradient(transparent 62%,#FBD96A 62% 92%,transparent 92%)}
+  .B .lead{font-size:19px;color:#4a5263;max-width:500px;margin:0 0 34px}
+  .B .ctas{display:flex;gap:12px;align-items:center}
+  .B .ctas .tel{font-weight:600;color:var(--navy);margin-left:10px;font-size:15px}
+  .B .ph{position:relative}
+  .B .ph img{width:100%;aspect-ratio:1/1.02;object-fit:cover;border-radius:32px}
+  .B .ph img{position:relative;z-index:1}
+  .B .ph .ribbon{position:absolute;z-index:0;width:260px;height:72px;background:var(--yellow);border-radius:36px;transform:rotate(-45deg);left:-90px;top:70px}
+  .B .ph .ribbon.r2{background:var(--red);width:220px;left:auto;right:-80px;top:auto;bottom:60px;transform:rotate(45deg)}
+  .B .ph .note{position:absolute;z-index:2;left:-28px;bottom:36px;background:#fff;border-radius:20px;padding:18px 22px;box-shadow:0 20px 40px -24px #0d153066;font-size:14px;color:#4a5263;max-width:240px}
+  .B .ph .note b{display:block;font-size:30px;color:var(--navy);font-weight:800;line-height:1.1}
+  .B section.pad{padding:96px 0}
+  .B h2{font-size:42px;line-height:1.1;font-weight:800;letter-spacing:-.025em;color:#0d1530;margin:14px 0 0}
+  .B .sub{color:#4a5263;max-width:560px;margin:14px 0 0}
+  .B .camp{background:var(--navy);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+  .B .camp:after{content:"";position:absolute;width:420px;height:110px;border-radius:55px;background:#ffffff0f;transform:rotate(-45deg);right:-120px;top:-10px}
+  .B .camp .pill{background:#ffffff1a;color:#FBD96A}
+  .B .camp h2{color:#fff;font-size:40px}
+  .B .camp p{color:#c9d3f0;margin:16px 0 0}
+  .B .camp .box{background:#ffffff12;border:1px solid #ffffff22;border-radius:22px;padding:28px;position:relative;z-index:1}
+  .B .camp .box ol{margin:0 0 22px;padding-left:20px;color:#dfe6fa;font-size:15px}
+  .B .camp .box li{margin-bottom:8px}
+  .B .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+  .B .svc article{background:#fff;border-radius:24px;padding:30px 26px;border:1px solid #f0e9da}
+  .B .svc .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:20px;color:var(--navy)}
+  .B .svc .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .B .svc h3{font-size:20px;font-weight:700;color:#0d1530;margin:0 0 8px}
+  .B .svc p{font-size:15px;color:#555d6e;margin:0}
+  .B .give{background:#FFF4D6}
+  .B .give .head{text-align:center;max-width:640px;margin:0 auto}
+  .B .give .head .sub{margin:14px auto 0}
+  .B .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .B .tier{background:#fff;border-radius:28px;padding:36px 32px;display:flex;flex-direction:column}
+  .B .tier.feat{background:var(--navy);color:#fff}
+  .B .tier h3{font-size:21px;font-weight:700;margin:0}
+  .B .tier .p{font-size:44px;font-weight:800;letter-spacing:-.03em;margin:16px 0 0;color:var(--navy)}
+  .B .tier.feat .p{color:#FBD96A}
+  .B .tier .p small{font-size:16px;font-weight:600;letter-spacing:0;color:#6b7280}
+  .B .tier.feat .p small{color:#c9d3f0}
+  .B .tier p{font-size:15px;color:#555d6e;margin:12px 0 28px;flex:1}
+  .B .tier.feat p{color:#c9d3f0}
+  .B .tier .btn{justify-content:center}
+  .B .give .foot{text-align:center;margin-top:28px;font-size:15px;color:#5c4500}
+  .B .give .foot a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .B .news{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .B .news img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:22px}
+  .B .news .src{font-size:13px;font-weight:600;color:var(--red);margin:18px 0 6px}
+  .B .news h3{font-size:19px;line-height:1.35;font-weight:700;color:#0d1530;margin:0}
+  .B .row-h{display:flex;justify-content:space-between;align-items:end}
+  .B .row-h a{font-weight:700;color:var(--navy)}
+  .B footer{background:#0d1530;color:#b8c0d6;font-size:15px;border-radius:40px 40px 0 0}
+  .B footer .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-top:72px;padding-bottom:56px}
+  .B footer h4{color:#fff;font-size:15px;margin:0 0 14px}
+  .B footer p{margin:0 0 8px}
+  .B footer .legal{border-top:1px solid #ffffff1a;font-size:13px}
+  .B footer .legal .wrap{display:flex;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+
+  /* ═════════════ C · CORPORATIVA ═════════════ */
+  .C{font-family:'Archivo',sans-serif;font-stretch:100%;color:#111827;font-size:17px;line-height:1.6}
+  .C .x{font-stretch:112%}
+  .C .util{border-bottom:1px solid #e7e9ee;font-size:13px;color:#4b5563}
+  .C .util .wrap{display:flex;align-items:center;height:40px;gap:24px}
+  .C .util .em{color:var(--red);font-weight:600}
+  .C .util .em:before{content:"● ";}
+  .C .util .r{margin-left:auto;display:flex;gap:22px}
+  .C header .wrap{display:flex;align-items:center;height:88px;gap:44px}
+  .C .brand{display:flex;align-items:center;gap:14px}
+  .C .brand img{height:46px}
+  .C .brand b{font-size:21px;font-weight:800;letter-spacing:.14em;color:var(--navy);font-stretch:118%}
+  .C nav{display:flex;gap:30px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .C nav a.hl{color:var(--navy);border-bottom:2px solid var(--red);padding-bottom:4px}
+  .C .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:16px 26px}
+  .C .btn-r{background:var(--red);color:#fff}
+  .C .btn-w{background:#fff;color:var(--navy)}
+  .C .btn-ol{border:1px solid #ffffff80;color:#fff}
+  .C .btn-n{background:var(--navy);color:#fff}
+  .C .btn-k{background:#111827;color:#fff}
+  .C header .btn{margin-left:auto}
+  .C .hero{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+  .C .hero .t{background:var(--navy);color:#fff;padding:88px 64px 72px max(40px,calc((100vw - 1200px)/2 + 40px));display:flex;flex-direction:column;justify-content:center}
+  .C .eb{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+  .C h1{font-size:58px;line-height:1.02;font-weight:800;font-stretch:112%;letter-spacing:-.01em;margin:22px 0 24px}
+  .C .hero p{font-size:19px;color:#c4cdea;margin:0 0 40px;max-width:500px}
+  .C .hero .ctas{display:flex;gap:12px}
+  .C .hero .m{position:relative;background:#0d1b46}
+  .C .hero .m video,.C .hero .m img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .C .stripe{height:6px;background:linear-gradient(90deg,var(--yellow) 0 33.3%,var(--navy) 33.3% 66.6%,var(--red) 66.6%)}
+  .C .figs .wrap{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #e7e9ee}
+  .C .figs div div{padding:44px 0 40px 32px;border-left:1px solid #e7e9ee}
+  .C .figs div div:first-child{padding-left:0;border-left:0}
+  .C .figs b{display:block;font-size:56px;font-weight:800;font-stretch:118%;color:var(--navy);line-height:1;letter-spacing:-.02em}
+  .C .figs span{display:block;margin-top:12px;font-size:14px;color:#4b5563;letter-spacing:.02em}
+  .C section.pad{padding:100px 0}
+  .C .lbl{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+  .C h2{font-size:44px;line-height:1.08;font-weight:800;font-stretch:112%;letter-spacing:-.01em;color:#0b1430;margin:14px 0 0;max-width:720px}
+  .C .svc{display:grid;grid-template-columns:repeat(2,1fr);margin-top:52px;border-top:1px solid #e1e4ea;border-left:1px solid #e1e4ea}
+  .C .svc article{border-right:1px solid #e1e4ea;border-bottom:1px solid #e1e4ea;padding:40px 40px 36px;display:grid;grid-template-columns:72px 1fr;gap:8px}
+  .C .svc .n{font-size:30px;font-weight:800;font-stretch:118%;color:#c7ccd8}
+  .C .svc h3{font-size:24px;font-weight:700;font-stretch:108%;margin:0 0 8px;color:#0b1430}
+  .C .svc p{margin:0 0 16px;color:#4b5563;font-size:16px}
+  .C .svc a{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+  .C .camp{background:var(--yellow)}
+  .C .camp .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center;padding-top:72px;padding-bottom:72px}
+  .C .camp .lbl{color:#7a1020}
+  .C .camp h2{color:var(--navy);font-size:46px}
+  .C .camp p{color:#2d2a18;margin:18px 0 0}
+  .C .camp .side{border-left:2px solid var(--navy);padding-left:40px}
+  .C .camp .side p{font-size:15px;margin:0 0 22px}
+  .C .give .grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px;border:1px solid #e1e4ea}
+  .C .tier{padding:40px 36px;border-left:1px solid #e1e4ea;display:flex;flex-direction:column}
+  .C .tier:first-child{border-left:0}
+  .C .tier.feat{background:#0b1430;color:#fff}
+  .C .tier .n{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#6b7280}
+  .C .tier.feat .n{color:var(--yellow)}
+  .C .tier h3{font-size:24px;font-weight:700;font-stretch:108%;margin:14px 0 0}
+  .C .tier .p{font-size:46px;font-weight:800;font-stretch:118%;letter-spacing:-.02em;margin:18px 0 0;color:var(--navy)}
+  .C .tier.feat .p{color:#fff}
+  .C .tier .p small{font-size:15px;font-weight:500;font-stretch:100%;color:#6b7280;letter-spacing:0}
+  .C .tier.feat .p small{color:#aab4d3}
+  .C .tier p{font-size:15px;color:#4b5563;margin:14px 0 30px;flex:1}
+  .C .tier.feat p{color:#c4cdea}
+  .C .tier .btn{justify-content:center}
+  .C .give .foot{display:flex;justify-content:space-between;margin-top:22px;font-size:14px;color:#4b5563}
+  .C .give .foot a{color:var(--navy);font-weight:600}
+  .C .newsband{background:#f4f5f8}
+  .C .news{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+  .C .news article{background:#fff}
+  .C .news img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .C .news .b{padding:24px 26px 28px}
+  .C .news .src{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+  .C .news h3{font-size:19px;line-height:1.35;font-weight:700;margin:10px 0 0;color:#0b1430}
+  .C .row-h{display:flex;justify-content:space-between;align-items:end;gap:40px}
+  .C .row-h a{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);white-space:nowrap}
+  .C footer{background:#0b1430;color:#aab4d3;font-size:15px}
+  .C footer .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-top:72px;padding-bottom:56px}
+  .C footer h4{color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 18px}
+  .C footer p{margin:0 0 8px}
+  .C footer .legal .wrap{display:flex;justify-content:space-between;padding-top:22px;padding-bottom:22px;border-top:1px solid #ffffff1a;font-size:13px}
+</style>
+</head>
+<body>
+
+<div class="switch" role="toolbar">
+  <strong>Propuestas de imagen</strong>
+  <button data-go="A" aria-pressed="true">A · Institucional</button>
+  <button data-go="B" aria-pressed="false">B · Cercana</button>
+  <button data-go="C" aria-pressed="false">C · Corporativa</button>
+  <button class="pick" id="pick">Me quedo con A</button>
+</div>
+
+<!-- ═══════════════════════ A ═══════════════════════ -->
+<div class="page A on" id="A">
+  <div class="util"><div class="wrap">
+    <span>Rúa Sor Lucía 4, Oficina 50 · Pontevedra</span><span>L–J · consulta el horario</span>
+    <div class="r"><span>604 016 113</span><span>info@asovedra.org</span></div>
+  </div></div>
+  <header><div class="wrap">
+    <a class="brand" href="#"><img src="./logo.png" alt=""><span><b>ASOVEDRA</b><small>Asociación de Venezolanos en Pontevedra</small></span></a>
+    <nav><a>La Asociación</a><a>Servicios</a><a class="hl">Residencia 2027</a><a>Actualidad</a><a>Contacto</a></nav>
+    <a class="btn btn-y">Colabora</a>
+  </div></header>
+  <div class="alert"><div class="wrap"><i></i><span><strong>Emergencia Venezuela.</strong> Asovedra Presente ofrece apoyo psicológico gratuito y canaliza la ayuda a los afectados por el terremoto.</span><a>Ver cómo ayudar</a></div></div>
+
+  <section class="hero"><div class="wrap">
+    <div>
+      <div class="kicker">Desde 2018 en Pontevedra</div>
+      <h1>Acompañamos a la comunidad iberoamericana en su vida en Galicia</h1>
+      <p class="lead">Orientación en extranjería, empleo, formación y apoyo social, con atención presencial en Pontevedra y acompañamiento en toda Galicia.</p>
+      <div class="ctas"><a class="btn btn-n">Pide orientación</a><a class="btn btn-o">Conoce la asociación</a></div>
+    </div>
+    <figure class="frame" style="margin:0"><div class="pic"><img src="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg" alt="Junta directiva de ASOVEDRA"></div><figcaption>Junta directiva de ASOVEDRA, 2025. Foto: Diario de Pontevedra.</figcaption></figure>
+  </div></section>
+
+  <div class="figs"><div class="wrap">
+    <div><b>4.000+</b><span>personas atendidas</span></div>
+    <div><b>500+</b><span>casos legales acompañados</span></div>
+    <div><b>1.000+</b><span>empleos conseguidos</span></div>
+    <div><b>8 años</b><span>al servicio de la comunidad</span></div>
+  </div></div>
+
+  <section class="pad"><div class="wrap">
+    <div class="camp">
+      <div class="t">
+        <div class="kicker">Campaña · Residencia 2027</div>
+        <h2>En 2026 dimos un paso. En 2027 seguimos contigo.</h2>
+        <p>¿Obtuviste tu residencia mediante la regularización extraordinaria de 2026? Si vence en abril, mayo o junio de 2027, contacta con ASOVEDRA para preparar la modificación o prórroga que corresponda.</p>
+      </div>
+      <div class="a">
+        <a class="btn btn-n" style="justify-content:center">Solicitar revisión de mi residencia</a>
+        <small>Solicítala con tres meses de antelación. Si no sabes cuándo caduca, también podemos orientarte.</small>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="pad" style="padding-top:0"><div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Lo que hacemos</div><h2>Servicios para cada etapa del camino</h2></div><a class="more">Todos los servicios</a></div>
+    <div class="svc">
+      <article><div class="n">01</div><h3>Orientación legal</h3><p>Extranjería, derechos y deberes, con derivación a profesionales cuando hace falta.</p><a>Saber más →</a></article>
+      <article><div class="n">02</div><h3>Trámites migratorios</h3><p>Regularización, renovaciones, nacionalidad, NIE/TIE y reagrupación familiar.</p><a>Saber más →</a></article>
+      <article><div class="n">03</div><h3>Empleo</h3><p>Bolsa de empleo, orientación profesional y preparación de entrevistas.</p><a>Saber más →</a></article>
+      <article><div class="n">04</div><h3>Formación</h3><p>Idiomas, capacitación digital y talleres de emprendimiento.</p><a>Saber más →</a></article>
+    </div>
+  </div></section>
+
+  <section class="pad give"><div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Colabora</div><h2>Tu apoyo sostiene la orientación, la formación y el acompañamiento social</h2></div></div>
+    <div class="tiers">
+      <div class="tier"><div class="tag">Mensual</div><h3>Colabora cada mes</h3><div class="p">3,50 € <small>/ mes</small></div><p>Aportación recurrente que da continuidad a nuestra labor. Puedes cancelarla cuando quieras.</p><a class="btn btn-o">Colaborar mensualmente</a></div>
+      <div class="tier feat"><div class="tag">Socios</div><h3>Forma parte de ASOVEDRA</h3><div class="p">24 € <small>/ año · familiar 36 €</small></div><p>Hazte socio y participa en la vida de la asociación y en sus actividades.</p><a class="btn btn-n">Hacerme socio</a></div>
+      <div class="tier"><div class="tag">Puntual</div><h3>Haz un donativo</h3><div class="p">Libre</div><p>Una aportación única para apoyar nuestra actividad, del importe que elijas.</p><a class="btn btn-o">Donar una vez</a></div>
+    </div>
+    <div class="foot"><span>¿Ya eres socio? <a>Paga tu cuota aquí</a></span><span>Pago seguro a través de Stripe · <a>Transparencia</a></span></div>
+  </div></section>
+
+  <section class="pad"><div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Actualidad</div><h2>ASOVEDRA en los medios</h2></div><a class="more">Todas las noticias</a></div>
+    <div class="news">
+      <article class="big"><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/29/2026062921141589480.jpg" alt=""><div class="src">Diario de Pontevedra · 29 de junio de 2026</div><h3>«Lo que se necesita ahora mismo con urgencia es dinero para poder comprar material de rescate»</h3></article>
+      <div class="list">
+        <article><div class="src" style="margin-top:0">Diario de Pontevedra · 27 de abril de 2026</div><h3>Las ONG rescatan la regularización de inmigrantes ante el atasco en los concellos</h3></article>
+        <article><div class="src" style="margin-top:0">Faro de Vigo · 21 de abril de 2026</div><h3>La regularización revoluciona Pontevedra con más de 40 atendidos en una mañana</h3></article>
+        <article><div class="src" style="margin-top:0">La Voz de Galicia · 29 de marzo de 2026</div><h3>Hermanamiento entre dos asociaciones para donar sangre de forma masiva</h3></article>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="partners"><div class="wrap"><b>Colaboramos con</b><span>Concello de Pontevedra</span><span>Deputación de Pontevedra</span><span>Ministerio de Inclusión</span><span>FEVEGA</span><span>ASAMPO</span></div></div>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>ASOVEDRA</h4><p>Asociación de Venezolanos en Pontevedra. Entidad sin ánimo de lucro al servicio de la comunidad iberoamericana en Galicia.</p></div>
+      <div><h4>Asociación</h4><p>Sobre nosotros</p><p>Estatutos</p><p>Transparencia</p><p>Plan de Igualdad</p></div>
+      <div><h4>Participa</h4><p>Colabora</p><p>Hazte socio</p><p>Voluntariado</p></div>
+      <div><h4>Contacto</h4><p>Rúa Sor Lucía 4, Of. 50<br>36002 Pontevedra</p><p>604 016 113</p><p>info@asovedra.org</p></div>
+    </div>
+    <div class="legal"><div class="wrap"><span>© 2026 ASOVEDRA</span><span>Aviso legal · Privacidad · Cookies · Accesibilidad</span></div></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════ B ═══════════════════════ -->
+<div class="page B" id="B">
+  <div class="alert"><div class="wrap"><span>Emergencia Venezuela · Apoyo psicológico gratuito y donaciones para los afectados por el terremoto.</span><a>Ver cómo ayudar</a></div></div>
+  <header><div class="wrap">
+    <a class="brand"><img src="./logo.png" alt=""><b>Asovedra</b></a>
+    <nav><a>La Asociación</a><a>Servicios</a><a class="hl">Residencia 2027</a><a>Noticias</a><a>Contacto</a></nav>
+    <a class="btn btn-y">♥ Colabora</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <div>
+      <span class="pill">Asociación de Venezolanos en Pontevedra · desde 2018</span>
+      <h1>Una comunidad que no deja a nadie <em>atrás</em></h1>
+      <p class="lead">Te orientamos en tus trámites, en la búsqueda de empleo y en tu formación, y te acompañamos en cada paso de tu vida en Galicia.</p>
+      <div class="ctas"><a class="btn btn-n">Pide orientación</a><a class="tel">o llama al 604 016 113</a></div>
+    </div>
+    <div class="ph">
+      <span class="ribbon"></span><span class="ribbon r2"></span>
+      <img src="./ayuda.jpg" alt="Voluntarios de ASOVEDRA entregando ayuda">
+      <div class="note"><b>4.000+</b>personas atendidas desde que empezamos</div>
+    </div>
+  </div></section>
+
+  <section style="padding:0 0 96px"><div class="wrap">
+    <div class="camp">
+      <div>
+        <span class="pill">Residencia 2027</span>
+        <h2>En 2026 dimos un paso. En 2027 seguimos contigo.</h2>
+        <p>¿Obtuviste tu residencia mediante la regularización extraordinaria de 2026? Si vence en abril, mayo o junio de 2027, contacta con ASOVEDRA para preparar la modificación o prórroga que corresponda.</p>
+      </div>
+      <div class="box">
+        <ol><li>Cuéntanos tu caso con tres meses de antelación.</li><li>Revisamos tu resolución y tus fechas.</li><li>Preparamos contigo lo que corresponda.</li></ol>
+        <a class="btn btn-y" style="width:100%;justify-content:center">Solicitar revisión de mi residencia</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section style="padding-bottom:96px"><div class="wrap">
+    <span class="pill">Lo que hacemos</span>
+    <h2>Te ayudamos con lo que más importa</h2>
+    <div class="svc">
+      <article><div class="ic" style="background:#EEF2FB"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a4 4 0 0 0 6 0zM19 7l-3 7a4 4 0 0 0 6 0z"/></svg></div><h3>Orientación legal</h3><p>Extranjería, derechos y deberes, con derivación a profesionales.</p></article>
+      <article><div class="ic" style="background:#FFF1C7;color:#7a5a00"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><h3>Trámites</h3><p>Regularización, renovaciones, nacionalidad y reagrupación.</p></article>
+      <article><div class="ic" style="background:#FDE4E8;color:#a10a22"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div><h3>Empleo</h3><p>Bolsa de empleo, orientación y preparación de entrevistas.</p></article>
+      <article><div class="ic" style="background:#EAF6EE;color:#17663a"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/></svg></div><h3>Formación</h3><p>Idiomas, capacitación digital y emprendimiento.</p></article>
+    </div>
+  </div></section>
+
+  <section class="pad give"><div class="wrap">
+    <div class="head"><span class="pill" style="background:#fff">Colabora</span><h2>Juntos llegamos más lejos</h2><p class="sub">Tu aportación sostiene la orientación, la formación y el acompañamiento social que ofrecemos, también a quien no tiene recursos.</p></div>
+    <div class="tiers">
+      <div class="tier"><h3>Colabora cada mes</h3><div class="p">3,50 € <small>/mes</small></div><p>Aportación recurrente. Puedes cancelarla cuando quieras.</p><a class="btn btn-n">Colaborar mensualmente</a></div>
+      <div class="tier feat"><h3>Hazte socio</h3><div class="p">24 € <small>/año · familiar 36 €</small></div><p>Forma parte de ASOVEDRA y participa en sus actividades.</p><a class="btn btn-y">Hacerme socio</a></div>
+      <div class="tier"><h3>Donativo puntual</h3><div class="p">Libre</div><p>Una aportación única del importe que elijas.</p><a class="btn btn-n">Donar una vez</a></div>
+    </div>
+    <p class="foot">¿Ya eres socio? <a>Paga tu cuota aquí</a> · Pago seguro con Stripe</p>
+  </div></section>
+
+  <section class="pad"><div class="wrap">
+    <div class="row-h"><div><span class="pill">Noticias</span><h2>Lo último de ASOVEDRA</h2></div><a>Ver todas →</a></div>
+    <div class="news">
+      <article><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/29/2026062921141589480.jpg" alt=""><div class="src">Diario de Pontevedra · 29 jun 2026</div><h3>«Lo que se necesita con urgencia es dinero para comprar material de rescate»</h3></article>
+      <article><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/04/27/2026042721010793060.jpg" alt=""><div class="src">Diario de Pontevedra · 27 abr 2026</div><h3>Las ONG rescatan la regularización ante el atasco en los concellos</h3></article>
+      <article><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/03/28/2026032817450646669.jpg" alt=""><div class="src">Diario de Pontevedra · 28 mar 2026</div><h3>«Éxito absoluto» en la jornada de donación de sangre con ASAMPO</h3></article>
+    </div>
+  </div></section>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>Asovedra</h4><p>Asociación de Venezolanos en Pontevedra. Sin ánimo de lucro, al servicio de la comunidad iberoamericana en Galicia.</p></div>
+      <div><h4>Asociación</h4><p>Sobre nosotros</p><p>Estatutos</p><p>Transparencia</p></div>
+      <div><h4>Participa</h4><p>Colabora</p><p>Hazte socio</p><p>Voluntariado</p></div>
+      <div><h4>Contacto</h4><p>Rúa Sor Lucía 4, Of. 50, Pontevedra</p><p>604 016 113</p><p>info@asovedra.org</p></div>
+    </div>
+    <div class="legal"><div class="wrap"><span>© 2026 ASOVEDRA</span><span>Aviso legal · Privacidad · Cookies · Accesibilidad</span></div></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════ C ═══════════════════════ -->
+<div class="page C" id="C">
+  <div class="util"><div class="wrap">
+    <a class="em">Emergencia Venezuela: apoyo psicológico y donaciones</a>
+    <div class="r"><span>604 016 113</span><span>info@asovedra.org</span><span>Pontevedra</span></div>
+  </div></div>
+  <header><div class="wrap">
+    <a class="brand"><img src="./logo.png" alt=""><b>ASOVEDRA</b></a>
+    <nav><a>Asociación</a><a>Servicios</a><a class="hl">Residencia 2027</a><a>Actualidad</a><a>Contacto</a></nav>
+    <a class="btn btn-r">Colabora</a>
+  </div></header>
+
+  <section class="hero">
+    <div class="t">
+      <div class="eb">Asociación de Venezolanos en Pontevedra</div>
+      <h1>Integración, empleo y derechos para la comunidad iberoamericana</h1>
+      <p>Desde 2018 orientamos y acompañamos a miles de personas en su proyecto de vida en Galicia.</p>
+      <div class="ctas"><a class="btn btn-w">Pide orientación</a><a class="btn btn-ol">Conócenos</a></div>
+    </div>
+    <div class="m"><video src="./hero.mp4" autoplay muted loop playsinline></video></div>
+  </section>
+  <div class="stripe"></div>
+
+  <div class="figs"><div class="wrap">
+    <div><b>4.000+</b><span>Personas atendidas</span></div>
+    <div><b>500+</b><span>Casos legales</span></div>
+    <div><b>1.000+</b><span>Empleos conseguidos</span></div>
+    <div><b>2018</b><span>Año de fundación</span></div>
+  </div></div>
+
+  <section class="pad"><div class="wrap">
+    <div class="lbl">Servicios</div>
+    <h2>Un acompañamiento integral, de principio a fin</h2>
+    <div class="svc">
+      <article><div class="n">01</div><div><h3>Orientación legal</h3><p>Extranjería, derechos y deberes, con derivación a profesionales especializados.</p><a>Saber más</a></div></article>
+      <article><div class="n">02</div><div><h3>Trámites migratorios</h3><p>Regularización, renovaciones, nacionalidad, NIE/TIE y reagrupación familiar.</p><a>Saber más</a></div></article>
+      <article><div class="n">03</div><div><h3>Empleo</h3><p>Bolsa de empleo, orientación profesional y red de empresas colaboradoras.</p><a>Saber más</a></div></article>
+      <article><div class="n">04</div><div><h3>Formación</h3><p>Idiomas, capacitación digital, emprendimiento y certificaciones.</p><a>Saber más</a></div></article>
+    </div>
+  </div></section>
+
+  <section class="camp"><div class="wrap">
+    <div>
+      <div class="lbl">Campaña · Residencia 2027</div>
+      <h2>En 2026 dimos un paso. En 2027 seguimos contigo.</h2>
+      <p>¿Obtuviste tu residencia mediante la regularización extraordinaria de 2026? Si vence en abril, mayo o junio de 2027, prepara con ASOVEDRA la modificación o prórroga que corresponda.</p>
+    </div>
+    <div class="side">
+      <p>Solicita tu revisión con tres meses de antelación. Si no sabes cuándo caduca, también podemos orientarte.</p>
+      <a class="btn btn-n">Solicitar revisión</a>
+    </div>
+  </div></section>
+
+  <section class="pad give"><div class="wrap">
+    <div class="lbl">Colabora</div>
+    <h2>Sostén el trabajo de ASOVEDRA</h2>
+    <div class="grid">
+      <div class="tier"><div class="n">01 · Mensual</div><h3>Colabora cada mes</h3><div class="p">3,50 € <small>/ mes</small></div><p>Aportación recurrente que da continuidad a nuestra labor. Cancelable en cualquier momento.</p><a class="btn btn-n">Colaborar mensualmente</a></div>
+      <div class="tier feat"><div class="n">02 · Socios</div><h3>Forma parte de ASOVEDRA</h3><div class="p">24 € <small>/ año · familiar 36 €</small></div><p>Cuota de socio individual o familiar. Participa en la asociación y sus actividades.</p><a class="btn btn-r">Hacerme socio</a></div>
+      <div class="tier"><div class="n">03 · Puntual</div><h3>Haz un donativo</h3><div class="p">Libre</div><p>Una aportación única del importe que elijas para apoyar nuestra actividad.</p><a class="btn btn-k">Donar una vez</a></div>
+    </div>
+    <div class="foot"><span>¿Ya eres socio? <a>Paga tu cuota aquí</a></span><span>Pago seguro a través de Stripe · <a>Transparencia</a></span></div>
+  </div></section>
+
+  <section class="pad newsband"><div class="wrap">
+    <div class="row-h"><div><div class="lbl">Actualidad</div><h2>ASOVEDRA en los medios</h2></div><a>Todas las noticias</a></div>
+    <div class="news">
+      <article><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/06/29/2026062921141589480.jpg" alt=""><div class="b"><div class="src">Diario de Pontevedra</div><h3>«Lo que se necesita con urgencia es dinero para comprar material de rescate»</h3></div></article>
+      <article><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/04/27/2026042721010793060.jpg" alt=""><div class="b"><div class="src">Diario de Pontevedra</div><h3>Las ONG rescatan la regularización ante el atasco en los concellos</h3></div></article>
+      <article><img src="https://www.diariodepontevedra.es/media/diariodepontevedra/images/2026/03/28/2026032817450646669.jpg" alt=""><div class="b"><div class="src">Diario de Pontevedra</div><h3>«Éxito absoluto» en la jornada de donación de sangre con ASAMPO</h3></div></article>
+    </div>
+  </div></section>
+
+  <footer>
+    <div class="wrap">
+      <div><h4>ASOVEDRA</h4><p>Asociación de Venezolanos en Pontevedra. Entidad sin ánimo de lucro.</p></div>
+      <div><h4>Asociación</h4><p>Sobre nosotros</p><p>Estatutos</p><p>Transparencia</p></div>
+      <div><h4>Participa</h4><p>Colabora</p><p>Hazte socio</p><p>Voluntariado</p></div>
+      <div><h4>Contacto</h4><p>Rúa Sor Lucía 4, Of. 50, Pontevedra</p><p>604 016 113</p><p>info@asovedra.org</p></div>
+    </div>
+    <div class="legal"><div class="wrap"><span>© 2026 ASOVEDRA</span><span>Aviso legal · Privacidad · Cookies · Accesibilidad</span></div></div>
+  </footer>
+</div>
+
+<script>
+  let cur = 'A'
+  const pick = document.getElementById('pick')
+  document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => {
+    cur = b.dataset.go
+    document.querySelectorAll('.page').forEach(p => p.classList.toggle('on', p.id === cur))
+    document.querySelectorAll('[data-go]').forEach(x => x.setAttribute('aria-pressed', x === b))
+    pick.textContent = 'Me quedo con ' + cur
+    pick.classList.remove('done')
+    window.scrollTo(0, 0)
+    window.brainstorm && brainstorm.send({ type: 'view', value: cur })
+  }))
+  pick.addEventListener('click', () => {
+    window.brainstorm && brainstorm.choice(cur)
+    pick.textContent = 'Elegida: ' + cur + ' ✓'
+    pick.classList.add('done')
+  })
+</script>
+</body>
+</html>
