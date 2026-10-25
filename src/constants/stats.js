@@ -1,3 +1,7 @@
+import { FOUNDING_YEAR, yearsSince } from './site.js'
+
+const YEARS = `${yearsSince(FOUNDING_YEAR)}`
+
 // Estadísticas de Asovedra
 export const ASOVEDRA_STATS = {
   venezuelansSupported: {
@@ -5,7 +9,7 @@ export const ASOVEDRA_STATS = {
     label: "Iberoamericanos Apoyados"
   },
   yearsOfExperience: {
-    number: "7+",
+    number: YEARS,
     label: "Años de Experiencia"
   },
   legalCases: {
@@ -25,7 +29,7 @@ export const HERO_STATS = {
     label: "Personas Atendidas"
   },
   yearsOfExperience: {
-    number: "7+", 
+    number: YEARS,
     label: "Años de Experiencia"
   },
   jobsAchieved: {
@@ -68,7 +72,7 @@ export const ABOUT_STATS = {
     label: "Empleos Conseguidos"
   },
   anosServicio: {
-    number: "7",
+    number: YEARS,
     label: "Años de Servicio"
   }
 };
