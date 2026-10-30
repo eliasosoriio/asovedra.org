@@ -14,25 +14,25 @@ function About() {
     {
       name: 'Manuel Osorio Lozano',
       position: 'Presidente',
-      image: 'https://asovedra.org/assets/img/people/manuel-osorio.jpg',
+      image: '/photo/equipo/manuel-osorio.webp',
       description: 'Más de 20 años de experiencia con la comunidad venezolana y su integración en España.'
     },
     {
       name: 'César Augusto Alarcón',
       position: 'Vicepresidente',
-      image: 'https://asovedra.org/assets/img/people/cesar-alarcon.jpg',
+      image: '/photo/equipo/cesar-alarcon.webp',
       description: 'Abogado y referente en acompañamiento jurídico y procesos de regularización.'
     },
     {
       name: 'Mónica Brenna Álvarez',
       position: 'Secretaria',
-      image: 'https://asovedra.org/assets/img/people/monica-brenna.jpg',
+      image: '/photo/equipo/monica-brenna.webp',
       description: 'Compagina su profesión sanitaria con un fuerte compromiso de voluntariado en Asovedra.'
     },
     {
       name: 'María Elena Buján',
       position: 'Tesorera',
-      image: 'https://asovedra.org/assets/img/people/maria-elena.jpg',
+      image: '/photo/equipo/maria-elena.webp',
       description: 'Apoya a familias migrantes desde una mirada cercana, comunitaria y práctica.'
     }
   ]
@@ -112,7 +112,7 @@ function About() {
               subtitle="Asovedra surge en 2018 para crear un espacio de apoyo, orientación e integración para personas que llegan a España buscando nuevas oportunidades y una red comunitaria estable."
             />
             <img
-              src="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg"
+              src="/photo/junta-directiva.webp"
               alt="Junta directiva de Asovedra"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-[28px] bg-cloud object-cover"

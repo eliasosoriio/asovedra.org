@@ -101,6 +101,7 @@ asovedra.org/
 - `/noticias`: actualidad institucional y apariciones en medios.
 - `/contacto`: canales de contacto y conversion.
 - `/aviso-legal`, `/politica-privacidad`, `/politica-cookies`, `/accesibilidad`: documentos legales y de cumplimiento.
+- Cookies: gestor propio (sin Cookiebot) en `src/lib/consent.js` y `src/components/consent/CookieManager.jsx`. Para añadir un servicio que necesite consentimiento (p. ej. analítica), añade una entrada a `CONSENT_SCRIPTS` y actualiza la tabla de `/politica-cookies`. Las fotos de las noticias se sirven en local desde `public/news/`.
 - `/plan-de-igualdad`, `/estatutos`, `/declaracion-valores`: documentacion institucional.
 
 ## Decisiones tecnicas

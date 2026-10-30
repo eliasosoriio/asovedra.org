@@ -12,7 +12,7 @@ const SHOW_TOP_AFTER = 400
 
 const circle = 'grid h-11 w-11 place-items-center rounded-full shadow-pill transition-colors'
 
-// Redes fijas abajo a la derecha (a la izquierda aparece el botón de cookies de Cookiebot)
+// Redes fijas abajo a la derecha (a la izquierda está el botón de configurar cookies)
 // y, al bajar por la página, un botón para volver arriba a su derecha.
 function SocialDock() {
   const [showTop, setShowTop] = useState(false)

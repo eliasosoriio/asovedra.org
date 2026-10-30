@@ -5,6 +5,7 @@ import { Header } from './components/layout/Header'
 import Preloader from './components/layout/Preloader'
 import SocialDock from './components/layout/SocialDock'
 import CustomCursor from './components/layout/CustomCursor'
+import CookieManager from './components/consent/CookieManager'
 import Footer from './components/layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import PageTransition from './components/PageTransition'
@@ -149,6 +150,7 @@ function App() {
           <Header />
           <SocialDock />
           <CustomCursor />
+          <CookieManager />
           <ScrollToTop />
           <AnimatedRoutes />
         </Router>

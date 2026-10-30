@@ -1,156 +1,140 @@
 import React from 'react'
 import SEO from '../components/SEO'
 import LegalDocumentLayout from '../components/layout/LegalDocumentLayout'
+import { CONSENT_MAX_AGE_DAYS, openCookieSettings } from '../lib/consent'
+
+const h2 = 'mb-6 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink'
+const h3 = 'mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink'
+
+// Lo que la web guarda realmente en el navegador (mantener al día si se añade algún servicio)
+const STORED = [
+  {
+    name: 'asovedra-consent',
+    type: 'Almacenamiento local · propia',
+    purpose: 'Recuerda qué cookies has aceptado o rechazado y cuándo.',
+    duration: `${Math.round(CONSENT_MAX_AGE_DAYS / 30)} meses`,
+    category: 'Necesaria'
+  },
+  {
+    name: 'asovedra-preloader',
+    type: 'Almacenamiento de sesión · propia',
+    purpose: 'Evita repetir la pantalla de carga en cada página.',
+    duration: 'Hasta cerrar el navegador',
+    category: 'Necesaria'
+  },
+  {
+    name: 'sb-…-auth-token',
+    type: 'Almacenamiento local · propia (Supabase)',
+    purpose: 'Mantiene la sesión del portal de empleados. Solo existe si inicias sesión en el portal.',
+    duration: 'Hasta cerrar sesión',
+    category: 'Necesaria'
+  }
+]
 
 function PoliticaCookies() {
   return (
     <>
       <SEO
         title="Política de Cookies"
-        description="Información sobre el uso de cookies en ASOVEDRA. Conoce cómo utilizamos las cookies para mejorar tu experiencia de navegación."
-        keywords="cookies asovedra, política cookies, privacidad web, navegación segura"
+        description="Qué guarda la web de ASOVEDRA en tu navegador, para qué y cómo aceptar, rechazar o cambiar tu elección en cualquier momento."
+        keywords="cookies asovedra, política cookies, privacidad web, consentimiento"
         canonical="/politica-cookies"
       />
       <LegalDocumentLayout
         eyebrow="Legal"
         title="Política de Cookies"
-        description="Información sobre el uso de cookies en nuestro sitio web"
+        description="Qué guardamos en tu navegador, para qué y cómo cambiar tu elección"
       >
-                <h2 className="mb-6 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Política de Cookies de ASOVEDRA.org</h2>
+        <h2 className={h2}>Política de cookies de asovedra.org</h2>
 
-                <p className="mb-6">
-                  Esta política define las condiciones establecidas para el dominio:
-                </p>
+        <p className="mb-6">
+          Esta política explica qué información guarda la web <strong>https://asovedra.org</strong> en tu navegador, para qué
+          la usamos y cómo puedes aceptarla, rechazarla o cambiar de opinión cuando quieras, conforme al artículo 22.2 de la
+          Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI) y a la guía de cookies de la Agencia Española de
+          Protección de Datos.
+        </p>
 
-                <ul className="mb-6">
-                  <li><strong>https://asovedra.org</strong></li>
-                </ul>
+        <div className="mb-10 rounded-[28px] bg-cloud p-8">
+          <p className="text-[19px] font-semibold text-ink">En resumen</p>
+          <p className="mt-2">
+            Solo usamos lo necesario para que la web funcione. No usamos cookies de analítica, de publicidad ni de redes
+            sociales, y no compartimos tus datos de navegación con nadie.
+          </p>
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="mt-6 inline-flex min-h-12 items-center rounded-full bg-navy px-6 text-[16px] font-semibold text-white transition-colors hover:bg-navy-deep"
+          >
+            Configurar cookies
+          </button>
+        </div>
 
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">¿Qué son las cookies?</h3>
-                <p className="mb-6">
-                  Las cookies constituyen una herramienta empleada por los servidores Web para almacenar y recuperar información acerca de sus visitantes. No es más que un fichero de texto que algunos servidores piden a nuestro navegador que escriba en nuestro disco duro, con información acerca de lo que hemos estado haciendo por sus páginas.
-                </p>
+        <h3 className={h3}>¿Qué son las cookies?</h3>
+        <p className="mb-6">
+          Son pequeños archivos o datos que una web guarda en tu navegador para recordar información entre una página y otra
+          o entre visitas. En esta política llamamos «cookies» también a otras formas parecidas de guardar información, como
+          el almacenamiento local del navegador.
+        </p>
 
-                <p className="mb-6">
-                  Poseen una fecha de caducidad, que puede oscilar desde el tiempo que dure la sesión hasta una fecha futura especificada, a partir de la cual dejan de ser operativas. ASOVEDRA.org utiliza cookies para facilitar la navegación por su Portal y para obtener una mayor eficacia y personalización de los servicios ofrecidos a los Usuarios.
-                </p>
+        <h3 className={h3}>Qué guardamos y para qué</h3>
+        <p className="mb-6">Todo lo que guardamos es propio (no de terceros) y necesario para que la web funcione:</p>
+        <ul className="mb-6 list-none space-y-4 pl-0">
+          {STORED.map((item) => (
+            <li key={item.name} className="rounded-[20px] bg-cloud p-6">
+              <p className="font-semibold text-ink">{item.name}</p>
+              <p className="mt-1 text-[15px]">{item.type} · {item.category} · Duración: {item.duration}</p>
+              <p className="mt-2">{item.purpose}</p>
+            </li>
+          ))}
+        </ul>
 
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Uso de cookies en ASOVEDRA</h3>
-                <p className="mb-6">
-                  Las cookies empleadas en ASOVEDRA.org se asocian únicamente con un Usuario anónimo y su ordenador, no proporcionan referencias que permitan deducir el nombre y apellidos del Usuario y no pueden leer datos de su disco duro ni incluir virus en sus textos. Asimismo, ASOVEDRA.org no puede leer las cookies implantadas en el disco duro del Usuario desde otros servidores.
-                </p>
+        <h3 className={h3}>Categorías</h3>
+        <ul className="mb-6 space-y-2">
+          <li><strong>Necesarias:</strong> permiten que la web funcione. Están siempre activas porque la ley no exige consentimiento para ellas.</li>
+          <li><strong>Analíticas:</strong> servirían para medir las visitas. Ahora mismo no usamos ninguna.</li>
+          <li><strong>Marketing:</strong> servirían para mostrar publicidad o contenido personalizado. Ahora mismo no usamos ninguna.</li>
+        </ul>
+        <p className="mb-6">
+          Si en el futuro añadimos algún servicio de estas categorías, solo se activará si lo aceptas, y te volveremos a pedir
+          tu elección.
+        </p>
 
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Control de cookies</h3>
-                <p className="mb-6">
-                  El usuario puede libremente decidir acerca de la implantación o no en su disco duro de las cookies empleadas en ASOVEDRA.org. En este sentido, el usuario puede configurar su navegador para aceptar o rechazar por defecto todas las cookies o para recibir un aviso en pantalla de la recepción de cada cookie y decidir en ese momento su implantación o no en su disco duro.
-                </p>
+        <h3 className={h3}>Cómo aceptar, rechazar o cambiar tu elección</h3>
+        <p className="mb-6">
+          La primera vez que entras te preguntamos con un aviso en el que puedes <strong>aceptar todas</strong>,{' '}
+          <strong>rechazar todas</strong> o <strong>configurarlas</strong> por categorías. Navegar por la web no supone aceptar
+          nada. Puedes cambiar tu elección en cualquier momento desde el botón de la galleta, abajo a la izquierda, o desde el
+          botón «Configurar cookies» de esta página. Tu elección se guarda {Math.round(CONSENT_MAX_AGE_DAYS / 30)} meses;
+          pasado ese tiempo, o si cambiamos los servicios que usamos, te la volveremos a pedir.
+        </p>
 
-                <p className="mb-6">
-                  Le sugerimos consultar la sección de ayuda de su navegador para saber cómo cambiar la configuración que actualmente emplea. Aun cuando el Usuario configurase su navegador para rechazar todas las cookies o rechazase expresamente las cookies de ASOVEDRA.org podrá navegar por el Portal con el único inconveniente de no poder disfrutar de las funcionalidades del Portal que requieran la instalación de alguna de ellas.
-                </p>
+        <h3 className={h3}>Enlaces a otras webs</h3>
+        <p className="mb-6">
+          Cuando sales de nuestra web por un enlace (por ejemplo, a Stripe para hacer un donativo, a WhatsApp, a las redes
+          sociales o a las noticias de los periódicos), esas webs tienen sus propias políticas de cookies, que no dependen de
+          nosotros. Las imágenes de las noticias se sirven desde nuestro propio servidor, así que verlas no envía datos a los
+          periódicos.
+        </p>
 
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Consentimiento</h3>
-                <p className="mb-6">
-                  Según los términos incluidos en el artículo 22.2 de la Ley 34/2002 de Servicios de la Sociedad de la Información y Comercio Electrónico, si continúas navegando, estarás prestando tu consentimiento para el empleo de las cookies que detallamos a continuación.
-                </p>
+        <h3 className={h3}>Borrar las cookies desde tu navegador</h3>
+        <p className="mb-4">También puedes borrar o bloquear lo que guarda cualquier web desde la configuración de tu navegador:</p>
+        <ul className="mb-6">
+          <li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer">Chrome</a></li>
+          <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener noreferrer">Firefox</a></li>
+          <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+          <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+        </ul>
 
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Las cookies de esta web ayudan a:</h3>
-                <ul className="mb-6 space-y-2">
-                  <li>Hacer que esta web funcione correctamente</li>
-                  <li>Ahorrarle el tener que iniciar sesión cada vez que visitas este sitio</li>
-                  <li>Recordarte tus ajustes durante y entre las visitas</li>
-                  <li>Permitirte visualizar videos</li>
-                  <li>Mejorar la velocidad / seguridad del sitio</li>
-                  <li>Que puedas compartir páginas con redes sociales</li>
-                  <li>Mejora continua de este sitio web</li>
-                  <li>Mostrarte contenido relevante según tus hábitos de navegación</li>
-                </ul>
+        <h3 className={h3}>Contacto</h3>
+        <p className="mb-6">
+          Para cualquier duda sobre esta política escríbenos a <a href="mailto:info@asovedra.org">info@asovedra.org</a>.
+        </p>
 
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">No utilizamos cookies para:</h3>
-                <ul className="mb-6 space-y-2">
-                  <li>Recoger información de identificación personal (sin tu permiso expreso)</li>
-                  <li>Recoger información sensible (sin tu permiso expreso)</li>
-                  <li>Compartir datos de identificación personal a terceros</li>
-                </ul>
-
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Tipos de cookies utilizadas</h3>
-
-                <h4 className="mb-3 text-[19px] font-semibold text-ink">Cookies técnicas</h4>
-                <p className="mb-6">
-                  Son aquéllas que permiten al USUARIO la navegación a través de la página web y la utilización de las diferentes opciones o servicios que en ella existen como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la navegación, almacenar contenidos para la difusión de vídeos o sonido o compartir contenidos a través de redes sociales.
-                </p>
-
-                <h4 className="mb-3 text-[19px] font-semibold text-ink">Cookies de Google Analytics</h4>
-                <p className="mb-4">
-                  Son cookies de terceros (Google Inc.) de análisis que permiten el seguimiento y análisis del comportamiento de los USUARIOS de los sitios web a los que están vinculadas. La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de perfiles de navegación de los USUARIOS de dichos sitios, aplicaciones y plataformas, con el fin de introducir mejoras en función del análisis de los datos de uso que hacen los USUARIOS del servicio.
-                </p>
-
-                <p className="mb-6">
-                  Google Analytics, almacena las cookies en servidores ubicados en Estados Unidos y se compromete a no compartirla con terceros, excepto en los casos en los que sea necesario para el funcionamiento del sistema o cuando la ley obligue a tal efecto. Según Google no guarda la dirección IP del USUARIO.
-                </p>
-
-                <p className="mb-6">
-                  Más información sobre Google Analytics en los siguientes enlaces:
-                </p>
-                <ul className="mb-6">
-                  <li><a href="https://www.google.com/analytics/" target="_blank" rel="noopener noreferrer">www.google.com/analytics/</a></li>
-                  <li><a href="http://www.google.com/intl/es/policies/privacy/" target="_blank" rel="noopener noreferrer">Política de privacidad de Google</a></li>
-                  <li><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es&csw=1" target="_blank" rel="noopener noreferrer">Uso de cookies en Analytics</a></li>
-                </ul>
-
-                <h4 className="mb-3 text-[19px] font-semibold text-ink">Cookies de redes sociales</h4>
-                <p className="mb-6">
-                  Las Cookies de redes sociales pueden almacenarse en su navegador mientras navega por ASOVEDRA.org por ejemplo, cuando utiliza el botón de compartir contenidos de ASOVEDRA.org en alguna red social.
-                </p>
-
-                <p className="mb-4">Las empresas que generan estas cookies correspondientes a las redes sociales que utiliza esta web tienen sus propias políticas de cookies:</p>
-                <ul className="mb-6">
-                  <li><a href="https://help.twitter.com/es/rules-and-policies/twitter-cookies" target="_blank" rel="noopener noreferrer">Cookie de Twitter</a></li>
-                  <li><a href="https://www.linkedin.com/legal/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie de LinkedIn</a></li>
-                  <li><a href="https://www.facebook.com/policies/cookies/" target="_blank" rel="noopener noreferrer">Cookie de Facebook</a></li>
-                </ul>
-
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">¿Cómo desactivar cookies?</h3>
-                <p className="mb-4">El usuario podrá -en cualquier momento- elegir qué cookies quiere que funcionen en este sitio web mediante la configuración de su navegador:</p>
-                <ul className="mb-6">
-                  <li><a href="http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647" target="_blank" rel="noopener noreferrer">Chrome</a></li>
-                  <li><a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9" target="_blank" rel="noopener noreferrer">Internet Explorer</a></li>
-                  <li><a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we" target="_blank" rel="noopener noreferrer">Firefox</a></li>
-                  <li><a href="http://support.apple.com/kb/ph5042" target="_blank" rel="noopener noreferrer">Safari</a></li>
-                  <li><a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank" rel="noopener noreferrer">Opera</a></li>
-                </ul>
-
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Cookies específicas que utiliza esta web</h3>
-                <ul className="mb-6 space-y-2">
-                  <li><strong>PHPSESSID</strong> (2 años): Cookie técnica para mantener la sesión del usuario</li>
-                  <li><strong>_ga, _gid, _gat</strong> (2 años): Cookies de Google Analytics para análisis de tráfico y estadísticas</li>
-                  <li><strong>Cookies de redes sociales</strong>: Para funcionalidades de compartir en redes sociales</li>
-                </ul>
-
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Responsabilidad</h3>
-                <p className="mb-6">
-                  Ni esta web, ni sus representantes legales se hacen responsables ni del contenido ni de la veracidad de las políticas de privacidad que puedan tener los terceros mencionados en esta política de cookies.
-                </p>
-
-                <p className="mb-6">
-                  Los navegadores web son las herramientas encargadas de almacenar las cookies y desde esos navegadores debes efectuar tu derecho a eliminación o desactivación de las mismas. Ni esta web ni sus representantes legales pueden garantizar la correcta o incorrecta manipulación de las cookies por parte de los mencionados navegadores.
-                </p>
-
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Aceptación</h3>
-                <p className="mb-6">
-                  La aceptación de la presente política de cookies implica que el usuario ha sido informado de una forma clara y completa sobre el uso de dispositivos de almacenamiento y recuperación de datos (cookies) así como que ASOVEDRA.org dispone del consentimiento del usuario para el uso de las mismas tal y como establece el artículo 22 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE).
-                </p>
-
-                <h3 className="mb-4 mt-12 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">Contacto</h3>
-                <p className="mb-6">
-                  Para cualquier duda o consulta acerca de esta política de cookies no dudes en comunicarte con nosotros a través de la dirección de correo electrónico <a href="mailto:info@asovedra.org">info@asovedra.org</a>.
-                </p>
-
-                <div className="mt-12 rounded-[28px] bg-cloud p-8">
-                  <p className="text-[15px] text-muted">
-                    <strong>Última actualización:</strong> Octubre 2025
-                  </p>
-                </div>
+        <div className="mt-12 rounded-[28px] bg-cloud p-8">
+          <p className="text-[15px] text-muted">
+            <strong>Última actualización:</strong> octubre de 2026
+          </p>
+        </div>
       </LegalDocumentLayout>
     </>
   )
