@@ -22,19 +22,19 @@ function Colabora() {
           description="Tu aportación ayuda a sostener la orientación, la formación y el acompañamiento social que ofrecemos como asociación sin ánimo de lucro, incluida la atención a personas sin recursos."
         />
 
-        <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+        <section className="bg-[#F5F5F7] py-20 lg:py-24">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-16">
             <ColaboraOptions />
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 py-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-16">
           <div className="grid gap-8 rounded-[28px] border border-line bg-white p-8 sm:p-10 md:grid-cols-[auto_1fr] md:items-start">
             <span className="grid h-14 w-14 place-items-center rounded-2xl bg-pill-blue text-navy">
               <LuHeartHandshake aria-hidden="true" className="h-7 w-7" />
             </span>
             <div>
-              <h2 className="text-2xl font-extrabold tracking-[-0.02em] text-ink sm:text-3xl">¿A dónde va tu aportación?</h2>
+              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink sm:text-3xl">¿A dónde va tu aportación?</h2>
               <p className="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">
                 Las aportaciones de esta página apoyan a la asociación en su conjunto: la atención en nuestra oficina de
                 Pontevedra, la orientación en trámites, los programas de empleo y formación y el acompañamiento a

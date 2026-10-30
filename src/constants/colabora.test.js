@@ -3,7 +3,8 @@ import assert from 'node:assert/strict'
 import { COLABORA_LINKS, COLABORA_OPTIONS, resolveColaboraOptions, safeLink, cancelText } from './colabora.js'
 
 test('empty links resolve to null href', () => {
-  assert.ok(resolveColaboraOptions().every(o => o.href === null))
+  const empty = Object.fromEntries(Object.keys(COLABORA_LINKS).map(k => [k, '']))
+  assert.ok(resolveColaboraOptions(undefined, empty).every(o => o.href === null))
 })
 
 test('https link is kept', () => {
@@ -25,5 +26,5 @@ test('cancelText uses the portal link when present', () => {
 })
 
 test('options carry the spec amounts', () => {
-  assert.deepEqual(COLABORA_OPTIONS.map(o => o.price), ['3,50 €', '24 €', 'Libre'])
+  assert.deepEqual(COLABORA_OPTIONS.map(o => o.price), ['3,50 €', '24 €', 'Desde 3 €'])
 })

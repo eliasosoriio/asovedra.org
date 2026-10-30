@@ -127,20 +127,16 @@ function EmergenciaVenezuela() {
       />
 
       <main className="min-h-screen">
-        <section className="relative overflow-hidden border-b-4 border-red bg-[#FFF6F7]">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-10 top-8 hidden h-48 w-72 md:block">
-            <span className="absolute right-16 top-4 h-11 w-48 -rotate-45 rounded-full bg-yellow"></span>
-            <span className="absolute right-0 top-16 h-11 w-40 rotate-45 rounded-full bg-red"></span>
-          </div>
-          <div className="relative mx-auto max-w-[1200px] px-5 pb-16 pt-12 lg:px-10 lg:pb-20 lg:pt-16">
+        <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-36 lg:px-16 lg:pb-24 lg:pt-[190px]">
+          <div className="lg:pl-[72px]">
             <Pill tone="red">
               <LuTriangleAlert aria-hidden="true" />
               Emergencia · Terremoto en Venezuela
             </Pill>
-            <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.06] tracking-[-0.03em] text-ink sm:text-5xl lg:text-6xl">
+            <h1 className="big-headline mt-6 max-w-6xl text-ink">
               No tienes que afrontar este momento en soledad
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted lg:text-[19px]">
+            <p className="mt-8 max-w-3xl text-xl leading-relaxed text-ink lg:text-[22px]">
               El terremoto ocurrido en Venezuela el <strong className="text-ink">24 de junio de 2026</strong> ha dejado
               miedo, incertidumbre y una profunda preocupación. Asovedra pone a tu disposición una red de
               profesionales para ofrecerte orientación y acompañamiento emocional, de forma gratuita y confidencial.
@@ -148,7 +144,7 @@ function EmergenciaVenezuela() {
             <div className="mt-8">
               <FormButton>Solicitar apoyo psicológico</FormButton>
             </div>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted">
               Completarás la <strong className="text-ink">Escala de Triaje Psicológico ante Desastres Naturales (ETP-DN)</strong>,
               un breve formulario de orientación inicial que ayuda a valorar el impacto emocional y psicológico y a
               clasificar las necesidades de atención. Servicio sujeto a disponibilidad profesional y tus respuestas se
@@ -157,7 +153,7 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] gap-10 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
+        <section className="mx-auto grid max-w-[1440px] gap-10 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-16">
           <div>
             <SectionHeader
               title="Lo que estás sintiendo también importa"
@@ -179,7 +175,7 @@ function EmergenciaVenezuela() {
         </section>
 
         <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <SectionHeader
               align="center"
               title="¿Cómo podemos ayudarte?"
@@ -189,7 +185,7 @@ function EmergenciaVenezuela() {
               {steps.map((step) => (
                 <li key={step.number}>
                   <Card as="article" className="h-full p-7">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-yellow text-lg font-extrabold text-ink">
+                    <span className="grid h-11 w-11 place-items-center rounded-full bg-yellow text-lg font-medium text-ink">
                       {step.number}
                     </span>
                     <h3 className="mt-5 text-xl font-bold text-ink">{step.title}</h3>
@@ -201,7 +197,7 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 py-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-16">
           <SectionHeader
             align="center"
             title="Este acompañamiento puede ser para ti"
@@ -224,7 +220,7 @@ function EmergenciaVenezuela() {
         </section>
 
         <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <SectionHeader
               align="center"
               pill="Nuestro equipo"
@@ -266,7 +262,7 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 py-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-16">
           <SectionHeader
             align="center"
             pill="Nuestra ayuda en acción"
@@ -305,7 +301,7 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-16">
           <Card className="p-8 lg:p-10">
             <div className="flex items-start gap-4">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-pill-blue text-navy">
@@ -329,9 +325,9 @@ function EmergenciaVenezuela() {
           </Card>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-16">
           <div className="rounded-[32px] bg-sand p-8 text-center sm:p-12">
-            <h2 className="mx-auto max-w-3xl text-3xl font-extrabold tracking-[-0.025em] text-ink lg:text-4xl">
+            <h2 className="mx-auto max-w-3xl text-3xl font-medium tracking-[-0.01em] text-ink lg:text-4xl">
               Dar el primer paso puede ayudarte a sentirte acompañado
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-relaxed text-muted">
@@ -345,7 +341,7 @@ function EmergenciaVenezuela() {
             <div role="note" className="mx-auto mt-10 max-w-3xl rounded-[22px] border border-[#f5b8c3] bg-pill-red p-6 text-left sm:p-8">
               <div className="flex items-center gap-3">
                 <LuTriangleAlert aria-hidden="true" className="h-6 w-6 shrink-0 text-[#a10a22]" />
-                <p className="text-sm font-extrabold uppercase tracking-wide text-[#a10a22]">
+                <p className="text-sm font-medium uppercase tracking-wide text-[#a10a22]">
                   En una situación de peligro inmediato
                 </p>
               </div>
@@ -359,12 +355,12 @@ function EmergenciaVenezuela() {
         </section>
 
         <section className="bg-navy py-20 text-white">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <div className="mx-auto max-w-3xl text-center">
               <span className="mx-auto grid h-16 w-16 place-items-center rounded-[20px] bg-white/10 text-yellow">
                 <LuHandHeart aria-hidden="true" className="h-8 w-8" />
               </span>
-              <h2 className="mt-6 text-3xl font-extrabold tracking-[-0.025em] lg:text-4xl">Cada donación cuenta</h2>
+              <h2 className="mt-6 text-3xl font-medium tracking-[-0.01em] lg:text-4xl">Cada donación cuenta</h2>
               <p className="mt-4 text-[17px] leading-relaxed text-[#c9d3f0]">
                 Asovedra canaliza la solidaridad de la comunidad de Pontevedra hacia las personas afectadas por los
                 terremotos en Venezuela, de forma rápida, útil y transparente. Toda ayuda se destina a material de

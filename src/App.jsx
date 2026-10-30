@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion'
 import { AuthProvider } from './context/AuthContext'
 import { Header } from './components/layout/Header'
-import EmergencyStrip from './components/layout/EmergencyStrip'
+import Preloader from './components/layout/Preloader'
+import SocialDock from './components/layout/SocialDock'
+import CustomCursor from './components/layout/CustomCursor'
 import Footer from './components/layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import PageTransition from './components/PageTransition'
@@ -143,8 +145,10 @@ function App() {
     <AuthProvider>
       <div className="overflow-x-clip">
         <Router>
-          <EmergencyStrip />
+          <Preloader />
           <Header />
+          <SocialDock />
+          <CustomCursor />
           <ScrollToTop />
           <AnimatedRoutes />
         </Router>

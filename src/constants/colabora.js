@@ -2,10 +2,10 @@
 // no se muestra y la web ofrece escribir a info@asovedra.org.
 // Antes de rellenarlos, comprobad que los importes coinciden con cada enlace.
 export const COLABORA_LINKS = {
-  mensual: '',
+  mensual: 'https://buy.stripe.com/5kQ14p3KmcBG1CZ3kidAk03',
   socioIndividual: '',
   socioFamiliar: '',
-  donativo: '',
+  donativo: 'https://donate.stripe.com/5kQbJ3cgS59e4Pbg74dAk00',
   renovacion: '',
   venezuela: '',
   cancelarMensual: ''
@@ -35,16 +35,16 @@ export const COLABORA_OPTIONS = [
   {
     id: 'donativo',
     title: 'Haz un donativo puntual',
-    price: 'Libre',
+    price: 'Desde 3 €',
     priceSuffix: '',
-    description: 'Una aportación única, del importe que elijas, para apoyar nuestra actividad.',
+    description: 'Una aportación única, del importe que elijas a partir de 3 €, para apoyar nuestra actividad.',
     cta: 'Donar una vez',
     linkKey: 'donativo',
     featured: false
   }
 ]
 
-export const COLABORA_FALLBACK = 'Escríbenos a info@asovedra.org para colaborar'
+export const COLABORA_FALLBACK = 'Escríbenos para colaborar'
 
 export const TRANSPARENCIA_PATH = '/estatutos'
 

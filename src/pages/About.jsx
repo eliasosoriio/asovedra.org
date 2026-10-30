@@ -66,12 +66,12 @@ function About() {
           description="Historia, valores y equipo al servicio de la comunidad iberoamericana en Galicia."
         />
 
-        <section className="mx-auto grid max-w-[1200px] gap-5 px-5 pb-20 md:grid-cols-2 lg:px-10">
+        <section className="mx-auto grid max-w-[1440px] gap-5 px-6 pb-20 md:grid-cols-2 lg:px-16">
           <Card tone="navy" className="p-8 sm:p-10">
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-yellow text-ink">
               <LuTarget aria-hidden="true" className="h-6 w-6" />
             </span>
-            <h2 className="mt-6 text-2xl font-extrabold tracking-[-0.02em]">Nuestra misión</h2>
+            <h2 className="mt-6 text-2xl font-medium tracking-[-0.02em]">Nuestra misión</h2>
             <p className="mt-3 text-[17px] leading-relaxed text-[#c9d3f0]">
               Promover la integración social, laboral y cultural de la comunidad venezolana e iberoamericana en Galicia desde el acompañamiento, la orientación y la cooperación solidaria.
             </p>
@@ -80,7 +80,7 @@ function About() {
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-pill-yellow text-[#7a5a00]">
               <LuStar aria-hidden="true" className="h-6 w-6" />
             </span>
-            <h2 className="mt-6 text-2xl font-extrabold tracking-[-0.02em] text-ink">Nuestra visión</h2>
+            <h2 className="mt-6 text-2xl font-medium tracking-[-0.02em] text-ink">Nuestra visión</h2>
             <p className="mt-3 text-[17px] leading-relaxed text-muted">
               Consolidarnos como una organización de referencia por su compromiso con la integración, la solidaridad y el desarrollo humano de la comunidad iberoamericana.
             </p>
@@ -88,7 +88,7 @@ function About() {
         </section>
 
         <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <SectionHeader
               pill="Valores"
               pillTone="white"
@@ -112,7 +112,7 @@ function About() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] items-start gap-12 px-5 py-20 lg:grid-cols-2 lg:px-10">
+        <section className="mx-auto grid max-w-[1440px] items-start gap-12 px-6 py-20 lg:grid-cols-2 lg:px-16">
           <img
             src="https://www.diariodepontevedra.es/asset/thumbnail,1280,720,center,center/media/diariodepontevedra/images/2025/07/22/2025072215310571656.jpg"
             alt="Junta directiva de Asovedra"
@@ -129,7 +129,7 @@ function About() {
               {milestones.map((milestone) => (
                 <li key={milestone.year} className="relative">
                   <span aria-hidden="true" className="absolute -left-[33px] top-1.5 h-4 w-4 rounded-full border-4 border-cream bg-yellow"></span>
-                  <p className="text-sm font-extrabold text-red">{milestone.year}</p>
+                  <p className="text-sm font-medium text-red">{milestone.year}</p>
                   <h3 className="text-lg font-bold text-ink">{milestone.event}</h3>
                   <p className="text-[15px] leading-relaxed text-muted">{milestone.description}</p>
                 </li>
@@ -138,7 +138,7 @@ function About() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-16">
           <SectionHeader
             pill="Equipo"
             title="Nuestro equipo"
@@ -158,20 +158,20 @@ function About() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-16">
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {ABOUT_STATS_ARRAY.map((stat) => (
               <div key={stat.label} className="rounded-[24px] bg-white p-6 text-center ring-1 ring-line">
-                <p className="text-4xl font-extrabold tracking-[-0.03em] text-navy">{stat.number}</p>
+                <p className="text-4xl font-medium tracking-[-0.01em] text-navy">{stat.number}</p>
                 <p className="mt-1 text-sm font-semibold text-muted">{stat.label}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pb-24 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pb-24 lg:px-16">
           <div className="rounded-[32px] bg-navy p-8 text-center text-white sm:p-12">
-            <h2 className="text-3xl font-extrabold tracking-[-0.025em]">¿Quieres colaborar con Asovedra?</h2>
+            <h2 className="text-3xl font-medium tracking-[-0.01em]">¿Quieres colaborar con Asovedra?</h2>
             <p className="mx-auto mt-3 max-w-2xl text-[17px] text-[#c9d3f0]">
               Siempre estamos abiertos a nuevas colaboraciones, voluntariado y personas comprometidas con nuestra comunidad.
             </p>

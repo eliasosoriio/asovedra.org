@@ -66,8 +66,8 @@ function News() {
           description="Seguimiento de iniciativas, colaboraciones y temas de interés para la comunidad iberoamericana."
         />
 
-        <section className="px-5 pb-24 lg:px-10">
-          <div id="listado-noticias" className="mx-auto max-w-[1200px]" ref={newsContainerRef}>
+        <section className="px-6 pb-24 lg:px-16">
+          <div id="listado-noticias" className="mx-auto max-w-[1440px]" ref={newsContainerRef}>
             <div className="grid gap-5">
               {currentNews.map((news, index) => (
                 <article
@@ -75,12 +75,19 @@ function News() {
                   className="group overflow-hidden rounded-[28px] border border-line bg-white lg:grid lg:grid-cols-[0.9fr_1.1fr]"
                 >
                   <div className="relative h-64 overflow-hidden bg-line lg:h-full lg:min-h-[18rem]">
-                    <img
-                      src={news.image}
-                      alt={news.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-                    />
+                    {news.image ? (
+                      <img
+                        src={news.image}
+                        alt=""
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                      />
+                    ) : (
+                      // Noticias sin foto del medio: fondo de marca con el logo
+                      <div className="grid h-full w-full place-items-center bg-navy">
+                        <img src="/favicon.png" alt="" className="h-20 w-20 rounded-full bg-white object-contain p-3" />
+                      </div>
+                    )}
                     <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold text-red shadow-sm">
                       {news.source}
                     </span>
@@ -88,7 +95,7 @@ function News() {
 
                   <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
                     <p className="text-sm font-semibold text-muted">{news.date}</p>
-                    <h2 className="mt-2 text-2xl font-extrabold leading-snug tracking-[-0.015em] text-ink transition-colors group-hover:text-navy lg:text-[26px]">
+                    <h2 className="mt-2 text-2xl font-medium leading-snug tracking-[-0.015em] text-ink transition-colors group-hover:text-navy lg:text-[26px]">
                       {news.title}
                     </h2>
                     <p className="mt-3 line-clamp-3 text-base leading-7 text-muted">

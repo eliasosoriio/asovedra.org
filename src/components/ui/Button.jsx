@@ -1,24 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ArrowIcon from './ArrowIcon'
 
 const VARIANTS = {
   navy: 'bg-navy text-white hover:bg-navy-deep',
   yellow: 'bg-yellow text-ink hover:bg-yellow-soft',
-  white: 'bg-white text-navy hover:bg-pill-blue',
-  ghost: 'border border-navy/25 bg-transparent text-navy hover:border-navy hover:bg-white'
+  white: 'bg-white text-ink shadow-pill hover:shadow-lg',
+  ghost: 'border border-ink/30 bg-transparent text-ink hover:border-ink'
 }
 
 const SIZES = {
-  md: 'min-h-12 px-6 text-[15px]',
-  lg: 'min-h-[52px] px-7 text-base'
+  md: 'min-h-14 px-6 text-base',
+  lg: 'min-h-16 px-7 text-[17px]'
 }
 
-function Button({ to, href, variant = 'navy', size = 'md', icon, className = '', children, ...rest }) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-full font-bold leading-tight transition-all duration-200 hover:-translate-y-px motion-reduce:transform-none ${VARIANTS[variant]} ${SIZES[size]} ${className}`
+// Botón en cápsula. Por defecto lleva la flecha larga; `icon` la sustituye y `arrow={false}` la quita.
+function Button({ to, href, variant = 'navy', size = 'md', icon, arrow = true, longArrow = false, className = '', children, ...rest }) {
+  const classes = `group inline-flex items-center justify-between gap-5 rounded-full font-semibold leading-tight transition-all duration-300 ${VARIANTS[variant]} ${SIZES[size]} ${className}`
   const content = (
     <>
-      {children}
-      {icon && <span aria-hidden="true" className="text-base">{icon}</span>}
+      <span>{children}</span>
+      {icon
+        ? <span aria-hidden="true" className="text-lg">{icon}</span>
+        : arrow && <ArrowIcon long={longArrow} />}
     </>
   )
 

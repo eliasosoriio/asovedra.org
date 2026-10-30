@@ -108,7 +108,7 @@ function Services() {
           description="Recursos, orientación y programas diseñados para responder a necesidades reales con una atención clara y cercana."
         />
 
-        <section className="mx-auto max-w-[1200px] space-y-5 px-5 pb-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] space-y-5 px-6 pb-20 lg:px-16">
           {services.map((service) => {
             const Icon = service.icon
             return (
@@ -117,7 +117,7 @@ function Services() {
                   <span className={`grid h-14 w-14 place-items-center rounded-2xl ${service.tile}`}>
                     <Icon aria-hidden="true" className="h-7 w-7" />
                   </span>
-                  <h2 className="mt-6 text-2xl font-extrabold tracking-[-0.02em] text-ink sm:text-3xl">{service.title}</h2>
+                  <h2 className="mt-6 text-2xl font-medium tracking-[-0.02em] text-ink sm:text-3xl">{service.title}</h2>
                   <p className="mt-3 text-[17px] leading-relaxed text-muted">{service.description}</p>
                   <Link to="/contacto" className="mt-6 inline-flex items-center gap-2 font-bold text-navy hover:underline">
                     Solicitar información
@@ -141,7 +141,7 @@ function Services() {
         </section>
 
         <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <SectionHeader
               pill="Además"
               pillTone="white"
@@ -169,13 +169,13 @@ function Services() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1200px] gap-5 px-5 py-20 lg:grid-cols-[1.4fr_1fr] lg:px-10">
+        <section className="mx-auto grid max-w-[1440px] gap-5 px-6 py-20 lg:grid-cols-[1.4fr_1fr] lg:px-16">
           <Card className="p-8 sm:p-10">
-            <h2 className="text-2xl font-extrabold tracking-[-0.02em] text-ink sm:text-3xl">¿Cómo funciona?</h2>
+            <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink sm:text-3xl">¿Cómo funciona?</h2>
             <ol className="mt-8 grid gap-5 sm:grid-cols-2">
               {processSteps.map((step, index) => (
                 <li key={step} className="flex items-center gap-4">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-yellow text-lg font-extrabold text-ink">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-yellow text-lg font-medium text-ink">
                     {index + 1}
                   </span>
                   <span className="text-lg font-bold text-ink">{step}</span>
@@ -184,7 +184,7 @@ function Services() {
             </ol>
           </Card>
           <Card tone="navy" className="p-8 sm:p-10">
-            <h2 className="text-2xl font-extrabold tracking-[-0.02em] sm:text-3xl">¿Necesitas orientación?</h2>
+            <h2 className="text-2xl font-medium tracking-[-0.02em] sm:text-3xl">¿Necesitas orientación?</h2>
             <p className="mt-3 text-[17px] leading-relaxed text-[#c9d3f0]">
               Nuestro equipo puede ayudarte a identificar el servicio adecuado y explicarte cómo empezar el proceso.
             </p>

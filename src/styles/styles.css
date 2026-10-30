@@ -2,8 +2,16 @@
 
 @plugin "@midudev/tailwind-animations";
 
+@font-face {
+    font-family: 'Figtree';
+    src: url('/fonts/figtree-latin.woff2') format('woff2');
+    font-weight: 300 800;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
-    /* Colores de marca (salen del logo) */
+    /* Colores de marca (salen del logo). El navy ocupa el papel del verde de North2 */
     --color-navy: #001E77;
     --color-navy-deep: #00278f;
     --color-yellow: #F8C31C;
@@ -11,21 +19,25 @@
     --color-red: #E10E2F;
 
     /* Texto */
-    --color-ink: #0d1530;
-    --color-body: #1d2433;
-    --color-muted: #4a5263;
+    --color-ink: #1F1F21;
+    --color-body: #1F1F21;
+    --color-muted: #55565c;
 
     /* Superficies */
-    --color-cream: #FFFCF6;
-    --color-sand: #FFF4D6;
+    --color-paper: #FCFCFC;
+    --color-cream: #FCFCFC;
+    --color-sand: #F2F2F0;
     --color-pill-yellow: #FFF1C7;
     --color-pill-blue: #EEF2FB;
     --color-pill-red: #FDE4E8;
-    --color-line: #f0e9da;
-
+    --color-line: #E4E4E4;
+    --color-mist: #A6A6A6;
 
     /* Fuentes */
-    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-display: 'Figtree', system-ui, sans-serif;
+
+    /* Sombras de los botones en cápsula */
+    --shadow-pill: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -35,56 +47,85 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
 }
 
 body {
-    background-color: var(--color-cream);
+    background-color: var(--color-paper);
     color: var(--color-body);
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
+/* Titulares gigantes al estilo North2 */
+.big-headline {
+    font-size: clamp(36px, 7.8vw, 112px);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+/* El titular de la portada comparte fila con las noticias: un poco más pequeño */
+.hero-headline {
+    font-size: clamp(32px, 5.6vw, 84px);
+}
+
+.section-title {
+    font-size: clamp(40px, 6.4vw, 96px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+
+.lead-text {
+    font-size: clamp(22px, 2.1vw, 30px);
+    font-weight: 450;
+    line-height: 1.5;
+}
+
 :focus-visible {
     outline: 3px solid var(--color-navy);
-    outline-offset: 2px;
+    outline-offset: 3px;
     border-radius: 6px;
 }
 
 /* Deja hueco a la cabecera fija al saltar a un ancla */
 [id] {
-    scroll-margin-top: 112px;
+    scroll-margin-top: 120px;
+}
+
+/* Barra de scroll fina, con el navy de la marca */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 30, 119, 0.45) transparent;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
+    height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-cream);
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #d9cfb8;
-    border-radius: 20px;
+    background-color: rgba(0, 30, 119, 0.45);
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-clip: content-box;
 }
 
-/* Latido del corazón del botón Colabora (una sola vez al pasar el ratón) */
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    30% { transform: scale(1.18); }
-    60% { transform: scale(0.95); }
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-navy);
 }
 
-.group:hover .animate-heartbeat-hover {
-    animation: heartbeat 0.6s ease;
+::-webkit-scrollbar-corner {
+    background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .group:hover .animate-heartbeat-hover {
-        animation: none;
-    }
-
     html {
         scroll-behavior: auto;
     }
@@ -134,7 +175,7 @@ body {
 
 .legal-prose h2 {
     color: var(--color-ink);
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: -0.01em;
 }
 
@@ -152,7 +193,17 @@ body {
 /* Anillo de foco visible sobre fondos oscuros o rojos */
 .bg-navy :focus-visible,
 .bg-ink :focus-visible,
-.bg-red :focus-visible,
 footer :focus-visible {
     outline-color: var(--color-yellow);
+}
+
+.bg-red :focus-visible {
+    outline-color: #ffffff;
+    box-shadow: 0 0 0 6px var(--color-navy);
+}
+
+/* Entrada del logo en la pantalla de carga */
+@keyframes preloader-in {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }

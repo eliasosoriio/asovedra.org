@@ -1,21 +1,19 @@
 import React from 'react'
 import Pill from './Pill'
 
-function SectionHeader({ pill, pillTone = 'yellow', title, subtitle, align = 'left', as = 'h2', className = '' }) {
+function SectionHeader({ pill, pillTone = 'outline', title, subtitle, align = 'left', as = 'h2', className = '' }) {
   const Heading = as
   const centered = align === 'center'
-  const size = as === 'h1'
-    ? 'text-4xl sm:text-5xl lg:text-6xl'
-    : 'text-3xl sm:text-4xl lg:text-[42px]'
+  const size = as === 'h1' ? 'big-headline' : 'text-4xl sm:text-5xl lg:text-[64px] font-medium leading-[1.15] tracking-[-0.01em]'
 
   return (
-    <div className={`${centered ? 'mx-auto text-center' : ''} max-w-3xl ${className}`}>
+    <div className={`${centered ? 'mx-auto text-center' : ''} max-w-4xl ${className}`}>
       {pill && <Pill tone={pillTone}>{pill}</Pill>}
-      <Heading className={`${pill ? 'mt-4' : ''} font-extrabold leading-[1.08] tracking-[-0.025em] text-ink ${size}`}>
+      <Heading className={`${pill ? 'mt-6' : ''} text-ink ${size}`}>
         {title}
       </Heading>
       {subtitle && (
-        <p className={`mt-4 text-lg leading-relaxed text-muted ${centered ? 'mx-auto' : ''} max-w-2xl`}>
+        <p className={`mt-6 text-xl leading-relaxed text-muted lg:text-[22px] ${centered ? 'mx-auto' : ''} max-w-3xl`}>
           {subtitle}
         </p>
       )}

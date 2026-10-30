@@ -41,17 +41,17 @@ function DeclaracionValores() {
           description="Principios que guían nuestras decisiones, relaciones y forma de acompañar a la comunidad."
         />
 
-        <section className="mx-auto max-w-[1200px] px-5 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 lg:px-16">
           <Card tone="navy" className="p-8 sm:p-10">
             <LuHeart aria-hidden="true" className="h-9 w-9 fill-red text-red" />
-            <h2 className="mt-5 text-2xl font-extrabold tracking-[-0.02em] sm:text-3xl">Nuestro compromiso</h2>
+            <h2 className="mt-5 text-2xl font-medium tracking-[-0.02em] sm:text-3xl">Nuestro compromiso</h2>
             <p className="mt-3 max-w-3xl text-[17px] leading-relaxed text-[#c9d3f0]">
               En Asovedra entendemos los valores como una guía práctica para actuar con cercanía, respeto, responsabilidad y vocación de servicio.
             </p>
           </Card>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-16 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-16 lg:px-16">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {valores.map((valor) => {
               const Icon = valor.icon
@@ -69,7 +69,7 @@ function DeclaracionValores() {
         </section>
 
         <section className="mt-20 bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <SectionHeader pill="Cómo actuamos" pillTone="white" title="Principios de actuación" />
             <ul className="mt-8 flex flex-wrap gap-3">
               {principios.map((principio) => (
@@ -81,13 +81,13 @@ function DeclaracionValores() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <Card className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:p-10">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-pill-yellow text-[#7a5a00]">
               <LuFileText aria-hidden="true" className="h-7 w-7" />
             </span>
             <div className="flex-1">
-              <h2 className="text-2xl font-extrabold tracking-[-0.02em] text-ink">Consulta la declaración completa</h2>
+              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink">Consulta la declaración completa</h2>
               <p className="mt-2 text-[17px] text-muted">
                 Puedes descargar el documento íntegro con el detalle de nuestros principios y compromisos institucionales.
               </p>

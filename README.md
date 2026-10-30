@@ -108,7 +108,7 @@ asovedra.org/
 - React Router gestiona la navegacion del sitio y las rutas internas.
 - Framer Motion se utiliza para transiciones entre paginas.
 - El componente `SEO` usa los metadatos nativos de React 19 (`<title>`, `<meta>`) para cada página.
-- El sistema visual «Cercana» vive en `src/styles/styles.css` (`@theme`: colores `navy`, `yellow`, `red`, `ink`, `cream`, `sand`…) y en los componentes de `src/components/ui`. Diseño de referencia: `docs/superpowers/specs/2026-10-25-rebranding-cercana-design.md`.
+- El sistema visual vive en `src/styles/styles.css` (`@theme`: colores `navy`, `yellow`, `red`, `ink`, `paper`…; clases `big-headline`, `section-title`, `lead-text`) y en los componentes de `src/components/ui`. Estructura inspirada en north2.net con los colores de ASOVEDRA. Tipografía Figtree autoalojada en `public/fonts` (licencia OFL).
 - Los enlaces de pago de Stripe se configuran en `src/constants/colabora.js`; un enlace vacío oculta su botón.
 - Tailwind CSS soporta la capa visual utilitaria del frontend.
 - Los contenidos de noticias y estadisticas se mantienen actualmente en constantes locales dentro de `src/constants`.

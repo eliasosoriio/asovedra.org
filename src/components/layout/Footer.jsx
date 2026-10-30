@@ -1,15 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaFacebookF, FaInstagram, FaTelegramPlane } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import { CONTACT, currentYear } from '../../constants/site'
-
-const socials = [
-  { label: 'Facebook', href: 'https://facebook.com/asovedra', icon: FaFacebookF },
-  { label: 'Instagram', href: 'https://instagram.com/asovedra', icon: FaInstagram },
-  { label: 'X (Twitter)', href: 'https://twitter.com/asovedra', icon: FaXTwitter },
-  { label: 'Telegram', href: 'https://t.me/asovedra', icon: FaTelegramPlane }
-]
+import { CONTACT, currentYear, whatsappUrl } from '../../constants/site'
+import ArrowIcon from '../ui/ArrowIcon'
 
 const columns = [
   {
@@ -26,6 +18,7 @@ const columns = [
     links: [
       { label: 'Colabora con ASOVEDRA', to: '/colabora' },
       { label: 'Residencia 2027', to: '/residencia-2027' },
+      { label: 'Emergencia Venezuela', to: '/emergencia-terremoto-venezuela' },
       { label: 'Voluntariado', to: '/contacto' }
     ]
   }
@@ -38,74 +31,76 @@ const legalLinks = [
   { label: 'Accesibilidad', to: '/accesibilidad' }
 ]
 
-const linkClass = 'text-[#b8c0d6] transition-colors hover:text-white'
+const linkClass = 'text-white/80 transition-colors hover:text-white'
 
 function Footer() {
   return (
-    <footer className="rounded-t-[40px] bg-ink text-[15px] text-[#b8c0d6]">
-      <div className="mx-auto grid max-w-[1200px] gap-10 px-5 pb-14 pt-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] lg:px-10 lg:pt-[72px]">
-        <div>
-          <div className="flex items-center gap-3">
-            <img src="/favicon.png" alt="" className="h-10 w-auto" />
-            <span className="text-xl font-extrabold text-white">Asovedra</span>
-          </div>
-          <p className="mt-4 max-w-xs leading-relaxed">
-            Asociación de Venezolanos en Pontevedra. Sin ánimo de lucro, al servicio de la comunidad iberoamericana en Galicia.
-          </p>
-          <ul className="mt-6 flex gap-2.5" aria-label="Redes sociales">
-            {socials.map(({ label, href, icon }) => {
-              const Icon = icon
-              return (
-              <li key={label}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-white/[0.08] text-white transition-colors hover:bg-yellow hover:text-ink"
-                >
-                  <Icon aria-hidden="true" className="h-4 w-4" />
-                </a>
-              </li>
-              )
-            })}
-          </ul>
+    <footer className="bg-navy text-white">
+      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-24 lg:px-16 lg:pt-36">
+        <p className="text-xl text-white/80">¿Hablamos?</p>
+        <h2 className="section-title mt-2">Escríbenos</h2>
+        <a
+          href={`mailto:${CONTACT.email}`}
+          className="mt-8 inline-block break-all text-3xl font-medium underline decoration-1 underline-offset-[10px] transition-colors hover:text-yellow sm:text-5xl lg:text-[64px]"
+        >
+          {CONTACT.email}
+        </a>
+
+        <div className="mt-12 flex flex-wrap gap-3">
+          <a
+            href={whatsappUrl('Hola, necesito ayuda.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex min-h-16 items-center gap-6 rounded-full bg-white px-7 text-[17px] font-semibold text-ink shadow-pill"
+          >
+            WhatsApp {CONTACT.phoneDisplay}
+            <ArrowIcon />
+          </a>
+          <a
+            href={`tel:${CONTACT.phone}`}
+            className="inline-flex min-h-16 items-center rounded-full border border-white/60 px-7 text-[17px] font-semibold transition-colors hover:border-white"
+          >
+            Llamar
+          </a>
         </div>
 
-        {columns.map((column) => (
-          <div key={column.title}>
-            <h2 className="mb-4 text-[15px] font-bold text-white">{column.title}</h2>
-            <ul className="space-y-2.5">
-              {column.links.map((link) => (
-                <li key={link.label}>
-                  <Link to={link.to} className={linkClass}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
+        <div className="mt-20 grid gap-12 border-t border-white/20 pt-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h3 className="text-sm font-medium uppercase tracking-[0.06em] text-white/70">Oficina</h3>
+            <address className="mt-4 space-y-1 not-italic text-lg">
+              <p>{CONTACT.address}</p>
+              <p>{CONTACT.city}</p>
+            </address>
           </div>
-        ))}
-
-        <div>
-          <h2 className="mb-4 text-[15px] font-bold text-white">Contacto</h2>
-          <address className="space-y-2.5 not-italic">
-            <p>{CONTACT.address}<br />{CONTACT.city}</p>
-            <p><a href={`tel:${CONTACT.phone}`} className={linkClass}>{CONTACT.phoneDisplay}</a></p>
-            <p><a href={`mailto:${CONTACT.email}`} className={linkClass}>{CONTACT.email}</a></p>
-            <ul className="pt-1 text-sm">
+          <div>
+            <h3 className="text-sm font-medium uppercase tracking-[0.06em] text-white/70">Horario</h3>
+            <ul className="mt-4 space-y-1 text-lg">
               {CONTACT.hours.map((line) => <li key={line}>{line}</li>)}
             </ul>
-          </address>
+          </div>
+          {columns.map((column) => (
+            <div key={column.title}>
+              <h3 className="text-sm font-medium uppercase tracking-[0.06em] text-white/70">{column.title}</h3>
+              <ul className="mt-4 space-y-2 text-lg">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.to} className={linkClass}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-5 py-6 text-[13px] sm:flex-row sm:items-center sm:justify-between lg:px-10">
-          <span>© {currentYear()} ASOVEDRA · Asociación de Venezolanos en Pontevedra</span>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2">
+      <div className="border-t border-white/20">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-7 text-base text-white/80 sm:flex-row sm:items-center sm:justify-between lg:px-16 lg:pr-48">
+          <span>ASOVEDRA {currentYear()}© · Asociación de Venezolanos en Pontevedra</span>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {legalLinks.map((link) => (
               <li key={link.to}><Link to={link.to} className={linkClass}>{link.label}</Link></li>
             ))}
-            <li><Link to="/portal/login" className="text-[#7c86a3] transition-colors hover:text-white">Portal de empleados</Link></li>
+            <li><Link to="/portal/login" className={linkClass}>Portal de empleados</Link></li>
           </ul>
         </div>
       </div>

@@ -46,13 +46,13 @@ function Estatutos() {
           description="Documento que regula la organización, el funcionamiento interno y el buen gobierno de la asociación."
         />
 
-        <section className="mx-auto max-w-[1200px] px-5 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 lg:px-16">
           <Card className="grid gap-6 p-8 sm:p-10 md:grid-cols-[auto_1fr] md:items-start">
             <span className="grid h-14 w-14 place-items-center rounded-2xl bg-pill-blue text-navy">
               <LuScale aria-hidden="true" className="h-7 w-7" />
             </span>
             <div>
-              <h2 className="text-2xl font-extrabold tracking-[-0.02em] text-ink sm:text-3xl">Transparencia y normativa</h2>
+              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink sm:text-3xl">Transparencia y normativa</h2>
               <p className="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">
                 Los estatutos de Asovedra establecen nuestras bases organizativas, los derechos y obligaciones de las personas asociadas y los procedimientos que ordenan la toma de decisiones.
               </p>
@@ -63,7 +63,7 @@ function Estatutos() {
           </Card>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <SectionHeader
             pill="Contenido"
             title="Contenido de los estatutos"
@@ -92,11 +92,11 @@ function Estatutos() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <div className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
             <div className="rounded-[32px] bg-navy p-8 text-white sm:p-12">
               <LuFileText aria-hidden="true" className="h-10 w-10 text-yellow" />
-              <h2 className="mt-5 text-3xl font-extrabold tracking-[-0.025em]">Consulta nuestros estatutos</h2>
+              <h2 className="mt-5 text-3xl font-medium tracking-[-0.01em]">Consulta nuestros estatutos</h2>
               <p className="mt-3 max-w-xl text-[17px] text-[#c9d3f0]">
                 Descarga el documento completo en PDF para conocer el detalle del marco organizativo y normativo de la asociación.
               </p>
@@ -108,7 +108,7 @@ function Estatutos() {
               </div>
             </div>
             <Card className="flex flex-col p-8 sm:p-10">
-              <h2 className="text-2xl font-extrabold tracking-[-0.02em] text-ink">¿Tienes dudas sobre los estatutos?</h2>
+              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink">¿Tienes dudas sobre los estatutos?</h2>
               <p className="mt-3 text-[17px] leading-relaxed text-muted">
                 Si necesitas aclaraciones sobre cualquier aspecto del documento o sobre el funcionamiento de la asociación, podemos orientarte.
               </p>

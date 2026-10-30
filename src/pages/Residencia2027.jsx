@@ -46,7 +46,7 @@ function Residencia2027() {
       <main className="min-h-screen pb-24">
         <InternalPageHero eyebrow="Residencia 2027" pillTone="blue" title={RESIDENCIA.headline} />
 
-        <section className="mx-auto max-w-[1200px] px-5 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 lg:px-16">
           <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-body">
             <p>{RESIDENCIA.intro}</p>
             <p className="font-semibold text-ink">{RESIDENCIA.advance}</p>
@@ -56,7 +56,7 @@ function Residencia2027() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <SectionHeader title="¿A quién va dirigida?" />
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {audiences.map((item) => {
@@ -74,13 +74,13 @@ function Residencia2027() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <div className="rounded-[32px] bg-navy p-8 text-white sm:p-12">
-            <h2 className="text-3xl font-extrabold tracking-[-0.025em] sm:text-4xl">Cómo lo haremos</h2>
+            <h2 className="text-3xl font-medium tracking-[-0.01em] sm:text-4xl">Cómo lo haremos</h2>
             <ol className="mt-8 grid gap-6 md:grid-cols-3">
               {RESIDENCIA.steps.map((step, index) => (
                 <li key={step} className="rounded-[22px] border border-white/15 bg-white/[0.07] p-6">
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-yellow text-base font-extrabold text-ink">
+                  <span className="grid h-9 w-9 place-items-center rounded-full bg-yellow text-base font-medium text-ink">
                     {index + 1}
                   </span>
                   <p className="mt-4 text-[17px] leading-relaxed text-[#dfe6fa]">{step}</p>
@@ -90,7 +90,7 @@ function Residencia2027() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <div className="flex gap-4 rounded-[24px] border border-[#f3d27a] bg-pill-yellow p-7 sm:p-8">
             <LuCircleAlert aria-hidden="true" className="mt-1 h-6 w-6 shrink-0 text-[#7a5a00]" />
             <div className="space-y-3 text-[16px] leading-relaxed text-[#4a3a00]">
@@ -106,9 +106,9 @@ function Residencia2027() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1200px] px-5 pt-20 lg:px-10">
+        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
           <div className="rounded-[28px] bg-sand p-8 sm:p-12">
-            <h2 className="max-w-2xl text-3xl font-extrabold tracking-[-0.025em] text-ink">
+            <h2 className="max-w-2xl text-3xl font-medium tracking-[-0.01em] text-ink">
               Organicemos tu revisión con tiempo
             </h2>
             <p className="mt-3 max-w-2xl text-[17px] text-muted">{RESIDENCIA.advance}</p>

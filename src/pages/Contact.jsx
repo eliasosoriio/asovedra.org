@@ -84,9 +84,9 @@ function Contact() {
           description="Respondemos consultas, orientamos procesos y facilitamos el acceso a los servicios de Asovedra."
         />
 
-        <section className="mx-auto grid max-w-[1200px] gap-5 px-5 pb-20 lg:grid-cols-[1fr_1.15fr] lg:px-10">
+        <section className="mx-auto grid max-w-[1440px] gap-5 px-6 pb-20 lg:grid-cols-[1fr_1.15fr] lg:px-16">
           <Card tone="navy" className="p-8 sm:p-10">
-            <h2 className="text-2xl font-extrabold tracking-[-0.02em] sm:text-3xl">Habla con nosotros</h2>
+            <h2 className="text-2xl font-medium tracking-[-0.02em] sm:text-3xl">Habla con nosotros</h2>
             <p className="mt-3 text-[17px] leading-relaxed text-[#c9d3f0]">
               La forma más rápida de contactar con un miembro del equipo es llamando o escribiendo directamente.
               Te orientaremos y, si corresponde, coordinaremos una cita presencial con el profesional adecuado.
@@ -94,7 +94,7 @@ function Contact() {
             <ol className="mt-7 space-y-4">
               {steps.map((step, index) => (
                 <li key={step} className="flex gap-3 text-[15px] text-[#dfe6fa]">
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-sm font-extrabold text-ink">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-yellow text-sm font-medium text-ink">
                     {index + 1}
                   </span>
                   <span>{step}</span>
@@ -155,7 +155,7 @@ function Contact() {
         </section>
 
         <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <SectionHeader
               align="center"
               pill="Dudas"
