@@ -66,8 +66,8 @@ function News() {
           description="Seguimiento de iniciativas, colaboraciones y temas de interés para la comunidad iberoamericana."
         />
 
-        <section className="px-6 pb-24 lg:px-16">
-          <div id="listado-noticias" className="mx-auto max-w-[1440px]" ref={newsContainerRef}>
+        <section className="pb-24">
+          <div id="listado-noticias" className="mx-auto max-w-[1440px] px-6 lg:px-16" ref={newsContainerRef}>
             <div className="grid gap-5">
               {currentNews.map((news, index) => (
                 <article

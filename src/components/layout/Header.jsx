@@ -88,7 +88,7 @@ export function Header() {
   return (
     <header ref={headerRef} className="pointer-events-none fixed left-0 top-0 z-50 w-full">
       <div
-        className={`relative z-20 mx-auto flex max-w-[1440px] items-center justify-between px-4 py-[18px] transition-all duration-1000 motion-reduce:transition-none sm:px-6 lg:px-16 lg:py-9 ${
+        className={`relative z-20 mx-auto flex max-w-[1440px] items-center justify-between px-6 py-[18px] transition-all duration-1000 motion-reduce:transition-none lg:px-16 lg:py-9 ${
           shown ? 'translate-y-0 opacity-100' : '-translate-y-1/2 opacity-0'
         }`}
       >

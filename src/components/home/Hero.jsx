@@ -66,10 +66,14 @@ function Hero() {
       {/* Dos tercios para el titular y un tercio, a toda altura, para las últimas noticias */}
       <div className="mx-auto grid max-w-[1440px] px-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-12 lg:px-16">
         <div className="flex flex-col justify-center">
-          {/* Nombre de la asociación, a juego con la fila de cifras de debajo */}
-          <p className="mb-10 flex items-center gap-3 border-b border-line pb-7 text-base font-medium text-ink lg:mb-12">
-            <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-navy"></span>
-            <span><span className="font-semibold">ASOVEDRA</span> · Asociación de Venezolanos en Pontevedra</span>
+          {/* Nombre de la asociación con una franja tricolor (amarillo, azul y rojo del logo y la bandera) */}
+          <p className="mb-8 flex items-center gap-4 lg:mb-10">
+            <span aria-hidden="true" className="flex h-[5px] w-14 shrink-0 overflow-hidden rounded-full">
+              <span className="flex-1 bg-yellow"></span>
+              <span className="flex-1 bg-navy"></span>
+              <span className="flex-1 bg-red"></span>
+            </span>
+            <span className="text-[15px] font-semibold leading-snug tracking-[-0.005em] text-ink sm:text-[17px] lg:text-[19px]"><span className="font-bold text-navy">ASOVEDRA</span> · Asociación de Venezolanos en Pontevedra</span>
           </p>
           <h1 aria-label={LABEL} className="big-headline hero-headline flex flex-col text-ink">
             <span aria-hidden="true">Te acompañamos en</span>

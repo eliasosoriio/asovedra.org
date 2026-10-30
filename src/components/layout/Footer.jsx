@@ -94,7 +94,7 @@ function Footer() {
       </div>
 
       <div className="border-t border-white/20">
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-7 text-base text-white/80 sm:flex-row sm:items-center sm:justify-between lg:px-16 lg:pr-48">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-7 text-base text-white/80 sm:flex-row sm:items-center sm:justify-between lg:px-16 lg:pb-24">
           <span>ASOVEDRA {currentYear()}© · Asociación de Venezolanos en Pontevedra</span>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {legalLinks.map((link) => (

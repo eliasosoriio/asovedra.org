@@ -163,7 +163,7 @@ function Contact() {
               title="Preguntas frecuentes"
               subtitle="Respuestas rápidas a algunas dudas habituales antes de contactarnos."
             />
-            <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-2">
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
               {faqItems.map((item) => (
                 <Card key={item.question} className="p-7">
                   <h3 className="text-lg font-bold text-ink">{item.question}</h3>

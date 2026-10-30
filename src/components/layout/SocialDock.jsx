@@ -55,7 +55,7 @@ function SocialDock() {
         aria-label="Volver arriba"
         tabIndex={showTop ? 0 : -1}
         aria-hidden={!showTop}
-        className={`${circle} bg-navy text-white transition-all duration-300 hover:bg-navy-deep motion-reduce:transition-none ${
+        className={`${circle} border-2 border-white bg-navy text-white transition-all duration-300 hover:bg-navy-deep motion-reduce:transition-none ${
           showTop ? 'pointer-events-auto translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
         }`}
       >

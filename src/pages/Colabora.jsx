@@ -23,7 +23,7 @@ function Colabora() {
         />
 
         <section className="bg-[#F5F5F7] py-20 lg:py-24">
-          <div className="mx-auto max-w-[1200px] px-6 lg:px-16">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <ColaboraOptions />
           </div>
         </section>

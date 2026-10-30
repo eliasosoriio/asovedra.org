@@ -357,8 +357,8 @@ function PlanIgualdad() {
           </div>
         </section>
 
-        <section className="px-6 pb-20 lg:px-16 lg:pb-24">
-          <div className="mx-auto max-w-[1440px]">
+        <section className="pb-20 lg:pb-24">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <h2 className="text-3xl font-medium text-ink lg:text-4xl">Objetivos estratégicos</h2>
               <p className="mt-4 text-base leading-7 text-muted lg:text-lg">Los pilares fundamentales del Plan de Igualdad.</p>
@@ -377,8 +377,8 @@ function PlanIgualdad() {
           </div>
         </section>
 
-        <section className="px-6 pb-20 lg:px-16 lg:pb-24">
-          <div className="mx-auto max-w-[1440px] space-y-5">
+        <section className="pb-20 lg:pb-24">
+          <div className="mx-auto max-w-[1440px] space-y-5 px-6 lg:px-16">
             {ejes.map((eje) => (
               <ContentSurface key={eje.numero} className="p-6 sm:p-8">
                 <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
@@ -402,8 +402,8 @@ function PlanIgualdad() {
           </div>
         </section>
 
-        <section className="px-6 pb-20 lg:px-16 lg:pb-24">
-          <div className="mx-auto max-w-[1440px] grid gap-6 lg:grid-cols-[1fr_0.95fr]">
+        <section className="pb-20 lg:pb-24">
+          <div className="mx-auto grid max-w-[1440px] gap-6 px-6 lg:grid-cols-[1fr_0.95fr] lg:px-16">
             <ContentSurface className="p-8 lg:p-10">
               <h2 className="text-3xl font-medium text-ink">Nuestros compromisos</h2>
               <div className="mt-6 grid gap-4">

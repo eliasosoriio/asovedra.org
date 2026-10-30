@@ -24,7 +24,7 @@ function Home() {
         <ProgramsStack />
 
         <section aria-labelledby="colabora" className="py-24 lg:py-32">
-          <div className="mx-auto max-w-[1200px] px-6 lg:px-16">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
             <div className="mx-auto max-w-[760px] text-center">
               <h2 id="colabora" className="text-[40px] font-semibold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[56px]">
                 Colabora.
