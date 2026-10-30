@@ -25,6 +25,18 @@ const CLOSED = 650
 function Hero() {
   const reduceMotion = useReducedMotion()
   const heroRef = useRef(null)
+  // El vídeo de fondo solo se reproduce si no se ha pedido menos movimiento ni ahorro de datos
+  const videoRef = useRef(null)
+  const [playVideo, setPlayVideo] = useState(false)
+  useEffect(() => {
+    setPlayVideo(!reduceMotion && !navigator.connection?.saveData)
+  }, [reduceMotion])
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    if (playVideo) video.play().catch(() => { /* el navegador puede bloquearlo; queda la imagen fija */ })
+    else video.pause()
+  }, [playVideo])
   const wrapperRef = useRef(null)
   const measureRefs = useRef([])
   const startedRef = useRef(false)
@@ -79,9 +91,24 @@ function Hero() {
   const width = showWord && sizes.widths[index] ? sizes.widths[index] + pad * 2 : sizes.line
 
   return (
-    <section ref={heroRef} className="flex min-h-[100svh] items-center overflow-hidden bg-navy pb-6 pt-32 text-white lg:pb-5 lg:pt-[118px]">
+    <section ref={heroRef} className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy pb-6 pt-32 text-white lg:pb-5 lg:pt-[118px]">
+      {/* Vídeo de fondo, como en la web anterior, bajo un velo navy para que todo se lea bien */}
+      <video
+        ref={videoRef}
+        aria-hidden="true"
+        tabIndex={-1}
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        src="/video/video_hero.mp4"
+        autoPlay={playVideo}
+        muted
+        loop
+        playsInline
+        preload={playVideo ? 'auto' : 'metadata'}
+      />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,30,119,0.78)_0%,rgba(0,30,119,0.84)_55%,rgba(0,30,119,0.93)_100%)]"></div>
+
       {/* Dos tercios para el titular y un tercio para las últimas noticias; debajo, las cifras a todo el ancho */}
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)] px-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-12 lg:px-16">
+      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)] px-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-12 lg:px-16">
         <div className="flex flex-col justify-center">
           {/* «ASOVEDRA» en grande, lo primero bajo la cabecera; ocupa el ancho de su columna (se mide en cqw) */}
           <p className="@container mb-10 lg:mb-8">
