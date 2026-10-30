@@ -1,19 +1,15 @@
 import React from 'react'
 import InternalPageHero from './InternalPageHero'
-import ContentSurface from './ContentSurface'
 
+// Documento legal: cabecera navy y texto en blanco con un ancho de lectura cómodo
 function LegalDocumentLayout({ eyebrow, title, description, children }) {
   return (
-    <main className="min-h-screen pb-20 lg:pb-24">
-      <InternalPageHero eyebrow={eyebrow} title={title} description={description} pillTone="blue" />
+    <main className="min-h-screen">
+      <InternalPageHero eyebrow={eyebrow} title={title} description={description} />
 
-      <section>
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
-          <ContentSurface className="p-7 md:p-12">
-            <div className="legal-prose max-w-[860px]">
-              {children}
-            </div>
-          </ContentSurface>
+      <section className="mx-auto max-w-[1440px] px-6 pb-24 lg:px-16 lg:pb-32">
+        <div className="legal-prose max-w-[860px] text-[17px] leading-relaxed">
+          {children}
         </div>
       </section>
     </main>

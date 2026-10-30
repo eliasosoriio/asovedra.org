@@ -1,19 +1,21 @@
 import React from 'react'
-import Pill from './Pill'
 
-function SectionHeader({ pill, pillTone = 'outline', title, subtitle, align = 'left', as = 'h2', className = '' }) {
+// Titular de sección al estilo de la portada: antetítulo en navy, título semibold y subtítulo gris.
+// `pill` se mantiene como nombre de la prop del antetítulo por compatibilidad con las páginas.
+function SectionHeader({ pill, title, subtitle, align = 'left', as = 'h2', onDark = false, className = '' }) {
   const Heading = as
   const centered = align === 'center'
-  const size = as === 'h1' ? 'big-headline' : 'text-4xl sm:text-5xl lg:text-[64px] font-medium leading-[1.15] tracking-[-0.01em]'
 
   return (
     <div className={`${centered ? 'mx-auto text-center' : ''} max-w-4xl ${className}`}>
-      {pill && <Pill tone={pillTone}>{pill}</Pill>}
-      <Heading className={`${pill ? 'mt-6' : ''} text-ink ${size}`}>
+      {pill && <p className={`text-[17px] font-semibold ${onDark ? 'text-yellow' : 'text-navy'}`}>{pill}</p>}
+      <Heading
+        className={`${pill ? 'mt-3' : ''} text-[34px] font-semibold leading-[1.08] tracking-[-0.02em] sm:text-[44px] lg:text-[56px] ${onDark ? 'text-white' : 'text-ink'}`}
+      >
         {title}
       </Heading>
       {subtitle && (
-        <p className={`mt-6 text-xl leading-relaxed text-muted lg:text-[22px] ${centered ? 'mx-auto' : ''} max-w-3xl`}>
+        <p className={`mt-5 max-w-3xl text-[19px] leading-relaxed lg:text-[21px] ${centered ? 'mx-auto' : ''} ${onDark ? 'text-white/80' : 'text-muted'}`}>
           {subtitle}
         </p>
       )}

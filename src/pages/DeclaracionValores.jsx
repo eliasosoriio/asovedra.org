@@ -34,46 +34,39 @@ function DeclaracionValores() {
         canonical="/declaracion-valores"
       />
 
-      <main className="min-h-screen pb-24">
+      <main className="min-h-screen">
         <InternalPageHero
           eyebrow="Principios"
           title="Declaración de valores"
           description="Principios que guían nuestras decisiones, relaciones y forma de acompañar a la comunidad."
         />
 
-        <section className="mx-auto max-w-[1440px] px-6 lg:px-16">
-          <Card tone="navy" className="p-8 sm:p-10">
-            <LuHeart aria-hidden="true" className="h-9 w-9 fill-red text-red" />
-            <h2 className="mt-5 text-2xl font-medium tracking-[-0.02em] sm:text-3xl">Nuestro compromiso</h2>
-            <p className="mt-3 max-w-3xl text-[17px] leading-relaxed text-[#c9d3f0]">
-              En Asovedra entendemos los valores como una guía práctica para actuar con cercanía, respeto, responsabilidad y vocación de servicio.
-            </p>
-          </Card>
-        </section>
-
-        <section className="mx-auto max-w-[1440px] px-6 pt-16 lg:px-16">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Compromiso y valores: primera sección blanca, la cabecera ya deja el margen superior */}
+        <section className="mx-auto max-w-[1440px] px-6 pb-24 lg:px-16 lg:pb-32">
+          <SectionHeader
+            title="Nuestro compromiso"
+            subtitle="En Asovedra entendemos los valores como una guía práctica para actuar con cercanía, respeto, responsabilidad y vocación de servicio."
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {valores.map((valor) => {
               const Icon = valor.icon
               return (
-                <Card key={valor.titulo} className="p-7">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-pill-blue text-navy">
-                    <Icon aria-hidden="true" className="h-6 w-6" />
-                  </span>
-                  <h3 className="mt-5 text-xl font-bold text-ink">{valor.titulo}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{valor.descripcion}</p>
+                <Card key={valor.titulo} className="p-8 lg:p-9">
+                  <Icon aria-hidden="true" className="h-9 w-9 text-navy" />
+                  <h3 className="mt-8 text-[24px] font-semibold tracking-[-0.01em] text-ink">{valor.titulo}</h3>
+                  <p className="mt-3 text-[17px] leading-snug text-muted">{valor.descripcion}</p>
                 </Card>
               )
             })}
           </div>
         </section>
 
-        <section className="mt-20 bg-sand py-20">
+        <section className="bg-cloud py-24 lg:py-32">
           <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
-            <SectionHeader pill="Cómo actuamos" pillTone="white" title="Principios de actuación" />
-            <ul className="mt-8 flex flex-wrap gap-3">
+            <SectionHeader pill="Cómo actuamos" title="Principios de actuación" />
+            <ul className="mt-14 flex flex-wrap gap-3 lg:mt-16">
               {principios.map((principio) => (
-                <li key={principio} className="rounded-full bg-white px-5 py-3 text-base font-semibold text-ink ring-1 ring-line">
+                <li key={principio} className="rounded-full bg-white px-6 py-3 text-[17px] font-semibold text-ink">
                   {principio}
                 </li>
               ))}
@@ -81,18 +74,23 @@ function DeclaracionValores() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
-          <Card className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:p-10">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-pill-yellow text-[#7a5a00]">
-              <LuFileText aria-hidden="true" className="h-7 w-7" />
-            </span>
-            <div className="flex-1">
-              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink">Consulta la declaración completa</h2>
-              <p className="mt-2 text-[17px] text-muted">
-                Puedes descargar el documento íntegro con el detalle de nuestros principios y compromisos institucionales.
-              </p>
-            </div>
-            <Button href="https://asovedra.org/assets/docs/declaracion_valores_asovedra.pdf" icon={<LuDownload />}>
+        {/* Llamada final: descarga del documento completo */}
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
+          <Card as="div" tone="navy" className="flex flex-col items-center px-8 py-14 text-center lg:px-16 lg:py-20">
+            <LuFileText aria-hidden="true" className="h-9 w-9 text-yellow" />
+            <SectionHeader
+              onDark
+              align="center"
+              className="mt-8"
+              title="Consulta la declaración completa"
+              subtitle="Puedes descargar el documento íntegro con el detalle de nuestros principios y compromisos institucionales."
+            />
+            <Button
+              href="https://asovedra.org/assets/docs/declaracion_valores_asovedra.pdf"
+              variant="yellow"
+              icon={<LuDownload />}
+              className="mt-10"
+            >
               Descargar PDF
             </Button>
           </Card>

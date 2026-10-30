@@ -1,8 +1,9 @@
 import React from 'react'
 
-function ContentSurface({ children, className = '' }) {
+// Superficie de contenido plana (gris claro sobre el fondo blanco de la página)
+function ContentSurface({ children, tone = 'grey', className = '' }) {
   return (
-    <div className={`rounded-[20px] bg-white shadow-[0_20px_45px_-30px_rgba(0,0,0,0.25)] ${className}`}>
+    <div className={`rounded-[28px] ${tone === 'white' ? 'bg-white' : 'bg-cloud'} ${className}`}>
       {children}
     </div>
   )

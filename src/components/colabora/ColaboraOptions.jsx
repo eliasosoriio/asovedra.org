@@ -59,7 +59,7 @@ function OptionCard({ option, links, surface }) {
 
 // `tone`: «white» (tarjetas blancas sobre fondo gris) o «grey» (tarjetas grises sobre fondo blanco)
 function ColaboraOptions({ links = COLABORA_LINKS, tone = 'white' }) {
-  const surface = tone === 'grey' ? 'bg-[#F5F5F7]' : 'bg-white'
+  const surface = tone === 'grey' ? 'bg-cloud' : 'bg-white'
   const options = resolveColaboraOptions(undefined, links)
   const anyPayment = options.some((option) => option.href)
   const renovacion = safeLink(links.renovacion)

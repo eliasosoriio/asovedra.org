@@ -18,7 +18,7 @@ function PoliticaPrivacidad() {
       >
             <div className="space-y-8">
               <div>
-                <h2 className="mb-4 text-2xl font-bold text-ink">Política de Privacidad (LOPD y RGPD)</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Política de Privacidad (LOPD y RGPD)</h2>
                 <p className="mb-4 leading-relaxed text-muted">
                   En esta Política de Privacidad te explicamos cómo recopilamos, utilizamos, compartimos y protegemos tu información de carácter personal a raíz de la contratación y uso que haces de nuestros productos, servicios y/o de nuestro Sitio Web.
                 </p>
@@ -28,7 +28,7 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">¿Quién recopila tus datos?</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">¿Quién recopila tus datos?</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   Asovedra.org, cuyo titular del sitio web es Asociación de Venezolanos en Pontevedra, con domicilio en Pontevedra, España (en adelante "la Asociación").
                 </p>
@@ -41,66 +41,66 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">¿Qué datos personales tenemos?</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">¿Qué datos personales tenemos?</h2>
                 <p className="text-muted leading-relaxed">
                   <strong>Datos que tú nos has facilitado:</strong> Los datos personales incluyen información como el correo electrónico, direcciones postales particulares, teléfono móvil, nombres de usuario, preferencias personales, contenido generado por el usuario e información de contacto, entre otros. También puede incluir identificadores numéricos como la dirección IP de su ordenador o la información obtenida a través de cookies.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Finalidad de tener datos</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Finalidad de tener datos</h2>
                 <p className="text-muted leading-relaxed">
                   Utilizamos tus datos para llevar a cabo los servicios de apoyo y orientación que ofrecemos a la comunidad iberoamericana, para enviarte notificaciones con información sobre nuestros servicios, eventos y actividades. También, para enviarte información y emails sobre nuestros programas, así como ofertas de formación y oportunidades laborales.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">¿Qué derechos tienes?</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">¿Qué derechos tienes?</h2>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho de información:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho de información:</h3>
                     <p className="text-muted leading-relaxed">
                       Tienes derecho a recibir información transparente y fácil de entender sobre la forma en que usamos tus datos personales.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho de acceso:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho de acceso:</h3>
                     <p className="text-muted leading-relaxed">
                       Tienes derecho a la confirmación de si se están tratando tus datos o no. Puedes acceder a tus datos personales, poniéndote en contacto con nosotros en: info@asovedra.org
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho de rectificación:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho de rectificación:</h3>
                     <p className="text-muted leading-relaxed">
                       Tienes derecho a hacer que se rectifiquen tus datos personales cuando sean inexactos o hayan dejado de ser válidos o a hacer que se completen cuando sean incompletos. Puedes solicitarlo enviándonos un email a info@asovedra.org.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho de supresión:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho de supresión:</h3>
                     <p className="text-muted leading-relaxed">
                       También conocido como derecho al olvido. En determinados casos, te corresponde el derecho a hacer que tus datos personales sean eliminados, aunque podremos tener motivos legales o legítimos para conservarlos.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho de oposición al marketing directo:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho de oposición al marketing directo:</h3>
                     <p className="text-muted leading-relaxed">
                       Puedes darte de baja de nuestras comunicaciones de marketing directo en cualquier momento. Para hacerlo, ponte en contacto con nosotros en info@asovedra.org.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho de portabilidad de los datos:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho de portabilidad de los datos:</h3>
                     <p className="text-muted leading-relaxed">
                       Tienes derecho a recibir tus datos personales que nos hayas proporcionado, en formato estructurado y lectura mecánica. Tras ello podrás solicitar el traspaso de estos datos cuando el tratamiento esté basado en el consentimiento. Para solicitar el derecho de portabilidad deberás ponerte en contacto con nosotros escribiendo a info@asovedra.org.
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">Derecho a la desactivación de cookies:</h3>
+                    <h3 className="mb-2 text-[19px] font-semibold text-ink">Derecho a la desactivación de cookies:</h3>
                     <p className="text-muted leading-relaxed">
                       Puedes gestionar las cookies a través de la configuración de tu navegador.
                     </p>
@@ -109,19 +109,19 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">¿Cuánto tiempo conservamos datos?</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">¿Cuánto tiempo conservamos datos?</h2>
                 <p className="text-muted leading-relaxed">
                   Conservaremos tus datos el tiempo necesario que dure la actividad para la cual recolectamos tus datos en un principio, cumpliendo siempre con la normativa vigente de protección de datos.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Datos Identificativos</h2>
-                <div className="rounded-2xl border border-line bg-cream p-6">
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Datos Identificativos</h2>
+                <div className="rounded-[28px] bg-cloud p-8 lg:p-9">
                   <p className="mb-4 leading-relaxed text-muted">
                     En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los siguientes datos:
                   </p>
-                  <ul className="space-y-2 text-muted">
+                  <ul className="list-none space-y-2 pl-0 text-muted">
                     <li><strong>Titular:</strong> Asociación de Venezolanos en Pontevedra (ASOVEDRA)</li>
                     <li><strong>Domicilio:</strong> Rúa Sor Lucía 4, Oficina 50, 36002 Pontevedra, España</li>
                     <li><strong>Correo electrónico de contacto:</strong> info@asovedra.org</li>
@@ -131,7 +131,7 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Protección de Datos</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Protección de Datos</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   La Asociación cumple con las directrices de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, el RGPD y demás normativa vigente en cada momento, y vela por garantizar un correcto uso y tratamiento de los datos personales del usuario.
                 </p>
@@ -144,7 +144,7 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Información Personal</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Información Personal</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   Cuando te unes a nuestra lista de correo, creas una cuenta o solicitas nuestros servicios a través de nuestro sitio, tu información personal es recogida y almacenada. Los datos personales que recopilamos incluyen (pero no está limitado a) tu nombre completo, dirección, número de teléfono y dirección de correo electrónico.
                 </p>
@@ -154,14 +154,14 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Información No Identificable</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Información No Identificable</h2>
                 <p className="text-muted leading-relaxed">
                   La información no identificable son porciones individuales de tu información personal que no puede ser vinculada a ti por sí mismas, por ejemplo, el código postal o ciudad. La Asociación puede utilizar la información no identificable con fines estadísticos para mejorar, en última instancia, tu experiencia en nuestro sitio web. Podemos combinar tu información no identificable con tu información personal para proporcionarte servicios personalizados o hacer frente a tus preguntas.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Uso del Portal</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Uso del Portal</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   Asovedra.org proporciona el acceso a multitud de informaciones, servicios, programas o datos (en adelante, "los contenidos") en Internet pertenecientes a la Asociación a los que el USUARIO pueda tener acceso. El USUARIO asume la responsabilidad del uso del portal.
                 </p>
@@ -171,24 +171,24 @@ function PoliticaPrivacidad() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Modificaciones</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Modificaciones</h2>
                 <p className="text-muted leading-relaxed">
                   La Asociación se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en esta Política de Privacidad. La vigencia de las citadas condiciones irá en función de su exposición y estarán vigentes hasta que sean modificadas por otras debidamente publicadas.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">Legislación Aplicable y Jurisdicción</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">Legislación Aplicable y Jurisdicción</h2>
                 <p className="text-muted leading-relaxed">
                   La relación entre la Asociación y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Pontevedra.
                 </p>
               </div>
 
               <div className="border-t border-line pt-6">
-                <p className="text-sm text-muted">
+                <p className="text-[15px] text-muted">
                   Última actualización: Octubre 2025
                 </p>
-                <p className="mt-2 text-sm text-muted">
+                <p className="mt-2 text-[15px] text-muted">
                   Para cualquier consulta sobre esta política de privacidad, contacta con nosotros en: info@asovedra.org
                 </p>
               </div>

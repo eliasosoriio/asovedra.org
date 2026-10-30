@@ -12,7 +12,6 @@ import {
 import SEO from '../components/SEO'
 import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
-import Pill from '../components/ui/Pill'
 import SectionHeader from '../components/ui/SectionHeader'
 import { COLABORA_LINKS, safeLink } from '../constants/colabora'
 
@@ -108,9 +107,9 @@ const confidentiality = [
   { title: 'Atención según disponibilidad', text: 'Completar el formulario no garantiza atención inmediata; permite organizarla de forma responsable.' }
 ]
 
-function FormButton({ children }) {
+function FormButton({ variant = 'navy', children }) {
   return (
-    <Button href={FORM_URL} variant="navy" size="lg" icon={<LuArrowRight />}>
+    <Button href={FORM_URL} variant={variant} size="lg" icon={<LuArrowRight />}>
       {children}
     </Button>
   )
@@ -127,25 +126,26 @@ function EmergenciaVenezuela() {
       />
 
       <main className="min-h-screen">
-        <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-36 lg:px-16 lg:pb-24 lg:pt-[190px]">
-          <div className="lg:pl-[72px]">
-            <Pill tone="red">
-              <LuTriangleAlert aria-hidden="true" />
+        {/* Cabecera navy como InternalPageHero; el rojo queda solo en la etiqueta de emergencia */}
+        <section className="bg-navy text-white">
+          <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-36 lg:px-16 lg:pb-24 lg:pt-[170px]">
+            <p className="inline-flex items-center gap-2 rounded-full bg-red px-4 py-1.5 text-[15px] font-semibold text-white">
+              <LuTriangleAlert aria-hidden="true" className="h-4 w-4" />
               Emergencia · Terremoto en Venezuela
-            </Pill>
-            <h1 className="big-headline mt-6 max-w-6xl text-ink">
+            </p>
+            <h1 className="mt-6 max-w-5xl text-[40px] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]">
               No tienes que afrontar este momento en soledad
             </h1>
-            <p className="mt-8 max-w-3xl text-xl leading-relaxed text-ink lg:text-[22px]">
-              El terremoto ocurrido en Venezuela el <strong className="text-ink">24 de junio de 2026</strong> ha dejado
+            <p className="mt-6 max-w-3xl text-[19px] leading-relaxed text-white/80 lg:text-[22px]">
+              El terremoto ocurrido en Venezuela el <strong className="font-semibold text-white">24 de junio de 2026</strong> ha dejado
               miedo, incertidumbre y una profunda preocupación. Asovedra pone a tu disposición una red de
               profesionales para ofrecerte orientación y acompañamiento emocional, de forma gratuita y confidencial.
             </p>
-            <div className="mt-8">
-              <FormButton>Solicitar apoyo psicológico</FormButton>
+            <div className="mt-10">
+              <FormButton variant="yellow">Solicitar apoyo psicológico</FormButton>
             </div>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted">
-              Completarás la <strong className="text-ink">Escala de Triaje Psicológico ante Desastres Naturales (ETP-DN)</strong>,
+            <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-white/80">
+              Completarás la <strong className="font-semibold text-white">Escala de Triaje Psicológico ante Desastres Naturales (ETP-DN)</strong>,
               un breve formulario de orientación inicial que ayuda a valorar el impacto emocional y psicológico y a
               clasificar las necesidades de atención. Servicio sujeto a disponibilidad profesional y tus respuestas se
               tratan con estricta confidencialidad.
@@ -153,43 +153,41 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-[1440px] gap-10 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-16">
+        <section className="mx-auto grid max-w-[1440px] items-center gap-10 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-16 lg:py-32">
           <div>
             <SectionHeader
               title="Lo que estás sintiendo también importa"
               subtitle="Después de una experiencia así pueden aparecer miedo, tristeza, angustia, insomnio, irritabilidad, sensación de peligro o preocupación constante por las personas cercanas. Estas reacciones también pueden afectar a quienes viven la emergencia desde la distancia."
             />
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="mt-8 flex flex-wrap gap-2">
               {reactions.map((reaction) => (
-                <li key={reaction} className="rounded-full bg-pill-red px-4 py-2 text-sm font-semibold text-[#a10a22]">
+                <li key={reaction} className="rounded-full bg-cloud px-4 py-2 text-[15px] font-semibold text-ink">
                   {reaction}
                 </li>
               ))}
             </ul>
           </div>
-          <blockquote className="flex items-center rounded-[28px] bg-navy p-8 sm:p-10">
-            <p className="text-xl font-semibold leading-8 text-white">
+          <Card as="blockquote" tone="navy" className="p-8 lg:p-10">
+            <p className="text-[24px] font-semibold leading-snug tracking-[-0.01em] text-white lg:text-[28px]">
               «Pedir apoyo no significa que seas débil. Significa que no tienes que cargar con todo en soledad.»
             </p>
-          </blockquote>
+          </Card>
         </section>
 
-        <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
+        <section className="bg-cloud">
+          <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
             <SectionHeader
               align="center"
               title="¿Cómo podemos ayudarte?"
               subtitle="Comenzaremos con un formulario breve para conocer tu situación y organizar una atención responsable y adaptada a tus necesidades."
             />
-            <ol className="mt-10 grid gap-5 md:grid-cols-3">
+            <ol className="mt-14 grid gap-5 md:grid-cols-3 lg:mt-16">
               {steps.map((step) => (
                 <li key={step.number}>
-                  <Card as="article" className="h-full p-7">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-yellow text-lg font-medium text-ink">
-                      {step.number}
-                    </span>
-                    <h3 className="mt-5 text-xl font-bold text-ink">{step.title}</h3>
-                    <p className="mt-2 text-[15px] leading-relaxed text-muted">{step.text}</p>
+                  <Card as="article" tone="white" className="h-full p-8 lg:p-9">
+                    <p className="text-[15px] font-semibold text-muted">Paso {step.number}</p>
+                    <h3 className="mt-1 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">{step.title}</h3>
+                    <p className="mt-3 text-[17px] leading-snug text-muted">{step.text}</p>
                   </Card>
                 </li>
               ))}
@@ -197,40 +195,37 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-16">
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
           <SectionHeader
             align="center"
             title="Este acompañamiento puede ser para ti"
             subtitle="No es necesario esperar a encontrarte completamente desbordado para pedir ayuda."
           />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-16 xl:grid-cols-4">
             {audiences.map((item) => {
               const Icon = item.icon
               return (
-                <Card key={item.title} className="p-7">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-pill-red text-[#a10a22]">
-                    <Icon aria-hidden="true" className="h-6 w-6" />
-                  </span>
-                  <h3 className="mt-5 text-lg font-bold text-ink">{item.title}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{item.text}</p>
+                <Card key={item.title} className="p-8 lg:p-9">
+                  <Icon aria-hidden="true" className="h-9 w-9 text-navy" />
+                  <h3 className="mt-8 text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">{item.title}</h3>
+                  <p className="mt-3 text-[17px] leading-snug text-muted">{item.text}</p>
                 </Card>
               )
             })}
           </div>
         </section>
 
-        <section className="bg-sand py-20">
-          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
+        <section className="bg-cloud">
+          <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
             <SectionHeader
               align="center"
               pill="Nuestro equipo"
-              pillTone="white"
               title="Una red profesional que acompaña"
               subtitle="Profesionales de la psicología han decidido aportar voluntariamente su experiencia para atender las necesidades emocionales derivadas de la emergencia."
             />
-            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-16 xl:grid-cols-3">
               {team.map((member) => (
-                <Card key={member.name} className="overflow-hidden">
+                <Card key={member.name} tone="white" className="overflow-hidden">
                   {member.video ? (
                     <video
                       src={member.video}
@@ -248,36 +243,35 @@ function EmergenciaVenezuela() {
                       className="h-72 w-full object-cover object-[center_20%]"
                     />
                   )}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-ink">{member.name}</h3>
-                    <p className="mt-1 text-[15px] leading-relaxed text-muted">{member.role}</p>
+                  <div className="p-8 lg:p-9">
+                    <h3 className="text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">{member.name}</h3>
+                    <p className="mt-2 text-[17px] leading-snug text-muted">{member.role}</p>
                   </div>
                 </Card>
               ))}
             </div>
-            <p className="mt-6 text-center text-sm text-muted">
+            <p className="mx-auto mt-8 max-w-3xl text-center text-[15px] leading-relaxed text-muted">
               La asignación se realizará según las necesidades identificadas, la especialización y la disponibilidad
               de los profesionales participantes.
             </p>
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-16">
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
           <SectionHeader
             align="center"
             pill="Nuestra ayuda en acción"
-            pillTone="red"
             title="La solidaridad ya está llegando"
             subtitle="Junto a Galicia Activa, la Iglesia Católica y los Bancos de Alimentos de Colombia, Asovedra ya está haciendo llegar ayuda humanitaria directamente a las familias afectadas en Venezuela."
           />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {helpPhotos.map((photo) => (
               <a
                 key={photo.src}
                 href={photo.src}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group overflow-hidden rounded-[24px] bg-line"
+                className="group overflow-hidden rounded-[28px] bg-cloud"
               >
                 <img
                   src={photo.src}
@@ -301,51 +295,46 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-16">
-          <Card className="p-8 lg:p-10">
-            <div className="flex items-start gap-4">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-pill-blue text-navy">
-                <LuLock aria-hidden="true" className="h-6 w-6" />
-              </span>
-              <div>
-                <h2 className="text-xl font-bold text-ink">Tu información será tratada con respeto y confidencialidad</h2>
-                <p className="mt-1 text-[15px] leading-relaxed text-muted">
-                  Solo se utilizará para valorar tu solicitud, organizar la atención y facilitar la derivación profesional.
-                </p>
-              </div>
-            </div>
-            <div className="mt-8 grid gap-5 sm:grid-cols-3">
+        {/* Confidencialidad y llamada al formulario, en el mismo bloque gris */}
+        <section className="bg-cloud">
+          <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
+            <LuLock aria-hidden="true" className="h-9 w-9 text-navy" />
+            <SectionHeader
+              className="mt-6"
+              title="Tu información será tratada con respeto y confidencialidad"
+              subtitle="Solo se utilizará para valorar tu solicitud, organizar la atención y facilitar la derivación profesional."
+            />
+            <div className="mt-14 grid gap-5 sm:grid-cols-3 lg:mt-16">
               {confidentiality.map((item) => (
-                <div key={item.title} className="rounded-[20px] bg-cream p-5">
-                  <p className="font-bold text-ink">{item.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">{item.text}</p>
-                </div>
+                <Card key={item.title} tone="white" className="p-8 lg:p-9">
+                  <h3 className="text-[22px] font-semibold leading-tight tracking-[-0.01em] text-ink">{item.title}</h3>
+                  <p className="mt-3 text-[17px] leading-snug text-muted">{item.text}</p>
+                </Card>
               ))}
             </div>
-          </Card>
-        </section>
 
-        <section className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-16">
-          <div className="rounded-[32px] bg-sand p-8 text-center sm:p-12">
-            <h2 className="mx-auto max-w-3xl text-3xl font-medium tracking-[-0.01em] text-ink lg:text-4xl">
-              Dar el primer paso puede ayudarte a sentirte acompañado
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-relaxed text-muted">
-              No tienes que saber exactamente qué ayuda necesitas. Cuéntanos brevemente qué estás viviendo y
-              trataremos de orientarte hacia la atención más adecuada.
-            </p>
-            <div className="mt-7">
-              <FormButton>Completar el formulario</FormButton>
+            <div className="mx-auto mt-24 max-w-3xl text-center lg:mt-32">
+              <h2 className="text-[34px] font-semibold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[44px]">
+                Dar el primer paso puede ayudarte a sentirte acompañado
+              </h2>
+              <p className="mx-auto mt-5 max-w-2xl text-[19px] leading-relaxed text-muted lg:text-[21px]">
+                No tienes que saber exactamente qué ayuda necesitas. Cuéntanos brevemente qué estás viviendo y
+                trataremos de orientarte hacia la atención más adecuada.
+              </p>
+              <div className="mt-10">
+                <FormButton>Completar el formulario</FormButton>
+              </div>
             </div>
 
-            <div role="note" className="mx-auto mt-10 max-w-3xl rounded-[22px] border border-[#f5b8c3] bg-pill-red p-6 text-left sm:p-8">
+            {/* Aviso de seguridad: aquí sí va el rojo, es información de emergencia */}
+            <div role="note" className="mx-auto mt-12 max-w-3xl rounded-[28px] bg-white p-8 lg:p-9">
               <div className="flex items-center gap-3">
-                <LuTriangleAlert aria-hidden="true" className="h-6 w-6 shrink-0 text-[#a10a22]" />
-                <p className="text-sm font-medium uppercase tracking-wide text-[#a10a22]">
+                <LuTriangleAlert aria-hidden="true" className="h-6 w-6 shrink-0 text-red" />
+                <p className="text-[15px] font-semibold uppercase tracking-wide text-red">
                   En una situación de peligro inmediato
                 </p>
               </div>
-              <p className="mt-3 text-[15px] leading-relaxed text-[#6b0716]">
+              <p className="mt-3 text-[17px] leading-snug text-ink">
                 Este servicio no sustituye a emergencias. Si existe riesgo para tu vida, riesgo de autolesión o
                 peligro para otra persona, contacta con los servicios de emergencia del país en el que te encuentres
                 o acude al centro sanitario más cercano.
@@ -354,30 +343,28 @@ function EmergenciaVenezuela() {
           </div>
         </section>
 
-        <section className="bg-navy py-20 text-white">
-          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="mx-auto grid h-16 w-16 place-items-center rounded-[20px] bg-white/10 text-yellow">
-                <LuHandHeart aria-hidden="true" className="h-8 w-8" />
-              </span>
-              <h2 className="mt-6 text-3xl font-medium tracking-[-0.01em] lg:text-4xl">Cada donación cuenta</h2>
-              <p className="mt-4 text-[17px] leading-relaxed text-[#c9d3f0]">
-                Asovedra canaliza la solidaridad de la comunidad de Pontevedra hacia las personas afectadas por los
-                terremotos en Venezuela, de forma rápida, útil y transparente. Toda ayuda se destina a material de
-                rescate y apoyo directo a los damnificados.
-              </p>
-            </div>
+        {/* Donaciones: bloque navy final; el fondo blanco lo separa del pie, que también es navy */}
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
+          <Card as="div" tone="navy" className="px-6 py-14 sm:px-12 lg:py-20">
+            <LuHandHeart aria-hidden="true" className="mx-auto h-9 w-9 text-yellow" />
+            <SectionHeader
+              className="mt-6"
+              align="center"
+              onDark
+              title="Cada donación cuenta"
+              subtitle="Asovedra canaliza la solidaridad de la comunidad de Pontevedra hacia las personas afectadas por los terremotos en Venezuela, de forma rápida, útil y transparente. Toda ayuda se destina a material de rescate y apoyo directo a los damnificados."
+            />
 
             {VENEZUELA_DONATION_HREF && (
-              <div className="mt-8 flex flex-col items-center gap-3 text-center">
+              <div className="mt-10 flex flex-col items-center gap-3 text-center">
                 <Button href={VENEZUELA_DONATION_HREF} variant="yellow" size="lg">
                   Donar a la campaña de Venezuela
                 </Button>
-                <p className="text-sm text-[#c9d3f0]">Esta donación se destina íntegramente a la campaña de emergencia en Venezuela.</p>
+                <p className="text-[15px] text-white/80">Esta donación se destina íntegramente a la campaña de emergencia en Venezuela.</p>
               </div>
             )}
 
-            <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-[28px] bg-white/5">
+            <div className="mx-auto mt-12 max-w-xl overflow-hidden rounded-[28px] bg-white/5">
               <a href="/photo/folleto_ayuda.png" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/photo/folleto_ayuda.png"
@@ -386,13 +373,13 @@ function EmergenciaVenezuela() {
                 />
               </a>
             </div>
-            <p className="mt-4 text-center text-sm text-[#c9d3f0]">
+            <p className="mx-auto mt-5 max-w-xl text-center text-[15px] leading-relaxed text-white/80">
               Toca la imagen para verla ampliada. Ante cualquier duda sobre cómo colaborar, puedes escribirnos a{' '}
               <a href="mailto:info@asovedra.org" className="font-semibold text-white underline">
                 info@asovedra.org
               </a>.
             </p>
-          </div>
+          </Card>
         </section>
       </main>
     </>

@@ -35,7 +35,8 @@
     /* Superficies */
     --color-paper: #FCFCFC;
     --color-cream: #FCFCFC;
-    --color-sand: #F2F2F0;
+    --color-sand: #F5F5F7;
+    --color-cloud: #F5F5F7;
     --color-pill-yellow: #FFF1C7;
     --color-pill-blue: #EEF2FB;
     --color-pill-red: #FDE4E8;
@@ -74,6 +75,11 @@ body {
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: -0.01em;
+}
+
+/* Iconos de trazo (Lucide) con el mismo grosor fino en toda la web */
+main svg[stroke="currentColor"] {
+    stroke-width: 1.75;
 }
 
 /* Nombre de la asociación en la portada, con tipografía propia */

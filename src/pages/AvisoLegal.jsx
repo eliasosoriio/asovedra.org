@@ -27,9 +27,9 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="mb-4 text-2xl font-bold text-ink">TITULARIDAD DEL SITIO WEB</h2>
-                <div className="rounded-2xl border border-line bg-cream p-6">
-                  <ul className="space-y-2 text-muted">
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">TITULARIDAD DEL SITIO WEB</h2>
+                <div className="rounded-[28px] bg-cloud p-8 lg:p-9">
+                  <ul className="list-none space-y-2 pl-0 text-muted">
                     <li><strong>Razón Social:</strong> ASOVEDRA</li>
                     <li><strong>Nombre del titular:</strong> Asociación de Venezolanos en Pontevedra</li>
                     <li><strong>Domicilio social:</strong> Rúa Sor Lucía 4, Oficina 50</li>
@@ -42,26 +42,26 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">OBJETO</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">OBJETO</h2>
                 <p className="text-muted leading-relaxed">
                   El sitio web facilita a los usuarios del mismo el acceso a información y servicios prestados por Asovedra a aquellas personas u organizaciones interesadas en los mismos, especialmente en relación con el apoyo y la integración de la comunidad iberoamericana en España.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">ACCESO Y UTILIZACIÓN DE LA WEB</h2>
-                <h3 className="text-lg font-semibold text-ink mb-2">Carácter gratuito del acceso y utilización de la web:</h3>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">ACCESO Y UTILIZACIÓN DE LA WEB</h2>
+                <h3 className="mb-2 text-[19px] font-semibold text-ink">Carácter gratuito del acceso y utilización de la web:</h3>
                 <p className="text-muted leading-relaxed mb-4">
                   El acceso a la web tiene carácter gratuito para los usuarios de la misma.
                 </p>
-                <h3 className="text-lg font-semibold text-ink mb-2">Registro de usuarios:</h3>
+                <h3 className="mb-2 text-[19px] font-semibold text-ink">Registro de usuarios:</h3>
                 <p className="text-muted leading-relaxed">
                   Con carácter general el acceso y utilización de la web no exige la previa suscripción o registro de los usuarios de la misma.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">CONTENIDOS DE LA WEB</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">CONTENIDOS DE LA WEB</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   El idioma utilizado por el titular en la web será el castellano. Asovedra no se responsabiliza de la no comprensión o entendimiento del idioma de la web por el usuario, ni de sus consecuencias.
                 </p>
@@ -77,14 +77,14 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">LIMITACIÓN DE RESPONSABILIDAD</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">LIMITACIÓN DE RESPONSABILIDAD</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   Tanto el acceso a la web como el uso inconsentido que pueda efectuarse de la información contenida en la misma es de la exclusiva responsabilidad de quien lo realiza.
                 </p>
                 <p className="text-muted leading-relaxed mb-4">
                   Asovedra no responderá de ninguna consecuencia, daño o perjuicio que pudieran derivarse de dicho acceso o uso. Asovedra no se hace responsable de los errores de seguridad, que se puedan producir ni de los daños que puedan causarse al sistema informático del usuario (hardware y software), o a los ficheros o documentos almacenados en el mismo, como consecuencia de:
                 </p>
-                <ul className="list-disc list-inside text-muted space-y-2 mb-4 ml-4">
+                <ul className="mb-4 list-disc space-y-2 pl-5 text-muted">
                   <li>la presencia de un virus en el ordenador del usuario que sea utilizado para la conexión a los servicios y contenidos de la web,</li>
                   <li>un mal funcionamiento del navegador,</li>
                   <li>y/o del uso de versiones no actualizadas del mismo.</li>
@@ -98,21 +98,21 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">EMPLEO DE LA TECNOLOGÍA "COOKIE"</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">EMPLEO DE LA TECNOLOGÍA "COOKIE"</h2>
                 <p className="text-muted leading-relaxed">
                   La web puede emplear cookies para mejorar la experiencia del usuario. Puede consultar nuestra Política de Cookies, que respeta en todo momento la confidencialidad e intimidad del mismo.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">PROPIEDAD INTELECTUAL E INDUSTRIAL</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">PROPIEDAD INTELECTUAL E INDUSTRIAL</h2>
                 <p className="text-muted leading-relaxed">
                   Son propiedad de Asovedra, todos los derechos de propiedad industrial e intelectual de la web, así como de los contenidos que alberga. Cualquier uso de la web o sus contenidos deberá tener un carácter exclusivamente particular. Cualquier otro uso que suponga la copia, reproducción, distribución, transformación, comunicación pública o cualquier otra acción similar, de todo o parte de los contenidos de la web, por lo que ningún usuario podrá llevar a cabo estas acciones sin la autorización previa y por escrito de Asovedra.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-ink mb-4">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   Asovedra garantiza la protección y confidencialidad de los datos personales, de cualquier tipo que nos proporcionen nuestros usuarios de acuerdo con lo dispuesto en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales y al RGPD.
                 </p>
@@ -131,14 +131,14 @@ function AvisoLegal() {
               </div>
 
               <div>
-                <h2 className="mb-4 text-2xl font-bold text-ink">LEGISLACIÓN APLICABLE Y JURISDICCIÓN COMPETENTE</h2>
+                <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-[-0.01em] text-ink">LEGISLACIÓN APLICABLE Y JURISDICCIÓN COMPETENTE</h2>
                 <p className="leading-relaxed text-muted">
                   El presente Aviso Legal se interpretará y regirá de conformidad con la legislación española. Asovedra y los usuarios, con renuncia expresa a cualquier otro fuero que pudiera corresponderles, se someten al de los juzgados y tribunales del domicilio de Asovedra para cualquier controversia que pudiera derivarse del acceso o uso de la web.
                 </p>
               </div>
 
               <div className="border-t border-line pt-6">
-                <p className="text-sm text-muted">
+                <p className="text-[15px] text-muted">
                   Última actualización: Octubre 2025
                 </p>
               </div>

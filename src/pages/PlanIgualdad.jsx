@@ -1,9 +1,11 @@
 import React from 'react'
 import SEO from '../components/SEO'
-import { LuChartLine, LuDownload, LuGavel, LuHandshake, LuHeart, LuScale, LuTarget, LuUsers } from 'react-icons/lu'
+import { LuChartLine, LuCheck, LuDownload, LuHandshake, LuHeart, LuScale, LuTarget, LuUsers } from 'react-icons/lu'
 import jsPDF from 'jspdf'
-import ContentSurface from '../components/layout/ContentSurface'
 import InternalPageHero from '../components/layout/InternalPageHero'
+import Button from '../components/ui/Button'
+import Card from '../components/ui/Card'
+import SectionHeader from '../components/ui/SectionHeader'
 
 function PlanIgualdad() {
   const objetivos = [
@@ -345,136 +347,118 @@ function PlanIgualdad() {
           description="Marco de actuación 2025-2026 para impulsar igualdad de oportunidades, prevención de discriminaciones y mejora continua."
         />
 
-        <section className="px-6 pb-20 lg:px-16 lg:pb-24">
-          <div className="mx-auto max-w-4xl">
-            <ContentSurface className="p-8 text-center lg:p-10">
-              <LuGavel className="mx-auto text-5xl text-navy" />
-              <h2 className="mt-6 text-3xl font-medium text-ink">Nuestro compromiso con la igualdad</h2>
-              <p className="mt-5 text-lg leading-8 text-muted">
-                Este plan establece una hoja de ruta clara para garantizar igualdad de oportunidades, participación equilibrada y entornos de trabajo respetuosos.
-              </p>
-            </ContentSurface>
-          </div>
+        <section className="mx-auto max-w-[1440px] px-6 pb-24 lg:px-16 lg:pb-32">
+          <SectionHeader
+            pill="Compromiso"
+            title="Nuestro compromiso con la igualdad"
+            subtitle="Este plan establece una hoja de ruta clara para garantizar igualdad de oportunidades, participación equilibrada y entornos de trabajo respetuosos."
+          />
         </section>
 
-        <section className="pb-20 lg:pb-24">
+        <section className="bg-cloud py-24 lg:py-32">
           <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <h2 className="text-3xl font-medium text-ink lg:text-4xl">Objetivos estratégicos</h2>
-              <p className="mt-4 text-base leading-7 text-muted lg:text-lg">Los pilares fundamentales del Plan de Igualdad.</p>
-            </div>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <SectionHeader pill="Objetivos" title="Objetivos estratégicos" subtitle="Los pilares fundamentales del Plan de Igualdad." />
+            <div className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-16 xl:grid-cols-4">
               {objetivos.map((objetivo) => (
-                <ContentSurface key={objetivo.titulo} className="p-6 text-center">
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-pill-blue text-xl text-navy">
-                    {objetivo.icon}
-                  </div>
-                  <h3 className="mt-5 text-xl font-medium text-ink">{objetivo.titulo}</h3>
-                  <p className="mt-3 text-sm leading-7 text-muted">{objetivo.descripcion}</p>
-                </ContentSurface>
+                <Card key={objetivo.titulo} tone="white" className="p-8 lg:p-9">
+                  {/* Los iconos de react-icons miden 1em: el tamaño de letra fija los 36 px */}
+                  <span aria-hidden="true" className="block text-[36px] leading-none text-navy">{objetivo.icon}</span>
+                  <h3 className="mt-8 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">{objetivo.titulo}</h3>
+                  <p className="mt-3 text-[17px] leading-snug text-muted">{objetivo.descripcion}</p>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="pb-20 lg:pb-24">
-          <div className="mx-auto max-w-[1440px] space-y-5 px-6 lg:px-16">
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
+          <SectionHeader pill="Ejes" title="Ejes de actuación" />
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-16 xl:grid-cols-3">
             {ejes.map((eje) => (
-              <ContentSurface key={eje.numero} className="p-6 sm:p-8">
-                <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-yellow text-lg font-medium text-ink">
-                    {eje.numero}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-medium text-ink">{eje.titulo}</h3>
-                    <p className="mt-2 text-base font-medium text-muted">{eje.descripcion}</p>
-                    <div className="mt-5 grid gap-3 md:grid-cols-2">
-                      {eje.medidas.map((medida) => (
-                        <div key={medida} className="rounded-2xl bg-cream px-4 py-3 text-sm leading-6 text-muted">
-                          {medida}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </ContentSurface>
+              <Card key={eje.numero} tone="grey" className="p-8 lg:p-9">
+                <p className="text-[48px] font-semibold leading-none tracking-[-0.02em] text-navy">{eje.numero}</p>
+                <h3 className="mt-6 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">{eje.titulo}</h3>
+                <p className="mt-3 text-[17px] leading-snug text-muted">{eje.descripcion}</p>
+                <ul className="mt-6 space-y-3 border-t border-line pt-6">
+                  {eje.medidas.map((medida) => (
+                    <li key={medida} className="flex gap-3 text-[15px] leading-snug text-ink">
+                      <LuCheck aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-navy" />
+                      {medida}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
             ))}
           </div>
         </section>
 
-        <section className="pb-20 lg:pb-24">
-          <div className="mx-auto grid max-w-[1440px] gap-6 px-6 lg:grid-cols-[1fr_0.95fr] lg:px-16">
-            <ContentSurface className="p-8 lg:p-10">
-              <h2 className="text-3xl font-medium text-ink">Nuestros compromisos</h2>
-              <div className="mt-6 grid gap-4">
-                {compromisos.map((compromiso) => (
-                  <div key={compromiso} className="flex items-start gap-4 rounded-2xl bg-cream px-4 py-4">
-                    <LuHandshake className="mt-1 text-xl text-navy" />
-                    <p className="text-base leading-7 text-muted">{compromiso}</p>
-                  </div>
-                ))}
-              </div>
-            </ContentSurface>
-
-            <div className="space-y-6">
-              <ContentSurface className="p-8">
-                <h2 className="text-2xl font-medium text-ink">Seguimiento y evaluación</h2>
-                <div className="mt-6 space-y-6">
-                  <div>
-                    <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
-                      <LuChartLine className="text-navy" />
-                      Monitoreo continuo
-                    </h3>
-                    <p className="mt-2 text-sm leading-7 text-muted">
-                      Se realiza seguimiento periódico de las medidas con evaluaciones trimestrales de indicadores de igualdad.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
-                      <LuTarget className="text-navy" />
-                      Indicadores de progreso
-                    </h3>
-                    <div className="mt-3 grid gap-3">
-                      {[
-                        'Porcentaje de participación por género en programas y servicios',
-                        'Número de formaciones en igualdad realizadas',
-                        'Grado de satisfacción con las medidas implementadas',
-                        'Análisis de brechas y evolución de las mismas'
-                      ].map((indicador) => (
-                        <div key={indicador} className="rounded-2xl bg-cream px-4 py-3 text-sm leading-6 text-muted">
-                          {indicador}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="flex items-center gap-2 text-lg font-semibold text-ink">
-                      <LuUsers className="text-navy" />
-                      Revisión participativa
-                    </h3>
-                    <p className="mt-2 text-sm leading-7 text-muted">
-                      El plan se revisa anualmente con la participación del equipo y de las personas usuarias de los servicios.
-                    </p>
-                  </div>
-                </div>
-              </ContentSurface>
-
-              <ContentSurface className="p-8 text-center">
-                <h2 className="text-2xl font-medium text-ink">Vigencia del plan</h2>
-                <p className="mt-4 text-base leading-7 text-muted">
-                  Este plan tiene una vigencia de 2 años, entre 2025 y 2026, y será revisado al finalizar el periodo.
-                </p>
-                <button
-                  onClick={generarPDF}
-                  className="mt-6 inline-flex items-center gap-3 rounded-full bg-navy px-7 py-4 text-sm font-bold text-white hover:bg-navy-deep"
-                >
-                  <LuDownload className="text-lg" />
-                  Descargar plan completo
-                </button>
-                <p className="mt-5 text-sm text-muted">Aprobado: Octubre 2025 | Próxima revisión: Octubre 2027</p>
-              </ContentSurface>
-            </div>
+        <section className="bg-cloud py-24 lg:py-32">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
+            <SectionHeader pill="Compromisos" title="Nuestros compromisos" />
+            <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-16 xl:grid-cols-3">
+              {compromisos.map((compromiso) => (
+                <Card as="li" key={compromiso} tone="white" className="p-8 lg:p-9">
+                  <LuHandshake aria-hidden="true" className="h-9 w-9 text-navy" />
+                  <p className="mt-6 text-[17px] leading-snug text-ink">{compromiso}</p>
+                </Card>
+              ))}
+            </ul>
           </div>
+        </section>
+
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
+          <SectionHeader pill="Seguimiento" title="Seguimiento y evaluación" />
+          <div className="mt-14 grid gap-5 lg:mt-16 lg:grid-cols-3">
+            <Card tone="grey" className="p-8 lg:p-9">
+              <LuChartLine aria-hidden="true" className="h-9 w-9 text-navy" />
+              <h3 className="mt-8 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">Monitoreo continuo</h3>
+              <p className="mt-3 text-[17px] leading-snug text-muted">
+                Se realiza seguimiento periódico de las medidas con evaluaciones trimestrales de indicadores de igualdad.
+              </p>
+            </Card>
+            <Card tone="grey" className="p-8 lg:p-9">
+              <LuTarget aria-hidden="true" className="h-9 w-9 text-navy" />
+              <h3 className="mt-8 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">Indicadores de progreso</h3>
+              <ul className="mt-3 space-y-3">
+                {[
+                  'Porcentaje de participación por género en programas y servicios',
+                  'Número de formaciones en igualdad realizadas',
+                  'Grado de satisfacción con las medidas implementadas',
+                  'Análisis de brechas y evolución de las mismas'
+                ].map((indicador) => (
+                  <li key={indicador} className="flex gap-3 text-[17px] leading-snug text-muted">
+                    <LuCheck aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-navy" />
+                    {indicador}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+            <Card tone="grey" className="p-8 lg:p-9">
+              <LuUsers aria-hidden="true" className="h-9 w-9 text-navy" />
+              <h3 className="mt-8 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">Revisión participativa</h3>
+              <p className="mt-3 text-[17px] leading-snug text-muted">
+                El plan se revisa anualmente con la participación del equipo y de las personas usuarias de los servicios.
+              </p>
+            </Card>
+          </div>
+        </section>
+
+        {/* Llamada final: continúa el fondo blanco de la sección anterior */}
+        <section className="mx-auto max-w-[1440px] px-6 pb-24 lg:px-16 lg:pb-32">
+          <Card as="div" tone="navy" className="p-8 sm:p-12 lg:p-16">
+            <SectionHeader
+              onDark
+              pill="Vigencia"
+              title="Vigencia del plan"
+              subtitle="Este plan tiene una vigencia de 2 años, entre 2025 y 2026, y será revisado al finalizar el periodo."
+            />
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Button onClick={generarPDF} variant="yellow" size="lg" icon={<LuDownload />}>
+                Descargar plan completo
+              </Button>
+              <span className="text-[15px] text-white/80">Aprobado: Octubre 2025 | Próxima revisión: Octubre 2027</span>
+            </div>
+          </Card>
         </section>
       </main>
     </>

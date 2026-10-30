@@ -1,14 +1,16 @@
 import React from 'react'
 
+// Tarjeta plana al estilo de la portada: gris claro sobre fondo blanco, blanca sobre fondo gris
 const TONES = {
-  white: 'bg-white text-body shadow-[0_20px_45px_-30px_rgba(0,0,0,0.25)]',
+  grey: 'bg-cloud text-body',
+  white: 'bg-white text-body',
   navy: 'bg-navy text-white'
 }
 
-function Card({ as = 'article', tone = 'white', className = '', children }) {
+function Card({ as = 'article', tone = 'grey', className = '', children }) {
   const Tag = as
   return (
-    <Tag className={`rounded-[20px] ${TONES[tone]} ${className}`}>
+    <Tag className={`rounded-[28px] ${TONES[tone] || TONES.grey} ${className}`}>
       {children}
     </Tag>
   )

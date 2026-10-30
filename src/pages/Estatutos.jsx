@@ -1,5 +1,5 @@
 import React from 'react'
-import { LuDownload, LuFileText, LuGavel, LuHandshake, LuScale, LuUsers } from 'react-icons/lu'
+import { LuDownload, LuGavel, LuHandshake, LuScale, LuUsers } from 'react-icons/lu'
 import SEO from '../components/SEO'
 import InternalPageHero from '../components/layout/InternalPageHero'
 import Button from '../components/ui/Button'
@@ -39,84 +39,81 @@ function Estatutos() {
         canonical="/estatutos"
       />
 
-      <main className="min-h-screen pb-24">
+      <main className="min-h-screen">
         <InternalPageHero
           eyebrow="Marco normativo"
           title="Estatutos de Asovedra"
           description="Documento que regula la organización, el funcionamiento interno y el buen gobierno de la asociación."
         />
 
-        <section className="mx-auto max-w-[1440px] px-6 lg:px-16">
-          <Card className="grid gap-6 p-8 sm:p-10 md:grid-cols-[auto_1fr] md:items-start">
-            <span className="grid h-14 w-14 place-items-center rounded-2xl bg-pill-blue text-navy">
-              <LuScale aria-hidden="true" className="h-7 w-7" />
-            </span>
-            <div>
-              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink sm:text-3xl">Transparencia y normativa</h2>
-              <p className="mt-3 max-w-3xl text-[17px] leading-relaxed text-muted">
-                Los estatutos de Asovedra establecen nuestras bases organizativas, los derechos y obligaciones de las personas asociadas y los procedimientos que ordenan la toma de decisiones.
-              </p>
-              <p className="mt-4 inline-flex rounded-full bg-pill-yellow px-4 py-2 text-sm font-semibold text-[#5c4500]">
-                Comprometidos con la transparencia y el buen gobierno asociativo.
-              </p>
+        <section className="mx-auto max-w-[1440px] px-6 pb-24 lg:px-16 lg:pb-32">
+          <SectionHeader
+            pill="Transparencia"
+            title="Transparencia y normativa"
+            subtitle="Los estatutos de Asovedra establecen nuestras bases organizativas, los derechos y obligaciones de las personas asociadas y los procedimientos que ordenan la toma de decisiones."
+          />
+          <p className="mt-6 text-[17px] font-semibold text-ink">
+            Comprometidos con la transparencia y el buen gobierno asociativo.
+          </p>
+        </section>
+
+        <section className="bg-cloud py-24 lg:py-32">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
+            <SectionHeader
+              pill="Contenido"
+              title="Contenido de los estatutos"
+              subtitle="Principales apartados que estructuran el funcionamiento de la asociación."
+            />
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+              {bloques.map((bloque) => {
+                const Icon = bloque.icon
+                return (
+                  <Card key={bloque.title} tone="white" className="p-8 lg:p-9">
+                    <Icon aria-hidden="true" className="h-9 w-9 text-navy" />
+                    <h3 className="mt-8 text-[24px] font-semibold leading-tight tracking-[-0.01em] text-ink">{bloque.title}</h3>
+                    <ul className="mt-4 space-y-2">
+                      {bloque.items.map((item) => (
+                        <li key={item} className="text-[17px] leading-snug text-muted">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1440px] px-6 py-24 lg:px-16 lg:py-32">
+          <Card as="div" tone="navy" className="p-8 sm:p-12 lg:p-16">
+            <SectionHeader
+              onDark
+              pill="Documento"
+              title="Consulta nuestros estatutos"
+              subtitle="Descarga el documento completo en PDF para conocer el detalle del marco organizativo y normativo de la asociación."
+            />
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Button href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf" variant="yellow" size="lg" icon={<LuDownload />}>
+                Descargar estatutos
+              </Button>
+              <span className="text-[15px] text-white/80">Última actualización: 2025</span>
             </div>
           </Card>
         </section>
 
-        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
-          <SectionHeader
-            pill="Contenido"
-            title="Contenido de los estatutos"
-            subtitle="Principales apartados que estructuran el funcionamiento de la asociación."
-          />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {bloques.map((bloque) => {
-              const Icon = bloque.icon
-              return (
-                <Card key={bloque.title} className="p-7">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-pill-blue text-navy">
-                    <Icon aria-hidden="true" className="h-6 w-6" />
-                  </span>
-                  <h3 className="mt-5 text-xl font-bold text-ink">{bloque.title}</h3>
-                  <ul className="mt-3 space-y-2">
-                    {bloque.items.map((item) => (
-                      <li key={item} className="flex gap-2.5 text-[15px] text-muted">
-                        <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-yellow"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              )
-            })}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-[1440px] px-6 pt-20 lg:px-16">
-          <div className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
-            <div className="rounded-[32px] bg-navy p-8 text-white sm:p-12">
-              <LuFileText aria-hidden="true" className="h-10 w-10 text-yellow" />
-              <h2 className="mt-5 text-3xl font-medium tracking-[-0.01em]">Consulta nuestros estatutos</h2>
-              <p className="mt-3 max-w-xl text-[17px] text-[#c9d3f0]">
-                Descarga el documento completo en PDF para conocer el detalle del marco organizativo y normativo de la asociación.
-              </p>
-              <div className="mt-7 flex flex-wrap items-center gap-4">
-                <Button href="https://asovedra.org/assets/docs/estatutos_asovedra.pdf" variant="yellow" icon={<LuDownload />}>
-                  Descargar estatutos
-                </Button>
-                <span className="text-sm text-[#c9d3f0]">Última actualización: 2025</span>
-              </div>
+        <section className="bg-cloud py-24 lg:py-32">
+          <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
+            <SectionHeader
+              align="center"
+              pill="Dudas"
+              title="¿Tienes dudas sobre los estatutos?"
+              subtitle="Si necesitas aclaraciones sobre cualquier aspecto del documento o sobre el funcionamiento de la asociación, podemos orientarte."
+            />
+            <div className="mt-10 flex justify-center">
+              <Button to="/contacto" size="lg">Contactar con la Junta Directiva</Button>
             </div>
-            <Card className="flex flex-col p-8 sm:p-10">
-              <h2 className="text-2xl font-medium tracking-[-0.02em] text-ink">¿Tienes dudas sobre los estatutos?</h2>
-              <p className="mt-3 text-[17px] leading-relaxed text-muted">
-                Si necesitas aclaraciones sobre cualquier aspecto del documento o sobre el funcionamiento de la asociación, podemos orientarte.
-              </p>
-              <div className="mt-auto pt-7">
-                <Button to="/contacto">Contactar con la Junta Directiva</Button>
-              </div>
-              <p className="mt-5 text-sm text-muted">Los estatutos están inscritos en el Registro de Asociaciones correspondiente.</p>
-            </Card>
+            <p className="mt-6 text-center text-[15px] text-muted">Los estatutos están inscritos en el Registro de Asociaciones correspondiente.</p>
           </div>
         </section>
       </main>

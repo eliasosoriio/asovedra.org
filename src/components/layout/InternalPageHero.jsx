@@ -1,5 +1,4 @@
 import React from 'react'
-import SectionHeader from '../ui/SectionHeader'
 
 function DarkHero({ eyebrow, title, description }) {
   return (
@@ -23,15 +22,23 @@ function DarkHero({ eyebrow, title, description }) {
   )
 }
 
-function InternalPageHero({ eyebrow, title, description, variant = 'light', pillTone = 'outline' }) {
+// Cabecera de las páginas internas: navy como el hero de la portada, título grande en blanco
+function InternalPageHero({ eyebrow, title, description, variant = 'light', children }) {
   if (variant === 'dark') {
     return <DarkHero eyebrow={eyebrow} title={title} description={description} />
   }
 
   return (
-    <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-36 lg:px-16 lg:pb-24 lg:pt-[190px]">
-      <div className="lg:pl-[72px]">
-        <SectionHeader as="h1" pill={eyebrow} pillTone={pillTone} title={title} subtitle={description} className="max-w-6xl" />
+    <section className="mb-20 bg-navy text-white lg:mb-28">
+      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-36 lg:px-16 lg:pb-24 lg:pt-[170px]">
+        {eyebrow && <p className="text-[17px] font-semibold text-yellow">{eyebrow}</p>}
+        <h1 className="mt-4 max-w-5xl text-[40px] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]">
+          {title}
+        </h1>
+        {description && (
+          <p className="mt-6 max-w-3xl text-[19px] leading-relaxed text-white/80 lg:text-[22px]">{description}</p>
+        )}
+        {children}
       </div>
     </section>
   )
