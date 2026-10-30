@@ -35,7 +35,7 @@ function Showreel() {
     <section
       ref={sectionRef}
       aria-labelledby="sobre-nosotros"
-      className="relative mx-auto grid max-w-[1440px] gap-12 px-6 pb-24 lg:grid-cols-[1.35fr_1fr] lg:items-center lg:gap-16 lg:px-16 lg:pb-36"
+      className="relative mx-auto grid max-w-[1440px] gap-12 px-6 pb-24 pt-20 lg:grid-cols-[1.35fr_1fr] lg:items-center lg:gap-16 lg:px-16 lg:pb-36 lg:pt-32"
     >
       <MotionDiv
         data-cursor="view"
